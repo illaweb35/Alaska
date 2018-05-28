@@ -1,5 +1,5 @@
 <?php
-namespace Alaska\App;
+namespace App;
 
 // Racine web
 const BASEPATH = '/Alaska/Web/';

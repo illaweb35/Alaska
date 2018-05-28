@@ -1,5 +1,5 @@
 <?php
-namespace Alaska\App\Pattern;
+namespace App\Pattern;
 
 trait Singleton
 {

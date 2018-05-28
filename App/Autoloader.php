@@ -1,6 +1,6 @@
 <?php
 require_once('Pattern/Singleton.trait.php');
-use Alaska\App\Pattern\Singleton;
+use App\Pattern\Singleton;
 
 class Autoloader
 {
@@ -14,6 +14,7 @@ class Autoloader
     {
         $class = str_replace(__NAMESPACE__, '', $class);
         $class = str_replace('\\', '/', $class);
-        require_once(dirname(__DIR__).'/'.$class.'.php');
+        $file = (dirname(__DIR__).'/'.$class.'.php');
+        require_once $file;
     }
 }
