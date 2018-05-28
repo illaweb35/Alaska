@@ -26,7 +26,7 @@ class Billets
         return $billets;
     }
     // lire un billet
-    public function readOne($id)
+    public function read($id)
     {
         $sql = ('SELECT * FROM T_billets WHER id = :id');
         $request = $this->_pdo->query($sql);

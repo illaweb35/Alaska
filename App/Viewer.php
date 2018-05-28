@@ -27,9 +27,8 @@ class Viewer
             $content = \ob_get_clean();
             $title = $this->_title;
             require_once('../Src/Views/Template.phtml');
-            return \ob_get_clean();
         } else {
-            throw new \Exception("Fichier View :' .$this->_file. 'introuvable", 1);
+            throw new \Exception(Error::getError($errorMsg ="Fichier View :' .$this->_file. 'introuvable", 1));
         }
     }
 }

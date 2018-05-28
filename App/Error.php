@@ -1,12 +1,14 @@
 <?php
 namespace App;
 
+use App\Viewer;
+
 abstract class Error
 {
-    public function getError($errorMsg)
+    public static function getError($errorMsg)
     {
-        $view = new View("Error", 'Page d\'erreur');
-        $view->generate(array('errorMsg' => $errorMsg));
-        require_once('../src/views/ErrorView.phtml');
+        $view = new Viewer("Error", 'Page d\'erreur');
+        $view->createFile(['errorMsg' => $errorMsg]);
+        require_once('../Src/Views/Error.phtml');
     }
 }

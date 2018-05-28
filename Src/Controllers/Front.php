@@ -14,4 +14,11 @@ class Front extends Main
         $view = new Viewer('Front/index', 'Accueil');
         $view->createFile(['billets' => $billets]);
     }
+    public function posting($id)
+    {
+        $billets = $this->Billets->read($id);
+        $comments = $this->Comments->read($id);
+        $view = new Viewer('Front/post', 'Déatils d\'un article');
+        $view->createFile(['billets'=>$billets,'comments' =>$comments]);
+    }
 }

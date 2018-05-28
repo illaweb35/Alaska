@@ -2,10 +2,10 @@
 <div class="hero-body">
   <div class="container">
     <h1 class="title" >
-      Mon Blog Ecrivain
+    Jean Forteroche
     </h1>
-    <h2 class="subtitle is-capitalized">
-      Présentation de mon livre en court de rédaction...
+    <h2 class="subtitle ">
+  Billet simple pour L'Alaska...
     </h2>
   <div class="container has-text-centered">
   <a href="#one">
@@ -19,10 +19,7 @@
 </section>
 <section  class="section is-medium " >
 <div id="one"class="container has-text-centered">
-  <h1 class="title">
-    Découvrir mon récit
-  </h1>
-Découvrirez au fur et à mesure des billets, l'architecture de mon ouvrage donnant lieu à mon oeuvre finale...
+Suivez mon nouveau roman...par épisode
 </div>
 </section>
 <section class="section">
@@ -47,7 +44,7 @@ Découvrirez au fur et à mesure des billets, l'architecture de mon ouvrage donn
               <div class="content">
                 <p><?= substr(nl2br(htmlspecialchars($billet->getContent())), 0, 150); ?>...</p>
                  <time datetime="1-1-2016">
-                   <small>Publié le : <em><?= date(' d m Y à H : i', strtotime($billet->getDateCrea())); ?></em></small>
+                   <small>Publié le : <em><?= date(' d m Y à H : i', strtotime($billet->getCreate_at())); ?></em></small>
                  </time>
               </div>
             </div>
