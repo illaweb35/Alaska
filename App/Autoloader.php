@@ -1,4 +1,5 @@
 <?php
+require_once('Pattern/Singleton.trait.php');
 use Alaska\App\Pattern\Singleton;
 
 class Autoloader
