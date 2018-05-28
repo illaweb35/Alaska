@@ -1,6 +1,7 @@
 <?php
 namespace Src\Entity;
 
+require_once('../App/Pattern/Hydrator.trait.php');
 use App\Pattern\Hydrator;
 
 class Billet

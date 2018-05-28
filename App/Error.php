@@ -3,7 +3,7 @@ namespace App;
 
 class Error
 {
-    public static function gestionError($errorMsg)
+    public static function getError($errorMsg)
     {
         $view = new Viewer("Error", 'Page d\'erreur');
         $view->generate(['errorMsg' => $errorMsg]);
