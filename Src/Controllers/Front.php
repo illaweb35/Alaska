@@ -1,6 +1,8 @@
 <?php
 namespace Src\Controllers;
 
+use App\Viewer;
+
 class Front extends Main
 {
     const MAX_POST = 4;
@@ -10,6 +12,6 @@ class Front extends Main
     {
         $billets = $this->Billets->readAll(0, self::MAX_POST);
         $view = new Viewer('Front/index', 'Accueil');
-        $view->generate(['billets' => $billets]);
+        $view->createFile(['billets' => $billets]);
     }
 }

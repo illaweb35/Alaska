@@ -1,0 +1,10 @@
+ php_value memory_limit 64M
+ Options -MultiViews
+ RewriteEngine On
+
+ RewriteBase /Alaska/Web
+
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+
+ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

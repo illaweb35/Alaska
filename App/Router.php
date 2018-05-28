@@ -33,13 +33,13 @@ class Router
                         }
                     }
                 } else {
-                    Error::getError('la Route suivant l\'url demandée n\a pas été  trouvée');
+                    throw new \Exception("La route suivant l'url demandée n'a pas été trouvé ou n'existe pas", 1);
                 }
             } else {
                 $this->_route->index();
             }
         } catch (\Exception $e) {
-            Error::getError($e->getMessage());
+            throw new \Exception($e->getMessage(), 1);
         }
     }
 }
