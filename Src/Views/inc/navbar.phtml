@@ -1,0 +1,43 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a class="navbar-item" href="<?= BASEPATH ?>" title="Retour à la page d'accueil">
+          <img src="https://loremflickr.com/120/120" alt="LoremFlickr image">
+        <div class="brand-content">
+          <div class="brand-title">
+          <h1 class="title">
+          Blog
+          </h1>
+          </div>
+          <div class="brand-subtitle">
+            <p>Mon livre</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <button class="button navbar-burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="navbar-menu" id="navMenu">
+  <div class="navbar-end">
+    <?php if (isset($_SESSION['logged'])): ?>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link" href="#">
+         Utilisateurs
+       </a>
+       <div class="navbar-dropdown is-boxed">
+         <a class="navbar-item" href="<?= BASEPATH.'Back/logout'?>" class="navbar-item">
+           Se déconnecter
+         </a>
+       </div>
+    <?php else: ?>
+    <a href="" class="navbar-item">Accueil</a>
+    <a href="" class="navbar-item">Blog</a>
+    <a href="" class="navbar-item">Admin</a>
+  <?php endif; ?>
+  </div>
+  </div>
+</nav>

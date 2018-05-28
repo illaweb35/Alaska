@@ -1,0 +1,61 @@
+<section class="hero is-fullheight">
+<div class="hero-body">
+  <div class="container">
+    <h1 class="title" >
+      Mon Blog Ecrivain
+    </h1>
+    <h2 class="subtitle is-capitalized">
+      Présentation de mon livre en court de rédaction...
+    </h2>
+  <div class="container has-text-centered">
+  <a href="#one">
+    <span class="icon" id="circle" title="Vers les derniers billets">
+      <i class="fas fa-arrow-circle-down fa-5x"></i>
+    </span>
+  </a>
+  </div>
+  </div>
+</div>
+</section>
+<section  class="section is-medium " >
+<div id="one"class="container has-text-centered">
+  <h1 class="title">
+    Découvrir mon récit
+  </h1>
+Découvrirez au fur et à mesure des billets, l'architecture de mon ouvrage donnant lieu à mon oeuvre finale...
+</div>
+</section>
+<section class="section">
+<div class="container">
+  <div class="columns is-centered">
+      <?php foreach ($billets as $billet):?>
+    <div class="column is-3">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image ">
+            <img id="homePost" src="<?= BASEPATH ?>img/posts/<?= $billet->getImage() ?>" alt="<?= $billet->getTitle()?>">
+          </figure>
+          <div class="card-content">
+            <div class="media-content">
+              <p class="title is-4" title="Lien vers le détail de l'billet">
+                <a href="<?= BASEPATH.'Front/post/'.$billet->getId()?>">
+                <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
+              </p>
+              <p class="subtitle is-6">
+                <strong><?=  htmlspecialchars($billet->getAuthor()) ?></strong>
+              </p>
+              <div class="content">
+                <p><?= substr(nl2br(htmlspecialchars($billet->getContent())), 0, 150); ?>...</p>
+                 <time datetime="1-1-2016">
+                   <small>Publié le : <em><?= date(' d m Y à H : i', strtotime($billet->getDateCrea())); ?></em></small>
+                 </time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <?php endforeach; ?>
+  </div>
+</div>
+</section>
