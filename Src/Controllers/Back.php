@@ -43,7 +43,7 @@ class Back extends Main
         $comments = $this->Comments->readAll();
         $users = $this->Users->userAll();
         $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
-        $view->createFile(['articles' => $articles,'comments'=>$comments,'users'=>$users]);
+        $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users]);
     }
     public function listeUser()
     {
@@ -60,9 +60,9 @@ class Back extends Main
             exit;
         }
         if (isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])) {
-            $result = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
         }
-        $user =$this->Users;
+        $user = $this->Users;
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
         $view->createFile(['user'=>$user]);
     }

@@ -22,7 +22,7 @@ class Users
         $request->bindValue(':username', $username, \PDO::PARAM_STR);
         $request->bindValue(':password', $password, \PDO::PARAM_STR);
         $request->execute();
-        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'src\entities\User');
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         if ($request->rowCount() == 1) {
             if (session_status() == PHP_SESSION_NONE) {
                 \session_start();
@@ -53,7 +53,7 @@ class Users
             $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         }
         $request->execute();
-        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'src\entities\User');
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         if ($users = $request->fetchAll()) {
             return $users;
         }
@@ -84,6 +84,7 @@ class Users
                 $request->bindValue(':role', $role, \PDO::PARAM_STR);
                 $request->bindValue(':dateCrea', $dateCrea);
                 $request->execute();
+                $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
                 return $user;
             } catch (PDOException $e) {
                 throw new \Exception(Error::getError($e->getMessage()), 1);
@@ -108,6 +109,7 @@ class Users
             $request->bindValue(':role', $role, \PDO::PARAM_STR);
             $request->bindValue(':dateCrea', $dateCrea);
             return $request->execute();
+            $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
             throw new \Exception(Error::getError($e->getMessage()), 1);
         }
