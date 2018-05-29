@@ -37,30 +37,19 @@ class Comments
         return null;
     }
     // Creation d'un commentaire
-    public function create()
+    public function create($pseudo, $content, $bil_id)
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
-            $pseudo = \htmlspecialchars($_POST['pseudo']);
-            $content = \htmlspecialchars($_POST['content']);
-            $bil_id =\htmlspecialchars($_POST['bil_id']);
-            $create_at = date(DATE_W3C);
-            try {
-                $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,:create_at,:bil_id)';
-                $request = $this->_pdo->prepare($sql);
-                $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
-                $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
-                $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
-                $request->bindValue(':create_at', $create_at);
-                $verif_is_ok = $request->execute();
-                $request->closeCursor();
-                if (!$verif_is_ok) {
-                    return false;
-                } else {
-                    return $_POST['bil_id'];
-                }
-            } catch (PDOException $e) {
-                throw new \Exception(Error::getError($e->getMessage()), 1);
-            }
+        try {
+            $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,now(),:bil_id)';
+            $request = $this->_pdo->prepare($sql);
+            $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
+            $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
+            $request->bindValue(':art_id', $art_id, \PDO::PARAM_INT);
+            $request->execute();
+            $request->closeCursor();
+            return $_POST['bil_id'];
+        } catch (PDOException $e) {
+            throw new \Exception(Error::getError($e->getMessage()), 1);
         }
     }
     // Mise à jour de Billet

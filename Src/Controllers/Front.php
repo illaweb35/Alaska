@@ -32,9 +32,16 @@ class Front extends Main
     // création d'un commentaire pour le billet en cour
     public function addComment()
     {
-        $comment = $this->Comments->create();
-        if ($comment !== false) {
-            header('Location:'.BASEPATH.'Front/posting/'.$comment);
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
+            $pseudo = htmlspecialchars($_POST['pseudo']);
+            $content = htmlspecialchars($_POST['content']);
+            $bil_id = htmlspecialchars($_POST['bil_id']);
+            $comment = $this->Comments->create($pseudo, $content, $bil_id);
+            if ($comment !== false) {
+                header('Location:'.BASEPATH.'Front/posting/'.$comment);
+            }
+        } else {
+            throw new \Exception(Error::getError("Une erreur est survenue"), 1);
         }
     }
 }

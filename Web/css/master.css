@@ -31,7 +31,6 @@
 
 #bandeau {
   border-radius: 2px 20px;
-  -webkit-filter: blur(2px);
 }
 
 .scrollup {
@@ -44,8 +43,8 @@
   text-decoration: underline;
 }
 
-#moderate:hover {
-  color: #4475f6;
+#Map_Alaska {
+  max-height: 250px;
 }
 
 #admin_img {
