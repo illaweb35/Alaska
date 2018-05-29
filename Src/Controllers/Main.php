@@ -19,4 +19,8 @@ class Main
         $this->Comments = new Comments();
         $this->Users = new Users();
     }
+    protected function isLogged()
+    {
+        return !empty($_SESSION['is_logged']);
+    }
 }

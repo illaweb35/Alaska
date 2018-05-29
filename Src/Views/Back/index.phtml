@@ -11,10 +11,14 @@
               </figure>
             </div>
             <div class="field">
-              <input type="text" class="input" name="userEmail" placeholder="Adresse email">
+              <label for="" class="label">
+                Nom d'utilisateur
+              </label>
+              <input type="text" class="input" name="username" placeholder="utilisateur">
             </div>
             <div class="field">
-              <input type="password" class="input" name="userPass" placeholder="mot de passe">
+              <label for="password" class="label">Password</label>
+              <input type="password" class="input" name="password" placeholder="mot de passe">
             </div>
             <div class="field has-addons">
               <div class="control">
@@ -23,12 +27,11 @@
                 </div>
               </div>
               <p>Si vous ne possedez pas de compte vous pouvez vous
-                <a href="<?= BASEPATH.'Back/signup/'?>">s'inscrire</a>
+                <a href="<?= BASEPATH.'Back/signup/'?>">Inscrire</a>
                   <span class="icon has-text-info">
                     <i class="fas fa-user-plus"></i>
                   </span>
               </p>
-              <p><a href="<?= BASEPATH.'Back/fpass'?>">Mot de passe perdu</a></p>
             </div>
           </form>
         </div>

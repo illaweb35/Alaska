@@ -1,0 +1,62 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Tableau de Bord</h1>
+    <div class="columns">
+      <div class="column">
+        <div class="box notification is-link">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img src="https://loremflickr.com/120/120" alt="">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="subtitle is-3">
+              Article
+              </p>
+              <p><?= count($articles) ?> Articles publiés.</p>
+              <hr/>
+              <p> Articles en attente de publication</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box notification is-info">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img src="https://loremflickr.com/120/120" alt="">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="subtitle is-3">
+                Commentaires
+              </p>
+              <p><?= count($comments)?> commentaires publiés</p>
+              <hr/>
+              <p> commentaires signalés</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box notification is-primary">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img src="https://loremflickr.com/120/120" alt="">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="subtitle is-3">
+                Utilisateurs
+              </p>
+              <p>Nombres: <?= count($users) ?></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
