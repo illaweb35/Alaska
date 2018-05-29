@@ -1,0 +1,35 @@
+<section class="section">
+  <?php foreach ($billets as $billet):?>
+<div class="container">
+    <div class="box">
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img src="<?= BASEPATH.'img/posts/'.$billet->getImage() ?>" alt="<?= $billet->getTitle()?>">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <a href="<?= BASEPATH .'Front/posting/'. $billet->getId()?>">
+              <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
+            </p>
+            <br/>
+            <p>
+            <?=  substr(nl2br(htmlspecialchars($billet->getContent())), 0, 150); ?>...
+            </p>
+            <br/>
+              <small>Publié le :
+                <em>
+                <?= date(' d m Y à H : i', strtotime($billet->getCreate_at())); ?>
+              </em>
+            </small>
+            <p>Par <strong><?= htmlspecialchars($billet->getAuthor()) ?></strong>
+            </p>
+          </div>
+         </div>
+      </article>
+    </div>
+  </div>
+  <?php endforeach; ?>
+</section>

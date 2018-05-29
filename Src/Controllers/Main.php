@@ -13,7 +13,7 @@ class Main
         if (\session_status() == PHP_SESSION_NONE) {
             \session_start();
         }
-        $this->_id = (int)(!empty($_GET['id']) ? $_GET[id]: 0);
+        $this->_id = (int)(!empty($_GET['id']) ? $_GET['id']: 0);
         $this->Billets = new Billets();
         $this->Comments = new Comments();
     }

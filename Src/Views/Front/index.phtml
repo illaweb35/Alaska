@@ -30,12 +30,12 @@ Suivez mon nouveau roman...par épisode
       <div class="card">
         <div class="card-image">
           <figure class="image ">
-            <img id="homePost" src="<?= BASEPATH ?>img/posts/<?= $billet->getImage() ?>" alt="<?= $billet->getTitle()?>">
+            <img id="homePost" src="<?= BASEPATH.'/img/posts/'. $billet->getImage()?>" alt="<?= $billet->getTitle()?>">
           </figure>
           <div class="card-content">
             <div class="media-content">
               <p class="title is-4" title="Lien vers le détail de l'billet">
-                <a href="<?= BASEPATH.'Front/post/'.$billet->getId()?>">
+                <a href="<?= BASEPATH.'Front/posting/'.$billet->getId()?>">
                 <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
               </p>
               <p class="subtitle is-6">

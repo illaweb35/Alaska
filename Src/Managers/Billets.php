@@ -28,13 +28,12 @@ class Billets
     // lire un billet
     public function read($id)
     {
-        $sql = ('SELECT * FROM T_billets WHER id = :id');
-        $request = $this->_pdo->query($sql);
-        $request->binValue(':id', $id, \PDO::PARAM_INT);
+        $sql = ("SELECT * FROM T_billets WHERE id_bil = :id");
+        $request = $this->_pdo->prepare($sql);
+        $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $request->execute();
-        $request->setFecthMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
-        if ($billet = $request->fetch()) {
-            $request->closeCursor();
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
+        if ($billets = $request->fetch()) {
             return $billets;
         }
         return null;
@@ -79,7 +78,7 @@ class Billets
     // Effacer un Billet
     public function delete($id)
     {
-        $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id = :id');
+        $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id');
         $request->bindparam(':id', $id);
         $request->execute();
         return true;

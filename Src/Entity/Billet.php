@@ -6,7 +6,7 @@ use App\Pattern\Hydrator;
 
 class Billet
 {
-    private $id;
+    private $id_bil;
     private $title;
     private $author;
     private $content;
@@ -26,7 +26,7 @@ class Billet
     public function setAuthor($author)
     {
         if (!is_string($author) || empty($author)) {
-            Error::gestionError('Le champ ne doit pas être vide et ne contenir que des caractères');
+            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->author = $author;
         }
@@ -34,7 +34,7 @@ class Billet
     public function setTitle($title)
     {
         if (!is_string($title) || empty($title)) {
-            Error::gestionError('Le champ ne doit pas être vide et ne contenir que des caractères');
+            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->title = $title;
         }
@@ -42,7 +42,7 @@ class Billet
     public function setContent($content)
     {
         if (!is_string($content) || empty($content)) {
-            Error::gestionError('Le champ ne doit pas être vide et ne contenir que des caractères');
+            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->content = $content;
         }
@@ -70,7 +70,7 @@ class Billet
     // GETTERS
     public function getId()
     {
-        return $this->id;
+        return $this->id_bil;
     }
     public function getAuthor()
     {
