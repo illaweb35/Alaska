@@ -1,0 +1,37 @@
+<section class="section">
+<h1>Connexion</h1>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="box">
+        <div class="column">
+          <form action="<?= BASEPATH.'Back/login'?>" method="post">
+            <div class="box">
+              <figure class="image is-centered">
+                  <img id="admin_img" src="<?= BASEPATH."/img/admin.png" ?>" alt="Administrateur avec casque et micro">
+              </figure>
+            </div>
+            <div class="field">
+              <input type="text" class="input" name="userEmail" placeholder="Adresse email">
+            </div>
+            <div class="field">
+              <input type="password" class="input" name="userPass" placeholder="mot de passe">
+            </div>
+            <div class="field has-addons">
+              <div class="control">
+                <button class="button is-link" type="submit">Se connecter</button>
+                <button class="button is-text" type="reset">Annulé</button>
+                </div>
+              </div>
+              <p>Si vous ne possedez pas de compte vous pouvez vous
+                <a href="<?= BASEPATH.'Back/signup/'?>">s'inscrire</a>
+                  <span class="icon has-text-info">
+                    <i class="fas fa-user-plus"></i>
+                  </span>
+              </p>
+              <p><a href="<?= BASEPATH.'Back/fpass'?>">Mot de passe perdu</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</section>

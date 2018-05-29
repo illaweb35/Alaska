@@ -1,0 +1,40 @@
+<section class="section">
+  <div class="container">
+    <form action="logged" method="post">
+      <div class="field">
+        <label for="username" class="label">Nom d'utilisateur</label>
+        <input type="text" class="input" name="username" id="username"/>
+      </div>
+      <div class="field">
+        <label for="email" class="label">Email</label>
+        <input type="text" class="input" name="email" id="email"/>
+      </div>
+      <div class="field">
+        <label for="password" class="label">Mot de passe</label>
+        <input type="password" class="input" name="password" id="password"/>
+      </div>
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="role">
+          Admin
+        </label>
+        <label clas="radio">
+          <input type="radio" name="role">
+          Modérateur
+        </label>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" name="remember">
+          Remember me
+      </label>
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="button is-link">Enregistrer</button>
+        </div>
+        <div class="control">
+          <button type="reset" class="button is-text">Annulé</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

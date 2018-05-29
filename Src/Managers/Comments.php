@@ -59,18 +59,42 @@ class Comments
                     return $_POST['bil_id'];
                 }
             } catch (PDOException $e) {
-                Error::getError($e->getMessage());
+                throw new \Exception(Error::getError($e->getMessage()), 1);
             }
         }
     }
     // Mise à jour de Billet
     public function update()
     {
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
+            $pseudo = \htmlspecialchars($_POST['pseudo']);
+            $content = \htmlspecialchars($_POST['content']);
+            $bil_id =\htmlspecialchars($_POST['bil_id']);
+            $modif_at = date(DATE_W3C);
+            try {
+                $sql = 'UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=:modif_at, bil_id=:bil_id WHERE id=:id';
+                $request = $this->_pdo->prepare($sql);
+                $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
+                $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
+                $request->bindValue(':modif_at', $modif_at);
+                $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
+                $request->bindValue(':id', $id, \PDO::PARAM_INT);
+                $verif_is_ok = $request->execute();
+                $request->closeCursor();
+                if (!$verif_is_ok) {
+                    return false;
+                } else {
+                    return $_POST['bil_id'];
+                }
+            } catch (PDOException $e) {
+                Error::getError($e->getMessage());
+            }
+        }
     }
     // Effacer un Billet
     public function delete($id)
     {
-        $request = $this->_pdo->prepare('DELETE FROM T_bcomments WHERE id_com = :id');
+        $request = $this->_pdo->prepare('DELETE FROM T_comments WHERE id_com = :id');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         $request->execute();
         return true;
