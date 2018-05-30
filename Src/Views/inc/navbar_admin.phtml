@@ -1,16 +1,16 @@
-<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top is-info" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <div class="navbar-item">
       <a class="navbar-item" href="<?= BASEPATH ?>" title="Retour à la page d'accueil">
-          <img src="<?= BASEPATH.'/img/Logo.jpg'?>" alt="LoremFlickr image">
-        <div class="brand-content">
+        <img src="<?= BASEPATH.'/img/Logo.jpg'?>" alt="LoremFlickr image">
+         <div class="brand-content">
           <div class="brand-title">
-          <h1 class="title">
-          Blog
-          </h1>
+           <h1 class="title">
+           Blog
+           </h1>
           </div>
           <div class="brand-subtitle">
-            <p>Mon livre</p>
+           <p>Mon livre</p>
           </div>
         </div>
       </a>
@@ -23,31 +23,37 @@
   </div>
   <div class="navbar-menu" id="navMenu">
   <div class="navbar-end">
-    <a href="<?= BASEPATH ?>" class="navbar-item">Accueil</a>
-    <a href="<?= BASEPATH.'Front/list'?>" class="navbar-item">Blog</a>
+    <a href="<?= BASEPATH.'Back/onBoard'?>" class="navbar-item" title="Tableau de bord">
+      <span class="icon">
+        <i class="fas fa-2x fa-tachometer-alt"></i>
+      </span>
+    </a>
+    <a href="<?= BASEPATH.'Back/write'?>" class="navbar-item" title="écrire un billet">
+      <span class="icon">
+        <i class="fas fa-2x fa-edit"></i>
+      </span>
+    </a>
+    <a href="<?= BASEPATH.'Back/list'?>" class="navbar-item" title="Liste des billets">
+      <span class="icon">
+        <i class="fas fa-2x fa-th-list"></i>
+      </span>
+    </a>
+    <a href="<?= BASEPATH.'Back/parameter'?>" class="navbar-item" title="Paramètres">
+      <span class="icon">
+        <i class="fas fa-2x fa-cog"></i>
+      </span>
+    </a>
     <div class="navbar-item has-dropdown is-hoverable">
      <a class="navbar-link" href="">
-      Admin
+      Connexion
      </a>
-     <div class="navbar-dropdown is-boxed">
-       <a class="navbar-item" href="/documentation/overview/start/">
-         Overview
-       </a>
-       <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-         Modifiers
-       </a>
-       <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-         Columns
-       </a>
-       <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-         Layout
-       </a>
-       <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-         Form
-       </a>
+     <div class="navbar-dropdown ">
        <hr class="navbar-divider">
+       <a class="navbar-item" href="<?= BASEPATH.'Front/index'?>">
+        Quitter
+       </a>
        <a class="navbar-item" href="<?= BASEPATH.'Main/logout'?>">
-        déconnection
+        Déconnecter
        </a>
 
      </div>

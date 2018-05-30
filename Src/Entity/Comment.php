@@ -66,7 +66,7 @@ class Comment
     {
         return $this->create_at;
     }
-    public function getBil_Id()
+    public function getBil_id()
     {
         return $this->bil_id;
     }

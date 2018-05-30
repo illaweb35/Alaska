@@ -58,6 +58,40 @@
 </section>
 <section class="section">
   <div class="container">
-    <h2 class="title">Commentaires non lus</h2>
+    <h2 class="title">Commentaires non moderés</h2>
+    <table class="table  is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Pseudo</th>
+          <th>Commentaire</th>
+          <th>Billet</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+        <?php foreach ($comments as $comment):?>
+      <tbody>
+        <td><?= htmlspecialchars($comment->getPseudo())?></td>
+        <td><?= substr(nl2br(htmlspecialchars($comment->getContent())), 0, 100); ?> ...</td>
+        <td><?= htmlspecialchars($comment->getBil_id())?></td>
+        <td>
+          <a href="">
+            <span class="icon">
+              <i class="fas fa-check"></i>
+            </span>
+          </a>
+          <a href="">
+            <span class="icon">
+              <i class="fas fa-edit"></i>
+            </span>
+          </a>
+          <a href="">
+            <span class="icon">
+              <i class="fas fa-trash"></i>
+            </span>
+          </a>
+        </td>
+      </tbody>
+            <?php endforeach?>
+    </table>
   </div>
 </section>
