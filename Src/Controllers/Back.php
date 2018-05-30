@@ -7,17 +7,17 @@ use App\Viewer;
 
 class Back extends Main
 {
-    // retour à l'accueil si deéconnecté
+    // retour à l'accueil si déconnecté
     public function index()
     {
-        if (!$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
     }
     //affichage Tableau de bord si connecté
     public function onBoard()
     {
-        if (!$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             exit;
         }
         $billets = $this->Billets->readAll();
@@ -26,27 +26,29 @@ class Back extends Main
         $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
         $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users]);
     }
-    //affichage de la liste des utilisateurs
-    public function listeUser()
+
+    public function list()
     {
-        if (!$this->isLogged()) {
-            exit;
-        }
-        $users = $this->Users->userAll();
-        $view = new Viewer('Back/Users', 'Liste des Utilisateurs');
-        $view->createFile(['users'=>$user]);
+        $billets =$this->Billets->readAll();
+        $view = new Viewer('Back/list', 'Liste des billets');
+        $view->createFile(['billets' => $billets]);
     }
-    // inscription
-    public function signup()
+    public function write()
     {
-        if (!$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             exit;
         }
-        if (isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])) {
-            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+        $billets = $this->Billets->create();
+        $view = new Viewer('Back/write', " Ecriture d'un billet");
+        $view->createFile(['billets'=>$billets]);
+    }
+    public function modif($id)
+    {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+            exit;
         }
-        $user = $this->Users;
-        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
-        $view->createFile(['user'=>$user]);
+        $billets = $this->Billets->read($id);
+        $view = new Viewer('Back/write', " Ecriture d'un billet");
+        $view->createFile(['billets'=>$billets]);
     }
 }

@@ -10,8 +10,8 @@ class User
     private $_username;
     private $_email;
     private $_password;
-    private $_status;
-    private $_token;
+    private $_role;
+    private $_create_at;
 
     public function __construct($data=[])
     {
@@ -45,17 +45,17 @@ class User
             $this->_password = $_password;
         }
     }
-    public function setStatus($_status)
+    public function setRole($_role)
     {
-        if (!\is_string($_status) || empty($_status)) {
+        if (!\is_string($_role) || empty($_role)) {
             throw new \Exception(Error::getError("Une erreur est survenue, merci de vérifier que vous avez sélectionner une option"), 1);
         } else {
-            $this->_status = $_status;
+            $this->_role = $_role;
         }
     }
-    public function setToken($_token)
+    public function setCreate_at($_create_at)
     {
-        $this->_token = $_token;
+        $this->_create_at = $_create_at;
     }
     // GETTERS
     public function getId()
@@ -74,12 +74,12 @@ class User
     {
         return $this->_password;
     }
-    public function getStatus()
+    public function getRole()
     {
-        return $this->_status;
+        return $this->_role;
     }
-    public function getToken()
+    public function getCreate_at()
     {
-        return $this->_token;
+        return $this->_create_at;
     }
 }

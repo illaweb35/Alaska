@@ -77,12 +77,11 @@ class Users
             throw new \Exception(Error::getError("Nom d'utilisateur ou email deja utilisé"), 1);
         } else {
             try {
-                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, dateCrea) VALUES (:name, :email, :password, :role, :dateCrea)');
+                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:name, :email, :password, :role, NOW())');
                 $request->bindValue(':name', $username, \PDO::PARAM_STR) ;
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
                 $request->bindValue(':role', $role, \PDO::PARAM_STR);
-                $request->bindValue(':dateCrea', $dateCrea);
                 $request->execute();
                 $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
                 return $user;

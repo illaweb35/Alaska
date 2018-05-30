@@ -50,4 +50,18 @@ class Main
         header('Location: '.\BASEPATH.'Back/index');
         exit;
     }
+    // inscription
+    public function signup()
+    {
+        if (!$this->isLogged()) {
+            exit;
+        }
+        if (isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])) {
+            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+        }
+        $user = $this->Users->createUser();
+        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
+        $view->createFile(['user'=>$user]);
+        header('Location:'.\BASEPATH.'Back/onBoard');
+    }
 }
