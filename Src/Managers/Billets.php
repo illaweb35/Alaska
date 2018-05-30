@@ -9,7 +9,7 @@ class Billets
 
     public function __construct()
     {
-        $this->_pdo = new Dbd;
+        $this->_pdo =  new Dbd;
     }
     // Lire tous les billets
     public function readAll($debut = -1, $limite = -1)
@@ -55,7 +55,7 @@ class Billets
                 $request->bindValue(':title', $title, \PDO::PARAM_STR);
                 $request->bindValue(':author', $author, \PDO::PARAM_STR);
                 $request->bindValue(':content', $content, \PDO::PARAM_STR);
-                $request->binValue(':image', $image, \PDO::PARAM_STR);
+                $request->bindValue(':image', $image, \PDO::PARAM_STR);
                 $request->bindValue(':create_at', $create_at);
                 $request->bindValue(':modif_at', $modif_at);
                 $request->bindvalue(':posted', $posted);
