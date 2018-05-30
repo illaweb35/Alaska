@@ -7,33 +7,14 @@ use App\Viewer;
 
 class Back extends Main
 {
-    public function login()
+    // retour à l'accueil si deéconnecté
+    public function index()
     {
-        if ($this->isLogged()) {
-            header('Location;'.BASEPATH.'/Front/Home');
+        if (!$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/index');
         }
-        if (isset($_POST['username']) and isset($_POST['password'])) {
-            $this->Users->connexion($_POST['username'], $_POST['password']);
-        }
-        if (isset($_SESSION['id'])) {
-            header('Location:'.BASEPATH.'Back/Dasboard/');
-        }
-        $_SESSION['is_logged'] = 1;
-        $user = $this->Users;
-        $view = new Viewer('Back/index', 'Mon Blog _ login');
-        $view->createFile(['user' => $user]);
     }
-    public function logout()
-    {
-        if (!empty($_SESSION)) {
-            $_SESSION = array();
-            session_unset();
-            session_destroy();
-        }
-        header('Location: '.\BASEPATH.'Back/login');
-        exit;
-    }
-
+    //affichage Tableau de bord si connecté
     public function onBoard()
     {
         if (!$this->isLogged()) {
@@ -45,6 +26,7 @@ class Back extends Main
         $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
         $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users]);
     }
+    //affichage de la liste des utilisateurs
     public function listeUser()
     {
         if (!$this->isLogged()) {
@@ -54,6 +36,7 @@ class Back extends Main
         $view = new Viewer('Back/Users', 'Liste des Utilisateurs');
         $view->createFile(['users'=>$user]);
     }
+    // inscription
     public function signup()
     {
         if (!$this->isLogged()) {

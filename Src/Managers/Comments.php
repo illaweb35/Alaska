@@ -37,21 +37,31 @@ class Comments
         return null;
     }
     // Creation d'un commentaire
-    public function create($pseudo, $content, $bil_id)
+    public function create()
     {
-        try {
-            $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,now(),:bil_id)';
-            $request = $this->_pdo->prepare($sql);
-            $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
-            $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
-            $request->bindValue(':art_id', $art_id, \PDO::PARAM_INT);
-            $request->execute();
-            $request->closeCursor();
-            return $_POST['bil_id'];
-        } catch (PDOException $e) {
-            throw new \Exception(Error::getError($e->getMessage()), 1);
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
+            $pseudo = htmlspecialchars($_POST['pseudo']);
+            $content = htmlspecialchars($_POST['content']);
+            $bil_id = htmlspecialchars($_POST['bil_id']);
+            try {
+                $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,NOW(),:bil_id)';
+                $request = $this->_pdo->prepare($sql);
+                $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
+                $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
+                $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
+                $verifIsOk = $request->execute();
+                $request->closeCursor();
+                if (!$verifIsOk) {
+                    return false;
+                } else {
+                    return $_POST['bil_id'];
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
         }
     }
+
     // Mise à jour de Billet
     public function update()
     {

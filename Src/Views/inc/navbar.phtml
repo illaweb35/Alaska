@@ -23,21 +23,9 @@
   </div>
   <div class="navbar-menu" id="navMenu">
   <div class="navbar-end">
-    <?php if (isset($_SESSION['authenticated'])): ?>
-      <div class="navbar-item has-dropdown is-hoverable">
-       <a class="navbar-link" href="#">
-         Utilisateurs
-       </a>
-       <div class="navbar-dropdown is-boxed">
-         <a class="navbar-item" href="<?= BASEPATH.'Back/logout'?>" class="navbar-item">
-           Se déconnecter
-         </a>
-       </div>
-    <?php else: ?>
     <a href="<?= BASEPATH ?>" class="navbar-item">Accueil</a>
     <a href="<?= BASEPATH.'Front/list'?>" class="navbar-item">Blog</a>
-    <a href="<?= BASEPATH.'Back/login'?>" class="navbar-item">Admin</a>
-  <?php endif; ?>
+    <a href="<?= BASEPATH.'Main/login'?>" class="navbar-item">Admin</a>
   </div>
   </div>
 </nav>

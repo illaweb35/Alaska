@@ -16,5 +16,10 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 <body>
 <header id="haut">
-  <?php include_once('navbar.phtml')?>
+  <?php
+  if (isset($_SESSION['authenticated'])) {
+      include_once('navbar_admin.phtml');
+  } else {
+      include_once('navbar.phtml');
+  }?>
 </header>

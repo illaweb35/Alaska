@@ -41,7 +41,9 @@
                         <?= htmlspecialchars($comment->getPseudo())?>
                       </strong> a écrit:
                     </p>
-                    </span>
+                  </span>
+                    <small>Le <?= date('d M Y à H:i', strtotime($comment->getCreate_at()))?></small>
+                    
                     <p>
                       <?= nl2br(htmlspecialchars($comment->getContent())) ?>
                     </p>
