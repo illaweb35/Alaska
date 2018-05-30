@@ -10,6 +10,7 @@ class Users
     {
         $this->_pdo = new Dbd;
     }
+    // Connexion Admin
     public function connexion($username, $password)
     {
         if (!$_SERVER['REQUEST_METHOD'] == 'POST') {

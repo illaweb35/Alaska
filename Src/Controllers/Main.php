@@ -20,13 +20,15 @@ class Main
         $this->Comments = new Comments();
         $this->Users = new Users();
     }
+    // vérifie si la session existe
     protected function isLogged()
     {
         return !empty($_SESSION['is_logged']);
     }
+    // Page de connexion a la partie Admin
     public function login()
     {
-        if ($this->isLogged()) {
+        if (!$this->isLogged()) {
             header('Location;'.BASEPATH.'/Front/Home');
         }
         if (isset($_POST['username']) and isset($_POST['password'])) {
@@ -40,6 +42,20 @@ class Main
         $view = new Viewer('Back/index', 'Mon Blog _ login');
         $view->createFile(['user' => $user]);
     }
+
+    // inscription
+    public function signup()
+    {
+        if (!$this->isLogged()) {
+            exit();
+        }
+        if (isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])) {
+            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+        }
+        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
+        $view->createFile(array('user'=>$user));
+    }
+    // Déconnection de la partie Admin
     public function logout()
     {
         if (!empty($_SESSION)) {
@@ -49,19 +65,5 @@ class Main
         }
         header('Location: '.\BASEPATH.'Back/index');
         exit;
-    }
-    // inscription
-    public function signup()
-    {
-        if (!$this->isLogged()) {
-            exit;
-        }
-        if (isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])) {
-            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
-        }
-        $user = $this->Users->createUser();
-        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
-        $view->createFile(['user'=>$user]);
-        header('Location:'.\BASEPATH.'Back/onBoard');
     }
 }
