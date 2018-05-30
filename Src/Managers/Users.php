@@ -38,11 +38,7 @@ class Users
             throw new \Exception(Error::getError("Mauvais couple d'identifiant"), 1);
         }
     }
-    // haschage du mot de passe
-    public function mixMdp($p)
-    {
-        return  \password_hash("AlaskaBlog", PASSWORD_DEFAULT);
-    }
+
     // afficher les utilisateurs avec ou sans id
     public function userAll($id = null)
     {
@@ -112,5 +108,10 @@ class Users
         } catch (PDOException $e) {
             throw new \Exception(Error::getError($e->getMessage()), 1);
         }
+    }
+    // haschage du mot de passe
+    public function mixMdp($p)
+    {
+        return  \password_hash("AlaskaBlog", PASSWORD_DEFAULT);
     }
 }

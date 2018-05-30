@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title is-4">Liste des utilisateurs</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>email</th>
+          <th>Date de création</th>
+        </tr>
+      </thead>
+        <?php foreach ($users as $user):?>
+      <tbody>
+        <tr>
+          <td><?= htmlspecialchars($user->getUsername())?></td>
+          <td><?= htmlspecialchars($user->getMail())?></td>
+          <td><?= htmlspecialchars($user->getCreate_at())?></td>
+        </tr>
+      </tbody>
+      <?php endforeach;?>
+    </table>
+  </div>
+</section>

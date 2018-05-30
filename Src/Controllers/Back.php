@@ -18,7 +18,7 @@ class Back extends Main
     public function onBoard()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            exit;
+            header('Location:'.\BASEPATH.'Front/index');
         }
         $billets = $this->Billets->readAll();
         $comments = $this->Comments->readAll();
@@ -36,7 +36,7 @@ class Back extends Main
     public function write()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            exit;
+            header('Location:'.\BASEPATH.'Front/index');
         }
         $billets = $this->Billets->create();
         $view = new Viewer('Back/write', " Ecriture d'un billet");
@@ -45,10 +45,19 @@ class Back extends Main
     public function modif($id)
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            exit;
+            header('Location:'.\BASEPATH.'Front/index');
         }
         $billets = $this->Billets->read($id);
         $view = new Viewer('Back/write', " Ecriture d'un billet");
         $view->createFile(['billets'=>$billets]);
+    }
+    public function params()
+    {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/index');
+        }
+        $users = $this->Users->userAll();
+        $view = new Viewer('Back/params', 'Alaska _ Paramètres');
+        $view->createFile(['users'=>$users]);
     }
 }
