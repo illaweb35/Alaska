@@ -11,10 +11,21 @@ class Comments
     {
         $this->_pdo = new Dbd;
     }
-    // Lire tous les commentaires
+    //Lire tous les commentaires
     public function readAll()
     {
         $sql =('SELECT * FROM T_comments ORDER BY create_at DESC');
+        $request = $this->_pdo->query($sql);
+        $request->execute();
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
+        $comments = $request->fetchAll();
+        $request->closeCursor();
+        return $comments;
+    }
+    // Lire tous les commentaires non signalé
+    public function readFront()
+    {
+        $sql =('SELECT * FROM T_comments WHERE moderate=0 ORDER BY create_at DESC');
         $request = $this->_pdo->query($sql);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');

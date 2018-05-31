@@ -35,6 +35,7 @@ class Users
             $_SESSION['authenticated'] = true;
             $_SESSION['token_uncrypted']= \uniqid();
             $_SESSION['token']= $this->mixMdp($_SESSION['token_uncrypted']);
+            $_SESSION['name'] = $_POST['username'];
             header('Location:'.BASEPATH.'Back/onBoard/');
         } else {
             throw new \Exception(Error::getError("Mauvais couple d'identifiant"), 1);

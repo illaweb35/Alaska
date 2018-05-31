@@ -18,7 +18,7 @@ class Front extends Main
     public function posting($id)
     {
         $billets = $this->Billets->read($id);
-        $comments = $this->Comments->readAll($id);
+        $comments = $this->Comments->readFront();
         $view = new Viewer('Front/post', 'Déatils d\'un article');
         $view->createFile(['billets'=>$billets,'comments' =>$comments]);
     }

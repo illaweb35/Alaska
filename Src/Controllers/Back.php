@@ -18,6 +18,7 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
+        
         $billets = $this->Billets->readAll();
         $comments = $this->Comments->readAll();
         $users = $this->Users->userAll();

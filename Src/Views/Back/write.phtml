@@ -3,6 +3,9 @@
  <section class="section">
   <div class="container">
     <h1 class="title">Poster un Billet</h1>
+    <div class="content">
+      <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+    </div>
     <div class="box">
       <form action="<?= BASEPATH.'Back/write'?>" method="post" enctype="multipart/form-data">
         <div class="field">
