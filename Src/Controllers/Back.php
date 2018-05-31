@@ -1,8 +1,6 @@
 <?php
 namespace Src\Controllers;
 
-use Src\Controllers\Main;
-use Src\Managers\Users;
 use App\Viewer;
 
 class Back extends Main
@@ -53,11 +51,22 @@ class Back extends Main
     }
     public function params()
     {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-        $users = $this->Users->userAll();
+        $user = $this->Users->userAll();
         $view = new Viewer('Back/params', 'Alaska _ Paramètres');
-        $view->createFile(['users'=>$users]);
+        $view->createFile(['user'=>$user]);
+    }
+    public function newUser()
+    {
+        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/index');
+        }
+        if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
+            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+        }
+        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
+        $view->createFile(array('user'=>$user));
     }
 }

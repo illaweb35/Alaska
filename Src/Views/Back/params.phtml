@@ -1,23 +1,84 @@
 <section class="section">
   <div class="container">
-    <h1 class="title is-4">Liste des utilisateurs</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Nom</th>
-          <th>email</th>
-          <th>Date de création</th>
-        </tr>
-      </thead>
-        <?php foreach ($users as $user):?>
-      <tbody>
-        <tr>
-          <td><?= htmlspecialchars($user->getUsername())?></td>
-          <td><?= htmlspecialchars($user->getMail())?></td>
-          <td><?= htmlspecialchars($user->getCreate_at())?></td>
-        </tr>
-      </tbody>
-      <?php endforeach;?>
-    </table>
+    <h1 class="title is-3">PARAMETRES</h1>
+    <div class="columns">
+      <div class="column">
+      <div class="box">
+        <div class="notification">
+          <p class="title is-5">
+            Liste des utilisateurs
+          </p>
+          <table class="table is-striped is-narrow is-hoverable ">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>email</th>
+                <th>Date de création</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+              <?php foreach ($user as $user):?>
+            <tbody>
+              <tr>
+                <td><?= htmlspecialchars($user->getUsername())?></td>
+                <td><?= htmlspecialchars($user->getMail())?></td>
+                <td><?= date(' d M Y à H:i', strtotime($user->getCreate_at()))?></td>
+                <td>
+                  <a href="">
+                    <span class="icon">
+                      <i class="fas fa-edit"></i>
+                    </span>
+                  </a>
+                  <a href="">
+                    <span class="icon">
+                      <i class="fas fa-trash"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+            <?php endforeach;?>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <div class="notification">
+            <p class="title is-5">
+              Ajouter un utilisateur
+              <form action="<?= BASEPATH.'Back/newUser'?>" method="post">
+                <div class="field">
+                  <label for="username" class="label">Nom d'utilisateur</label>
+                  <input type="text" class="input" name="username" placeholder="Utilisateur"required>
+                </div>
+                <div class="field">
+                  <label for="email" class="label">Email</label>
+                  <input type="text" class="input" name="email" placeholder="votre adresse email" required>
+                </div>
+                <div class="field">
+                  <label for="password" class="label">Mot de Passe</label>
+                  <input type="password" class="input" name="password" placeholder="Mot de passe " required>
+                </div>
+                <div class="field">
+                  <div class="select">
+                    <select name="role">
+                      <option value="Administrateur">Administrateur</option>
+                      <option value="Modérateur">Modérateur</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field has-addons">
+                  <div class="control">
+                    <button class="button is-link" type="submit">Ajouté</button>
+                    <button class="button is-text" type="reset">Annulé</button>
+                  </div>
+                </div>
+              </form>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

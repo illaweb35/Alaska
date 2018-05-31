@@ -3,15 +3,16 @@ namespace Src\Entity;
 
 require_once('../App/Pattern/Hydrator.trait.php');
 use App\Pattern\Hydrator;
+use App\Error;
 
 class User
 {
-    private $_id_user;
-    private $_username;
-    private $_email;
-    private $_password;
-    private $_role;
-    private $_create_at;
+    private $id_user;
+    private $username;
+    private $email;
+    private $password;
+    private $role;
+    private $create_at;
 
     public function __construct($data=[])
     {
@@ -21,65 +22,65 @@ class User
     }
     use Hydrator;
     //SETTERS
-    public function setUsername($_username)
+    public function setUsername($username)
     {
-        if (!\is_string($_username) || empty($_username)) {
+        if (!\is_string($username) || empty($username)) {
             throw new \Exception(Error::getError("Merci de remplir correctement le champ"), 1);
         } else {
-            $this->_username = $_username;
+            $this->username = $username;
         }
     }
-    public function setEmail($_email)
+    public function setEmail($email)
     {
-        if (!\is_string($_email) || empty($_email) and  filter_var($_email, FILTER_VALIDATE_EMAIL)) {
+        if (!\is_string($email) || empty($email) and  filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new \Exception(Error::getError("Merci de saisir une adresse email valide"), 1);
         } else {
-            $this->_email = $_email;
+            $this->email = $email;
         }
     }
-    public function setPassword($_password)
+    public function setPassword($password)
     {
-        if (!\is_string($_password) || empty($_password)) {
+        if (!\is_string($password) || empty($password)) {
             throw new \Exception(Error::getError("Merci de remplir correctement le champ"), 1);
         } else {
-            $this->_password = $_password;
+            $this->password = $password;
         }
     }
-    public function setRole($_role)
+    public function setRole($role)
     {
-        if (!\is_string($_role) || empty($_role)) {
+        if (!\is_string($role) || empty($role)) {
             throw new \Exception(Error::getError("Une erreur est survenue, merci de vérifier que vous avez sélectionner une option"), 1);
         } else {
-            $this->_role = $_role;
+            $this->role = $role;
         }
     }
-    public function setCreate_at($_create_at)
+    public function setCreate_at($create_at)
     {
-        $this->_create_at = $_create_at;
+        $this->create_at = $create_at;
     }
     // GETTERS
     public function getId()
     {
-        return $this->_id_user;
+        return $this->id_user;
     }
     public function getUsername()
     {
-        return $this->_username;
+        return $this->username;
     }
     public function getMail()
     {
-        return $this->_email;
+        return $this->email;
     }
     public function getPassword()
     {
-        return $this->_password;
+        return $this->password;
     }
     public function getRole()
     {
-        return $this->_role;
+        return $this->role;
     }
     public function getCreate_at()
     {
-        return $this->_create_at;
+        return $this->create_at;
     }
 }

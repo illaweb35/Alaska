@@ -13,7 +13,7 @@
           <div class="content">
             <p class="title is-4"><?= htmlspecialchars($billets->getTitle()) ?></p>
             <p><?= nl2br(htmlspecialchars($billets->getContent())) ?></p>
-            <small>Publié le : <em><?= date(' d M Y à H : i', strtotime($billets->getCreate_at())); ?></em></small>
+            <small>Publié le : <em><?= date(' d M Y à H:i', strtotime($billets->getCreate_at())); ?></em></small>
           </div>
         </div>
       </article>
@@ -43,7 +43,7 @@
                     </p>
                   </span>
                     <small>Le <?= date('d M Y à H:i', strtotime($comment->getCreate_at()))?></small>
-                    
+
                     <p>
                       <?= nl2br(htmlspecialchars($comment->getContent())) ?>
                     </p>

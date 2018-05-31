@@ -42,20 +42,15 @@ class Users
     }
 
     // afficher les utilisateurs avec ou sans id
-    public function userAll($id = null)
+    public function userAll()
     {
-        if ($id == null) {
-            $request = $this->_pdo->prepare('SELECT * FROM T_users');
-        } else {
-            $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE id_user = :id');
-            $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
-        }
+        $sql =('SELECT * FROM T_users ORDER BY create_at DESC');
+        $request = $this->_pdo->query($sql);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
-        if ($users = $request->fetchAll()) {
-            return $users;
-        }
-        return null;
+        $users = $request->fetchAll();
+        $request->closeCursor();
+        return $users;
     }
     // ajout d'un utilisateur
     public function createUser()
