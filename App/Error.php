@@ -3,7 +3,7 @@ namespace App;
 
 use App\Viewer;
 
-abstract class Error
+class Error
 {
     public static function getError($errorMsg)
     {
