@@ -3,12 +3,14 @@ namespace App;
 
 use Src\Controllers\Back;
 use Src\Controllers\Front;
+use Src\Controllers\Main;
 
 class Router
 {
     private $_route;
     public function __construct()
     {
+        $this->_route = new Main();
         $this->_route = new Back();
         $this->_route = new Front();
     }

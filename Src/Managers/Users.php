@@ -2,6 +2,7 @@
 namespace Src\Managers;
 
 use App\Dbd;
+use App\Error;
 
 class Users
 {
