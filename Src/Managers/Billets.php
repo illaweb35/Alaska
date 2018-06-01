@@ -14,11 +14,10 @@ class Billets
     // Lire tous les billets
     public function readAll($debut = -1, $limite = -1)
     {
-        $sql =('SELECT * FROM T_billets ORDER BY create_at DESC');
+        $request = $this->_pdo->prepare('SELECT * FROM T_billets ORDER BY create_at DESC');
         if ($debut != -1 || $limite != -1) {
             $sql .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $debut;
         }
-        $request = $this->_pdo->query($sql);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
         $billets = $request->fetchAll();
@@ -28,8 +27,7 @@ class Billets
     // lire un billet
     public function read($id)
     {
-        $sql = ("SELECT * FROM T_billets WHERE id_bil = :id");
-        $request = $this->_pdo->prepare($sql);
+        $request = $this->_pdo->prepare("SELECT * FROM T_billets WHERE id_bil = :id");
         $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');

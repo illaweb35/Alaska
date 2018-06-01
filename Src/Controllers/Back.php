@@ -18,7 +18,7 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-        
+
         $billets = $this->Billets->readAll();
         $comments = $this->Comments->readAll();
         $users = $this->Users->userAll();
@@ -69,5 +69,11 @@ class Back extends Main
         }
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
+    }
+    public function editUser()
+    {
+        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/index');
+        }
     }
 }

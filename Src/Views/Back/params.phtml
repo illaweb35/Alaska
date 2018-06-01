@@ -27,7 +27,7 @@
                 <td><?= htmlspecialchars($user->getMail())?></td>
                 <td><?= date(' d M Y à H:i', strtotime($user->getCreate_at()))?></td>
                 <td>
-                  <a href="">
+                  <a href="<?= BASEPATH.'Back/userEdit'?>">
                     <span class="icon">
                       <i class="fas fa-edit"></i>
                     </span>
@@ -78,7 +78,6 @@
                   </div>
                 </div>
               </form>
-            </p>
           </div>
         </div>
       </div>
