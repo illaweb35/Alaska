@@ -14,8 +14,7 @@ class Comments
     //Lire tous les commentaires
     public function readAll()
     {
-        $sql =('SELECT * FROM T_comments ORDER BY create_at DESC');
-        $request = $this->_pdo->query($sql);
+        $request = $this->_pdo->query('SELECT * FROM T_comments ORDER BY create_at DESC');
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
         $comments = $request->fetchAll();
@@ -25,8 +24,7 @@ class Comments
     // Lire tous les commentaires non signalé
     public function readFront()
     {
-        $sql =('SELECT * FROM T_comments WHERE moderate=0 ORDER BY create_at DESC');
-        $request = $this->_pdo->query($sql);
+        $request = $this->_pdo->query('SELECT * FROM T_comments WHERE moderate=0 ORDER BY create_at DESC');
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
         $comments = $request->fetchAll();
@@ -36,8 +34,7 @@ class Comments
     // lire un commentaires
     public function read($id)
     {
-        $sql = ("SELECT * FROM T_comments WHERE bil_id = :id");
-        $request = $this->_pdo->prepare($sql);
+        $request = $this->_pdo->prepare("SELECT * FROM T_comments WHERE bil_id = :id");
         $request->bindValue(':id', (int)$id, \PDO::PARAM_INT);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
@@ -55,8 +52,7 @@ class Comments
             $content = htmlspecialchars($_POST['content']);
             $bil_id = htmlspecialchars($_POST['bil_id']);
             try {
-                $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,NOW(),:bil_id)';
-                $request = $this->_pdo->prepare($sql);
+                $request = $this->_pdo->prepare('INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,NOW(),:bil_id)');
                 $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
                 $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
                 $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
@@ -82,8 +78,7 @@ class Comments
             $bil_id =\htmlspecialchars($_POST['bil_id']);
             $modif_at = date(DATE_W3C);
             try {
-                $sql = 'UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=:modif_at, bil_id=:bil_id WHERE id=:id';
-                $request = $this->_pdo->prepare($sql);
+                $request = $this->_pdo->prepare('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=:modif_at, bil_id=:bil_id WHERE id=:id');
                 $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
                 $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
                 $request->bindValue(':modif_at', $modif_at);
