@@ -45,8 +45,7 @@ class Users
     // afficher les utilisateurs avec ou sans id
     public function userAll()
     {
-        $sql =('SELECT * FROM T_users ORDER BY create_at DESC');
-        $request = $this->_pdo->query($sql);
+        $request = $this->_pdo->query('SELECT * FROM T_users ORDER BY create_at DESC');
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         $users = $request->fetchAll();
@@ -94,8 +93,7 @@ class Users
         $role = \htmlspecialchars($_POST['role']);
         $dateCrea = date(DATE_W3C);
         try {
-            $sql =('UPDATE T_users SET username=:username,email=:email,password=:password WHERE id_user=:id');
-            $request = $this->_pdo->prepare($sql);
+            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,password=:password WHERE id_user=:id');
             $request->bindValue(':name', $name, \PDO::PARAM_STR) ;
             $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
             $request->bindValue(':password', $password, \PDO::PARAM_STR);
