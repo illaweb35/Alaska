@@ -48,8 +48,7 @@ class Billets
             $modif_at = date(DATE_W3C);
             $posted = 0;
             try {
-                $sql = 'INSERT INTO T_billets(title,author, content,image, create_at,modif_at, posted) VALUES (:title,:author,:content,:image,:create_at,:modif_at,:posted)';
-                $request = $this->_pdo->prepare($sql);
+                $request = $this->_pdo->prepare('INSERT INTO T_billets(title,author, content,image, create_at,modif_at, posted) VALUES (:title,:author,:content,:image,:create_at,:modif_at,:posted)');
                 $request->bindValue(':title', $title, \PDO::PARAM_STR);
                 $request->bindValue(':author', $author, \PDO::PARAM_STR);
                 $request->bindValue(':content', $content, \PDO::PARAM_STR);
