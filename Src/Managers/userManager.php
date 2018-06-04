@@ -4,7 +4,7 @@ namespace Src\Managers;
 use App\Dbd;
 use App\Error;
 
-class Users
+class userManager
 {
     private $_pdo;
     public function __construct()

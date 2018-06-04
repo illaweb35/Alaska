@@ -19,16 +19,16 @@ class Back extends Main
             header('Location:'.\BASEPATH.'Front/index');
         }
 
-        $billets = $this->Billets->readAll();
-        $comments = $this->Comments->readAll();
-        $users = $this->Users->userAll();
+        $billets = $this->billetManager->readAll();
+        $comments = $this->commentManager->readAll();
+        $users = $this->userManager->userAll();
         $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
         $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users]);
     }
 
     public function list()
     {
-        $billets =$this->Billets->readAll();
+        $billets =$this->billetManager->readAll();
         $view = new Viewer('Back/list', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
@@ -39,7 +39,7 @@ class Back extends Main
             header('Location:'.\BASEPATH.'Front/index');
         }
         if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-            $billet = $this->Billets->create();
+            $billet = $this->billetManager->create();
             if ($billet !== false) {
                 header('Location:'.\BASEPATH.'Back/onBoard');
                 exit();
@@ -55,7 +55,7 @@ class Back extends Main
             header('Location:'.\BASEPATH.'Front/index');
         }
         if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-            $billet = $this->Billets->read();
+            $billet = $this->billetManager->read();
             if ($billet !== false) {
                 header('Location:'.\BASEPATH.'Back/onBoard');
                 exit();
@@ -69,7 +69,7 @@ class Back extends Main
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-        $user = $this->Users->userAll();
+        $user = $this->userManager->userAll();
         $view = new Viewer('Back/params', 'Alaska _ Paramètres');
         $view->createFile(['user'=>$user]);
     }
@@ -81,7 +81,7 @@ class Back extends Main
 
         if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
             if ($_SERVER['REQUEST_METHOD']=== 'post') {
-                $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+                $user = $this->userManager->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
             }
         }
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');

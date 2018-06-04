@@ -3,7 +3,7 @@ namespace Src\Managers;
 
 use App\Dbd;
 
-class Billets
+class billetManager
 {
     protected $_pdo;
 

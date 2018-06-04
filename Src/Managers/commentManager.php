@@ -3,7 +3,7 @@ namespace Src\Managers;
 
 use App\Dbd;
 
-class Comments
+class commentManager
 {
     protected $_pdo;
 

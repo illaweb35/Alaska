@@ -1,14 +1,17 @@
 <?php
 namespace Src\Controllers;
 
-use Src\Managers\Billets;
-use Src\Managers\Comments;
-use Src\Managers\Users;
+use Src\Managers\billetManager;
+use Src\Managers\commentManager;
+use Src\Managers\userManager;
 use App\Viewer;
 
 class Main
 {
     private $_id;
+    protected $billetManager;
+    protected $commentManager;
+    protected $userManager;
 
     public function __construct()
     {
@@ -16,9 +19,9 @@ class Main
             \session_start();
         }
         $this->_id = (int)(!empty($_GET['id']) ? $_GET['id']: 0);
-        $this->Billets = new Billets();
-        $this->Comments = new Comments();
-        $this->Users = new Users();
+        $this->billetManager= new billetManager();
+        $this->commentManager = new commentManager();
+        $this->userManager = new userManager();
     }
     // vérifie si la session existe
     protected function isLogged()
@@ -32,13 +35,13 @@ class Main
             header('Location;'.BASEPATH.'/Front/Home');
         }
         if (isset($_POST['username'],$_POST['password'])) {
-            $this->Users->connexion($_POST['username'], $_POST['password']);
+            $this->userManager->connexion($_POST['username'], $_POST['password']);
         }
         if (isset($_SESSION['id'])) {
             header('Location:'.BASEPATH.'Back/Dasboard/');
         }
         $_SESSION['is_logged'] = 1;
-        $user = $this->Users;
+        $user = $this->userManager;
         $view = new Viewer('Back/index', 'Mon Blog _ login');
         $view->createFile(['user' => $user]);
     }
@@ -50,7 +53,7 @@ class Main
             exit();
         }
         if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
-            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+            $user = $this->userManager->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
         }
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
