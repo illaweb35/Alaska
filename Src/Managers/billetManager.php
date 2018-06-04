@@ -42,11 +42,11 @@ class Billets
         if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
             $title = \htmlspecialchars($_POST['title']);
             $author = \htmlspecialchars($_POST['author']);
-            $content = \htmlspecialchars($_POST['content']);
-            $image = \htmlspecialchars($_POST['image']);
+            $content = $_POST['content'];
+            $image = "test";
             $create_at = date(DATE_W3C);
             $modif_at = date(DATE_W3C);
-            $posted = 0;
+            $posted = $_POST['posted'];
             try {
                 $request = $this->_pdo->prepare('INSERT INTO T_billets(title,author, content,image, create_at,modif_at, posted) VALUES (:title,:author,:content,:image,:create_at,:modif_at,:posted)');
                 $request->bindValue(':title', $title, \PDO::PARAM_STR);

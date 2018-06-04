@@ -21,28 +21,24 @@ class Comments
         $request->closeCursor();
         return $comments;
     }
-    // Lire tous les commentaires non signalé
-    public function readFront()
+
+    // lire un commentaire non signalé
+    public function read($id = null)
     {
-        $request = $this->_pdo->query('SELECT * FROM T_comments WHERE moderate=0 ORDER BY create_at DESC');
+        if (!isset($_SESSION['id'])) {
+            $request = $this->_pdo->prepare('SELECT * FROM T_comments WHERE bil_id = :id AND moderate = 0');
+            $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        } elseif ($id == null) {// si pas d'id
+            $request = $this->_pdo->prepare('SELECT * FROM T_comments');
+        } else { //sinon avec id
+            $request = $this->_pdo->prepare('SELECT * FROM T_comments WHERE bil_id = :id');
+            $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        }
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
         $comments = $request->fetchAll();
         $request->closeCursor();
         return $comments;
-    }
-    // lire un commentaires
-    public function read($id)
-    {
-        $request = $this->_pdo->prepare("SELECT * FROM T_comments WHERE bil_id = :id");
-        $request->bindValue(':id', (int)$id, \PDO::PARAM_INT);
-        $request->execute();
-        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
-        if ($comments = $request->fetch()) {
-            $request->closeCursor();
-            return $Comments;
-        }
-        return null;
     }
     // Creation d'un commentaire
     public function create()

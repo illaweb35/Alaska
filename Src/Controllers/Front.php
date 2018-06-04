@@ -18,8 +18,8 @@ class Front extends Main
     public function posting($id)
     {
         $billets = $this->Billets->read($id);
-        $comments = $this->Comments->readFront();
-        $view = new Viewer('Front/post', 'Déatils d\'un article');
+        $comments = $this->Comments->read($id);
+        $view = new Viewer('Front/post', 'Détails d\'un article');
         $view->createFile(['billets'=>$billets,'comments' =>$comments]);
     }
     // affichage des billets en liste
@@ -35,6 +35,7 @@ class Front extends Main
         $comment = $this->Comments->create();
         if ($comment !== false) {
             header('Location:'.BASEPATH.'Front/posting/'.$comment);
+            exit();
         }
     }
 }

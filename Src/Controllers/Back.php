@@ -32,21 +32,35 @@ class Back extends Main
         $view = new Viewer('Back/list', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
+    // création d'un Billet
     public function write()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-        $billets = $this->Billets->create();
+        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
+            $billet = $this->Billets->create();
+            if ($billet !== false) {
+                header('Location:'.\BASEPATH.'Back/onBoard');
+                exit();
+            }
+        }
         $view = new Viewer('Back/write', " Ecriture d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
+    // Update du billet
     public function modif($id)
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-        $billets = $this->Billets->read($id);
+        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
+            $billet = $this->Billets->read();
+            if ($billet !== false) {
+                header('Location:'.\BASEPATH.'Back/onBoard');
+                exit();
+            }
+        }
         $view = new Viewer('Back/write', " Ecriture d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
@@ -64,8 +78,11 @@ class Back extends Main
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
+
         if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
-            $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+            if ($_SERVER['REQUEST_METHOD']=== 'post') {
+                $user = $this->Users->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+            }
         }
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
