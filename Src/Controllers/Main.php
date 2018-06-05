@@ -4,6 +4,7 @@ namespace Src\Controllers;
 use Src\Managers\billetManager;
 use Src\Managers\commentManager;
 use Src\Managers\userManager;
+use Src\Managers\imageManager;
 use App\Viewer;
 
 class Main
@@ -12,6 +13,7 @@ class Main
     protected $billetManager;
     protected $commentManager;
     protected $userManager;
+    protected $imageManager;
 
     public function __construct()
     {
@@ -22,6 +24,7 @@ class Main
         $this->billetManager= new billetManager();
         $this->commentManager = new commentManager();
         $this->userManager = new userManager();
+        $this->imageMnager = new imageManager();
     }
     // vérifie si la session existe
     protected function isLogged()
