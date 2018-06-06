@@ -41,7 +41,7 @@ class Main
             $this->userManager->connexion($_POST['username'], $_POST['password']);
         }
         if (isset($_SESSION['id'])) {
-            header('Location:'.BASEPATH.'Back/Dasboard/');
+            header('Location:'.BASEPATH.'Back/Dasboard');
         }
         $_SESSION['is_logged'] = 1;
         $user = $this->userManager;

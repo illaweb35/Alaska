@@ -21,7 +21,15 @@ class commentManager
         $request->closeCursor();
         return $comments;
     }
-
+    public function readModerate()
+    {
+        $request = $this->_pdo->query('SELECT * FROM T_comments WHERE moderate = 1 ORDER BY create_at DESC');
+        $request->execute();
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
+        $comments = $request->fetchAll();
+        $request->closeCursor();
+        return $comments;
+    }
     // lire un commentaire non signalé
     public function read($id = null)
     {

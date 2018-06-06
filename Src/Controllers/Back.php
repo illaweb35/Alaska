@@ -13,7 +13,7 @@ class Back extends Main
         }
     }
     //affichage Tableau de bord si connecté
-    public function onBoard()
+    public function Dashboard()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
@@ -21,9 +21,10 @@ class Back extends Main
 
         $billets = $this->billetManager->readAll();
         $comments = $this->commentManager->readAll();
+        $comModerate =$this->commentManager->readModerate();
         $users = $this->userManager->userAll();
         $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
-        $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users]);
+        $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users,'comModerate'=> $comModerate]);
     }
 
     public function list()

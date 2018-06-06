@@ -1,35 +1,78 @@
-<div class="box">
-  <div class="notification">
-    <p class="title is-5">
-      Modifier un utilisateur
-      <form action="<?= BASEPATH.'Back/newUser'?>" method="post">
+
+ <section class="section">
+  <div class="container">
+    <h1 class="title">Modifier un Billet</h1>
+    <div class="content">
+      <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+    </div>
+    <div class="box">
+      <form action="<?= BASEPATH.'Back/update'?>" method="post" enctype="multipart/form-data">
         <div class="field">
-          <label for="username" class="label">Nom d'utilisateur</label>
-          <input type="text" class="input" name="username" placeholder="Utilisateur"required>
+          <label for="Titre" name="title" class="label" > Titre du billet</label>
+          <input type="text" name="title" class="input" placeholder="<?= $billets->getTitle()?>">
         </div>
         <div class="field">
-          <label for="email" class="label">Email</label>
-          <input type="text" class="input" name="email" placeholder="votre adresse email" required>
-        </div>
-        <div class="field">
-          <label for="password" class="label">Mot de Passe</label>
-          <input type="password" class="input" name="password" placeholder="Mot de passe " required>
-        </div>
-        <div class="field">
-          <div class="select">
-            <select name="role">
-              <option value="Administrateur">Administrateur</option>
-              <option value="Modérateur">Modérateur</option>
-            </select>
-          </div>
-        </div>
-        <div class="field has-addons">
           <div class="control">
-            <button class="button is-link" type="submit">Ajouté</button>
-            <button class="button is-text" type="reset">Annulé</button>
+            <textarea class="textarea"  type="text" name="content" placeholder="<?= $billets->getContent()?>"></textarea>
           </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <p class="title is-5">Image à la une</p>
+                <div class="file">
+                  <label class="file-label">
+                    <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="<?= $billets->getImage()?>">
+                    <input class="file-input" type="file" name="image">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choisir un fichier…
+                        </span>
+                      </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <div class="field">
+                  <label class="label">Auteur</label>
+                    <div class="control">
+                      <div class="select">
+                        <select name="author">
+                          <option>Administrateur</option>
+                          <option>Modérateur</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                <div class="field">
+                  <label class="checkbox switch">
+                    <input type="checkbox" name="posted" checked>
+                    <span class="slider round"></span>
+                  </label>
+                  Poster le billet
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field is-grouped">
+                <div class="control">
+                  <button type="submit" class="button is-link" name="btn-comment" title="Enregistrer le commentaire">Enregistrer</button>
+                </div>
+                <div class="control">
+                  <button class="button"type="reset" title="effacer et recommencer la saisie">
+                  Effacer
+                  </button>
+                </div>
+            </div>
         </div>
       </form>
-    </p>
+    </div>
   </div>
-</div>
+</section>

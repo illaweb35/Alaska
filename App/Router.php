@@ -2,6 +2,7 @@
 namespace App;
 
 use Src\Controllers\Back;
+use Src\Controllers\Admin;
 use Src\Controllers\Front;
 use Src\Controllers\Main;
 
@@ -12,6 +13,7 @@ class Router
     {
         $this->_route = new Main();
         $this->_route = new Back();
+        $this->_route = new Admin();
         $this->_route = new Front();
     }
     public function initRoute()

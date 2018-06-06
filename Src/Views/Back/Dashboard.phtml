@@ -61,7 +61,9 @@
 </section>
 <section class="section">
   <div class="container">
-    <h2 class="title">Commentaires non moderés</h2>
+    <h2 class="title">Commentaires signalés </h2>
+    <small>( Commentaires signalés par les lecteurs à valider)</small>
+    <hr/>
     <table class="table is-striped is-narrow is-hoverable is-fullwidth">
       <thead>
         <tr>
@@ -71,11 +73,11 @@
           <th>Action</th>
         </tr>
       </thead>
-        <?php foreach ($comments as $comment):?>
+        <?php foreach ($comModerate as $comMod):?>
       <tbody>
-        <td><?= htmlspecialchars($comment->getPseudo())?></td>
-        <td><?= substr(nl2br(htmlspecialchars($comment->getContent())), 0, 100); ?> ...</td>
-        <td><?= htmlspecialchars($comment->getBil_id())?></td>
+        <td><?= htmlspecialchars($comMod->getPseudo())?></td>
+        <td><?= substr(nl2br(htmlspecialchars($comMod->getContent())), 0, 100); ?> ...</td>
+        <td><?= htmlspecialchars($comMod->getBil_id())?></td>
         <td>
           <a href="">
             <span class="icon">

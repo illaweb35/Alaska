@@ -69,8 +69,37 @@ class billetManager
         }
     }
     // Mise à jour de Billet
-    public function update()
+    public function update($id)
     {
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
+            $title = \htmlspecialchars($_POST['title']);
+            $author = \htmlspecialchars($_POST['author']);
+            $content = $_POST['content'];
+            $image = "test";
+            $create_at = date(DATE_W3C);
+            $modif_at = date(DATE_W3C);
+            $posted = $_POST['posted'];
+            try {
+                $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title,author=:author, content=:content,image=:image, create_at=:create_at,modif_at=NOW(), posted=:posted WHERE id=:id');
+                $request->bindValue('id', (int) $id, \PDO::PARAM_INT);
+                $request->bindValue(':title', $title, \PDO::PARAM_STR);
+                $request->bindValue(':author', $author, \PDO::PARAM_STR);
+                $request->bindValue(':content', $content, \PDO::PARAM_STR);
+                $request->bindValue(':image', $image, \PDO::PARAM_STR);
+                $request->bindValue(':create_at', $create_at);
+                $request->bindValue(':modif_at', $modif_at);
+                $request->bindvalue(':posted', $posted);
+                $verif_is_ok = $request->execute();
+                $request->closeCursor();
+                if (!$verif_is_ok) {
+                    return false;
+                } else {
+                    return $_POST['id'];
+                }
+            } catch (PDOException $e) {
+                Error::getError($e->getMessage());
+            }
+        }
     }
     // Effacer un Billet
     public function delete($id)
