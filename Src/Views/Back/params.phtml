@@ -27,7 +27,7 @@
                 <td><?= htmlspecialchars($user->getMail())?></td>
                 <td><?= date(' d M Y à H:i', strtotime($user->getCreate_at()))?></td>
                 <td>
-                  <a href="<?= BASEPATH.'Back/userEdit'?>">
+                  <a href="<?= BASEPATH.'Backedit/UserEdit'?>">
                     <span class="icon">
                       <i class="fas fa-edit"></i>
                     </span>
@@ -50,7 +50,7 @@
           <div class="notification">
             <p class="title is-5">
               Ajouter un utilisateur
-              <form action="<?= BASEPATH.'Back/newUser'?>" method="post">
+              <form action="<?= BASEPATH.'Back/NewUser'?>" method="post">
                 <div class="field">
                   <label for="username" class="label">Nom d'utilisateur</label>
                   <input type="text" class="input" name="username" placeholder="Utilisateur"required>

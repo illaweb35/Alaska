@@ -32,7 +32,7 @@ class Main
         return !empty($_SESSION['is_logged']);
     }
     // Page de connexion a la partie Admin
-    public function login()
+    public function Login()
     {
         if (!$this->isLogged()) {
             header('Location;'.BASEPATH.'/Front/Home');
@@ -50,7 +50,7 @@ class Main
     }
 
     // inscription
-    public function signup()
+    public function Signup()
     {
         if (!$this->isLogged()) {
             exit();
@@ -60,9 +60,10 @@ class Main
         }
         $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
+        header('Location: '.\BASEPATH.'Back/Dashboard');
     }
     // Déconnection de la partie Admin
-    public function logout()
+    public function Logout()
     {
         if (!empty($_SESSION)) {
             $_SESSION = array();
