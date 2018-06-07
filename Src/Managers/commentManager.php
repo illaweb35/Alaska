@@ -51,61 +51,31 @@ class commentManager
     // Creation d'un commentaire
     public function create()
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
-            $pseudo = htmlspecialchars($_POST['pseudo']);
-            $content = htmlspecialchars($_POST['content']);
-            $bil_id = htmlspecialchars($_POST['bil_id']);
-            try {
-                $request = $this->_pdo->prepare('INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,NOW(),:bil_id)');
-                $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
-                $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
-                $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
-                $verifIsOk = $request->execute();
-                $request->closeCursor();
-                if (!$verifIsOk) {
-                    return false;
-                } else {
-                    return $_POST['bil_id'];
-                }
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
-        }
+        $request = $this->_pdo->prepare('INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,NOW(),:bil_id)');
+        $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
+        $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
+        $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
+        return $request->execute();
+        $request->closeCursor();
     }
 
     // Mise à jour de Billet
-    public function update()
+    public function update(array $data)
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
-            $pseudo = \htmlspecialchars($_POST['pseudo']);
-            $content = \htmlspecialchars($_POST['content']);
-            $bil_id =\htmlspecialchars($_POST['bil_id']);
-            $modif_at = date(DATE_W3C);
-            try {
-                $request = $this->_pdo->prepare('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=:modif_at, bil_id=:bil_id WHERE id=:id');
-                $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
-                $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
-                $request->bindValue(':modif_at', $modif_at);
-                $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
-                $request->bindValue(':id', $id, \PDO::PARAM_INT);
-                $verif_is_ok = $request->execute();
-                $request->closeCursor();
-                if (!$verif_is_ok) {
-                    return false;
-                } else {
-                    return $_POST['bil_id'];
-                }
-            } catch (PDOException $e) {
-                Error::getError($e->getMessage());
-            }
-        }
+        $request = $this->_pdo->prepare('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=:modif_at, bil_id=:bil_id WHERE id=:id');
+        $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
+        $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
+        $request->bindValue(':modif_at', $modif_at);
+        $request->bindValue(':bil_id', $bil_id, \PDO::PARAM_INT);
+        $request->bindValue(':id', $id, \PDO::PARAM_INT);
+        return $request->execute($data);
+        $request->closeCursor();
     }
     // Effacer un Billet
     public function delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_comments WHERE id_com = :id');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
-        $request->execute();
-        return true;
+        return $request->execute();
     }
 }

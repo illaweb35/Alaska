@@ -25,7 +25,7 @@ class Front extends Main
     // affichage des billets en liste
     public function list()
     {
-        $billets =$this->billetManager->readAll();
+        $billets =$this->billetManager->readAll(0, 100);
         $view = new Viewer('Front/list', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }

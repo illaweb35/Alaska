@@ -18,18 +18,17 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/index');
         }
-
-        $billets = $this->billetManager->readAll();
+        $billets = $this->billetManager->readAll(0, 100);
         $comments = $this->commentManager->readAll();
         $comModerate =$this->commentManager->readModerate();
         $users = $this->userManager->userAll();
-        $view = new Viewer("Back/Dashboard", "Mon Blog _ Tableau de bord");
+        $view = new Viewer('Back/Dashboard', "Mon Blog _ Tableau de bord");
         $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users,'comModerate'=> $comModerate]);
     }
 
     public function List()
     {
-        $billets =$this->billetManager->readAll();
+        $billets =$this->billetManager->readAll(0, 100);
         $view = new Viewer('Back/list', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
@@ -42,21 +41,5 @@ class Back extends Main
         $user = $this->userManager->userAll();
         $view = new Viewer('Back/params', 'Alaska _ Paramètres');
         $view->createFile(['user'=>$user]);
-    }
-    public function AddUser()
-    {
-        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
-        }
-
-        if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
-            if ($_SERVER['REQUEST_METHOD']=== 'post') {
-                $user = $this->userManager->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
-            }
-        }
-        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
-        $view->createFile(array('user'=>$user));
-        header('Location:'.\BASEPATH.'Main/Login');
-        exit();
     }
 }

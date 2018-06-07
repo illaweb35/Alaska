@@ -7,7 +7,7 @@
       <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Back/write'?>" method="post" enctype="multipart/form-data">
+      <form action="<?= BASEPATH.'Backedit/create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
           <input type="text" name="title" class="input" placeholder="Indiquer le titre de votre billet">
@@ -24,7 +24,7 @@
                 <div class="file">
                   <label class="file-label">
                     <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+                    <input type="hidden" name="MAX_FILE_SIZE">
                     <input class="file-input" type="file" name="image">
                       <span class="file-cta">
                         <span class="file-icon">

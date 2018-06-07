@@ -17,13 +17,13 @@
               <p class="subtitle is-3">
               Billets
               </p>
-              <p><?= count($billets) ?> Billets publiés.</p>
+              <p><strong><?= count($billets) ?></strong> Billets publiés.</p>
             </div>
           </article>
         </div>
       </div>
       <div class="column">
-        <div class="box notification is-info">
+        <div class="box notification is-warning">
           <article class="media">
             <div class="media-left">
               <figure class="image is-64x64">
@@ -34,7 +34,7 @@
               <p class="subtitle is-3">
                 Commentaires
               </p>
-              <p><?= count($comments)?> commentaires publiés</p>
+              <p><strong><?= count($comments)?></strong> commentaires publiés</p>
             </div>
           </article>
         </div>
@@ -51,7 +51,7 @@
               <p class="subtitle is-3">
                 Utilisateurs
               </p>
-              <p>Nombres: <?= count($users) ?></p>
+              <p>Nombres : <strong><?= count($users) ?></strong></p>
             </div>
           </article>
         </div>
@@ -89,7 +89,7 @@
               <i class="fas fa-edit"></i>
             </span>
           </a>
-          <a href="">
+          <a href="<?= BASEPATH.'Back/Delete/'.$comMod->getBil_id()?>">
             <span class="icon">
               <i class="fas fa-trash"></i>
             </span>

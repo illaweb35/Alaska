@@ -36,7 +36,7 @@ class userManager
             $_SESSION['token_uncrypted']= \uniqid();
             $_SESSION['token']= $this->mixMdp($_SESSION['token_uncrypted']);
             $_SESSION['name'] = $_POST['username'];
-            header('Location:'.BASEPATH.'Back/onBoard/');
+            header('Location:'.BASEPATH.'Back/Dashboard/');
         } else {
             throw new \Exception(Error::getError("Mauvais couple d'identifiant"), 1);
         }
@@ -109,5 +109,13 @@ class userManager
     public function mixMdp($p)
     {
         return  \password_hash("AlaskaBlog", PASSWORD_DEFAULT);
+    }
+    // Effacer un Billet
+    public function delete($id)
+    {
+        $request = $this->_pdo->prepare('DELETE FROM T_users WHERE id = :id');
+        $request->bindParam(':id', $id, \PDO::PARAM_INT);
+        $request->execute();
+        return true;
     }
 }
