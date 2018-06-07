@@ -19,9 +19,8 @@ class billetManager
         $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
-        $billets = $request->fetchAll();
+        return $billets = $request->fetchAll();
         $request->closeCursor();
-        return $billets;
     }
     // lire un billet
     public function read($id)
@@ -30,10 +29,8 @@ class billetManager
         $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
-        if ($billets = $request->fetch()) {
-            return $billets;
-        }
-        return null;
+        return $billets = $request->fetch();
+        $request->closeCursor();
     }
     // Creation d'un billet
     public function create(array $data)
