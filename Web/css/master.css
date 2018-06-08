@@ -1,13 +1,5 @@
 /* Présentaion du blog siuvant mes propres critères */
 
-/*.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-}
-*/
-
 .scrollup {
   position: fixed;
   bottom: 10px;
@@ -123,4 +115,24 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Modification des placeholder du mode Edit */
+
+input[type=text]::-webkit-input-placeholder {
+  color: #262626;
+}
+
+input[type=text]:-moz-placeholder {
+  color: #262626;
+  opacity: 1;
+}
+
+input[type=text]::-moz-placeholder {
+  color: #262626;
+  opacity: 1;
+}
+
+input[type=text]:-ms-input-placeholder {
+  color: #262626;
 }

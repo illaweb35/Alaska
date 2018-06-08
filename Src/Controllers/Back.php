@@ -9,14 +9,14 @@ class Back extends Main
     public function Index()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
         }
     }
     //affichage Tableau de bord si connecté
     public function Dashboard()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
         }
         $billets = $this->billetManager->readAll(0, 100);
         $comments = $this->commentManager->readAll();
@@ -29,17 +29,17 @@ class Back extends Main
     public function List()
     {
         $billets =$this->billetManager->readAll(0, 100);
-        $view = new Viewer('Back/list', 'Liste des billets');
+        $view = new Viewer('Back/List', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
 
     public function Params()
     {
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
         }
         $user = $this->userManager->userAll();
-        $view = new Viewer('Back/params', 'Alaska _ Paramètres');
+        $view = new Viewer('Back/Params', 'Alaska _ Paramètres');
         $view->createFile(['user'=>$user]);
     }
 }

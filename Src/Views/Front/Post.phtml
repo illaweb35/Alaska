@@ -12,7 +12,7 @@
         <div class="media-content">
           <div class="content">
             <p class="title is-4"><?= htmlspecialchars($billets->getTitle()) ?></p>
-            <p><?= nl2br(htmlspecialchars($billets->getContent())) ?></p>
+            <p><?= $billets->getContent() ?></p>
             <small>Publié le : <em><?= date(' d M Y à H:i', strtotime($billets->getCreate_at())); ?></em></small>
           </div>
         </div>
@@ -49,10 +49,7 @@
                     </p>
                     <br/>
                     <p class="is-size-7">
-                      <label class="checkbox" >
-                        <input type="checkbox" name="moderate">
-                        Signaler le commentaire
-                      </label>
+                    <a href="<?= BASEPATH.'Front/Signaler/'.$comment->getId() ?>">Signaler le commentaire</a>
                     </p>
                   <hr/>
                 <?php endforeach?>

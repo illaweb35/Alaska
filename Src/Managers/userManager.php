@@ -12,7 +12,7 @@ class userManager
         $this->_pdo = new Dbd;
     }
     // Connexion Admin
-    public function connexion($username, $password)
+    public function Connexion($username, $password)
     {
         if (!$_SERVER['REQUEST_METHOD'] == 'POST') {
             throw new \Exception(Error::getError("Error Accès non autorisé"), 1);
@@ -43,7 +43,7 @@ class userManager
     }
 
     // afficher les utilisateurs avec ou sans id
-    public function userAll()
+    public function UserAll()
     {
         $request = $this->_pdo->query('SELECT * FROM T_users ORDER BY create_at DESC');
         $request->execute();
@@ -53,7 +53,7 @@ class userManager
         return $users;
     }
     // ajout d'un utilisateur
-    public function createUser()
+    public function Create()
     {
         if (!$_SERVER['REQUEST_METHOD'] == 'POST') {
             throw new \Exception(Error::getError("Error Accès non autorisé"), 1);
@@ -61,7 +61,7 @@ class userManager
         $user =new User();
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
-        $password = LoginManager::mixMdp(\htmlspecialchars($_POST['password']));
+        $password = $this->mixMdp(\htmlspecialchars($_POST['password']));
         $role = \htmlspecialchars($_POST['role']);
         $dateCrea = date(DATE_W3C);
         $request = $this->_pdo->query("SELECT* FROM T_users WHERE username = '$username' OR email='$email'");
@@ -85,7 +85,7 @@ class userManager
     }
 
     // Mise a jour utilisateurs
-    public function update($id)
+    public function Update($id)
     {
         $name = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
@@ -111,7 +111,7 @@ class userManager
         return  \password_hash("AlaskaBlog", PASSWORD_DEFAULT);
     }
     // Effacer un Billet
-    public function delete($id)
+    public function Delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_users WHERE id = :id');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);

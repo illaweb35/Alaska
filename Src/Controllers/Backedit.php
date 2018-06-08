@@ -6,10 +6,39 @@ use App\Viewer;
 class Backedit extends Main
 {
     // création d'un Billet
-    public function create()
+    public function Create()
     {
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
+        }
+        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
+            if (!isset(
+            $_POST['title'],
+            $_POST['author'],
+            $_POST['content'],
+            $_POST['posted'])) {
+                $data = [
+              'title'=> \htmlspecialchars($_POST['title']),
+              'author'=> \htmlspecialchars($_POST['author']),
+              'content'=>($_POST['content']),
+              'image'=>\htmlspecialchars($_POST['image']['name']),
+              'posted'=> \htmlspecialchars($_POST['posted'])];
+                $billets = $this->billetManager->Create($data);
+                if ($billets !== false) {
+                    header('Location:'.\BASEPATH.'Back/Dashboard');
+                    exit();
+                }
+            }
+        }
+        $view = new Viewer('Back/Write', "Alaska _ Ecriture d'un billet");
+        $view->createFile(['billets'=>$billets]);
+    }
+    // Update du billet
+    public function Update($id)
+    {
+        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/Index');
+            exit();
         }
         if ($_SERVER['REQUEST_METHOD']=== 'POST') {
             if (isset(
@@ -20,52 +49,34 @@ class Backedit extends Main
                 $data = [
               'title'=> \htmlspecialchars($_POST['title']),
               'author'=> \htmlspecialchars($_POST['author']),
-              'content'=> \htmlspecialchars($_POST['content']),
-              'create_at'=> date('d M Y H:i:s'),
-              'modif_at'=> date('d M Y H:i:s'),
+              'content'=>($_POST['content']),
               'posted'=> \htmlspecialchars($_POST['posted'])];
-                $billet = $this->billetManager->create($data);
-                if ($billet !== false) {
-                    header('Location:'.\BASEPATH.'Back/Dashboard');
+                $billets = $this->billetManager->Update($data);
+                if ($billets !== false) {
+                    header('Location:'.\BASEPATH.'Back/Edit'.$billet->getId());
                     exit();
                 }
+                throw new \Exception(Error::getError("Une erreur est survenue l'enrgistrement ne c'est pas fait "), 1);
             }
         }
-        $view = new Viewer('Back/write', " Ecriture d'un billet");
-        $view->createFile(['billets'=>$billets]);
-    }
-    // Update du billet
-    public function modif($id)
-    {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
-        }
-        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-            $billet = $this->billetManager->read();
-            if ($billet !== false) {
-                header('Location:'.\BASEPATH.'Back/Dashboard');
-                exit();
-            }
-        }
-        $view = new Viewer('Back/write', " Ecriture d'un billet");
+        $billets = $this->billetManager->Read($id);
+        $view = new Viewer('Back/Edit', " Alaska _ Modification d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
 
-    public function editUser()
+    public function EditUser()
     {
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
     }
-    public function delete($id)
+    public function Delete($id)
     {
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
-        $comments = $this->commentManager->delete($id);
-        $billets = $this->billetManager->delete($id);
-        $users = $this->userManager->delete($id);
+        $billets = $this->billetManager->Delete($id);
     }
 }

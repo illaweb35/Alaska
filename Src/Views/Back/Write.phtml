@@ -1,19 +1,20 @@
-
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
  <section class="section">
   <div class="container">
-    <h1 class="title">Modifier un Billet</h1>
+    <h1 class="title">Poster un Billet</h1>
     <div class="content">
       <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Back/update'?>" method="post" enctype="multipart/form-data">
+      <form action="<?= BASEPATH.'Backedit/create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
-          <input type="text" name="title" class="input" placeholder="<?= $billets->getTitle()?>">
+          <input type="text" name="title" class="input" />
         </div>
         <div class="field">
           <div class="control">
-            <textarea class="textarea"  type="text" name="content" placeholder="<?= $billets->getContent()?>"></textarea>
+            <textarea class="textarea"  type="text" name="content"></textarea>
           </div>
         </div>
         <div class="columns">
@@ -23,8 +24,8 @@
                 <div class="file">
                   <label class="file-label">
                     <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="<?= $billets->getImage()?>">
-                    <input class="file-input" type="file" name="image">
+                    <input type="hidden" name="MAX_FILE_SIZE"/>
+                    <input class="file-input" type="file" name="image"/>
                       <span class="file-cta">
                         <span class="file-icon">
                           <i class="fas fa-upload"></i>
@@ -52,7 +53,7 @@
                   </div>
                 <div class="field">
                   <label class="checkbox switch">
-                    <input type="checkbox" name="posted" checked>
+                    <input type="checkbox" name="posted">
                     <span class="slider round"></span>
                   </label>
                   Poster le billet

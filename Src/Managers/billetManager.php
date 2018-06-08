@@ -12,18 +12,24 @@ class billetManager
         $this->_pdo =  new Dbd;
     }
     // Lire tous les billets
-    public function readAll($offset, $limit)
+    public function ReadAll($offset, $limit)
     {
-        $request = $this->_pdo->prepare('SELECT * FROM T_billets ORDER BY create_at DESC LIMIT :offset,:limit');
-        $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
-        $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
+        if (isset($_SESSION['authenticated'])) {
+            $request = $this->_pdo->prepare('SELECT * FROM T_billets  ORDER BY create_at DESC LIMIT :offset,:limit');
+            $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
+            $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
+        } else {
+            $request = $this->_pdo->prepare('SELECT * FROM T_billets  WHERE posted=1 ORDER BY create_at DESC LIMIT :offset,:limit');
+            $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
+            $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
+        }
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
         return $billets = $request->fetchAll();
         $request->closeCursor();
     }
     // lire un billet
-    public function read($id)
+    public function Read($id)
     {
         $request = $this->_pdo->prepare("SELECT * FROM T_billets WHERE id_bil = :id LIMIT 1");
         $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
@@ -33,41 +39,39 @@ class billetManager
         $request->closeCursor();
     }
     // Creation d'un billet
-    public function create(array $data)
+    public function Create(array $data)
     {
-        $request = $this->_pdo->prepare('INSERT INTO T_billets(title,author, content, create_at,modif_at, posted) VALUES (:title,:author,:content,:create_at,:modif_at,:posted)');
-        $request->bindValue(':title', $title, \PDO::PARAM_STR);
-        $request->bindValue(':author', $author, \PDO::PARAM_STR);
-        $request->bindValue(':content', $content, \PDO::PARAM_STR);
-        $request->bindValue(':create_at', $create_at);
-        $request->bindValue(':modif_at', $modif_at);
-        $request->bindvalue(':posted', $posted);
+        $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted) VALUES (:title, :author, :content, :image, NOW(), NOW(),:posted)');
+        $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+        $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
+        $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+        $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+        $request->bindvalue(':posted', $data['posted']);
         return $request->execute($data);
         $request->closeCursor();
     }
     // Mise à jour de Billet
-    public function update(array $data)
+    public function Update(array $data)
     {
-        $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title,author=:author, content=:content,image=:image, create_at=:create_at,modif_at=NOW(), posted=:posted WHERE id=:id');
-        $request->bindValue('id', (int) $id, \PDO::PARAM_INT);
-        $request->bindValue(':title', $title, \PDO::PARAM_STR);
-        $request->bindValue(':author', $author, \PDO::PARAM_STR);
-        $request->bindValue(':content', $content, \PDO::PARAM_STR);
-        $request->bindValue(':image', $image, \PDO::PARAM_STR);
-        $request->bindValue(':create_at', $create_at);
-        $request->bindValue(':modif_at', $modif_at);
-        $request->bindvalue(':posted', $posted);
+        $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title,author=:author, content=:content,image=:image, ,modif_at=NOW(), posted=:posted WHERE id_bil=:id');
+        $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+        $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
+        $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+        $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+        $request->bindvalue(':posted', $data['posted']);
         return $request->execute($data);
         $request->closeCursor();
     }
     // Effacer un Billet
-    public function delete($id)
+    public function Delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id LIMIT 1');
-        $request->bindparam(':id', $id, \PDO::PARAM_INT);
+        $request->bindParam(':id', $id, \PDO::PARAM_INT);
         return $request->execute();
     }
-    public function add_picture($tmp_name, $extension)
+    // Ajout d'image
+    public function Add_picture($tmp_name, $extension)
     {
         if (!empty($_FILES['image']['name'])) {
             $file = $_FILES['image']['name'];

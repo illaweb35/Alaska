@@ -1,4 +1,7 @@
 <section class="section">
+  <div class="content">
+    <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+  </div>
   <?php foreach ($billets as $billet):?>
 <div class="container">
     <div class="box">
@@ -16,7 +19,7 @@
             </p>
             <br/>
             <p>
-            <?=  substr(nl2br(htmlspecialchars($billet->getContent())), 0, 150); ?>...
+            <?=  substr(nl2br($billet->getContent()), 0, 150); ?>...
             </p>
             <br/>
               <small>Publié le :
@@ -27,9 +30,23 @@
             <p>Par <strong><?= htmlspecialchars($billet->getAuthor()) ?></strong>
             </p>
           </div>
+          <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$billet->getId()?>">
+            <span class="icon is-small">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$billet->getId()?>">
+            <span class="icon is-small">
+              <i class="fas fa-trash" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
          </div>
       </article>
+      </div>
     </div>
-  </div>
   <?php endforeach; ?>
 </section>

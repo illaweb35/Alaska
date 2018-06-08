@@ -25,6 +25,10 @@ Suivez mon nouveau roman...par épisode
 <section class="section">
 <div class="container">
   <div class="columns is-centered">
+<?php if (empty($billets)):?>
+  <p><strong>Il n'y a aucun billets publiés.</strong> _  Merci de revenir me visiter plus tard</p>
+
+<?php else:?>
       <?php foreach ($billets as $billet):?>
     <div class="column is-3">
       <div class="card">
@@ -42,9 +46,9 @@ Suivez mon nouveau roman...par épisode
                 <strong><?=  htmlspecialchars($billet->getAuthor()) ?></strong>
               </p>
               <div class="content">
-                <p><?= substr(nl2br(htmlspecialchars($billet->getContent())), 0, 150); ?>...</p>
+              <p><?= substr($billet->getContent(), 0, 150)?>...</p>
                  <time datetime="1-1-2016">
-                   <small>Publié le : <em><?= date(' d m Y à H : i', strtotime($billet->getCreate_at())); ?></em></small>
+                   <small>Publié le : <em><?= date(' d m Y à H:i', strtotime($billet->getCreate_at())); ?></em></small>
                  </time>
               </div>
             </div>
@@ -52,7 +56,8 @@ Suivez mon nouveau roman...par épisode
         </div>
       </div>
     </div>
-      <?php endforeach; ?>
+  <?php endforeach;?>
+<?php endif?>
   </div>
 </div>
 </section>

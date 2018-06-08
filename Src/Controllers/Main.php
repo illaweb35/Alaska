@@ -44,14 +44,14 @@ class Main
         }
         $_SESSION['is_logged'] = 1;
         $user = $this->userManager;
-        $view = new Viewer('Back/index', 'Mon Blog _ login');
+        $view = new Viewer('Back/Index', 'Alaska _ login');
         $view->createFile(['user' => $user]);
     }
     // Inscription utilisateur
     public function Signup()
     {
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/index');
+            header('Location:'.\BASEPATH.'Front/Index');
         }
 
         if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
@@ -59,7 +59,7 @@ class Main
                 $user = $this->userManager->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
             }
         }
-        $view = new Viewer('Back/signup', 'Ajouter un utilisateur');
+        $view = new Viewer('Back/Signup', 'Alaska _ Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
     }
     // Déconnection de la partie Admin
@@ -70,7 +70,7 @@ class Main
             session_unset();
             session_destroy();
         }
-        header('Location: '.\BASEPATH.'Back/index');
+        header('Location: '.\BASEPATH.'Back/Index');
         exit;
     }
 }
