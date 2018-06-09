@@ -11,18 +11,22 @@ class billetManager
     {
         $this->_pdo =  new Dbd;
     }
-    // Lire tous les billets
-    public function ReadAll($offset, $limit)
+    public function readAll()
     {
         if (isset($_SESSION['authenticated'])) {
-            $request = $this->_pdo->prepare('SELECT * FROM T_billets  ORDER BY create_at DESC LIMIT :offset,:limit');
-            $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
-            $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
-        } else {
-            $request = $this->_pdo->prepare('SELECT * FROM T_billets  WHERE posted=1 ORDER BY create_at DESC LIMIT :offset,:limit');
-            $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
-            $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
+            $request = $this->_pdo->prepare('SELECT * FROM T_billets  ORDER BY create_at DESC ');
+            $request->execute();
+            $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
+            return $billets = $request->fetchAll();
+            $request->closeCursor();
         }
+    }
+    // Lire tous les billets
+    public function ReadFront($offset, $limit)
+    {
+        $request = $this->_pdo->prepare('SELECT * FROM T_billets  WHERE posted = 1 ORDER BY create_at DESC LIMIT :offset,:limit');
+        $request->bindParam(':offset', $offset, \PDO::PARAM_INT);
+        $request->bindParam(':limit', $limit, \PDO::PARAM_INT);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
         return $billets = $request->fetchAll();
@@ -53,13 +57,21 @@ class billetManager
     // Mise à jour de Billet
     public function Update(array $data)
     {
-        $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title,author=:author, content=:content,image=:image, ,modif_at=NOW(), posted=:posted WHERE id_bil=:id');
+        $request = $this->_pdo->prepare(
+          'UPDATE  T_billets
+          SET
+          title=:title,
+          author=:author,
+          content=:content,
+          modif_at=NOW(),
+          posted=:posted
+          WHERE id_bil=:id'
+        );
         $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
         $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
         $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-        $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
-        $request->bindvalue(':posted', $data['posted']);
+        $request->bindValue(':posted', $data['posted'], \PDO::PARAM_INT);
         return $request->execute($data);
         $request->closeCursor();
     }

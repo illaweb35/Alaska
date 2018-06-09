@@ -43,7 +43,6 @@
                     </p>
                   </span>
                     <small>Le <?= date('d M Y à H:i', strtotime($comment->getCreate_at()))?></small>
-
                     <p>
                       <?= nl2br(htmlspecialchars($comment->getContent())) ?>
                     </p>
@@ -60,7 +59,7 @@
         <div class="column">
           <article class="media">
             <div class="media-content">
-              <form action="<?= BASEPATH.'Front/addComment/'. $billets->getId()?>" method="post">
+              <form action="<?= BASEPATH.'Front/Create/'. $billets->getId()?>" method="post">
                 <div class="field">
                   <div class="control">
                     <input class ="input" id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo" required /><br />

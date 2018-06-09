@@ -17,7 +17,9 @@
               <p class="subtitle is-3">
               Billets
               </p>
-              <p><strong><?= count($billets) ?></strong> Billets publiés.</p>
+              <p><strong><?= count($all_billets) ?></strong> Billets sur le site.</p>
+              <hr/>
+              <p><strong><?= count($billets)?></strong> Publié sur le site</p>
             </div>
           </article>
         </div>
@@ -35,6 +37,8 @@
                 Commentaires
               </p>
               <p><strong><?= count($comments)?></strong> commentaires publiés</p>
+              <hr/>
+              <p><strong><?= count($commentModerate) ?></strong> Commentaires à valider</p>
             </div>
           </article>
         </div>
@@ -73,13 +77,13 @@
           <th>Action</th>
         </tr>
       </thead>
-        <?php foreach ($comModerate as $comMod):?>
+        <?php foreach ($commentModerate as $comMod):?>
       <tbody>
         <td><?= htmlspecialchars($comMod->getPseudo())?></td>
         <td><?= substr(nl2br(htmlspecialchars($comMod->getContent())), 0, 100); ?> ...</td>
         <td><?= htmlspecialchars($comMod->getBil_id())?></td>
         <td>
-          <a href="">
+          <a href="<?= BASEPATH.'Back/Check/'.$comMod->getId()?>">
             <span class="icon">
               <i class="fas fa-check"></i>
             </span>

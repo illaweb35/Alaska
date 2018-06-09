@@ -79,11 +79,10 @@ class commentManager
     // Mise à jour de Commentaires
     public function Update(array $data)
     {
-        $sql= ('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=NOW(), bil_id=:bil_id, moderate=:moderate WHERE id=:id');
+        $sql= ('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=NOW(), moderate=:moderate WHERE id_com=:id');
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':pseudo', $data['pseudo'], \PDO::PARAM_STR) ;
         $request->bindValue(':content', $data['content'], \PDO::PARAM_STR) ;
-        $request->bindValue(':bil_id', $data['bil_id'], \PDO::PARAM_INT);
         $request->bindValue('moderate', $data['moderate'], \PDO::PARAM_INT);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
         return $request->execute($data);
@@ -91,13 +90,21 @@ class commentManager
     }
     public function Moderate($id)
     {
-        $sql = ('UPDATE T_comments SET moderate=:moderate WHERE id_com=:id');
+        $request = $this->_pdo->query('SELECT moderate FROM T_comments WHERE id_com='.$id.' LIMIT 1');
+        $verif_moderate = $request->execute();
+        $sql = ('UPDATE T_comments SET moderate=:moderate, modif_at=NOW() WHERE id_com=:id');
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
-        $request->bindValue(':moderate', 1, \PDO::PARAM_BOOL);
+        if ($verif_moderate === 0) {
+            $request->bindValue(':moderate', 1, \PDO::PARAM_INT);
+        } else {
+            $request->bindValue(':moderate', 0, \PDO::PARAM_INT);
+        }
+
         return $request->execute();
         $request->closeCursor();
     }
+
     // Effacer un Billet
     public function Delete($id)
     {

@@ -18,12 +18,13 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-        $billets = $this->billetManager->readAll(0, 100);
+        $billets = $this->billetManager->readFront(0, 100);
+        $all_billets = $this->billetManager->readAll();
         $comments = $this->commentManager->readAll();
-        $comModerate =$this->commentManager->readModerate();
+        $commentModerate =$this->commentManager->readModerate();
         $users = $this->userManager->userAll();
         $view = new Viewer('Back/Dashboard', "Mon Blog _ Tableau de bord");
-        $view->createFile(['billets' => $billets,'comments'=>$comments,'users'=>$users,'comModerate'=> $comModerate]);
+        $view->createFile(['billets' => $billets,'all_billets'=>$all_billets,'comments'=>$comments,'users'=>$users,'commentModerate'=> $commentModerate]);
     }
 
     public function List()
@@ -41,5 +42,13 @@ class Back extends Main
         $user = $this->userManager->userAll();
         $view = new Viewer('Back/Params', 'Alaska _ Paramètres');
         $view->createFile(['user'=>$user]);
+    }
+    public function Check($id)
+    {
+        $comment = $this->commentManager->Moderate($id);
+        if ($comment !== false) {
+            header('Location:'.\BASEPATH.'Back/Dashboard/'.$comment);
+            exit();
+        }
     }
 }

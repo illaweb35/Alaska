@@ -1,4 +1,5 @@
-
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
  <section class="section">
   <div class="container">
     <h1 class="title">Modifier un Billet</h1>
@@ -6,10 +7,10 @@
       <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Back/Update'?>" method="post" enctype="multipart/form-data">
+      <form action="<?= BASEPATH.'Backedit/Update'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
-          <input type="text" name="title" class="input" placeholder="<?= $billets->getTitle()?>">
+          <input type="text" name="title" class="input" placeholder="<?= $billets->getTitle()?>"/>
         </div>
         <div class="field">
           <div class="control">
@@ -50,13 +51,15 @@
                       </div>
                     </div>
                   </div>
-                <div class="field">
-                  <label class="checkbox switch">
-                    <input type="checkbox" name="posted" checked>
-                    <span class="slider round"></span>
-                  </label>
-                  Poster le billet
-                </div>
+              <div class="field">
+                <label class="checkbox switch">
+                  <input type="checkbox" name="posted" value="<?= $billets->getPosted()?>" <?php if ($billets->getPosted()== 1) {
+    ?>checked="checked"<?php
+}?>/>
+                  <span class="slider round"></span>
+                </label>
+                Poster
+              </div>
                 </div>
               </div>
             </div>

@@ -21,7 +21,7 @@ class Backedit extends Main
               'title'=> \htmlspecialchars($_POST['title']),
               'author'=> \htmlspecialchars($_POST['author']),
               'content'=>($_POST['content']),
-              'image'=>\htmlspecialchars($_POST['image']['name']),
+              'image'=>\htmlspecialchars($_POST['image']),
               'posted'=> \htmlspecialchars($_POST['posted'])];
                 $billets = $this->billetManager->Create($data);
                 if ($billets !== false) {
@@ -40,8 +40,8 @@ class Backedit extends Main
             header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
-        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-            if (isset(
+        if ($_SERVER['REQUEST_METHOD']==='POST') {
+            if (!isset(
             $_POST['title'],
             $_POST['author'],
             $_POST['content'],
@@ -50,13 +50,12 @@ class Backedit extends Main
               'title'=> \htmlspecialchars($_POST['title']),
               'author'=> \htmlspecialchars($_POST['author']),
               'content'=>($_POST['content']),
-              'posted'=> \htmlspecialchars($_POST['posted'])];
+              'posted'=> $_POST['posted']];
                 $billets = $this->billetManager->Update($data);
                 if ($billets !== false) {
-                    header('Location:'.\BASEPATH.'Back/Edit'.$billet->getId());
+                    header('Location:'.\BASEPATH.'Back/Post'.$billet->getId());
                     exit();
                 }
-                throw new \Exception(Error::getError("Une erreur est survenue l'enrgistrement ne c'est pas fait "), 1);
             }
         }
         $billets = $this->billetManager->Read($id);

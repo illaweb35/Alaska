@@ -10,7 +10,7 @@ class Front extends Main
     // affiche la liste des billets sur la page d'accueil avec un maximum de 4 billets suivant la constance MAX_POST
     public function Index()
     {
-        $billets = $this->billetManager->readAll(0, self::MAX_POST);
+        $billets = $this->billetManager->readFront(0, self::MAX_POST);
         $view = new Viewer('Front/Index', 'Alaska _ Accueil');
         $view->createFile(['billets' => $billets]);
     }
@@ -25,24 +25,25 @@ class Front extends Main
     // affichage des billets en liste
     public function List()
     {
-        $billets =$this->billetManager->readAll(0, 100);
+        $billets =$this->billetManager->readFront(0, 100);
         $view = new Viewer('Front/List', 'Alaska _ Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
     // création d'un commentaire pour le billet en cour
     public function Create()
     {
-        $comment = $this->commentManager->create();
-        if ($comment !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
+        $comments = $this->commentManager->create();
+        if ($comments !== false) {
+            header('Location:'.\BASEPATH.'Front/Posting/'.$comments);
             exit();
         }
     }
     public function Signaler($id)
     {
-        $comment = $this->commentManager->Moderate($id);
-        if ($comment !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
+        $comments = $this->commentManager->Moderate($id);
+      
+        if ($comments !== false) {
+            header('Location:'.\BASEPATH.'Front/Posting/'.$comments);
             exit();
         }
     }
