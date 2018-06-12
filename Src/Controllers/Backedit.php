@@ -11,23 +11,11 @@ class Backedit extends Main
         if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-        if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-            if (!isset(
-            $_POST['title'],
-            $_POST['author'],
-            $_POST['content'],
-            $_POST['posted'])) {
-                $data = [
-              'title'=> \htmlspecialchars($_POST['title']),
-              'author'=> \htmlspecialchars($_POST['author']),
-              'content'=>($_POST['content']),
-              'image'=>\htmlspecialchars($_POST['image']),
-              'posted'=> \htmlspecialchars($_POST['posted'])];
-                $billets = $this->billetManager->Create($data);
-                if ($billets !== false) {
-                    header('Location:'.\BASEPATH.'Back/Dashboard');
-                    exit();
-                }
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
+            $billets = $this->billetManager->Create($data);
+            if ($billets !== false) {
+                header('Location:'.\BASEPATH.'Back/Dashboard');
+                exit();
             }
         }
         $view = new Viewer('Back/Write', "Alaska _ Ecriture d'un billet");
@@ -40,26 +28,14 @@ class Backedit extends Main
             header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
-        if ($_SERVER['REQUEST_METHOD']==='POST') {
-            if (!isset(
-            $_POST['title'],
-            $_POST['author'],
-            $_POST['content'],
-            $_POST['posted'])) {
-                $data = [
-              'title'=> \htmlspecialchars($_POST['title']),
-              'author'=> \htmlspecialchars($_POST['author']),
-              'content'=>($_POST['content']),
-              'posted'=> \htmlspecialchars($_POST['posted'])];
-            
-                $billets = $this->billetManager->Update($data);
-                if ($billets !== false) {
-                    header('Location:'.\BASEPATH.'Back/Post'.$billet->getId());
-                    exit();
-                }
+        $billets = $this->billetManager->Read($id);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
+            $billets = $this->billetManager->Update($data);
+            if ($billets !== false) {
+                header('Location:'.\BASEPATH.'Back/Post'.$billet->getId());
+                exit();
             }
         }
-        $billets = $this->billetManager->Read($id);
         $view = new Viewer('Back/Edit', " Alaska _ Modification d'un billet");
         $view->createFile(['billets'=>$billets]);
     }

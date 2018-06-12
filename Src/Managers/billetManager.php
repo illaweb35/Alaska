@@ -43,35 +43,62 @@ class billetManager
         $request->closeCursor();
     }
     // Creation d'un billet
-    public function Create(array $data)
+    public function Create()
     {
+        $title = \htmlspecialchars($_POST['title']);
+        $author = \htmlspecialchars($_POST['author']);
+        $content = $_POST['content'];
+        $image = \htmlspecialchars($_POST['image']);
+        $create_at = date(DATE_W3C);
+        $modif_at = date(DATE_W3C);
+        $posted = \htmlspecialchars($_POST['posted']);
         try {
-            $request = $this->_pdo->prepare('INSERT INTO T_billets(title, author, content, image, create_at, modif_at, posted)
+            $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
-            $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
-            $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
-            $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-            $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
-            $request->bindvalue(':posted', $data['posted']);
-            return $request->execute($data);
+            $request->bindValue(':title', $title, \PDO::PARAM_STR);
+            $request->bindValue(':author', $author, \PDO::PARAM_STR);
+            $request->bindValue(':content', $content, \PDO::PARAM_STR);
+            $request->bindValue(':image', $image, \PDO::PARAM_STR);
+            $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
+            $verifIsOk = $request->execute();
+            if (!$verifIsOk) {
+                return false;
+            } else {
+                return $_POST['id_bil'];
+            }
         } catch (Exception $e) {
             throw new \Exception(Error::getError("Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
         }
         $request->closeCursor();
     }
     // Mise à jour de Billet
-    public function Update(array $data)
+    public function Update()
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
+            $title = \htmlspecialchars($_POST['title']);
+            $author = \htmlspecialchars($_POST['author']);
+            $content = $_POST['content'];
+            $image = \htmlspecialchars($_POST['image']);
+            $create_at = date(DATE_W3C);
+            $modif_at = date(DATE_W3C);
+            $posted = \htmlspecialchars($_POST['posted']);
+        }
         try {
             $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
-            $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
-            $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
-            $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
-            $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-            $request->bindValue(':posted', $data['posted'], \PDO::PARAM_INT);
-            return $request->execute($data);
+            $request->bindValue(':id', $id, \PDO::PARAM_INT);
+            $request->bindValue(':title', $title, \PDO::PARAM_STR);
+            $request->bindValue(':author', $author, \PDO::PARAM_STR);
+            $request->bindValue(':content', $content, \PDO::PARAM_STR);
+            $request->bindValue(':image', $image, \PDO::PARAM_STR);
+            $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
+            $verifIsOk = $request->execute();
+            if (!$verifIsOk) {
+                return false;
+            } else {
+                return $_POST['id_bil'];
+            }
         } catch (Exception $e) {
-            throw new \Exception(Error::getError("Une erreur est survenue, la mise a jour  n'a pu aboutir"), 1);
+            throw new \Exception(Error::getError("Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
         }
         $request->closeCursor();
     }
