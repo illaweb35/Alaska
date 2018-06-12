@@ -20,15 +20,19 @@ class userManager
         if (strlen($username)<= 0 or strlen($password)<= 0) {
             throw new \Exception(Error::getError("Vous devez entrer un non d'utilisateur et un mot de passe valide"), 1);
         }
+        $username = \htmlspecialchars($_POST['username']);
+        $password = $this->mixMdp(\htmlspecialchars($_POST['password']));
         $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username AND password=:password ');
         $request->bindValue(':username', $username, \PDO::PARAM_STR);
         $request->bindValue(':password', $password, \PDO::PARAM_STR);
         $request->execute();
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
+      
         if ($request->rowCount() == 1) {
             if (session_status() == PHP_SESSION_NONE) {
                 \session_start();
             }
+
             $userData = $request->Fetch();
             $user = ['id_user'=> $userData->getId()];
             $_SESSION['user'] = $user;
@@ -55,10 +59,6 @@ class userManager
     // ajout d'un utilisateur
     public function Create()
     {
-        if (!$_SERVER['REQUEST_METHOD'] == 'POST') {
-            throw new \Exception(Error::getError("Error Accès non autorisé"), 1);
-        }
-        $user =new User();
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
         $password = $this->mixMdp(\htmlspecialchars($_POST['password']));
@@ -70,14 +70,19 @@ class userManager
             throw new \Exception(Error::getError("Nom d'utilisateur ou email deja utilisé"), 1);
         } else {
             try {
-                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:name, :email, :password, :role, NOW())');
-                $request->bindValue(':name', $username, \PDO::PARAM_STR) ;
+                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:username, :email, :password, :role, NOW())');
+                $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
                 $request->bindValue(':role', $role, \PDO::PARAM_STR);
                 $request->execute();
                 $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
-                return $user;
+                $verifIsOk = $request->execute();
+                if (!$verifIsOk) {
+                    return false;
+                } else {
+                    return $_POST['id_user'];
+                }
             } catch (PDOException $e) {
                 throw new \Exception(Error::getError($e->getMessage()), 1);
             }
@@ -99,7 +104,7 @@ class userManager
             $request->bindValue(':password', $password, \PDO::PARAM_STR);
             $request->bindValue(':role', $role, \PDO::PARAM_STR);
             $request->bindValue(':dateCrea', $dateCrea);
-            return $request->execute();
+            $request->execute();
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
             throw new \Exception(Error::getError($e->getMessage()), 1);
@@ -108,7 +113,7 @@ class userManager
     // haschage du mot de passe
     public function mixMdp($p)
     {
-        return  \password_hash("AlaskaBlog", PASSWORD_DEFAULT);
+        return \password_hash(SALT, PASSWORD_DEFAULT);
     }
     // Effacer un Billet
     public function Delete($id)

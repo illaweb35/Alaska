@@ -42,7 +42,7 @@ class Front extends Main
     {
         $comment = $this->commentManager->Moderate($id);
         if ($comment !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
+            header('Location'.\BASEPATH.'Front/Posting'.$comment);
             exit();
         }
     }

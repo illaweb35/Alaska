@@ -4,7 +4,7 @@
     <div class="columns is-centered">
       <div class="box">
         <div class="column">
-          <form action="<?= BASEPATH.'Back/Login'?>" method="post">
+          <form action="<?= BASEPATH.'Main/Login'?>" method="post">
             <div class="box">
               <figure class="image is-centered">
                   <img id="admin_img" src="<?= BASEPATH."/img/admin.png" ?>" alt="Administrateur avec casque et micro">
@@ -14,11 +14,13 @@
               <label for="" class="label">
                 Nom d'utilisateur
               </label>
-              <input type="text" class="input" name="username">
+              <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
+    echo$_POST['username'];
+}?>">
             </div>
             <div class="field">
               <label for="password" class="label">Password</label>
-              <input type="password" class="input" name="password" placeholder="mot de passe">
+              <input type="password" class="input" name="password">
             </div>
             <div class="field has-addons">
               <div class="control">

@@ -51,4 +51,13 @@ class Back extends Main
             exit();
         }
     }
+    public function comDelete($id)
+    {
+        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/Index');
+        }
+        $comments = $this->commentManager->Delete($id);
+        header('Location:'.\BASEPATH.'Back/Dashboard');
+        exit();
+    }
 }

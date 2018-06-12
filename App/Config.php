@@ -8,3 +8,5 @@ DB_HOST ='localhost',
 DB_NAME = 'Alaska',
 DB_USER = 'root',
 DB_PASS = 'root';
+// SALT
+define('SALT', 'georgedelajunglecrieohwoua');

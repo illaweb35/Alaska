@@ -72,17 +72,16 @@ class billetManager
         $request->closeCursor();
     }
     // Mise à jour de Billet
-    public function Update()
+    public function Update($id)
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
-            $title = \htmlspecialchars($_POST['title']);
-            $author = \htmlspecialchars($_POST['author']);
-            $content = $_POST['content'];
-            $image = \htmlspecialchars($_POST['image']);
-            $create_at = date(DATE_W3C);
-            $modif_at = date(DATE_W3C);
-            $posted = \htmlspecialchars($_POST['posted']);
-        }
+        $title = \htmlspecialchars($_POST['title']);
+        $author = \htmlspecialchars($_POST['author']);
+        $content = $_POST['content'];
+        $image = \htmlspecialchars($_POST['image']);
+        $create_at = date(DATE_W3C);
+        $modif_at = date(DATE_W3C);
+        $posted = \htmlspecialchars($_POST['posted']);
+
         try {
             $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);

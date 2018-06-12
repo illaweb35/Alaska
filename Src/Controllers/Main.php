@@ -53,10 +53,11 @@ class Main
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-
-        if (isset($_POST['username'],$_POST['email'],$_POST['password'],$_POST['role'])) {
-            if ($_SERVER['REQUEST_METHOD']=== 'post') {
-                $user = $this->userManager->createUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role']);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
+            $user = $this->userManager->Create();
+            if ($user !== false) {
+                header('Location:'.\BASEPATH.'Back/Index');
+                exit();
             }
         }
         $view = new Viewer('Back/Signup', 'Alaska _ Ajouter un utilisateur');

@@ -2,6 +2,7 @@
 namespace Src\Controllers;
 
 use App\Viewer;
+use App\Error;
 
 class Backedit extends Main
 {
@@ -12,7 +13,7 @@ class Backedit extends Main
             header('Location:'.\BASEPATH.'Front/Index');
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
-            $billets = $this->billetManager->Create($data);
+            $billets = $this->billetManager->Create();
             if ($billets !== false) {
                 header('Location:'.\BASEPATH.'Back/Dashboard');
                 exit();
@@ -53,6 +54,9 @@ class Backedit extends Main
             header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
+
         $billets = $this->billetManager->Delete($id);
+        header('Location:'.\BASEPATH.'Back/List');
+        exit();
     }
 }
