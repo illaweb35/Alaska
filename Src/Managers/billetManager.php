@@ -45,34 +45,34 @@ class billetManager
     // Creation d'un billet
     public function Create(array $data)
     {
-        $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted) VALUES (:title, :author, :content, :image, NOW(), NOW(),:posted)');
-        $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
-        $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
-        $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-        $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
-        $request->bindvalue(':posted', $data['posted']);
-        return $request->execute($data);
+        try {
+            $request = $this->_pdo->prepare('INSERT INTO T_billets(title, author, content, image, create_at, modif_at, posted)
+            VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
+            $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+            $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
+            $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+            $request->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+            $request->bindvalue(':posted', $data['posted']);
+            return $request->execute($data);
+        } catch (Exception $e) {
+            throw new \Exception(Error::getError("Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
+        }
         $request->closeCursor();
     }
     // Mise à jour de Billet
     public function Update(array $data)
     {
-        $request = $this->_pdo->prepare(
-          'UPDATE  T_billets
-          SET
-          title=:title,
-          author=:author,
-          content=:content,
-          modif_at=NOW(),
-          posted=:posted
-          WHERE id_bil=:id'
-        );
-        $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
-        $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
-        $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
-        $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-        $request->bindValue(':posted', $data['posted'], \PDO::PARAM_INT);
-        return $request->execute($data);
+        try {
+            $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
+            $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+            $request->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+            $request->bindValue(':author', $data['author'], \PDO::PARAM_STR);
+            $request->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+            $request->bindValue(':posted', $data['posted'], \PDO::PARAM_INT);
+            return $request->execute($data);
+        } catch (Exception $e) {
+            throw new \Exception(Error::getError("Une erreur est survenue, la mise a jour  n'a pu aboutir"), 1);
+        }
         $request->closeCursor();
     }
     // Effacer un Billet

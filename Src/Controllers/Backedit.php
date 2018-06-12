@@ -50,7 +50,8 @@ class Backedit extends Main
               'title'=> \htmlspecialchars($_POST['title']),
               'author'=> \htmlspecialchars($_POST['author']),
               'content'=>($_POST['content']),
-              'posted'=> $_POST['posted']];
+              'posted'=> \htmlspecialchars($_POST['posted'])];
+            
                 $billets = $this->billetManager->Update($data);
                 if ($billets !== false) {
                     header('Location:'.\BASEPATH.'Back/Post'.$billet->getId());
