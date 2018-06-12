@@ -41,7 +41,6 @@ class Front extends Main
     public function Signaler($id)
     {
         $comments = $this->commentManager->Moderate($id);
-      
         if ($comments !== false) {
             header('Location:'.\BASEPATH.'Front/Posting/'.$comments);
             exit();

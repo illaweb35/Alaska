@@ -34,7 +34,7 @@ class commentManager
     public function Read($id = null)
     {
         if (!isset($_SESSION['id'])) {
-            $request = $this->_pdo->prepare('SELECT * FROM T_comments WHERE bil_id = :id AND moderate = 0');
+            $request = $this->_pdo->prepare('SELECT * FROM T_comments WHERE bil_id = :id AND moderate = 0 ORDER BY create_at DESC');
             $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         } elseif ($id == null) {// si pas d'id
             $request = $this->_pdo->prepare('SELECT * FROM T_comments');
@@ -90,15 +90,19 @@ class commentManager
     }
     public function Moderate($id)
     {
-        $request = $this->_pdo->query('SELECT moderate FROM T_comments WHERE id_com='.$id.' LIMIT 1');
-        $verif_moderate = $request->execute();
-        $sql = ('UPDATE T_comments SET moderate=:moderate, modif_at=NOW() WHERE id_com=:id');
+        $sql=('SELECT moderate FROM T_comments WHERE id_com=:id LIMIT 1');
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
+        $request->execute();
+        $verif_moderate = $request->fetch();
         if ($verif_moderate === 0) {
-            $request->bindValue(':moderate', 1, \PDO::PARAM_INT);
+            $sql = ('UPDATE T_comments SET moderate=1, modif_at=NOW() WHERE id_com=:id');
+            $request = $this->_pdo->prepare($sql);
+            $request->bindValue(':id', $id, \PDO::PARAM_INT);
         } else {
-            $request->bindValue(':moderate', 0, \PDO::PARAM_INT);
+            $sql = ('UPDATE T_comments SET moderate=0, modif_at=NOW() WHERE id_com=:id');
+            $request = $this->_pdo->prepare($sql);
+            $request->bindValue(':id', $id, \PDO::PARAM_INT);
         }
 
         return $request->execute();
