@@ -40,9 +40,9 @@ class Front extends Main
     }
     public function Signaler($id)
     {
-        $comments = $this->commentManager->Moderate($id);
-        if ($comments !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting/'.$comments);
+        $comment = $this->commentManager->Moderate($id);
+        if ($comment !== false) {
+            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
             exit();
         }
     }

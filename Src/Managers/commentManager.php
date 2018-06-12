@@ -95,19 +95,17 @@ class commentManager
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
         $request->execute();
         $verif_moderate = $request->fetch();
-        if ($verif_moderate === 0) {
-            $sql = ('UPDATE T_comments SET moderate=1, modif_at=NOW() WHERE id_com=:id');
-            $request = $this->_pdo->prepare($sql);
-            $request->bindValue(':id', $id, \PDO::PARAM_INT);
+        if ($verif_moderate == 1) {
+            $sql = ('UPDATE T_comments SET moderate = 0, modif_at=NOW() WHERE id_com=:id');
         } else {
-            $sql = ('UPDATE T_comments SET moderate=0, modif_at=NOW() WHERE id_com=:id');
-            $request = $this->_pdo->prepare($sql);
-            $request->bindValue(':id', $id, \PDO::PARAM_INT);
+            $sql = ('UPDATE T_comments SET moderate = 1, modif_at=NOW() WHERE id_com=:id');
         }
-
+        $request = $this->_pdo->prepare($sql);
+        $request->bindValue(':id', $id, \PDO::PARAM_INT);
         return $request->execute();
-        $request->closeCursor();
+        closeCursor();
     }
+
 
     // Effacer un Billet
     public function Delete($id)
