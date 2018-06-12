@@ -33,30 +33,22 @@ class Main
     // Page de connexion a la partie Admin
     public function Login()
     {
-        if (!$this->isLogged()) {
-            header('Location;'.BASEPATH.'/Front/Home');
-        }
-        if (isset($_POST['username'],$_POST['password'])) {
-            $this->userManager->connexion($_POST['username'], $_POST['password']);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' | !empty($_POST)) {
+            $this->userManager->connexion();
         }
         if (isset($_SESSION['id'])) {
             header('Location:'.BASEPATH.'Back/Dashboard');
         }
-        $_SESSION['is_logged'] = 1;
-        $user = $this->userManager;
-        $view = new Viewer('Back/Index', 'Alaska _ login');
+        $view = new Viewer('Back/Login', 'Alaska _ login');
         $view->createFile(['user' => $user]);
     }
     // Inscription utilisateur
     public function Signup()
     {
-        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/Index');
-        }
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $user = $this->userManager->Create();
             if ($user !== false) {
-                header('Location:'.\BASEPATH.'Back/Index');
+                header('Location:'.\BASEPATH.'Back/Login');
                 exit();
             }
         }

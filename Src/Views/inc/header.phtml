@@ -1,3 +1,10 @@
+<?php
+use App\Check;
+
+if ($_SESSION['authenticated']) {
+    Check::verifSession();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
