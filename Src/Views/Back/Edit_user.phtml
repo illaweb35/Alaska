@@ -1,0 +1,42 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Modifier son profil</h1>
+    <div class="content">
+      <p>Utilisateur connecté:
+        <strong>
+          <?= $_SESSION['name']?>
+        </strong>
+      </p>
+    </div>
+    <div class="box">
+      <form action="<?= BASEPATH.'Backedit/Update_user'?>" method="post">
+        <div class="field">
+          <label for="username" class="label">Nom</label>
+          <input type="text" class="input" name="username" placeholder="<?= $users->getUsername()?>"/>
+        </div>
+        <div class="field">
+          <label for="email" class="label">Email</label>
+          <input type="email"  name="email" class="input" placeholder="">
+        </div>
+        <div class="field">
+          <label for="password" class="label">Mot de passe</label>
+          <input type="password" name="password" class="input" placeholder="">
+        </div>
+        <div class="field">
+          <div class="select">
+            <select name="role">
+              <option value="Administrateur">Utilisateur</option>
+              <option value="Modérateur">Modérateur</option>
+            </select>
+          </div>
+        </div>
+        <div class="field has-addons">
+          <div class="control">
+            <button class="button is-link" type="submit">Modifier</button>
+            <button class="button is-text" type="reset">Annulé</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

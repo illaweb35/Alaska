@@ -74,6 +74,7 @@ class billetManager
     // Mise à jour de Billet
     public function Update($id)
     {
+        $title = $author = $content = $image = $modif_at = $posted = '';
         $title = \htmlspecialchars($_POST['title']);
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];

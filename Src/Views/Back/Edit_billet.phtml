@@ -4,13 +4,17 @@
   <div class="container">
     <h1 class="title">Modifier un Billet</h1>
     <div class="content">
-      <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+      <p>Utilisateur Connecté:
+        <strong>
+          <?= $_SESSION['name']?>
+        </strong>
+      </p>
     </div>
     <div class="box">
       <form action="<?= BASEPATH.'Backedit/Update'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
-          <input type="text" name="title" class="input" placeholder="<?= $billets->getTitle()?>"/>
+          <input type="text" name="title" class="input" placeholder="<?= htmlspecialchars($billets->getTitle())?>"/>
         </div>
         <div class="field">
           <div class="control">
@@ -24,7 +28,7 @@
                 <div class="file">
                   <label class="file-label">
                     <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="<?= $billets->getImage()?>">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="<?= htmlspecialchars($billets->getImage())?>"/>
                     <input class="file-input" type="file" name="image">
                       <span class="file-cta">
                         <span class="file-icon">
@@ -41,7 +45,7 @@
             <div class="column">
               <div class="box">
                 <div class="field">
-                  <label class="label">Auteur</label>
+                  <label class="label">Role</label>
                     <div class="control">
                       <div class="select">
                         <select name="author">

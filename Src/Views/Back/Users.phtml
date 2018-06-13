@@ -1,6 +1,6 @@
 <section class="section">
   <div class="container">
-    <h1 class="title is-3">PARAMETRES</h1>
+    <h1 class="title is-3">Utilisateurs</h1>
     <div class="content">
       <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
     </div>
@@ -27,12 +27,12 @@
                 <td><?= htmlspecialchars($user->getMail())?></td>
                 <td><?= date(' d M Y à H:i', strtotime($user->getCreate_at()))?></td>
                 <td>
-                  <a href="<?= BASEPATH.'Backedit/updateUser'?>">
+                  <a href="<?= BASEPATH.'Backedit/Update_user/'.$user->getId()?>">
                     <span class="icon">
                       <i class="fas fa-edit"></i>
                     </span>
                   </a>
-                  <a href="<?= BASEPATH.'Backedit/userDelete/'.$user->getId() ?>">
+                  <a href="<?= BASEPATH.'Backedit/Delete_user/'.$user->getId() ?>">
                     <span class="icon">
                       <i class="fas fa-trash"></i>
                     </span>
@@ -50,7 +50,7 @@
           <div class="notification">
             <p class="title is-5">
               Ajouter un utilisateur
-              <form action="<?= BASEPATH.'Backedit/CreateUser'?>" method="post">
+              <form action="<?= BASEPATH.'Backedit/Create_user'?>" method="post">
                 <div class="field">
                   <label for="username" class="label">Nom d'utilisateur</label>
                   <input type="text" class="input" name="username" required>
