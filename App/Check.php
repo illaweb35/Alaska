@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-abstract class Check
+class Check
 {
     public static function verifSession()
     {

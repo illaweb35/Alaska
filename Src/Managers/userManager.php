@@ -75,11 +75,13 @@ class userManager
                 $request->bindValue(':role', $role, \PDO::PARAM_STR);
                 $request->execute();
                 $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
-                $verifIsOk = $request->execute();
+                $users = $request->execute();
+                $verifIsOk = $users;
                 if (!$verifIsOk) {
                     return false;
                 } else {
-                    return $_POST['id_user'];
+                    return $users;
+                    $request->closeCursor();
                 }
             } catch (PDOException $e) {
                 throw new \Exception(Error::getError($e->getMessage()), 1);
@@ -114,7 +116,7 @@ class userManager
     // Effacer un Billet
     public function Delete($id)
     {
-        $request = $this->_pdo->prepare('DELETE FROM T_users WHERE id = :id');
+        $request = $this->_pdo->prepare('DELETE FROM T_users WHERE id_user = :id');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         $request->execute();
         return true;

@@ -24,7 +24,13 @@ class Back extends Main
         $commentModerate =$this->commentManager->readModerate();
         $users = $this->userManager->userAll();
         $view = new Viewer('Back/Dashboard', "Mon Blog _ Tableau de bord");
-        $view->createFile(['billets' => $billets,'all_billets'=>$all_billets,'comments'=>$comments,'users'=>$users,'commentModerate'=> $commentModerate]);
+        $view->createFile(
+          ['billets' => $billets,
+          'all_billets'=>$all_billets,
+          'comments'=>$comments,
+          'users'=>$users,
+          'commentModerate'=> $commentModerate]
+        );
     }
 
     public function List()
@@ -34,14 +40,14 @@ class Back extends Main
         $view->createFile(['billets' => $billets]);
     }
 
-    public function Params()
+    public function ListUsers()
     {
         if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-        $user = $this->userManager->userAll();
-        $view = new Viewer('Back/Params', 'Alaska _ Paramètres');
-        $view->createFile(['user'=>$user]);
+        $users = $this->userManager->userAll();
+        $view = new Viewer('Back/Users', 'Alaska _ Paramètres');
+        $view->createFile(['users'=>$users]);
     }
     public function Check($id)
     {
@@ -50,14 +56,5 @@ class Back extends Main
             header('Location:'.\BASEPATH.'Back/Dashboard/'.$comment);
             exit();
         }
-    }
-    public function comDelete($id)
-    {
-        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
-            header('Location:'.\BASEPATH.'Front/Index');
-        }
-        $comments = $this->commentManager->Delete($id);
-        header('Location:'.\BASEPATH.'Back/Dashboard');
-        exit();
     }
 }

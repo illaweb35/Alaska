@@ -20,19 +20,19 @@
                 <th>Actions</th>
               </tr>
             </thead>
-              <?php foreach ($user as $user):?>
+              <?php foreach ($users as $user):?>
             <tbody>
               <tr>
                 <td><?= htmlspecialchars($user->getUsername())?></td>
                 <td><?= htmlspecialchars($user->getMail())?></td>
                 <td><?= date(' d M Y à H:i', strtotime($user->getCreate_at()))?></td>
                 <td>
-                  <a href="<?= BASEPATH.'Backedit/UserEdit'?>">
+                  <a href="<?= BASEPATH.'Backedit/updateUser'?>">
                     <span class="icon">
                       <i class="fas fa-edit"></i>
                     </span>
                   </a>
-                  <a href="">
+                  <a href="<?= BASEPATH.'Backedit/userDelete/'.$user->getId() ?>">
                     <span class="icon">
                       <i class="fas fa-trash"></i>
                     </span>
@@ -40,7 +40,7 @@
                 </td>
               </tr>
             </tbody>
-            <?php endforeach;?>
+            <?php endforeach?>
           </table>
         </div>
       </div>
@@ -50,23 +50,23 @@
           <div class="notification">
             <p class="title is-5">
               Ajouter un utilisateur
-              <form action="<?= BASEPATH.'Back/NewUser'?>" method="post">
+              <form action="<?= BASEPATH.'Backedit/CreateUser'?>" method="post">
                 <div class="field">
                   <label for="username" class="label">Nom d'utilisateur</label>
-                  <input type="text" class="input" name="username" placeholder="Utilisateur"required>
+                  <input type="text" class="input" name="username" required>
                 </div>
                 <div class="field">
                   <label for="email" class="label">Email</label>
-                  <input type="text" class="input" name="email" placeholder="votre adresse email" required>
+                  <input type="text" class="input" name="email"  required>
                 </div>
                 <div class="field">
                   <label for="password" class="label">Mot de Passe</label>
-                  <input type="password" class="input" name="password" placeholder="Mot de passe " required>
+                  <input type="password" class="input" name="password"  required>
                 </div>
                 <div class="field">
                   <div class="select">
                     <select name="role">
-                      <option value="Administrateur">Administrateur</option>
+                      <option value="Administrateur">Utilisateur</option>
                       <option value="Modérateur">Modérateur</option>
                     </select>
                   </div>

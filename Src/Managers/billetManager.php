@@ -74,32 +74,31 @@ class billetManager
     // Mise à jour de Billet
     public function Update($id)
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['title'] && !empty($_POST['author']) && !empty($_POST['content']))) {
-            $title = \htmlspecialchars($_POST['title']);
-            $author = \htmlspecialchars($_POST['author']);
-            $content = $_POST['content'];
-            $image = \htmlspecialchars($_POST['image']);
-            $modif_at = date(DATE_W3C);
-            $posted = \htmlspecialchars($_POST['posted']);
-            try {
-                $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
-                $request->bindValue(':id', $id, \PDO::PARAM_INT);
-                $request->bindValue(':title', $title, \PDO::PARAM_STR);
-                $request->bindValue(':author', $author, \PDO::PARAM_STR);
-                $request->bindValue(':content', $content, \PDO::PARAM_STR);
-                $request->bindValue(':image', $image, \PDO::PARAM_STR);
-                $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
-                $verifIsOk = $request->execute();
-                if (!$verifIsOk) {
-                    return false;
-                } else {
-                    return $_POST['id_bil'];
-                    $request->closeCursor();
-                }
-            } catch (Exception $e) {
-                throw new \Exception(Error::getError("Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
+        $title = \htmlspecialchars($_POST['title']);
+        $author = \htmlspecialchars($_POST['author']);
+        $content = $_POST['content'];
+        $image = (isset($_POST['image'])) ? \htmlspecialchars($_POST['image']):"";
+        $modif_at = date(DATE_W3C);
+        $posted = (isset($_POST['posted']))? \htmlspecialchars($_POST['posted']):"0";
+        try {
+            $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
+            $request->bindValue(':id', $id, \PDO::PARAM_INT);
+            $request->bindValue(':title', $title, \PDO::PARAM_STR);
+            $request->bindValue(':author', $author, \PDO::PARAM_STR);
+            $request->bindValue(':content', $content, \PDO::PARAM_STR);
+            $request->bindValue(':image', $image, \PDO::PARAM_STR);
+            $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
+            $billets = $request->execute();
+            $verifIsOk = $billets;
+            if (!$verifIsOk) {
+                return false;
+            } else {
+                return $billets;
             }
+        } catch (Exception $e) {
+            throw new \Exception(Error::getError("Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
         }
+        $request->closeCursor();
     }
     // Effacer un Billet
     public function Delete($id)
