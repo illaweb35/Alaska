@@ -54,9 +54,11 @@ class User
             $this->role = $role;
         }
     }
-    public function setCreate_at($create_at)
+    public function setDateCrea(DateTime $create_at)
     {
-        $this->create_at = $create_at;
+        if (is_string($create_at)) {
+            $this->create_at = $create_at;
+        }
     }
     // GETTERS
     public function getId()

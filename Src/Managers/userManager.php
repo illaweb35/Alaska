@@ -15,24 +15,31 @@ class userManager
     // Connexion Admin
     public function Connexion()
     {
-        $username = \htmlspecialchars($_POST['username']);
-        $password = Check::mixMdp(\htmlspecialchars($_POST['password']));
+        if (empty($_POST) && empty($_POST['username']) && empty($_POST['password'])) {
+            throw new \Exception(Error::getError('Vous devez renseignez tous les champs!'), 1);
+        }
+        $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username ');
+        $request->execute([':username'=>\htmlspecialchars($_POST['username'])]);
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
 
-        $request =$this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username AND password=:password');
-        $request->execute([':password'=> $password,':username'=>$username]);
-        if (!$request->rowCount()==1) {
-            session_start();
-            session_name("Alaska_blog");
-            $userData = $request->fetch();
-            $_SESSION = $userData;
-            $_SESSION['authenticated']= true;
-            $_SESSION['token_uncrypted']= \uniqid();
-            $_SESSION['token']= Check::mixMdp($_SESSION['token_uncrypted']);
-            $_SESSION['name']= $username;
-            header('Location:'.\BASEPATH.'Back/Dashboard');
-            exit();
+        if ($request->rowCount()== 1) {
+            $user = $request->fetch();
+            if (\password_verify(\htmlspecialchars($_POST['password']), $user->getPassword())) {
+                if (\session_status()== PHP_SESSION_NONE) {
+                    \session_start();
+                    session_name('Alaska_MonBlog');
+                }
+                $_SESSION = $userdata;
+                $_SESSION['authenticated']= true;
+                $_SESSION['token_encrypted']= \uniqid();
+                $_SESSION['token']= Check::mixMdp($_SESSION['token_encrypted']);
+                $_SESSION['name'] = $user->getUsername();
+                //redirection vers le tableau de board
+                header('Location:'.\BASEPATH.'Back/Dashboard');
+                exit();
+            }
         } else {
-            throw new \Exception(Error::getError('Mauvais couple d\'indentifiants'), 1);
+            throw new \Exception(Error::getError("Mauvais couple d'identifiant."), 1);
         }
     }
 
@@ -83,22 +90,24 @@ class userManager
     // Mise a jour utilisateurs
     public function Update($id)
     {
-        $name = \htmlspecialchars($_POST['username']);
+        $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
         $password= Check::mixMdp(\htmlspecialchars($_POST['password']));
         $role = \htmlspecialchars($_POST['role']);
-        $dateCrea = date(DATE_W3C);
+        $modif_at = date(DATE_W3C);
         try {
-            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,password=:password WHERE id_user=:id');
-            $request->bindValue(':name', $name, \PDO::PARAM_STR) ;
+            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,password=:password, modif_at=:modif_at WHERE id_user=:id');
+
+            $request->bindValue(':id', $id, \PDO::PARAM_INT);
+            $request->bindValue(':name', $username, \PDO::PARAM_STR) ;
             $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
             $request->bindValue(':password', $password, \PDO::PARAM_STR);
             $request->bindValue(':role', $role, \PDO::PARAM_STR);
-            $request->bindValue(':dateCrea', $dateCrea);
+            $request->bindValue(':modif_at', $modif_at, \PDO::PARAM_STR);
             $request->execute();
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
-            throw new \Exception(Error::getError($e->getMessage()), 1);
+            throw new \Exception($e->getMessage(), 1);
         }
     }
 

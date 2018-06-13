@@ -9,7 +9,7 @@ class Backedit extends Main
     // création d'un Billet
     public function Create()
     {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
@@ -25,15 +25,16 @@ class Backedit extends Main
     // Update du billet
     public function Update($id)
     {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
             exit();
         }
         $billets = $this->billetManager->Read($id);
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
-            $billets = $this->billetManager->Update($data);
+            $billets = $this->billetManager->Update($id);
+
             if ($billets !== false) {
-                header('Location:'.\BASEPATH.'Back/Post'.$billet->getId());
+                header('Location:'.\BASEPATH.'Back/Post'.$billets);
                 exit();
             }
         }

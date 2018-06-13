@@ -8,14 +8,14 @@ class Back extends Main
     // retour à l'accueil si déconnecté
     public function Index()
     {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
     }
     //affichage Tableau de bord si connecté
     public function Dashboard()
     {
-        if (!isset($_SESSION['authenticated'])and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
         $billets = $this->billetManager->readFront(0, 100);

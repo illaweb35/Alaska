@@ -25,16 +25,12 @@ class Main
         $this->commentManager = new commentManager();
         $this->userManager = new userManager();
     }
-    // vérifie si la session existe
-    protected function isLogged()
-    {
-        return !empty($_SESSION['is_logged']);
-    }
+
     // Page de connexion a la partie Admin
     public function Login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST' | !empty($_POST)) {
-            $this->userManager->connexion();
+            $user = $this->userManager->Connexion();
         }
         if (isset($_SESSION['id'])) {
             header('Location:'.BASEPATH.'Back/Dashboard');

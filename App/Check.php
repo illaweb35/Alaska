@@ -16,6 +16,6 @@ abstract class Check
     // haschage du mot de passe
     public static function mixMdp($p)
     {
-        return \password_hash(SALT, PASSWORD_DEFAULT);
+        return \password_hash($p, PASSWORD_DEFAULT);
     }
 }
