@@ -38,7 +38,7 @@ class Backedit extends Main
             }
         }
         $billets = $this->billetManager->Read($id);
-        $view = new Viewer('Back/Edit', " Alaska _ Modification d'un billet");
+        $view = new Viewer('Back/Edit_billet', " Alaska _ Modification d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
 

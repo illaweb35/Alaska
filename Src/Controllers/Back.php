@@ -42,7 +42,7 @@ class Back extends Main
 
     public function ListUsers()
     {
-        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
+        if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
         $users = $this->userManager->userAll();
