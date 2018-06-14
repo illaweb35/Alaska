@@ -13,20 +13,18 @@
         <div class="field">
           <label for="username" class="label">Nom</label>
           <input type="text" class="input" name="username" placeholder="<?= $users->getUsername()?>"/>
+
         </div>
         <div class="field">
           <label for="email" class="label">Email</label>
-          <input type="email"  name="email" class="input" placeholder="">
-        </div>
-        <div class="field">
-          <label for="password" class="label">Mot de passe</label>
-          <input type="password" name="password" class="input" placeholder="">
+          <input type="email" class="input" name="email"  placeholder="<?= $users->getMail()?>"/>
         </div>
         <div class="field">
           <div class="select">
             <select name="role">
-              <option value="Administrateur">Utilisateur</option>
-              <option value="Modérateur">Modérateur</option>
+              <option value="Utilisateur"<?php if ($users->getRole() == 'Utilisateur'): ?>selected="selected"<?php endif; ?>>Utilisateur</option>
+              <option value="Modérateur"<?php if ($users->getRole() == 'Modérateur'):?>selected="selected"<?php endif; ?>
+              >Modérateur</option>
             </select>
           </div>
         </div>

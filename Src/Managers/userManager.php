@@ -47,7 +47,7 @@ class userManager
         $request = $this->_pdo->prepare("SELECT * FROM T_users WHERE id_user = :id LIMIT 1");
         $request->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $request->execute();
-        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Billet');
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         return $users = $request->fetch();
         $request->closeCursor();
     }
