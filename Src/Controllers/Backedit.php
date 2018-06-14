@@ -19,6 +19,7 @@ class Backedit extends Main
                 exit();
             }
         }
+        $billets = $this->billetManager->ReadAll();
         $view = new Viewer('Back/Write', "Alaska _ Ecriture d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
@@ -37,7 +38,7 @@ class Backedit extends Main
             }
         }
         $billets = $this->billetManager->Read($id);
-        $view = new Viewer('Back/Edit_billet', " Alaska _ Modification d'un billet");
+        $view = new Viewer('Back/Edit_billet', " Alaska _ Modifs d'un billet");
         $view->createFile(['billets'=>$billets]);
     }
     // Creation d'un utilisateur

@@ -21,7 +21,6 @@ class Router
         try {
             $url = substr($_SERVER['REQUEST_URI'], strlen(BASEPATH));
             $url = explode('/', filter_var($url, FILTER_SANITIZE_URL));
-
             if (strlen($url[0]) > 0) {
                 $controllerName = 'Src\\Controllers\\'. ucfirst(strtolower($url[0]));
                 if (in_array($controllerName, get_declared_classes())) {
@@ -37,13 +36,13 @@ class Router
                         }
                     }
                 } else {
-                    Error::getError($errorMsg = "La route suivant l'url demandée n'a pas été trouvé ou n'existe pas", 1);
+                    Alert::getError($errorMsg = "La route suivant l'url demandée n'a pas été trouvé ou n'existe pas", 1);
                 }
             } else {
                 $this->_route->index();
             }
         } catch (\Exception $e) {
-            throw new \Exception(Error::getError($errorMsg =$e->getMessage()), 1);
+            throw new \Exception(Alert::getError($errorMsg =$e->getMessage()), 1);
         }
     }
 }

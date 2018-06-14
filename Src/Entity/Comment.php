@@ -10,7 +10,9 @@ class Comment
     private $pseudo;
     private $content;
     private $create_at;
+    private $modif_at;
     private $bil_id;
+    private $moderate;
 
     public function __construct($date = [])
     {
@@ -38,15 +40,25 @@ class Comment
             $this->content = $content;
         }
     }
-    public function setDateCrea(DateTime $create_at)
+    public function setCreate_at(DateTime $create_at)
     {
         if (is_string($create_at)) {
             $this->create_at = $create_at;
         }
     }
+    public function setModif_at(DateTime $modif_at)
+    {
+        if (is_string($modif_at)) {
+            $this->modif_at = $modif_at;
+        }
+    }
     public function setBil_Id($bil_id)
     {
         $this->bil_id = (int)$bil_id;
+    }
+    public function setModerate($moderate)
+    {
+        $this->moderate = (int)$moderate;
     }
 
     //GETTERS
@@ -66,8 +78,16 @@ class Comment
     {
         return $this->create_at;
     }
+    public function getModif_at()
+    {
+        return $this->modif_at;
+    }
     public function getBil_id()
     {
         return $this->bil_id;
+    }
+    public function getModerate()
+    {
+        return $thiis->moderate;
     }
 }

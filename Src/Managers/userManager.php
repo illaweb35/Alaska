@@ -16,7 +16,7 @@ class userManager
     public function Connexion()
     {
         if (empty($_POST) && empty($_POST['username']) && empty($_POST['password'])) {
-            throw new \Exception(Error::getError('Vous devez renseignez tous les champs!'), 1);
+            throw new \Exception(Error::getError($errorMsg = 'Vous devez renseignez tous les champs!'), 1);
         }
         $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username ');
         $request->execute([':username'=>\htmlspecialchars($_POST['username'])]);
@@ -39,7 +39,7 @@ class userManager
                 exit();
             }
         } else {
-            throw new \Exception(Error::getError("Mauvais couple d'identifiant."), 1);
+            throw new \Exception(Error::getError($errorMsg = "Mauvais couple d'identifiant."), 1);
         }
     }
     public function Read($id)
@@ -73,10 +73,10 @@ class userManager
         $request = $this->_pdo->query("SELECT* FROM T_users WHERE username = '$username' OR email='$email'");
         $userExist = $request->rowCount();
         if ($userExist == 1) {
-            throw new \Exception(Error::getError("Nom d'utilisateur ou email deja utilisé"), 1);
+            throw new \Exception(Error::getError($errorMsg = "Nom d'utilisateur ou email deja utilisé"), 1);
         } else {
             try {
-                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:username, :email, :password, :role, NOW())');
+                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:username, :email, :password, :role, NOW()) ');
                 $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
@@ -92,7 +92,7 @@ class userManager
                     $request->closeCursor();
                 }
             } catch (PDOException $e) {
-                throw new \Exception(Error::getError($e->getMessage()), 1);
+                throw new \Exception(Error::getError($errorMsg = $e->getMessage()), 1);
             }
         }
     }
@@ -117,7 +117,7 @@ class userManager
             $request->execute();
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
-            throw new \Exception($e->getMessage(), 1);
+            throw new \Exception($errorMsg = $e->getMessage(), 1);
         }
     }
 

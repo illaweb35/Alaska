@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-use App\Error;
+use App\Alert;
 
 class Viewer
 {
@@ -28,7 +28,7 @@ class Viewer
             $title = $this->_title;
             require_once('../Src/Views/Template.phtml');
         } else {
-            throw new \Exception(Error::getError($errorMsg ="Fichier View :' .$this->_file. 'introuvable", 1));
+            throw new \Exception(Alert::getError($errorMsg ="Fichier View :' .$this->_file. 'introuvable", 1));
         }
     }
 }

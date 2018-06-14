@@ -60,16 +60,7 @@ CREATE TABLE `T_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `T_comments`
---
-
-INSERT INTO `T_comments` (`id_com`, `pseudo`, `content`, `modif_at`, `create_at`, `bil_id`) VALUES
-(7, 'Jean', 'De la Salle à dit du commentaire que cela ne correspondait à rien', '0000-00-00 00:00:00', '2018-05-29 19:13:03', 1),
-(10, 'Modern', 'ajout de commentaire', '0000-00-00 00:00:00', '2018-05-29 19:13:52', 1),
-(13, 'lolo', 'comment', '0000-00-00 00:00:00', '2018-05-29 19:17:45', 1);
-
--- --------------------------------------------------------
-
+-
 --
 -- Structure de la table `T_users`
 --

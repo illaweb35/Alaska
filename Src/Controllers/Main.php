@@ -36,7 +36,7 @@ class Main
             header('Location:'.BASEPATH.'Back/Dashboard');
         }
         $view = new Viewer('Back/Login', 'Alaska _ login');
-        $view->createFile(['user' => $user]);
+        $view->createFile(['user'=>$user]);
     }
     // Inscription utilisateur
     public function Signup()

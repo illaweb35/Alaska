@@ -71,7 +71,7 @@ class commentManager
                     return $_POST['bil_id'];
                 }
             } catch (PDOException $e) {
-                echo $e->getMessage();
+                throw new \Exception(Alert::getError($errorMsg = $e->getMessage()), 1);
             }
         }
     }
