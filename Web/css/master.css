@@ -38,15 +38,58 @@
   max-width: 25em;
 }
 
-#bandeau {
-  border-radius: 2px 20px;
-}
-
 .underline {
   text-decoration: underline;
 }
 
 /* image modification */
+
+.image_bandeau img {
+  position: relative;
+  z-index: 1;
+  border-radius: 2px 20px;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.image_bandeau:hover img {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.image_bandeau span h2 {
+  z-index: 2;
+  background: transparent;
+  visibility: hidden;
+  position: absolute;
+}
+
+.image_bandeau span p {
+  z-index: 2;
+  background: transparent;
+  visibility: hidden;
+  position: absolute;
+}
+
+.image_bandeau:hover span h2 {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 800px;
+  visibility: visible;
+  transition: 1s ease-in-out;
+}
+
+.image_bandeau:hover span p {
+  position: absolute;
+  color: white;
+  top: 150px;
+  left: 800px;
+  visibility: visible;
+  transition: 1s ease-in-out;
+}
 
 #Map_Alaska {
   max-height: 250px;
