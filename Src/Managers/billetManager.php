@@ -48,11 +48,26 @@ class billetManager
         $title = \htmlspecialchars($_POST['title']);
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
-        $image = \htmlspecialchars($_POST['image']);
+        $imgFile = $_FILES['image']['name'];
+        $tmp_dir = $_FILES['image']['tmp_name'];
+        $imgSize = $_FILES['image']['size'];
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         $posted = \htmlspecialchars($_POST['posted']);
         try {
+            $upload_dir = \BASEPATH.'img/posts/';// Dossier des images chargées
+            $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
+            $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
+            $image = rand(1000, 1000000).".".$imgExt;
+            if (in_array($imgExt, $valid_extensions)) {
+                if ($imgSize < 500000) {
+                    \move_uploaded_file($tmp_dir, $upload_dir.$image);
+                } else {
+                    throw new \Exception(Error::getError('Le fichier image est trop gros!'), 1);
+                }
+            } else {
+                throw new \Exception(Error::getError('Erreur: Extensionsde fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+            }
             $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
             $request->bindValue(':title', $title, \PDO::PARAM_STR);
@@ -78,9 +93,31 @@ class billetManager
         $title = \htmlspecialchars($_POST['title']);
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
-        $image = (isset($_POST['image'])) ? \htmlspecialchars($_POST['image']):"";
         $modif_at = date(DATE_W3C);
         $posted = (isset($_POST['posted']))? \htmlspecialchars($_POST['posted']):"0";
+        $imgFile = $_FILES['user_image']['name'];
+        $tmp_dir = $_FILES['user_image']['tmp_name'];
+        $imgSize = $_FILES['user_image']['size'];
+
+        if ($imgFile) {
+            $upload_dir = 'user_images/'; // upload directory
+            $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
+            $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+            $image = rand(1000, 1000000).".".$imgExt;
+            if (in_array($imgExt, $valid_extensions)) {
+                if ($imgSize < 5000000) {
+                    unlink($upload_dir.$edit_row['image']);
+                    move_uploaded_file($tmp_dir, $upload_dir.$image);
+                } else {
+                    throw new \Exception(Error::getError('Le fichier image est trop gros!'), 1);
+                }
+            } else {
+                throw new \Exception(Error::getError('Erreur: Extensionsde fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+            }
+        } else {
+            // Si pas d'image sélectionné on garde l'ancienne
+            $image = $edit_row['image'];
+        }
         try {
             $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);
