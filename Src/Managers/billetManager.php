@@ -114,14 +114,14 @@ class billetManager
                     throw new \Exception(Alert::getError($errorMsg = 'Le fichier image est trop gros!'), 1);
                 }
             } else {
-                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensionsde fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
             }
         } else {
             // Si pas d'image sélectionné on garde l'ancienne
         }
-        
+
         try {
-            $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
+            $request = $this->_pdo->prepare('UPDATE T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);
             $request->bindValue(':title', $title, \PDO::PARAM_STR);
             $request->bindValue(':author', $author, \PDO::PARAM_STR);
@@ -129,16 +129,16 @@ class billetManager
             $request->bindValue(':image', $image, \PDO::PARAM_STR);
             $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
             $billets = $request->execute();
-            $verifIsOk = $billets;
-            if (!$verifIsOk) {
+        
+            if (!$billets) {
                 return false;
             } else {
+                $request->closeCursor();
                 return $billets;
             }
         } catch (Exception $e) {
             throw new \Exception(Alert::getError($errorMsg = "Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
         }
-        $request->closeCursor();
     }
     // Effacer un Billet
     public function Delete($id)
