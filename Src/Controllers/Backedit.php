@@ -50,7 +50,7 @@ class Backedit extends Main
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $users = $this->userManager->Create();
             if ($users !== false) {
-                header('Location:'.\BASEPATH.'Back/Users');
+                header('Location:'.\BASEPATH.'Back/ListUsers');
                 exit();
             }
             $view = new Viewer('Back/Users', 'Alaska _ Ajout utilisateur');

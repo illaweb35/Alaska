@@ -12,12 +12,12 @@
       <form action="<?= BASEPATH.'Backedit/Update_user'?>" method="post">
         <div class="field">
           <label for="username" class="label">Nom</label>
-          <input type="text" class="input" name="username" placeholder="<?= $users->getUsername()?>"/>
+          <input type="text" class="input" name="username" value="<?= $users->getUsername()?>"/>
 
         </div>
         <div class="field">
           <label for="email" class="label">Email</label>
-          <input type="email" class="input" name="email"  placeholder="<?= $users->getMail()?>"/>
+          <input type="email" class="input" name="email"  value="<?= $users->getMail()?>"/>
         </div>
         <div class="field">
           <div class="select">

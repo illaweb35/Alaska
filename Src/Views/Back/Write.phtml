@@ -10,15 +10,11 @@
       <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
-          <input type="text" name="title" class="input" value="<?php if (isset($_POST['title'])) {
-    echo $POST['title'];
-}?>" />
+          <input type="text" name="title" class="input" placeholder="Ici votre titre " />
         </div>
         <div class="field">
           <div class="control">
-            <textarea class="textarea"  type="text" name="content" value="<?php if (isset($_POST['content'])) {
-    echo $_POST['content'];
-}?>"></textarea>
+            <textarea class="textarea"  type="text" name="content" ></textarea>
           </div>
         </div>
         <div class="columns">
