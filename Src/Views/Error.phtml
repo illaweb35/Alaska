@@ -1,10 +1,14 @@
 <section class="section">
-  <div class="container">
+  <div class="container ">
+  <div class="box">
     <div class="card">
       <div class="card-image">
-        <img src="<?= BASEPATH.'img/404.jpg'?>" alt="Erreur 404">
+      <figure class="image is-square">
+          <img src="<?= BASEPATH.'img/404.jpg'?>"  alt="Erreur 404">
+      </figure>
       </div>
       <div class="card-content">
+        <h1 class="title">Oups! </h1>
         <div class="notification is-danger">
            <strong><p><?= $errorMsg?>></p></strong>
         </div>
@@ -17,5 +21,6 @@
         </footer>
       </div>
     </div>
+  </div>
   </div>
 </section>

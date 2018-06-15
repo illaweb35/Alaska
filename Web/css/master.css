@@ -20,14 +20,14 @@
   margin: 3em;
 }
 
+.circle {
+  margin-top: 1.5em;
+}
+
 /* Espace margin et padding contenu */
 
 #one {
   padding-top: 8em;
-}
-
-#circle {
-  margin-top: 4em;
 }
 
 #top {
@@ -42,12 +42,78 @@
   text-decoration: underline;
 }
 
+/* Ring sur bouton */
+
+.rings {
+  position: relative;
+  display: inline-flex;
+  width: 15vw;
+  height: 15vw;
+  overflow: hidden;
+}
+
+.rings>* {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: rotate infinite linear;
+}
+
+.rings>*>* {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #000;
+  border-top-color: rgba(0, 0, 0, .75);
+  border-right-color: rgba(0, 0, 0, .5);
+  border-bottom-color: : rgba(0, 0, 0, .25);
+  border-left-color: rgba(0, 0, 0, 0);
+}
+
+.rings>*:nth-child(1) {
+  position: absolute;
+  text-align: center;
+  height: 1em;
+  top: calc(50% - 1em);
+}
+
+.rings>*:nth-child(2) {
+  animation-duration: 8s;
+}
+
+.rings>*:nth-child(3) {
+  animation-duration: 12s;
+  margin: 10%;
+  height: 80%;
+  width: 80%;
+}
+
+.rings>*:nth-child(4) {
+  animation-duration: 20s;
+  margin: 20%;
+  height: 60%;
+  width: 60%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 /* image modification */
 
 .image_bandeau img {
   position: relative;
   z-index: 1;
-  border-radius: 2px 20px;
+  border-radius: 2% 20%;
   -webkit-filter: blur(3px);
   filter: blur(3px);
   -webkit-transition: .3s ease-in-out;
@@ -55,6 +121,7 @@
 }
 
 .image_bandeau:hover img {
+  border-radius: 2px 2px;
   -webkit-filter: blur(0);
   filter: blur(0);
 }
@@ -89,6 +156,10 @@
   left: 800px;
   visibility: visible;
   transition: 1s ease-in-out;
+}
+
+.card-image {
+  max-width: 350px
 }
 
 #Map_Alaska {
