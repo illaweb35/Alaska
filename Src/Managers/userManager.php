@@ -67,6 +67,9 @@ class userManager
     {
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
+        if (!\filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new \Exception(Alert::getError($errorMsg="Le format de l'adresse email est incorrecte."), 1);
+        }
         $password = Check::mixMdp(\htmlspecialchars($_POST['password']));
         $role = \htmlspecialchars($_POST['role']);
         $dateCrea = date(DATE_W3C);
