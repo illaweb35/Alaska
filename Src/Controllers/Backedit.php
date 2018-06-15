@@ -67,7 +67,7 @@ class Backedit extends Main
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $users = $this->userManager->Update($id);
             if ($billets !== false) {
-                header('Location:'.\BASEPATH.'Back/Users');
+                header('Location:'.\BASEPATH.'Back/ListUsers');
                 exit();
             }
         }

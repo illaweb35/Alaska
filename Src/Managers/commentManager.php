@@ -86,24 +86,25 @@ class commentManager
         $request->bindValue('moderate', $data['moderate'], \PDO::PARAM_INT);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
         return $request->execute($data);
-        $request->closeCursor();
     }
     public function Moderate($id)
     {
-        $sql=('SELECT moderate FROM T_comments WHERE id_com=:id LIMIT 1');
+        $sql=('SELECT moderate, bil_id FROM T_comments WHERE id_com=:id LIMIT 1');
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
         $request->execute();
-        $verif_moderate = $request->fetch();
-        if ($verif_moderate == 1) {
+        $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\Comment');
+        $comment = $request->fetch();
+        if ($comment->getModerate() == 1) {
             $sql = ('UPDATE T_comments SET moderate = 0, modif_at=NOW() WHERE id_com=:id');
         } else {
             $sql = ('UPDATE T_comments SET moderate = 1, modif_at=NOW() WHERE id_com=:id');
         }
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
-        return $request->execute();
-        closeCursor();
+        $request->execute();
+
+        return $comment->getBil_id();
     }
 
 

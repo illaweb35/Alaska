@@ -2,6 +2,7 @@
 namespace Src\Managers;
 
 use App\Dbd;
+use App\Alert;
 
 class billetManager
 {
@@ -54,6 +55,7 @@ class billetManager
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         $posted = \htmlspecialchars($_POST['posted']);
+
         try {
             $upload_dir = \BASEPATH.'img/posts/';// Dossier des images chargées
             $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
@@ -61,12 +63,12 @@ class billetManager
             $image = rand(1000, 1000000).".".$imgExt;
             if (in_array($imgExt, $valid_extensions)) {
                 if ($imgSize < 500000) {
-                    \move_uploaded_file($tmp_dir, $upload_dir.$image);
+                    \move_uploaded_file($tmp_dir, "$upload_dir/$image");
                 } else {
                     throw new \Exception(Alert::getError($errorMsg = 'Le fichier image est trop gros!'), 1);
                 }
             } else {
-                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensionsde fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
             }
             $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
@@ -118,6 +120,8 @@ class billetManager
             // Si pas d'image sélectionné on garde l'ancienne
             $image = $edit_row['image'];
         }
+        var_dump($_POST);
+        die();
         try {
             $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);

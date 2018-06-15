@@ -88,6 +88,6 @@ class Comment
     }
     public function getModerate()
     {
-        return $thiis->moderate;
+        return $this->moderate;
     }
 }

@@ -29,7 +29,7 @@
                   <label class="file-label">
                     <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
                     <input type="hidden" name="MAX_FILE_SIZE"/>
-                  
+
                     <input class="file-input" type="file" name="image" accept="image/*"/>
                       <span class="file-cta">
                         <span class="file-icon">
@@ -53,9 +53,7 @@
                   </div>
                 <div class="field">
                   <label class="checkbox switch">
-                    <input type="checkbox" name="posted" value="<?php if (isset($_POST['posted'])) {
-    echo $_POST['posted'];
-}?>">
+                    <input type="checkbox" name="posted">
                     <span class="slider round"></span>
                   </label>
                   Poster le billet

@@ -32,9 +32,9 @@ class Front extends Main
     // création d'un commentaire pour le billet en cour
     public function Create()
     {
-        $comments = $this->commentManager->create();
-        if ($comments !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting/'.$comments);
+        $comment = $this->commentManager->create();
+        if ($comment !== false) {
+            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
             exit();
         }
     }
@@ -42,7 +42,7 @@ class Front extends Main
     {
         $comment = $this->commentManager->Moderate($id);
         if ($comment !== false) {
-            header('Location:'.\BASEPATH.'Front/Posting'.$comment);
+            header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
             exit();
         }
     }

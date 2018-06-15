@@ -81,15 +81,14 @@ class userManager
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
                 $request->bindValue(':role', $role, \PDO::PARAM_STR);
-                $request->execute();
-                $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
                 $users = $request->execute();
+                $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
                 $verifIsOk = $users;
                 if (!$verifIsOk) {
                     return false;
                 } else {
-                    return $users;
                     $request->closeCursor();
+                    return $users;
                 }
             } catch (PDOException $e) {
                 throw new \Exception(Alert::getError($errorMsg = $e->getMessage()), 1);
@@ -103,18 +102,17 @@ class userManager
         $username = $email = $password = $role = $modif_at = "";
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
-        $password= Check::mixMdp(\htmlspecialchars($_POST['password']));
         $role = \htmlspecialchars($_POST['role']);
         $modif_at = date(DATE_W3C);
         try {
-            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,password=:password, modif_at=:modif_at WHERE id_user=:id');
-            $request->bindValue(':id', $id, \PDO::PARAM_INT);
-            $request->bindValue(':name', $username, \PDO::PARAM_STR) ;
+            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,role=:role, modif_at=:modif_at WHERE id_user=:id');
+            $request->bindValue(':id', (int)$id, \PDO::PARAM_INT);
+            $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
             $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
-            $request->bindValue(':password', $password, \PDO::PARAM_STR);
             $request->bindValue(':role', $role, \PDO::PARAM_STR);
             $request->bindValue(':modif_at', $modif_at, \PDO::PARAM_STR);
             $request->execute();
+
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
             throw new \Exception(Alert::getError($errorMsg = $e->getMessage()), 1);
