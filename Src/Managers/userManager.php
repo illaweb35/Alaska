@@ -112,7 +112,6 @@ class userManager
             $request->bindValue(':role', $role, \PDO::PARAM_STR);
             $request->bindValue(':modif_at', $modif_at, \PDO::PARAM_STR);
             $request->execute();
-
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {
             throw new \Exception(Alert::getError($errorMsg = $e->getMessage()), 1);

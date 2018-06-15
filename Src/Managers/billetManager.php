@@ -97,9 +97,9 @@ class billetManager
         $content = $_POST['content'];
         $modif_at = date(DATE_W3C);
         $posted = (isset($_POST['posted']))? \htmlspecialchars($_POST['posted']):"0";
-        $imgFile = $_FILES['user_image']['name'];
-        $tmp_dir = $_FILES['user_image']['tmp_name'];
-        $imgSize = $_FILES['user_image']['size'];
+        $imgFile = $_FILES['image']['name'];
+        $tmp_dir = $_FILES['image']['tmp_name'];
+        $imgSize = $_FILES['image']['size'];
 
         if ($imgFile) {
             $upload_dir = 'user_images/'; // upload directory
@@ -118,10 +118,8 @@ class billetManager
             }
         } else {
             // Si pas d'image sélectionné on garde l'ancienne
-            $image = $edit_row['image'];
         }
-        var_dump($_POST);
-        die();
+        
         try {
             $request = $this->_pdo->prepare('UPDATE  T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);
