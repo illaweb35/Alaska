@@ -3,6 +3,7 @@ namespace Src\Entity;
 
 require_once('../App/Pattern/Hydrator.trait.php');
 use App\Pattern\Hydrator;
+use app\Alert;
 
 class Comment
 {
@@ -27,7 +28,7 @@ class Comment
     public function setPseudo($pseudo)
     {
         if (!is_string($pseudo) || empty($pseudo)) {
-            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
+            Alert::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->pseudo = $pseudo;
         }
@@ -35,22 +36,18 @@ class Comment
     public function setContent($content)
     {
         if (!is_string($content) || empty($content)) {
-            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
+            Alert::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->content = $content;
         }
     }
     public function setCreate_at(DateTime $create_at)
     {
-        if (is_string($create_at)) {
-            $this->create_at = $create_at;
-        }
+        $this->create_at = $create_at;
     }
     public function setModif_at(DateTime $modif_at)
     {
-        if (is_string($modif_at)) {
-            $this->modif_at = $modif_at;
-        }
+        $this->modif_at = $modif_at;
     }
     public function setBil_Id($bil_id)
     {
@@ -58,7 +55,9 @@ class Comment
     }
     public function setModerate($moderate)
     {
-        $this->moderate = (int)$moderate;
+        if (is_bool($moderate)) {
+            $this->moderate = (int)$moderate;
+        }
     }
 
     //GETTERS

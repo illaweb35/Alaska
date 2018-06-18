@@ -3,7 +3,7 @@ namespace Src\Entity;
 
 require_once('../App/Pattern/Hydrator.trait.php');
 use App\Pattern\Hydrator;
-use App\Error;
+use App\Alert;
 
 class User
 {
@@ -13,6 +13,7 @@ class User
     private $password;
     private $role;
     private $create_at;
+    private $modif_at;
 
     public function __construct($data=[])
     {
@@ -25,7 +26,7 @@ class User
     public function setUsername($username)
     {
         if (!\is_string($username) || empty($username)) {
-            throw new \Exception(Error::getError("Merci de remplir correctement le champ"), 1);
+            Alert::getError("Merci de remplir correctement le champ");
         } else {
             $this->username = $username;
         }
@@ -33,7 +34,7 @@ class User
     public function setEmail($email)
     {
         if (!\is_string($email) || empty($email) and  filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new \Exception(Error::getError("Merci de saisir une adresse email valide"), 1);
+            Alert::getError("Merci de saisir une adresse email valide");
         } else {
             $this->email = $email;
         }
@@ -41,7 +42,7 @@ class User
     public function setPassword($password)
     {
         if (!\is_string($password) || empty($password)) {
-            throw new \Exception(Error::getError("Merci de remplir correctement le champ"), 1);
+            Alert::getError("Merci de remplir correctement le champ");
         } else {
             $this->password = $password;
         }
@@ -49,7 +50,7 @@ class User
     public function setRole($role)
     {
         if (!\is_string($role) || empty($role)) {
-            throw new \Exception(Error::getError("Une erreur est survenue, merci de vérifier que vous avez sélectionner une option"), 1);
+            Alert::getError("Une erreur est survenue, merci de vérifier que vous avez sélectionner une option");
         } else {
             $this->role = $role;
         }
@@ -58,6 +59,12 @@ class User
     {
         if (is_string($create_at)) {
             $this->create_at = $create_at;
+        }
+    }
+    public function setModif_at(DateTime $modif_at)
+    {
+        if (is_string($modif_at)) {
+            $this->modif_at = $modif_at;
         }
     }
     // GETTERS
@@ -69,7 +76,7 @@ class User
     {
         return $this->username;
     }
-    public function getMail()
+    public function getEmail()
     {
         return $this->email;
     }
@@ -84,5 +91,9 @@ class User
     public function getCreate_at()
     {
         return $this->create_at;
+    }
+    public function getModif_at()
+    {
+        return $this->modif_at;
     }
 }

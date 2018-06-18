@@ -46,6 +46,7 @@ class billetManager
     // Creation d'un billet
     public function Create()
     {
+        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted="";
         $title = \htmlspecialchars($_POST['title']);
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
@@ -57,18 +58,18 @@ class billetManager
         $posted = \htmlspecialchars($_POST['posted']);
 
         try {
-            $upload_dir = \BASEPATH.'img/posts/';// Dossier des images chargées
+            $upload_dir = "C:\wamp\www\\" . BASEPATH.'img/posts';
             $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
             $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
             $image = rand(1000, 1000000).".".$imgExt;
             if (in_array($imgExt, $valid_extensions)) {
-                if ($imgSize < 500000) {
-                    \move_uploaded_file($tmp_dir, "$upload_dir/$image");
+                if ($imgSize < 5*MB) {
+                    \move_uploaded_file($tmp_dir, "$upload_dir.$image");
                 } else {
-                    throw new \Exception(Alert::getError($errorMsg = 'Le fichier image est trop gros!'), 1);
+                    Alert::getError($errorMsg = 'Le fichier image est trop gros!');
                 }
             } else {
-                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+                Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
             }
             $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
@@ -91,7 +92,7 @@ class billetManager
     // Mise à jour de Billet
     public function Update($id)
     {
-        $title = $author = $content = $image = $modif_at = $posted = '';
+        $title = $author = $content = $image = $modif_at = $posted = $imgFile = $tmp_dir = $imgSize='';
         $title = \htmlspecialchars($_POST['title']);
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
@@ -102,24 +103,26 @@ class billetManager
         $imgSize = $_FILES['image']['size'];
 
         if ($imgFile) {
-            $upload_dir = 'user_images/'; // upload directory
+            $upload_dir = "C:\wamp\www\\" . BASEPATH.'img/posts';
             $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
             $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
             $image = rand(1000, 1000000).".".$imgExt;
             if (in_array($imgExt, $valid_extensions)) {
-                if ($imgSize < 5000000) {
+                if ($imgSize < 5*MB) {
                     unlink($upload_dir.$edit_row['image']);
                     move_uploaded_file($tmp_dir, $upload_dir.$image);
                 } else {
-                    throw new \Exception(Alert::getError($errorMsg = 'Le fichier image est trop gros!'), 1);
+                    Alert::getError($errorMsg = 'Le fichier image est trop gros!');
                 }
             } else {
-                throw new \Exception(Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)'), 1);
+                Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
             }
         } else {
             // Si pas d'image sélectionné on garde l'ancienne
-        }
+            $edit_row = $this->read($id);
 
+            $image = $edit_row->getImage();
+        }
         try {
             $request = $this->_pdo->prepare('UPDATE T_billets SET title=:title, author=:author, content=:content,image=:image, modif_at=NOW(), posted=:posted WHERE id_bil=:id');
             $request->bindValue(':id', $id, \PDO::PARAM_INT);
@@ -129,7 +132,7 @@ class billetManager
             $request->bindValue(':image', $image, \PDO::PARAM_STR);
             $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
             $billets = $request->execute();
-        
+
             if (!$billets) {
                 return false;
             } else {

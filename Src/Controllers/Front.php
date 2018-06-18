@@ -38,6 +38,7 @@ class Front extends Main
             exit();
         }
     }
+    //Signaler un commentaire a l'admin
     public function Signaler($id)
     {
         $comment = $this->commentManager->Moderate($id);

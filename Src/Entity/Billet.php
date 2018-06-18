@@ -3,6 +3,7 @@ namespace Src\Entity;
 
 require_once('../App/Pattern/Hydrator.trait.php');
 use App\Pattern\Hydrator;
+use App\Alert;
 
 class Billet
 {
@@ -26,7 +27,7 @@ class Billet
     public function setAuthor($author)
     {
         if (!is_string($author) || empty($author)) {
-            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
+            Alert::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->author = $author;
         }
@@ -34,7 +35,7 @@ class Billet
     public function setTitle($title)
     {
         if (!is_string($title) || empty($title)) {
-            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
+            Alert::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->title = $title;
         }
@@ -42,7 +43,7 @@ class Billet
     public function setContent($content)
     {
         if (!is_string($content) || empty($content)) {
-            Error::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
+            Alert::getError($errorMsg = 'Le champ ne doit pas être vide et ne contenir que des caractères');
         } else {
             $this->content = $content;
         }
@@ -64,7 +65,7 @@ class Billet
     public function setPosted($posted)
     {
         if (is_bool($posted)) {
-            $this->posted = $posted;
+            $this->posted = (int)$posted;
         }
     }
     // GETTERS
