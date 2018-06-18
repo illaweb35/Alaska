@@ -5,8 +5,13 @@ class Dbd extends \PDO
 {
     public function __construct()
     {
-        $aDriverOptions[\PDO::MYSQL_ATTR_INIT_COMMAND] = 'SET NAMES UTF8';
-        parent::__construct('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';', DB_USER, DB_PASS, $aDriverOptions);
+        $db_base = \DB_NAME;
+        $db_host = \DB_HOST;
+        $db_user = \DB_USER;
+        $db_pass =\DB_PASS;
+        $dsn = 'mysql:host='.$db_host.';dbname='.$db_base.';charset=utf8';
+
+        parent::__construct($dsn, $db_user, $db_pass);
         $this->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 }
