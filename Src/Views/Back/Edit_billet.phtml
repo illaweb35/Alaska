@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Backedit/Update'?>" method="post" enctype="multipart/form-data">
+      <form action="<?= BASEPATH.'Backedit/Update/'.$billets->getId()?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" > Titre du billet</label>
           <input type="text" name="title" class="input" value="<?= htmlspecialchars($billets->getTitle())?>"/>

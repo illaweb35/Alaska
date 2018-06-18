@@ -9,15 +9,14 @@
       </p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Backedit/Update_user'?>" method="post">
+      <form action="<?= BASEPATH.'Backedit/Update_user/'.$users->getId()?>" method="post">
         <div class="field">
           <label for="username" class="label">Nom</label>
           <input type="text" class="input" name="username" value="<?= $users->getUsername()?>"/>
-
         </div>
         <div class="field">
           <label for="email" class="label">Email</label>
-          <input type="email" class="input" name="email"  value="<?= $users->getMail()?>"/>
+          <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= $users->getMail()?>"/>
         </div>
         <div class="field">
           <div class="select">
