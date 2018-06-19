@@ -9,6 +9,9 @@
 require_once('Pattern/Singleton.trait.php');
 use App\Pattern\Singleton;
 
+/**
+*Class Autoloader pour chargement automatique des classes et interfaces du site
+*/
 class Autoloader
 {
     use Singleton;

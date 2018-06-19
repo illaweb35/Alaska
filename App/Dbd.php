@@ -8,6 +8,10 @@
 */
 namespace App;
 
+/**
+*Classe de connexion à la base de données
+* Utilisation des constances de la classe config pour les parametres de connexion
+*/
 class Dbd extends \PDO
 {
     public function __construct()

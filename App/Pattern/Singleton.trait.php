@@ -8,6 +8,10 @@
 */
 namespace App\Pattern;
 
+/**
+* Trait Singleton instanciation unique d'une classe
+* Instance de classe unique
+*/
 trait Singleton
 {
     protected static $_instance = null;

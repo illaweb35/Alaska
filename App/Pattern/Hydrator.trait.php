@@ -6,9 +6,11 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
-
 namespace App\Pattern;
 
+/**
+* Hydratation des données des classes entity
+*/
 trait Hydrator
 {
     public function hydrate($data)

@@ -8,6 +8,9 @@
 */
 namespace App;
 
+/**
+*Classe Check pour verification de la session avec token de comparaison .
+*/
 class Check
 {
     public static function verifSession()
@@ -20,9 +23,13 @@ class Check
             exit();
         }
     }
-    // haschage du mot de passe
-    public static function mixMdp($p)
+
+    /**
+    *Fonction de cryptage
+    * @param variable $pass egal au password.
+    */
+    public static function mixMdp($pass)
     {
-        return \password_hash($p, PASSWORD_DEFAULT);
+        return \password_hash($pass, PASSWORD_DEFAULT);
     }
 }

@@ -9,7 +9,7 @@
 // Racine web
 const BASEPATH = '/Alaska/Web/';
 
-// Connxion à la base de données
+// Connexion à la base de données
 const
 DB_HOST ='localhost',
 DB_NAME = 'Alaska',

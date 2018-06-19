@@ -10,18 +10,30 @@ namespace Src\Controllers;
 
 use App\Viewer;
 
+/**
+*Class Front pour la gestion des controleurs du site côté visiteur
+* Hérite de la class Main
+*/
 class Front extends Main
 {
+    /**
+    * Constance pour le nombre de billet à afficher sur la page
+    */
     const MAX_POST = 4;
 
-    // affiche la liste des billets sur la page d'accueil avec un maximum de 4 billets suivant la constance MAX_POST
+    /**
+    * affiche la liste des billets sur la page d'accueil avec un maximum de 4 billets suivant la constance MAX_POST
+    */
     public function Index()
     {
         $billets = $this->billetManager->readFront(0, self::MAX_POST);
         $view = new Viewer('Front/Index', 'Alaska _ Accueil');
         $view->createFile(['billets' => $billets]);
     }
-    // affiche les détails d'un billet
+    /**
+    *Affiche les détails d'un billet
+    *@param variable $id  identifiant du billet
+    */
     public function Posting($id)
     {
         $billets = $this->billetManager->read($id);
@@ -29,14 +41,18 @@ class Front extends Main
         $view = new Viewer('Front/Post', 'Alaska _ Détails d\'un article');
         $view->createFile(['billets'=>$billets,'comments' =>$comments]);
     }
-    // affichage des billets en liste
+    /**
+    *Affiche la liste des billets
+    */
     public function List()
     {
         $billets =$this->billetManager->readFront(0, 100);
         $view = new Viewer('Front/List', 'Alaska _ Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
-    // création d'un commentaire pour le billet en cour
+    /**
+    *Création d'un commentaire pour le billet
+    */
     public function Create()
     {
         $comment = $this->commentManager->create();
@@ -45,7 +61,9 @@ class Front extends Main
             exit();
         }
     }
-    //Signaler un commentaire a l'admin
+    /**
+    *Signaler un commentaire a l'admin
+    */
     public function Signaler($id)
     {
         $comment = $this->commentManager->Moderate($id);

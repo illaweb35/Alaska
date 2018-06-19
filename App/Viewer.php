@@ -10,21 +10,38 @@ namespace App;
 
 use App\Alert;
 
+/**
+* Classe Viewer pour l'affichage des données
+*@param variable $_file qui contient le fichier crée par la fonction creatFile suivant les données recueillies.
+*@param variable $_title qui récupère le tire pour chaque page
+*/
 class Viewer
 {
     private $_file;
     private $_title;
-
+    /**
+    *Fonction de construction de la vue
+    *@param variable $action suivant la méthode défini dans l'url
+    *@param variable $title recupère le tire de la page
+    */
     public function __construct($action, $title)
     {
         $this->_file = '../Src/Views/'.$action.'.phtml';
         $this->_title = $title;
     }
+    /**
+    *Affichage de la vue
+    */
     public function View($data)
     {
         $view = $this->createFile($data);
         echo $view;
     }
+    /**
+    *Fonction de création du fichier des données
+    *@param variable $data les données récupérées
+    * extraction des données puis ouverture du template pour affichage
+    */
     public function createFile($data)
     {
         if (\file_exists($this->_file)) {

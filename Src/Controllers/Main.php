@@ -11,9 +11,15 @@ namespace Src\Controllers;
 use Src\Managers\billetManager;
 use Src\Managers\commentManager;
 use Src\Managers\userManager;
-
 use App\Viewer;
 
+/**
+*Class Main instancie les classes controllers et vérifie la connection et l'inscription sur le site ainsi que la déconnexion.
+*@param variable $_id l'identifiant des Entities.
+*@param variable $billetManager instance de la classse Billet Manager
+*@param variable $commentManager instance de la classe Comment Manager
+*@param variable $userManager instance de la calsse User Manager
+*/
 class Main
 {
     private $_id;
@@ -21,7 +27,9 @@ class Main
     protected $commentManager;
     protected $userManager;
 
-    //Constructeur des managers
+    /**
+    *Instanceiation des classes et de la session et mise verification de l'identifiant
+    */
     public function __construct()
     {
         if (\session_status() == PHP_SESSION_NONE) {
@@ -33,7 +41,9 @@ class Main
         $this->userManager = new userManager();
     }
 
-    // Page de connexion a la partie Admin
+    /**
+    *Page de connexion a la partie Admin
+    */
     public function Login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && isset($_POST)) {
@@ -46,7 +56,9 @@ class Main
         $view = new Viewer('Back/Login', 'Alaska _ login');
         $view->createFile(['user'=>$user]);
     }
-    // Inscription utilisateur
+    /**
+    *Inscription utilisateur
+    */
     public function Signup()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
@@ -60,7 +72,9 @@ class Main
         $view = new Viewer('Back/Signup', 'Alaska _ Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
     }
-    // Déconnection de la partie Admin
+    /**
+    *Déconnection de la partie Admin
+    */
     public function Logout()
     {
         if (!empty($_SESSION)) {

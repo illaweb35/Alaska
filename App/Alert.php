@@ -8,10 +8,21 @@
 */
 namespace App;
 
+/**
+* Utilisation de la classe Viewer pour l'affichage des données
+*/
 use App\Viewer;
 
+/**
+* Classe Alert pour l'affichage de toutes les alertes du site
+*/
+
 class Alert
-{
+{/**
+  *Function qui récupère le message d'erreur et génère la vue
+  *@param variable $errorMsg contenant le message
+  * Instanciation de la classe Viewer pour générer la vue.
+  */
     public static function getError($errorMsg)
     {
         $view = new Viewer("Error", 'Page d\'erreur');
