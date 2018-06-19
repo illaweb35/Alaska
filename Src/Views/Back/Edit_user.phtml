@@ -12,11 +12,11 @@
       <form action="<?= BASEPATH.'Backedit/Update_user/'.$users->getId()?>" method="post">
         <div class="field">
           <label for="username" class="label">Nom</label>
-          <input type="text" class="input" name="username" value="<?= $users->getUsername()?>"/>
+          <input type="text" class="input" name="username" value="<?= htmlspecialchars($users->getUsername())?>"/>
         </div>
         <div class="field">
           <label for="email" class="label">Email</label>
-          <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= $users->getMail()?>"/>
+          <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= htmlspecialchars($users->getEmail())?>"/>
         </div>
         <div class="field">
           <div class="select">
@@ -35,5 +35,10 @@
         </div>
       </form>
     </div>
+    <a href="javascript:history.go(-1)" class="button is-primary"><span>Retour </span>
+      <span class="icon">
+      <i class="fas fa-undo"></i>
+      </span>
+    </a>
   </div>
 </section>

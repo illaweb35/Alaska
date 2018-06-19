@@ -29,7 +29,7 @@ class Main
     // Page de connexion a la partie Admin
     public function Login()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' | !empty($_POST)) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && isset($_POST)) {
             $user = $this->userManager->Connexion();
         }
         if (isset($_SESSION['id'])) {

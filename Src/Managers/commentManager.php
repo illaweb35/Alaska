@@ -52,18 +52,19 @@ class commentManager
     // Creation d'un commentaire
     public function Create()
     {
+        $pseudo = $content = $art_id = $create_at ="";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
             $pseudo = htmlspecialchars($_POST['pseudo']);
             $content = htmlspecialchars($_POST['content']);
             $art_id = htmlspecialchars($_POST['bil_id']);
             $create_at = date(DATE_W3C);
             try {
-                $sql = 'INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,:create_at,:bil_id)';
+                $sql = ('INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,:create_at,:bil_id)');
                 $request = $this->_pdo->prepare($sql);
                 $request->bindValue(':pseudo', $pseudo, \PDO::PARAM_STR) ;
                 $request->bindValue(':content', $content, \PDO::PARAM_STR) ;
                 $request->bindValue(':bil_id', $art_id, \PDO::PARAM_INT);
-                $request->bindValue(':create_at', $create_at);
+                $request->bindValue(':create_at', $create_at, \PDO::PARAM_STR);
                 $verifIsOk = $request->execute();
                 $request->closeCursor();
                 if (!$verifIsOk) {
@@ -72,22 +73,11 @@ class commentManager
                     return $_POST['bil_id'];
                 }
             } catch (PDOException $e) {
-                throw new \Exception(Alert::getError($errorMsg = $e->getMessage()), 1);
+                throw new \Exception($e->getMessage());
             }
         }
     }
 
-    // Mise à jour de Commentaires
-    public function Update(array $data)
-    {
-        $sql= ('UPDATE  T_comments SET pseudo=:pseudo, content=:content, modif_at=NOW(), moderate=:moderate WHERE id_com=:id');
-        $request = $this->_pdo->prepare($sql);
-        $request->bindValue(':pseudo', $data['pseudo'], \PDO::PARAM_STR) ;
-        $request->bindValue(':content', $data['content'], \PDO::PARAM_STR) ;
-        $request->bindValue('moderate', $data['moderate'], \PDO::PARAM_INT);
-        $request->bindValue(':id', $id, \PDO::PARAM_INT);
-        return $request->execute($data);
-    }
     public function Moderate($id)
     {
         $sql=('SELECT moderate, bil_id FROM T_comments WHERE id_com=:id LIMIT 1');
@@ -104,10 +94,8 @@ class commentManager
         $request = $this->_pdo->prepare($sql);
         $request->bindValue(':id', $id, \PDO::PARAM_INT);
         $request->execute();
-
         return $comment->getBil_id();
     }
-
 
     // Effacer un Billet
     public function Delete($id)

@@ -48,6 +48,10 @@ class billetManager
     {
         $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted="";
         $title = \htmlspecialchars($_POST['title']);
+        if (empty($title)) {
+            Alert::getError($errorMsg='Merci de donner un titre à votre billet!');
+            die();
+        }
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
         $imgFile = $_FILES['image']['name'];
@@ -58,18 +62,21 @@ class billetManager
         $posted = \htmlspecialchars($_POST['posted']);
 
         try {
-            $upload_dir = "C:\wamp\www\\" . BASEPATH.'img/posts';
-            $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
-            $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
-            $image = rand(1000, 1000000).".".$imgExt;
-            if (in_array($imgExt, $valid_extensions)) {
-                if ($imgSize < 5*MB) {
-                    \move_uploaded_file($tmp_dir, "$upload_dir.$image");
+            if (isset($_FILES['image'])) {
+                $upload_dir = chmod(\BASEPATH .'img/posts/', 0755);
+                $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
+                $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
+                $image = rand(1000, 1000000).".".$imgExt;
+                if (in_array($imgExt, $valid_extensions)) {
+                    if ($imgSize < 5*MB) {
+                        \move_uploaded_file($tmp_dir, $upload_dir.$image);
+                        echo 'Upload éffectué avec succès';
+                    } else {
+                        Alert::getError($errorMsg = 'Le fichier image est trop gros!');
+                    }
                 } else {
-                    Alert::getError($errorMsg = 'Le fichier image est trop gros!');
+                    Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
                 }
-            } else {
-                Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
             }
             $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
@@ -85,7 +92,7 @@ class billetManager
                 return $_POST['id_bil'];
             }
         } catch (Exception $e) {
-            throw new \Exception(Alert::getError($errorMsg = "Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
+            throw new \Exception($e->getMessage());
         }
         $request->closeCursor();
     }
@@ -103,7 +110,7 @@ class billetManager
         $imgSize = $_FILES['image']['size'];
 
         if ($imgFile) {
-            $upload_dir = "C:\wamp\www\\" . BASEPATH.'img/posts';
+            $upload_dir = chmod(BASEPATH.'img/posts/', 0755);
             $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
             $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
             $image = rand(1000, 1000000).".".$imgExt;
@@ -120,7 +127,6 @@ class billetManager
         } else {
             // Si pas d'image sélectionné on garde l'ancienne
             $edit_row = $this->read($id);
-
             $image = $edit_row->getImage();
         }
         try {
@@ -132,7 +138,6 @@ class billetManager
             $request->bindValue(':image', $image, \PDO::PARAM_STR);
             $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
             $billets = $request->execute();
-
             if (!$billets) {
                 return false;
             } else {
@@ -140,7 +145,7 @@ class billetManager
                 return $billets;
             }
         } catch (Exception $e) {
-            throw new \Exception(Alert::getError($errorMsg = "Une erreur est survenue, l'enregistrement n'a pu aboutir"), 1);
+            throw new \Exception($e->getMessage());
         }
     }
     // Effacer un Billet

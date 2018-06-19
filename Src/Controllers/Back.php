@@ -46,7 +46,7 @@ class Back extends Main
             header('Location:'.\BASEPATH.'Front/Index');
         }
         $users = $this->userManager->userAll();
-        $view = new Viewer('Back/Users', 'Alaska _ Paramètres');
+        $view = new Viewer('Back/ListUsers', 'Alaska _ Paramètres');
         $view->createFile(['users'=>$users]);
     }
     public function Check($id)

@@ -53,11 +53,15 @@
               <form action="<?= BASEPATH.'Backedit/Create_user'?>" method="post">
                 <div class="field">
                   <label for="username" class="label">Nom d'utilisateur</label>
-                  <input type="text" class="input" name="username" required>
+                  <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
+    echo $_POST['username'];
+}?>" required>
                 </div>
                 <div class="field">
                   <label for="email" class="label">Email</label>
-                  <input type="text" class="input" name="email"  required>
+                  <input type="text" class="input" name="email" pattern ="^[a-z0-9]+@([a-z0-9])+(\.)([a-z]{2,4})" value="<?php if (isset($_POST['email'])) {
+    echo $_POST['email'];
+}?>" required/>
                 </div>
                 <div class="field">
                   <label for="password" class="label">Mot de Passe</label>
