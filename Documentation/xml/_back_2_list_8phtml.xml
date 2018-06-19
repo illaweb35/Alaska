@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_back_2_list_8phtml" kind="file" language="PHP">
+    <compoundname>List.phtml</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_back_2_list_8phtml_1a1f60df41da29a5ab6912652ef3c1cea5" prot="public" static="no" mutable="no">
+        <type>foreach</type>
+        <definition>foreach ( $billets as $bil)()?&gt;&quot; alt</definition>
+        <argsstring>()?&gt;&quot; alt</argsstring>
+        <name>($billets as $bil)</name>
+        <initializer>=  substr($bil-&gt;getContent(), 0, 150)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Views/Back/List.phtml" line="5" column="1" bodyfile="Src/Views/Back/List.phtml" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;p&gt;Utilisateur<sp/>Connecté:<sp/>&lt;strong&gt;&lt;?=<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]?&gt;&lt;/strong&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($billets<sp/>as<sp/>$bil):?&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;box&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;article<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;media&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;figure<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;media-left&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;image<sp/>is-128x128&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;img<sp/>src=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;img/posts/&apos;.$bil-&gt;getImage()?&gt;&quot;</highlight><highlight class="normal"><sp/>alt=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>$bil-&gt;getTitle()?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/figure&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;media-content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH<sp/>.&apos;Front/posting/&apos;.<sp/>$bil-&gt;getId()?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;&lt;?=<sp/>htmlspecialchars($bil-&gt;getTitle())<sp/>?&gt;&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;br/&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;</highlight></codeline>
+<codeline lineno="22" refid="_back_2_list_8phtml_1a1f60df41da29a5ab6912652ef3c1cea5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?=<sp/><sp/>substr($bil-&gt;getContent(),<sp/>0,<sp/>150);<sp/>?&gt;...</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;br/&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;small&gt;Publié<sp/>le<sp/>:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;em&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?=<sp/>date(</highlight><highlight class="stringliteral">&apos;d<sp/>-<sp/>M<sp/>-<sp/>Y<sp/>à<sp/>H<sp/>:<sp/>i&apos;</highlight><highlight class="normal">,<sp/>strtotime($bil-&gt;getCreate_at()));<sp/>?&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/em&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/small&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Par<sp/>&lt;strong&gt;&lt;?=<sp/>htmlspecialchars($bil-&gt;getAuthor())<sp/>?&gt;&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;nav<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;level<sp/>is-mobile&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;level-left&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;level-item&quot;</highlight><highlight class="normal"><sp/>aria-label=</highlight><highlight class="stringliteral">&quot;mmodif&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Backedit/Update/&apos;.$bil-&gt;getId()?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;icon<sp/>is-small&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;i<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;fas<sp/>fa-edit&quot;</highlight><highlight class="normal"><sp/>aria-hidden=</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">&gt;&lt;/i&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/span&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;level-item&quot;</highlight><highlight class="normal"><sp/>aria-label=</highlight><highlight class="stringliteral">&quot;delete&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Backedit/delete/&apos;.$bil-&gt;getId()?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;icon<sp/>is-small&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;i<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;fas<sp/>fa-trash&quot;</highlight><highlight class="normal"><sp/>aria-hidden=</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">&gt;&lt;/i&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/span&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/nav&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/article&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>&lt;?php<sp/><ref refid="_index_8phtml_1a672d9707ef91db026c210f98cc601123" kindref="member">endforeach</ref>?&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">&lt;/section&gt;</highlight></codeline>
+    </programlisting>
+    <location file="Src/Views/Back/List.phtml"/>
+  </compounddef>
+</doxygen>

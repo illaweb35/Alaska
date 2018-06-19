@@ -1,43 +1,52 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
   <div class="content">
     <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
   </div>
-  <?php foreach ($billets as $billet):?>
+  <?php foreach ($billets as $bil):?>
 <div class="container">
     <div class="box">
       <article class="media">
         <figure class="media-left">
           <p class="image is-128x128">
-            <img src="<?= BASEPATH.'img/posts/'.$billet->getImage() ?>" alt="<?= $billet->getTitle()?>">
+            <img src="<?= BASEPATH.'img/posts/'.$bil->getImage()?>" alt="<?= $bil->getTitle()?>">
           </p>
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="<?= BASEPATH .'Front/posting/'. $billet->getId()?>">
-              <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
+              <a href="<?= BASEPATH .'Front/posting/'. $bil->getId()?>">
+              <strong><?= htmlspecialchars($bil->getTitle()) ?></strong></a>
             </p>
             <br/>
             <p>
-            <?=  substr(nl2br($billet->getContent()), 0, 150); ?>...
+            <?=  substr($bil->getContent(), 0, 150); ?>...
             </p>
             <br/>
               <small>Publié le :
                 <em>
-                <?= date(' d m Y à H : i', strtotime($billet->getCreate_at())); ?>
+                <?= date('d - M - Y à H : i', strtotime($bil->getCreate_at())); ?>
               </em>
             </small>
-            <p>Par <strong><?= htmlspecialchars($billet->getAuthor()) ?></strong>
+            <p>Par <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
             </p>
           </div>
           <nav class="level is-mobile">
         <div class="level-left">
-          <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$billet->getId()?>">
+          <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
             <span class="icon is-small">
               <i class="fas fa-edit" aria-hidden="true"></i>
             </span>
           </a>
-          <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$billet->getId()?>">
+          <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$bil->getId()?>">
             <span class="icon is-small">
               <i class="fas fa-trash" aria-hidden="true"></i>
             </span>
@@ -48,5 +57,5 @@
       </article>
       </div>
     </div>
-  <?php endforeach; ?>
+  <?php endforeach?>
 </section>

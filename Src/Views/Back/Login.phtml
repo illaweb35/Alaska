@@ -1,3 +1,12 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
 <h1 class='title'>Connexion</h1>
   <div class="container">
@@ -11,32 +20,32 @@
               </figure>
             </div>
             <div class="field">
-              <label for="" class="label">
-                Nom d'utilisateur
+              <label for="username" class="label">
+                Nom d'utilisateur ou pseudo
               </label>
               <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
     echo $_POST['username'];
-}?>">
+}?>" autofocus/>
             </div>
             <div class="field">
               <label for="password" class="label">Password</label>
-              <input type="password" class="input" name="password">
+              <input type="password" class="input" name="password"/>
             </div>
             <div class="field has-addons">
               <div class="control">
                 <button class="button is-link" type="submit">Se connecter</button>
                 <button class="button is-text" type="reset">Annulé</button>
                 </div>
-              </div>
-              <p>Si vous ne possédez pas de compte vous pouvez vous
-                <a href="<?= BASEPATH.'Main/Signup'?>">Inscrire</a>
-                  <span class="icon has-text-info">
-                    <i class="fas fa-user-plus"></i>
-                  </span>
-              </p>
             </div>
-          </form>
-        </div>
+            <p>Si vous ne possédez pas de compte ->
+              <a href="<?= BASEPATH.'Main/Signup'?>">S'inscrire</a>
+              <span class="icon has-text-info">
+                <i class="fas fa-user-plus"></i>
+              </span>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </section>

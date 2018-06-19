@@ -1,4 +1,3 @@
- php_value memory_limit 64M
  Options -MultiViews
  RewriteEngine On
 

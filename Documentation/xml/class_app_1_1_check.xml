@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_app_1_1_check" kind="class" language="PHP" prot="public">
+    <compoundname>App::Check</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static verifSession</definition>
+        <argsstring>()</argsstring>
+        <name>verifSession</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Check.php" line="6" column="1" bodyfile="App/Check.php" bodystart="6" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static mixMdp</definition>
+        <argsstring>($p)</argsstring>
+        <name>mixMdp</name>
+        <param>
+          <declname>$p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Check.php" line="17" column="1" bodyfile="App/Check.php" bodystart="17" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="App/Check.php" line="5" column="1" bodyfile="App/Check.php" bodystart="4" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" prot="public" virt="non-virtual"><scope>App::Check</scope><name>mixMdp</name></member>
+      <member refid="class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" prot="public" virt="non-virtual"><scope>App::Check</scope><name>verifSession</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

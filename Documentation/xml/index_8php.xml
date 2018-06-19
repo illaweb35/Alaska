@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+    <innernamespace refid="namespace_app_1_1_router">App::Router</innernamespace>
+    <innernamespace refid="namespace_app_1_1_config">App::Config</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="index_8php_1af4105acdee5d34dc96c2aec4058b81f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$route</definition>
+        <argsstring></argsstring>
+        <name>$route</name>
+        <initializer>= new <ref refid="class_app_1_1_router" kindref="compound">Router</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Web/index.php" line="9" column="1" bodyfile="Web/index.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">use<sp/><ref refid="namespace_app_1_1_router" kindref="compound">App\Router</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">use<sp/><ref refid="namespace_app_1_1_config" kindref="compound">App\Config</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">require_once(</highlight><highlight class="stringliteral">&apos;../App/Autoloader.php&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">require_once(</highlight><highlight class="stringliteral">&apos;../App/Config.php&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_autoloader_1a9f0be6ae273d3669e11c29910a0be338" kindref="member">Autoloader::init</ref>();</highlight></codeline>
+<codeline lineno="9" refid="index_8php_1af4105acdee5d34dc96c2aec4058b81f9" refkind="member"><highlight class="normal"><ref refid="index_8php_1af4105acdee5d34dc96c2aec4058b81f9" kindref="member">$route</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_app_1_1_router" kindref="compound">Router</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="index_8php_1af4105acdee5d34dc96c2aec4058b81f9" kindref="member">$route</ref>-&gt;initRoute();</highlight></codeline>
+    </programlisting>
+    <location file="Web/index.php"/>
+  </compounddef>
+</doxygen>

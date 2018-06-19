@@ -1,3 +1,12 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
   <div class="container">
     <div class="image_bandeau">
@@ -17,9 +26,9 @@
         </div>
         <div class="media-content">
           <div class="content">
-            <p class="title is-4"><?= htmlspecialchars($billets->getTitle()) ?></p>
+            <p class="title is-4"><?= htmlspecialchars($billets->getTitle())?></p>
             <p><?= $billets->getContent() ?></p>
-            <small>Publié le : <em><?= date(' d M Y à H:i', strtotime($billets->getCreate_at())); ?></em></small>
+            <small>Publié le : <em><?= date(' d - M - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
           </div>
         </div>
       </article>
@@ -28,7 +37,7 @@
         <div class="column">
           <article class="message is-info">
               <div class="message-header">
-                <p><em><strong>Commentaires pour :  </strong></em><?= htmlspecialchars($billets->getTitle()) ?>
+                <p><em><strong>Commentaires pour :  </strong></em><?php htmlspecialchars($billets->getTitle()) ?>
               </p>
               </div>
                 <div class="message-body">
@@ -40,21 +49,21 @@
                   Soyez le premier à ecrire un commentaire.
                 </p>
               <?php else:?>
-                <?php foreach ($comments as $comment):?>
+                <?php foreach ($comments as $com):?>
                   <span class="underline">
                     <p>
                       <strong>
-                        <?= htmlspecialchars($comment->getPseudo())?>
+                        <?= htmlspecialchars($com->getPseudo())?>
                       </strong> a écrit:
                     </p>
                   </span>
-                    <small>Le <?= date('d M Y à H:i', strtotime($comment->getCreate_at()))?></small>
+                    <small>Le <?= date('d - M - Y à H:i', strtotime($com->getCreate_at()))?></small>
                     <p>
-                      <?= nl2br(htmlspecialchars($comment->getContent())) ?>
+                      <?= $com->getContent() ?>
                     </p>
                     <br/>
                     <p class="is-size-7">
-                    <a href="<?= BASEPATH.'Front/Signaler/'.$comment->getId() ?>">Signaler le commentaire</a>
+                    <a href="<?= BASEPATH.'Front/Signaler/'.$com->getId() ?>">Signaler le commentaire</a>
                     </p>
                   <hr/>
                 <?php endforeach?>
@@ -73,16 +82,16 @@
                 </div>
                 <div class="field">
                   <div class="control">
-                      <textarea class="textarea" id="content" name="content" placeholder="Votre commentaire" required></textarea><br />
+                      <textarea class="textarea" id="content" name="content" placeholder="Votre commentaire" required></textarea><br/>
                   </div>
                 </div>
-                <input class="input" type="hidden" name="bil_id" value="<?= $billets->getId() ?>" />
+                <input class="input" type="hidden" name="bil_id" value="<?= $billets->getId() ?>"/>
                   <div class="field is-grouped">
                     <div class="control">
                       <button type="submit" class="button" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>
                     </div>
                     <div class="control">
-                      <button class="button"type="reset" title="effacer et recommencer la saisie">
+                      <button class="button"type="reset" title="Effacer et recommencer la saisie">
                         Effacer
                       </button>
                     </div>

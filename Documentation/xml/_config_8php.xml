@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_config_8php" kind="file" language="PHP">
+    <compoundname>Config.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_config_8php_1ad39801cabfd338dc5524466fe793fda9" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const BASEPATH</definition>
+        <argsstring></argsstring>
+        <name>BASEPATH</name>
+        <initializer>= &apos;/Alaska/Web/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="3" column="1" bodyfile="App/Config.php" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1a293363d7988627f671958e2d908c202a" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const DB_HOST</definition>
+        <argsstring></argsstring>
+        <name>DB_HOST</name>
+        <initializer>=&apos;localhost&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="7" column="1" bodyfile="App/Config.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1ab5db0d3504f917f268614c50b02c53e2" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const DB_NAME</definition>
+        <argsstring></argsstring>
+        <name>DB_NAME</name>
+        <initializer>= &apos;Alaska&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="8" column="1" bodyfile="App/Config.php" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const DB_USER</definition>
+        <argsstring></argsstring>
+        <name>DB_USER</name>
+        <initializer>= &apos;root&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="9" column="1" bodyfile="App/Config.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1a8bb9c4546d91667cfa61879d83127a92" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const DB_PASS</definition>
+        <argsstring></argsstring>
+        <name>DB_PASS</name>
+        <initializer>= &apos;root&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="10" column="1" bodyfile="App/Config.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1a4f06cdd0c63f3ce691804d6c90ea6c32" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const KB</definition>
+        <argsstring></argsstring>
+        <name>KB</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="14" column="1" bodyfile="App/Config.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_config_8php_1a91c734126e699a6ba53fe57e06bb8b49" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const MB</definition>
+        <argsstring></argsstring>
+        <name>MB</name>
+        <initializer>1048576</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Config.php" line="15" column="1" bodyfile="App/Config.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Racine<sp/>web</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="_config_8php_1ad39801cabfd338dc5524466fe793fda9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_config_8php_1ad39801cabfd338dc5524466fe793fda9" kindref="member">BASEPATH</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;/Alaska/Web/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Connxion<sp/>à<sp/>la<sp/>base<sp/>de<sp/>données</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_config_8php_1a293363d7988627f671958e2d908c202a" refkind="member"><highlight class="normal"><ref refid="_config_8php_1a293363d7988627f671958e2d908c202a" kindref="member">DB_HOST</ref><sp/>=</highlight><highlight class="stringliteral">&apos;localhost&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="8" refid="_config_8php_1ab5db0d3504f917f268614c50b02c53e2" refkind="member"><highlight class="normal"><ref refid="_config_8php_1ab5db0d3504f917f268614c50b02c53e2" kindref="member">DB_NAME</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Alaska&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="9" refid="_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" refkind="member"><highlight class="normal"><ref refid="_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" kindref="member">DB_USER</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;root&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="10" refid="_config_8php_1a8bb9c4546d91667cfa61879d83127a92" refkind="member"><highlight class="normal"><ref refid="_config_8php_1a8bb9c4546d91667cfa61879d83127a92" kindref="member">DB_PASS</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;root&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dimensions<sp/>images</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_config_8php_1a4f06cdd0c63f3ce691804d6c90ea6c32" refkind="member"><highlight class="normal">define(</highlight><highlight class="stringliteral">&apos;KB&apos;</highlight><highlight class="normal">,<sp/>1024);</highlight></codeline>
+<codeline lineno="15" refid="_config_8php_1a91c734126e699a6ba53fe57e06bb8b49" refkind="member"><highlight class="normal">define(</highlight><highlight class="stringliteral">&apos;MB&apos;</highlight><highlight class="normal">,<sp/>1048576);</highlight></codeline>
+    </programlisting>
+    <location file="App/Config.php"/>
+  </compounddef>
+</doxygen>

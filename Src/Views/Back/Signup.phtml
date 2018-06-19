@@ -1,5 +1,14 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
-  <h1>Inscription</h1>
+  <h1 class="title">Inscription</h1>
   <div class="container">
     <div class="columns is-centered">
       <div class="box">
@@ -14,7 +23,7 @@
               <label for="username" class="label">Nom d'utilisateur</label>
               <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
     echo $_POST['username'];
-}?>" required>
+}?>" required autofocus>
             </div>
             <div class="field">
               <label for="email" class="label">Email</label>
@@ -29,7 +38,7 @@
             <div class="field">
               <div class="select">
                 <select name="role">
-                  <option value="utilisateur">Utilisateur</option>
+                  <option value="utilisateur">Abonné</option>
                   <option value="Modérateur">Modérateur</option>
                 </select>
               </div>

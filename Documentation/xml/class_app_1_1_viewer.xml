@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_app_1_1_viewer" kind="class" language="PHP" prot="public">
+    <compoundname>App::Viewer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_app_1_1_viewer_1abddaf0b77086e2b7d920f5d1a9616889" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$_file</definition>
+        <argsstring></argsstring>
+        <name>$_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Viewer.php" line="8" column="1" bodyfile="App/Viewer.php" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_app_1_1_viewer_1a49d523a090a700a0689f154d79932063" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$_title</definition>
+        <argsstring></argsstring>
+        <name>$_title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Viewer.php" line="9" column="1" bodyfile="App/Viewer.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_app_1_1_viewer_1a5dc57f09efa63fa174e82e8f34a79c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($action, $title)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$action</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Viewer.php" line="11" column="1" bodyfile="App/Viewer.php" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_1_1_viewer_1ab1d271f3b152feb68aec05dd99ce8e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>View</definition>
+        <argsstring>($data)</argsstring>
+        <name>View</name>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Viewer.php" line="16" column="1" bodyfile="App/Viewer.php" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_1_1_viewer_1a6826cb34504c5216f4352fec9f9f27d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createFile</definition>
+        <argsstring>($data)</argsstring>
+        <name>createFile</name>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Viewer.php" line="21" column="1" bodyfile="App/Viewer.php" bodystart="21" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="App/Viewer.php" line="7" column="1" bodyfile="App/Viewer.php" bodystart="6" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_app_1_1_viewer_1abddaf0b77086e2b7d920f5d1a9616889" prot="private" virt="non-virtual"><scope>App::Viewer</scope><name>$_file</name></member>
+      <member refid="class_app_1_1_viewer_1a49d523a090a700a0689f154d79932063" prot="private" virt="non-virtual"><scope>App::Viewer</scope><name>$_title</name></member>
+      <member refid="class_app_1_1_viewer_1a5dc57f09efa63fa174e82e8f34a79c3b" prot="public" virt="non-virtual"><scope>App::Viewer</scope><name>__construct</name></member>
+      <member refid="class_app_1_1_viewer_1a6826cb34504c5216f4352fec9f9f27d2" prot="public" virt="non-virtual"><scope>App::Viewer</scope><name>createFile</name></member>
+      <member refid="class_app_1_1_viewer_1ab1d271f3b152feb68aec05dd99ce8e66" prot="public" virt="non-virtual"><scope>App::Viewer</scope><name>View</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

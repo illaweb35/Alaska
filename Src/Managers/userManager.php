@@ -1,4 +1,11 @@
 <?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
 namespace Src\Managers;
 
 use App\Dbd;
@@ -38,6 +45,7 @@ class userManager
             Alert::getError($errorMsg = " Erreur, Mauvais couple d'identifiant!");
         }
     }
+    //Afficher les utilisateurs par id
     public function Read($id)
     {
         $request = $this->_pdo->prepare("SELECT * FROM T_users WHERE id_user = :id LIMIT 1");
@@ -48,7 +56,7 @@ class userManager
         $request->closeCursor();
     }
 
-    // afficher les utilisateurs avec ou sans id
+    // afficher tous les utilisateurs
     public function UserAll()
     {
         $request = $this->_pdo->query('SELECT * FROM T_users ORDER BY create_at DESC');
@@ -77,7 +85,7 @@ class userManager
             Alert::getError($errorMsg = "Nom d'utilisateur ou email deja utilisé");
         } else {
             try {
-                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at) VALUES (:username, :email, :password, :role, NOW(),NOW())');
+                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at, modif_at) VALUES (:username, :email, :password, :role, NOW(),NOW())');
                 $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
@@ -99,7 +107,7 @@ class userManager
 
     // Mise a jour utilisateurs
     public function Update($id)
-    { // Define variable in use
+    {
         $username = $email = $password = $role = $modif_at = "";
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);

@@ -1,3 +1,12 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
   <div class="container">
     <h1 class="title">Modifier son profil</h1>
@@ -21,8 +30,8 @@
         <div class="field">
           <div class="select">
             <select name="role">
-              <option value="Utilisateur"<?php if ($users->getRole() == 'Utilisateur'): ?>selected="selected"<?php endif; ?>>Utilisateur</option>
-              <option value="Modérateur"<?php if ($users->getRole() == 'Modérateur'):?>selected="selected"<?php endif; ?>
+              <option value="Utilisateur"<?php if ($users->getRole() == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
+              <option value="Modérateur"<?php if ($users->getRole() == 'Modérateur'):?>selected="selected"<?php endif?>
               >Modérateur</option>
             </select>
           </div>
@@ -35,7 +44,7 @@
         </div>
       </form>
     </div>
-    <a href="javascript:history.go(-1)" class="button is-primary"><span>Retour </span>
+    <a href="javascript:history.go(-1)" class="button is-primary"><span>Retour</span>
       <span class="icon">
       <i class="fas fa-undo"></i>
       </span>

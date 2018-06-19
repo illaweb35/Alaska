@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_template_8phtml" kind="file" language="PHP">
+    <compoundname>Template.phtml</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php<sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/header.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;?=<sp/>$content<sp/>?&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">&lt;/section&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">&lt;?php<sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/footer.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="Src/Views/Template.phtml"/>
+  </compounddef>
+</doxygen>

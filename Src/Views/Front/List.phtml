@@ -1,35 +1,44 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
-  <?php foreach ($billets as $billet):?>
+  <?php foreach ($billets as $bil):?>
 <div class="container">
     <div class="box">
       <article class="media">
         <figure class="media-left">
           <p class="image is-128x128">
-            <img src="<?= BASEPATH.'img/posts/'.$billet->getImage() ?>" alt="<?= $billet->getTitle()?>">
+            <img src="<?= BASEPATH.'img/posts/'.$bil->getImage()?>" alt="<?= $bil->getTitle()?>">
           </p>
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="<?= BASEPATH .'Front/posting/'. $billet->getId()?>">
-              <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
+              <a href="<?= BASEPATH .'Front/posting/'. $bil->getId()?>">
+              <strong><?= htmlspecialchars($bil->getTitle()) ?></strong></a>
             </p>
             <br/>
             <p>
-            <?=  substr($billet->getContent(), 0, 150); ?>...
+            <?=  substr($bil->getContent(), 0, 150)?>...
             </p>
             <br/>
               <small>Publié le :
                 <em>
-                <?= date(' d m Y à H : i', strtotime($billet->getCreate_at())); ?>
+                <?= date(' d - M - Y  à H : i', strtotime($bil->getCreate_at())); ?>
               </em>
             </small>
-            <p>Par <strong><?= htmlspecialchars($billet->getAuthor()) ?></strong>
+            <p>Par <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
             </p>
           </div>
          </div>
       </article>
     </div>
   </div>
-  <?php endforeach; ?>
+  <?php endforeach?>
 </section>

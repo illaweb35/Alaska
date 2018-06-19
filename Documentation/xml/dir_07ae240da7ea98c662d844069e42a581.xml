@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_07ae240da7ea98c662d844069e42a581" kind="dir">
+    <compoundname>Src/Entity</compoundname>
+    <innerfile refid="_billet_8php">Billet.php</innerfile>
+    <innerfile refid="_comment_8php">Comment.php</innerfile>
+    <innerfile refid="_user_8php">User.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Entity/"/>
+  </compounddef>
+</doxygen>

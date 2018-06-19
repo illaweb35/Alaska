@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_src_1_1_controllers" kind="namespace" language="PHP">
+    <compoundname>Src::Controllers</compoundname>
+    <innerclass refid="class_src_1_1_controllers_1_1_back" prot="public">Src::Controllers::Back</innerclass>
+    <innerclass refid="class_src_1_1_controllers_1_1_backedit" prot="public">Src::Controllers::Backedit</innerclass>
+    <innerclass refid="class_src_1_1_controllers_1_1_front" prot="public">Src::Controllers::Front</innerclass>
+    <innerclass refid="class_src_1_1_controllers_1_1_main" prot="public">Src::Controllers::Main</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Controllers/Back.php" line="2" column="1"/>
+  </compounddef>
+</doxygen>

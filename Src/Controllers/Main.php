@@ -1,4 +1,11 @@
 <?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
 namespace Src\Controllers;
 
 use Src\Managers\billetManager;
@@ -35,6 +42,7 @@ class Main
         if (isset($_SESSION['id'])) {
             header('Location:'.BASEPATH.'Back/Dashboard');
         }
+        $user = null;
         $view = new Viewer('Back/Login', 'Alaska _ login');
         $view->createFile(['user'=>$user]);
     }
@@ -48,6 +56,7 @@ class Main
                 exit();
             }
         }
+        $user = null;
         $view = new Viewer('Back/Signup', 'Alaska _ Ajouter un utilisateur');
         $view->createFile(array('user'=>$user));
     }

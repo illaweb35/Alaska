@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_0f400d64cb58d868843a8146019a2a86" kind="dir">
+    <compoundname>Src/Views/inc</compoundname>
+    <innerfile refid="footer_8phtml">footer.phtml</innerfile>
+    <innerfile refid="header_8phtml">header.phtml</innerfile>
+    <innerfile refid="navbar_8phtml">navbar.phtml</innerfile>
+    <innerfile refid="navbar__admin_8phtml">navbar_admin.phtml</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Views/inc/"/>
+  </compounddef>
+</doxygen>

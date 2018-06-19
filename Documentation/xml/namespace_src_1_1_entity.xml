@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_src_1_1_entity" kind="namespace" language="PHP">
+    <compoundname>Src::Entity</compoundname>
+    <innerclass refid="class_src_1_1_entity_1_1_billet" prot="public">Src::Entity::Billet</innerclass>
+    <innerclass refid="class_src_1_1_entity_1_1_comment" prot="public">Src::Entity::Comment</innerclass>
+    <innerclass refid="class_src_1_1_entity_1_1_user" prot="public">Src::Entity::User</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Entity/Billet.php" line="2" column="1"/>
+  </compounddef>
+</doxygen>

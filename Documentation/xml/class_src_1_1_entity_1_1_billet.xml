@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_src_1_1_entity_1_1_billet" kind="class" language="PHP" prot="public">
+    <compoundname>Src::Entity::Billet</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ae855528e951e2d1a970382632682a6c4" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id_bil</definition>
+        <argsstring></argsstring>
+        <name>$id_bil</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="10" column="1" bodyfile="Src/Entity/Billet.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ada57e7bb7c152edad18fe2f166188691" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$title</definition>
+        <argsstring></argsstring>
+        <name>$title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="11" column="1" bodyfile="Src/Entity/Billet.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$author</definition>
+        <argsstring></argsstring>
+        <name>$author</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="12" column="1" bodyfile="Src/Entity/Billet.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a57b284fe00866494b33afa80ba729bed" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$content</definition>
+        <argsstring></argsstring>
+        <name>$content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="13" column="1" bodyfile="Src/Entity/Billet.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1aac6146b4cdec66c94263ddb55afd5946" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$image</definition>
+        <argsstring></argsstring>
+        <name>$image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="14" column="1" bodyfile="Src/Entity/Billet.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$create_at</definition>
+        <argsstring></argsstring>
+        <name>$create_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="15" column="1" bodyfile="Src/Entity/Billet.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$modif_at</definition>
+        <argsstring></argsstring>
+        <name>$modif_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="16" column="1" bodyfile="Src/Entity/Billet.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ae3027d981e3b44a9d3a607332821c2a1" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$posted</definition>
+        <argsstring></argsstring>
+        <name>$posted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="17" column="1" bodyfile="Src/Entity/Billet.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1ab3129f1d71e9f51353de9d551ea381d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($data=[])</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$data</declname>
+          <defval>[]</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="19" column="1" bodyfile="Src/Entity/Billet.php" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setAuthor</definition>
+        <argsstring>($author)</argsstring>
+        <name>setAuthor</name>
+        <param>
+          <declname>$author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="27" column="1" bodyfile="Src/Entity/Billet.php" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a884ba9bb0d54bde7839e798db7964476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setTitle</definition>
+        <argsstring>($title)</argsstring>
+        <name>setTitle</name>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="35" column="1" bodyfile="Src/Entity/Billet.php" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a04a5eddb7c3abc7bf31fa25b58f046bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setContent</definition>
+        <argsstring>($content)</argsstring>
+        <name>setContent</name>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="43" column="1" bodyfile="Src/Entity/Billet.php" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1af785d0fb8da1ba24ec74c2f9f7e27c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setImage</definition>
+        <argsstring>($image)</argsstring>
+        <name>setImage</name>
+        <param>
+          <declname>$image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="51" column="1" bodyfile="Src/Entity/Billet.php" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1ad12db04fd7abd82e8172ebee19c45ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setCreate_at</definition>
+        <argsstring>(DateTime $create_at)</argsstring>
+        <name>setCreate_at</name>
+        <param>
+          <type>DateTime</type>
+          <declname>$create_at</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="57" column="1" bodyfile="Src/Entity/Billet.php" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setModif_at</definition>
+        <argsstring>(DateTime $modif_at)</argsstring>
+        <name>setModif_at</name>
+        <param>
+          <type>DateTime</type>
+          <declname>$modif_at</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="61" column="1" bodyfile="Src/Entity/Billet.php" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1acee4aedcde0f95ac298a1a0ce86be082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setPosted</definition>
+        <argsstring>($posted)</argsstring>
+        <name>setPosted</name>
+        <param>
+          <declname>$posted</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="65" column="1" bodyfile="Src/Entity/Billet.php" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a12251d0c022e9e21c137a105ff683f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="72" column="1" bodyfile="Src/Entity/Billet.php" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a5286e30390ae3e1b274940286493dd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getAuthor</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="76" column="1" bodyfile="Src/Entity/Billet.php" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a95e859a4588a39a1824b717378a84c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="80" column="1" bodyfile="Src/Entity/Billet.php" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a58e43f09a06ce4e29b192c4e17ce7915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getContent</definition>
+        <argsstring>()</argsstring>
+        <name>getContent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="84" column="1" bodyfile="Src/Entity/Billet.php" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a2af8add37797384585cae101fb8cbfe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getImage</definition>
+        <argsstring>()</argsstring>
+        <name>getImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="88" column="1" bodyfile="Src/Entity/Billet.php" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCreate_at</definition>
+        <argsstring>()</argsstring>
+        <name>getCreate_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="92" column="1" bodyfile="Src/Entity/Billet.php" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getModif_at</definition>
+        <argsstring>()</argsstring>
+        <name>getModif_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="96" column="1" bodyfile="Src/Entity/Billet.php" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a4a91b6f2e5d3d9220ccbed241e1d2eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPosted</definition>
+        <argsstring>()</argsstring>
+        <name>getPosted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/Billet.php" line="100" column="1" bodyfile="Src/Entity/Billet.php" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Entity/Billet.php" line="9" column="1" bodyfile="Src/Entity/Billet.php" bodystart="8" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_src_1_1_entity_1_1_billet_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$author</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a57b284fe00866494b33afa80ba729bed" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$content</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$create_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ae855528e951e2d1a970382632682a6c4" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$id_bil</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1aac6146b4cdec66c94263ddb55afd5946" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$image</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$modif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ae3027d981e3b44a9d3a607332821c2a1" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$posted</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ada57e7bb7c152edad18fe2f166188691" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$title</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ab3129f1d71e9f51353de9d551ea381d7" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>__construct</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a5286e30390ae3e1b274940286493dd24" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getAuthor</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a58e43f09a06ce4e29b192c4e17ce7915" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getContent</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getCreate_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a12251d0c022e9e21c137a105ff683f13" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getId</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a2af8add37797384585cae101fb8cbfe7" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getImage</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getModif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a4a91b6f2e5d3d9220ccbed241e1d2eb0" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getPosted</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a95e859a4588a39a1824b717378a84c29" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>getTitle</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setAuthor</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a04a5eddb7c3abc7bf31fa25b58f046bf" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setContent</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1ad12db04fd7abd82e8172ebee19c45ff1" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setCreate_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1af785d0fb8da1ba24ec74c2f9f7e27c0a" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setImage</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setModif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1acee4aedcde0f95ac298a1a0ce86be082" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setPosted</name></member>
+      <member refid="class_src_1_1_entity_1_1_billet_1a884ba9bb0d54bde7839e798db7964476" prot="public" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>setTitle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

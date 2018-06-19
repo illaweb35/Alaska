@@ -1,40 +1,60 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
- <section class="section">
-  <div class="container">
-    <h1 class="title">Poster un Billet</h1>
-    <div class="content">
+  <script>tinymce.init({ selector:'textarea' });</script>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Poster un Billet</h1>
+      <div class="content">
       <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
-    </div>
-    <div class="box">
-      <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
-        <div class="field">
-          <label for="Titre" name="title" class="label" > Titre du billet</label>
-          <input type="text" name="title" class="input" placeholder="Ici votre titre " />
-        </div>
-        <div class="field">
-          <div class="control">
-            <textarea class="textarea"  type="text" name="content" ></textarea>
+      </div>
+      <div class="box">
+        <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
+          <div class="field">
+            <label for="Titre" name="title" class="label" >Titre du billet</label>
+            <input type="text" name="title" class="input" placeholder="Ici votre titre " value="<?php if (isset($_POST['title'])) {
+    echo $_POST['title'];
+}?>" autofocus/>
           </div>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <div class="box">
-              <p class="title is-5">Image à la une</p>
-                <div class="file">
-                  <label class="file-label">
-                    <label for="image" name="image" class="label">image (JPG,PNG,ou GIf | max: 2 mo)</label>
-                    <input type="hidden" name="MAX_FILE_SIZE"/>
-                    <input class="file-input" type="file" name="image" accept="image/*"/>
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" type="text" name="content"
+              value="<?php if (isset($_POST[content])) {
+    echo $_POST['contnt'];
+}?>">
+              </textarea>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="box">
+                <p class="title is-5">Image à la une</p>
+                <div class="field">
+                  <div class="file is-warning has-name is-boxed">
+                    <label class="file-label">
+                      <input class="file-input" type="file" name="image">
                       <span class="file-cta">
-                        <span class="file-icon">
-                          <i class="fas fa-upload"></i>
-                        </span>
-                        <span class="file-label">
-                          Choisir un fichier…
-                        </span>
+                      <span class="file-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
                       </span>
-                  </label>
+                      <span class="file-label">
+                      Enregistrer l'image
+                      </span>
+                      </span>
+                      <span class="file-name">
+<?php if (isset($_POST['image']['name'])) {
+    echo $_POST['image']['name'];
+}?>
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -42,11 +62,10 @@
               <div class="box">
                 <div class="field">
                   <label class="label">Auteur</label>
-                  <input type="text" name="author" class="input" value="Jean Forteroche"
-
-                    </div>
-                  </div>
-                <div class="field">
+                  <input type="text" name="author" class="input" value="Jean Forteroche"/>
+                </div>
+              </div>
+              <div class="field">
                   <label class="checkbox switch">
                     <input type="checkbox" name="posted">
                     <span class="slider round"></span>

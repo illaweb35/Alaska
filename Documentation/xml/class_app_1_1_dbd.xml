@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_app_1_1_dbd" kind="class" language="PHP" prot="public">
+    <compoundname>App::Dbd</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PDO</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>()</argsstring>
+        <name>__construct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="App/Dbd.php" line="6" column="1" bodyfile="App/Dbd.php" bodystart="6" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>PDO</label>
+      </node>
+      <node id="22">
+        <label>Dbd</label>
+        <link refid="class_app_1_1_dbd"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>PDO</label>
+      </node>
+      <node id="24">
+        <label>Dbd</label>
+        <link refid="class_app_1_1_dbd"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="App/Dbd.php" line="5" column="1" bodyfile="App/Dbd.php" bodystart="4" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>App::Dbd</scope><name>__construct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

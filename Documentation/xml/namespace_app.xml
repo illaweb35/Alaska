@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_app" kind="namespace" language="PHP">
+    <compoundname>App</compoundname>
+    <innerclass refid="class_app_1_1_alert" prot="public">App::Alert</innerclass>
+    <innerclass refid="class_app_1_1_check" prot="public">App::Check</innerclass>
+    <innerclass refid="class_app_1_1_dbd" prot="public">App::Dbd</innerclass>
+    <innerclass refid="class_app_1_1_router" prot="public">App::Router</innerclass>
+    <innerclass refid="class_app_1_1_viewer" prot="public">App::Viewer</innerclass>
+    <innernamespace refid="namespace_app_1_1_pattern">App::Pattern</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="App/Alert.php" line="2" column="1"/>
+  </compounddef>
+</doxygen>

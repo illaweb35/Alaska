@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_autoloader_8php" kind="file" language="PHP">
+    <compoundname>Autoloader.php</compoundname>
+    <innerclass refid="class_autoloader" prot="public">Autoloader</innerclass>
+    <innernamespace refid="namespace_app_1_1_pattern_1_1_singleton">App::Pattern::Singleton</innernamespace>
+    <innernamespace refid="namespace_singleton">Singleton</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">require_once(</highlight><highlight class="stringliteral">&apos;Pattern/Singleton.trait.php&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">use<sp/><ref refid="namespace_app_1_1_pattern_1a90c7994df18fc2d358849f9a46502bc1" kindref="member">App\Pattern\Singleton</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_autoloader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_autoloader" kindref="compound">Autoloader</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>use<sp/><ref refid="namespace_app_1_1_pattern_1a90c7994df18fc2d358849f9a46502bc1" kindref="member">Singleton</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_autoloader_1a9f0be6ae273d3669e11c29910a0be338" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="class_autoloader_1a9f0be6ae273d3669e11c29910a0be338" kindref="member">init</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spl_autoload_register([__CLASS__,</highlight><highlight class="stringliteral">&apos;autoload&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13" refid="class_autoloader_1ab4c022bf9d3474583030f31894865182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="class_autoloader_1ab4c022bf9d3474583030f31894865182" kindref="member">autoload</ref>($class)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$class<sp/>=<sp/>str_replace(__NAMESPACE__,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$class);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$class<sp/>=<sp/>str_replace(</highlight><highlight class="charliteral">&apos;\\&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/>$class);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>(dirname(__DIR__).</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">.$class.</highlight><highlight class="stringliteral">&apos;.php&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_once<sp/>$file;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="App/Autoloader.php"/>
+  </compounddef>
+</doxygen>

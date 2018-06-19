@@ -1,3 +1,12 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="section">
   <div class="container">
     <h1 class="title">Tableau de Bord</h1>
@@ -17,9 +26,9 @@
               <p class="subtitle is-3">
               Billets
               </p>
-              <p><strong><?= count($all_billets) ?></strong> Billets sur le site.</p>
+              <p><strong><?= count($all_billets)?></strong> _ Billets sur le site.</p>
               <hr/>
-              <p><strong><?= count($billets)?></strong> Publié sur le site</p>
+              <p><strong><?= count($billets)?></strong> _ Publié sur le site</p>
             </div>
           </article>
         </div>
@@ -29,16 +38,16 @@
           <article class="media">
             <div class="media-left">
               <figure class="image is-64x64">
-                <img src="<?= BASEPATH.'/img/Comments.png'?>" alt="">
+                <img src="<?= BASEPATH.'/img/Comments.png'?>" alt="Bulles commentaires">
               </figure>
             </div>
             <div class="media-content">
               <p class="subtitle is-3">
                 Commentaires
               </p>
-              <p><strong><?= count($comments)?></strong> commentaires publiés</p>
+              <p><strong><?= count($comments)?></strong> _ Commentaires publiés</p>
               <hr/>
-              <p><strong><?= count($commentModerate) ?></strong> Commentaires à valider</p>
+              <p><strong><?= count($commentModerate)?></strong> _ Commentaires à valider</p>
             </div>
           </article>
         </div>
@@ -48,7 +57,7 @@
           <article class="media">
             <div class="media-left">
               <figure class="image is-64x64">
-                <img src="<?= BASEPATH.'/img/Utilisateurs.png'?>" alt="">
+                <img src="<?= BASEPATH.'/img/Utilisateurs.png'?>" alt="Utilisateurs dans un cercle">
               </figure>
             </div>
             <div class="media-content">
@@ -66,7 +75,7 @@
 <section class="section">
   <div class="container">
     <h2 class="title">Commentaires signalés </h2>
-    <small>( Commentaires signalés par les lecteurs à valider)</small>
+    <small>( Commentaires signalés par les lecteurs, à valider)</small>
     <hr/>
     <table class="table is-striped is-narrow is-hoverable is-fullwidth">
       <thead>
@@ -95,7 +104,7 @@
           </a>
         </td>
       </tbody>
-            <?php endforeach?>
+    <?php endforeach?>
     </table>
   </div>
 </section>

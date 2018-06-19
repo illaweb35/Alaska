@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_src_1_1_entity_1_1_user" kind="class" language="PHP" prot="public">
+    <compoundname>Src::Entity::User</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a076f4e9335db95bc9db9c2695d128809" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id_user</definition>
+        <argsstring></argsstring>
+        <name>$id_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="10" column="1" bodyfile="Src/Entity/User.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="11" column="1" bodyfile="Src/Entity/User.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1ad634f418b20382e2802f80532d76d3cd" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$email</definition>
+        <argsstring></argsstring>
+        <name>$email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="12" column="1" bodyfile="Src/Entity/User.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="13" column="1" bodyfile="Src/Entity/User.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a1ea903cca285c7c0b4c9203932100309" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="14" column="1" bodyfile="Src/Entity/User.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$create_at</definition>
+        <argsstring></argsstring>
+        <name>$create_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="15" column="1" bodyfile="Src/Entity/User.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_src_1_1_entity_1_1_user_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$modif_at</definition>
+        <argsstring></argsstring>
+        <name>$modif_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="16" column="1" bodyfile="Src/Entity/User.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1ab3129f1d71e9f51353de9d551ea381d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($data=[])</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$data</declname>
+          <defval>[]</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="18" column="1" bodyfile="Src/Entity/User.php" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1ac359b701a2ccaff746dd480f03314244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>setUsername</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="26" column="1" bodyfile="Src/Entity/User.php" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a5ef76eef42d2624386442eeb636d338c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setEmail</definition>
+        <argsstring>($email)</argsstring>
+        <name>setEmail</name>
+        <param>
+          <declname>$email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="34" column="1" bodyfile="Src/Entity/User.php" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setPassword</definition>
+        <argsstring>($password)</argsstring>
+        <name>setPassword</name>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="42" column="1" bodyfile="Src/Entity/User.php" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1aa9233284be00bee150c4982e73785b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setRole</definition>
+        <argsstring>($role)</argsstring>
+        <name>setRole</name>
+        <param>
+          <declname>$role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="50" column="1" bodyfile="Src/Entity/User.php" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a9c8311c6d2e7d1d118a6a6da7b577c0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDateCrea</definition>
+        <argsstring>(DateTime $create_at)</argsstring>
+        <name>setDateCrea</name>
+        <param>
+          <type>DateTime</type>
+          <declname>$create_at</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="58" column="1" bodyfile="Src/Entity/User.php" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setModif_at</definition>
+        <argsstring>(DateTime $modif_at)</argsstring>
+        <name>setModif_at</name>
+        <param>
+          <type>DateTime</type>
+          <declname>$modif_at</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="64" column="1" bodyfile="Src/Entity/User.php" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a12251d0c022e9e21c137a105ff683f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="71" column="1" bodyfile="Src/Entity/User.php" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="75" column="1" bodyfile="Src/Entity/User.php" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a02a01849f28e2535e888ae4ec87b20f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getEmail</definition>
+        <argsstring>()</argsstring>
+        <name>getEmail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="79" column="1" bodyfile="Src/Entity/User.php" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="83" column="1" bodyfile="Src/Entity/User.php" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="87" column="1" bodyfile="Src/Entity/User.php" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCreate_at</definition>
+        <argsstring>()</argsstring>
+        <name>getCreate_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="91" column="1" bodyfile="Src/Entity/User.php" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_src_1_1_entity_1_1_user_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getModif_at</definition>
+        <argsstring>()</argsstring>
+        <name>getModif_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/Entity/User.php" line="95" column="1" bodyfile="Src/Entity/User.php" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/Entity/User.php" line="9" column="1" bodyfile="Src/Entity/User.php" bodystart="8" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_src_1_1_entity_1_1_user_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$create_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1ad634f418b20382e2802f80532d76d3cd" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$email</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a076f4e9335db95bc9db9c2695d128809" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$id_user</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$modif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$password</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a1ea903cca285c7c0b4c9203932100309" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$role</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" virt="non-virtual"><scope>Src::Entity::User</scope><name>$username</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1ab3129f1d71e9f51353de9d551ea381d7" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>__construct</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getCreate_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a02a01849f28e2535e888ae4ec87b20f2" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getEmail</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a12251d0c022e9e21c137a105ff683f13" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getId</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getModif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getPassword</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getRole</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>getUsername</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a9c8311c6d2e7d1d118a6a6da7b577c0b" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setDateCrea</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a5ef76eef42d2624386442eeb636d338c" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setEmail</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setModif_at</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setPassword</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1aa9233284be00bee150c4982e73785b72" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setRole</name></member>
+      <member refid="class_src_1_1_entity_1_1_user_1ac359b701a2ccaff746dd480f03314244" prot="public" virt="non-virtual"><scope>Src::Entity::User</scope><name>setUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

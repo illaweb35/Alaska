@@ -1,7 +1,15 @@
+<?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
+?>
 <section class="hero is-fullheight">
 <div class="hero-body">
   <div class="container has-text-centered">
-  
   <div class="rings">
     <h1 class="title" >
     Jean Forteroche
@@ -25,7 +33,7 @@ Billet simple pour L'Alaska...
 </section>
 <section  class="section is-medium " >
 <div id="one"class="container has-text-centered">
-Suivez mon nouveau roman...par épisode
+Suivez mon nouveau roman...par épisodes
 </div>
 </section>
 <section class="section">
@@ -34,26 +42,26 @@ Suivez mon nouveau roman...par épisode
 <?php if (empty($billets)):?>
   <p><strong>Il n'y a aucun billets publiés.</strong> _  Merci de revenir me visiter plus tard</p>
 <?php else:?>
-      <?php foreach ($billets as $billet):?>
+      <?php foreach ($billets as $bil):?>
     <div class="column is-3">
       <div class="card">
         <div class="card-image">
           <figure class="image ">
-            <img id="homePost" src="<?= BASEPATH.'/img/posts/'. $billet->getImage()?>" alt="<?= $billet->getTitle()?>">
+            <img id="homePost" src="<?= BASEPATH.'/img/posts/'. $bil->getImage()?>" alt="<?= $bil->getTitle()?>">
           </figure>
           <div class="card-content">
             <div class="media-content">
               <p class="title is-4" title="Lien vers le détail de l'billet">
-                <a href="<?= BASEPATH.'Front/posting/'.$billet->getId()?>">
-                <strong><?= htmlspecialchars($billet->getTitle()) ?></strong></a>
+                <a href="<?= BASEPATH.'Front/posting/'.$bil->getId()?>">
+                <strong><?= htmlspecialchars($bil->getTitle()) ?></strong></a>
               </p>
               <p class="subtitle is-6">
-                <strong><?=  htmlspecialchars($billet->getAuthor()) ?></strong>
+                <strong><?=  htmlspecialchars($bil->getAuthor()) ?></strong>
               </p>
               <div class="content">
-              <p><?= substr($billet->getContent(), 0, 150)?>...</p>
+              <p><?= substr($bil->getContent(), 0, 150)?>...</p>
                  <time datetime="1-1-2016">
-                   <small>Publié le : <em><?= date(' d m Y à H:i', strtotime($billet->getCreate_at())); ?></em></small>
+                   <small>Publié le : <em><?= date(' d - M - Y à H:i', strtotime($bil->getCreate_at())); ?></em></small>
                  </time>
               </div>
             </div>
