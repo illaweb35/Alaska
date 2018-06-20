@@ -81,7 +81,7 @@ CREATE TABLE `T_users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
-  `create_at` datetime NOT NULL
+  `create_at` datetime NOT NULL,
   `modif_at`datetime not null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
