@@ -14,17 +14,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Function qui récupère le message d&apos;erreur et génère la vue <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$errorMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contenant le message Instanciation de la classe <ref refid="class_app_1_1_viewer" kindref="compound">Viewer</ref> pour générer la vue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Alert.php" line="8" column="1" bodyfile="App/Alert.php" bodystart="8" bodyend="13"/>
+        <location file="App/Alert.php" line="26" column="1" bodyfile="App/Alert.php" bodystart="26" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="App/Alert.php" line="7" column="1" bodyfile="App/Alert.php" bodystart="6" bodyend="14"/>
+<para>Classe <ref refid="class_app_1_1_alert" kindref="compound">Alert</ref> pour l&apos;affichage de toutes les alertes du site </para>    </detaileddescription>
+    <location file="App/Alert.php" line="21" column="1" bodyfile="App/Alert.php" bodystart="20" bodyend="32"/>
     <listofallmembers>
       <member refid="class_app_1_1_alert_1a9e9e1b0e1f542b18ea01e9f132a278e2" prot="public" virt="non-virtual"><scope>App::Alert</scope><name>getError</name></member>
     </listofallmembers>

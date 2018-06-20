@@ -12,6 +12,10 @@ use App\Dbd;
 use App\Alert;
 use App\Check;
 
+/**
+* Classe Manager de User regroupe les fonctions de gestion des utilisateurs
+*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*/
 class userManager
 {
     private $_pdo;
@@ -19,7 +23,9 @@ class userManager
     {
         $this->_pdo = new Dbd;
     }
-    // Connexion Admin
+    /**
+    * Fonction de connexion à la partie admin et creation de la session
+    */
     public function Connexion()
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username ');
@@ -45,7 +51,10 @@ class userManager
             Alert::getError($errorMsg = " Erreur, Mauvais couple d'identifiant!");
         }
     }
-    //Afficher les utilisateurs par id
+    /**
+    * Fonction d'affichage d'utilisateur suivant l'identifiant
+    *@param variable $id identifiant de l'utilisateur
+    */
     public function Read($id)
     {
         $request = $this->_pdo->prepare("SELECT * FROM T_users WHERE id_user = :id LIMIT 1");
@@ -55,8 +64,9 @@ class userManager
         return $users = $request->fetch();
         $request->closeCursor();
     }
-
-    // afficher tous les utilisateurs
+    /**
+    * Fonction d'affichage de tous les utilisateurs
+    */
     public function UserAll()
     {
         $request = $this->_pdo->query('SELECT * FROM T_users ORDER BY create_at DESC');
@@ -66,7 +76,9 @@ class userManager
         $request->closeCursor();
         return $users;
     }
-    // ajout d'un utilisateur
+    /**
+    * Fonction d'insertion d'un nouvel utilisateur dans le base de données
+    */
     public function Create()
     {
         $username = $email = $password =  $role = $create_at = $modif_at="";
@@ -104,8 +116,10 @@ class userManager
             }
         }
     }
-
-    // Mise a jour utilisateurs
+    /**
+    * Mise a jour des infos de l'utilisateur suivant l'identifiant
+    *@param variable $id identifiant de l'utilisateur
+    */
     public function Update($id)
     {
         $username = $email = $password = $role = $modif_at = "";
@@ -125,8 +139,10 @@ class userManager
             throw new \Exception($e->getMessage());
         }
     }
-
-    // Effacer un Billet
+    /**
+    * fonction d'effacement d'un utilisateur suivant son identifiant
+    *@param variable $id identifiant de l'utilisateur
+    */
     public function Delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_users WHERE id_user = :id');

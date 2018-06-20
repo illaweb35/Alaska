@@ -61,7 +61,7 @@
   </compound>
   <compound refid="class_app_1_1_check" kind="class"><name>App::Check</name>
     <member refid="class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" kind="function"><name>verifSession</name></member>
-    <member refid="class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" kind="function"><name>mixMdp</name></member>
+    <member refid="class_app_1_1_check_1a336fdbb25ca75f575c65d04924058db9" kind="function"><name>mixMdp</name></member>
   </compound>
   <compound refid="class_src_1_1_entity_1_1_comment" kind="class"><name>Src::Entity::Comment</name>
     <member refid="class_src_1_1_entity_1_1_comment_1a379b4edd94d1eb0c4669683b4c765674" kind="variable"><name>$id_com</name></member>
@@ -173,8 +173,6 @@
   <compound refid="namespace_app_1_1_config" kind="namespace"><name>App::Config</name>
   </compound>
   <compound refid="namespace_app_1_1_dbd" kind="namespace"><name>App::Dbd</name>
-  </compound>
-  <compound refid="namespace_app_1_1_error" kind="namespace"><name>App::Error</name>
   </compound>
   <compound refid="namespace_app_1_1_pattern" kind="namespace"><name>App::Pattern</name>
     <member refid="namespace_app_1_1_pattern_1a90c7994df18fc2d358849f9a46502bc1" kind="variable"><name>Singleton</name></member>

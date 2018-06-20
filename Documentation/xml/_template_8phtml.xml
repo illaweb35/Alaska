@@ -7,13 +7,14 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">&lt;?php<sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/header.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
-<codeline lineno="2"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="3"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;?=<sp/>$content<sp/>?&gt;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">&lt;/section&gt;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">&lt;?php<sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/footer.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/header.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;?=<sp/>$content<sp/>?&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">&lt;/section&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">&lt;?php<sp/>include_once(</highlight><highlight class="stringliteral">&apos;inc/footer.phtml&apos;</highlight><highlight class="normal">)?&gt;</highlight></codeline>
     </programlisting>
     <location file="Src/Views/Template.phtml"/>
   </compounddef>

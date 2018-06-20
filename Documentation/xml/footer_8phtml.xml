@@ -7,34 +7,36 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><sp/><sp/>&lt;footer<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal"><sp/>&gt;</highlight></codeline>
-<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;content<sp/>has-text-centered&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;illaweb&lt;/strong&gt;<sp/>by</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;https://www.illaweb.fr&quot;</highlight><highlight class="normal">&gt;Jean-marie&lt;/a&gt;.</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;small&gt;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tous<sp/>droits<sp/>de<sp/>reproductions<sp/>interdits<sp/>sans<sp/>autorisation<sp/>d</highlight><highlight class="stringliteral">&apos;illaweb<sp/><sp/>_<sp/>Travaux<sp/>pour<sp/>le<sp/>P3<sp/>OpenClassroom</highlight></codeline>
-<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/small&gt;</highlight></codeline>
-<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
-<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;div<sp/>class=&quot;scrollup&quot;&gt;</highlight></codeline>
-<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;#haut&quot;&gt;</highlight></codeline>
-<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span<sp/>class=&quot;icon&quot;&gt;</highlight></codeline>
-<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;i<sp/>class=&quot;fas<sp/>fa-caret-square-up<sp/>fa-2x&quot;<sp/>title=&quot;Haut<sp/>de<sp/>page&quot;&gt;&lt;/i&gt;</highlight></codeline>
-<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/span&gt;</highlight></codeline>
-<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
-<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/>&lt;/footer&gt;</highlight></codeline>
-<codeline lineno="22"><highlight class="stringliteral">&lt;/section&gt;</highlight></codeline>
-<codeline lineno="23"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/jquery.min.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
-<codeline lineno="24"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=BASEPATH.&apos;</highlight><highlight class="normal">js/menu.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
-<codeline lineno="25"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/smoothScroll.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
-<codeline lineno="26"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/schwitch.js</highlight><highlight class="stringliteral">&apos;<sp/>?&gt;&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
-<codeline lineno="27"><highlight class="stringliteral">&lt;/body&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="stringliteral">&lt;/html&gt;</highlight></codeline>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">&lt;section<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;section&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>&lt;footer<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal"><sp/>&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;content<sp/>has-text-centered&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;illaweb&lt;/strong&gt;<sp/>by</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;https://www.illaweb.fr&quot;</highlight><highlight class="normal">&gt;Jean-marie&lt;/a&gt;.</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;small&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tous<sp/>droits<sp/>de<sp/>reproductions<sp/>interdits<sp/>sans<sp/>autorisation<sp/>d</highlight><highlight class="stringliteral">&apos;illaweb<sp/><sp/>_<sp/>Travaux<sp/>pour<sp/>le<sp/>P3<sp/>OpenClassroom</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/small&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;div<sp/>class=&quot;scrollup&quot;&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;#haut&quot;&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span<sp/>class=&quot;icon&quot;&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;i<sp/>class=&quot;fas<sp/>fa-caret-square-up<sp/>fa-2x&quot;<sp/>title=&quot;Haut<sp/>de<sp/>page&quot;&gt;&lt;/i&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/span&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/>&lt;/footer&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral">&lt;/section&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/jquery.min.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=BASEPATH.&apos;</highlight><highlight class="normal">js/menu.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/smoothScroll.js</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>type=&quot;text/javascript&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral">&lt;script<sp/>src=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">js/schwitch.js</highlight><highlight class="stringliteral">&apos;<sp/>?&gt;&quot;<sp/>charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral">&lt;/html&gt;</highlight></codeline>
     </programlisting>
     <location file="Src/Views/inc/footer.phtml"/>
   </compounddef>

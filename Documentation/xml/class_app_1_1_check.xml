@@ -14,32 +14,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Check.php" line="6" column="1" bodyfile="App/Check.php" bodystart="6" bodyend="15"/>
+        <location file="App/Check.php" line="16" column="1" bodyfile="App/Check.php" bodystart="16" bodyend="25"/>
       </memberdef>
-      <memberdef kind="function" id="class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_app_1_1_check_1a336fdbb25ca75f575c65d04924058db9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
         <definition>static mixMdp</definition>
-        <argsstring>($p)</argsstring>
+        <argsstring>($pass)</argsstring>
         <name>mixMdp</name>
         <param>
-          <declname>$p</declname>
+          <declname>$pass</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de cryptage <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>egal au password. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Check.php" line="17" column="1" bodyfile="App/Check.php" bodystart="17" bodyend="20"/>
+        <location file="App/Check.php" line="31" column="1" bodyfile="App/Check.php" bodystart="31" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="App/Check.php" line="5" column="1" bodyfile="App/Check.php" bodystart="4" bodyend="21"/>
+<para>Classe <ref refid="class_app_1_1_check" kindref="compound">Check</ref> pour verification de la session avec token de comparaison . </para>    </detaileddescription>
+    <location file="App/Check.php" line="15" column="1" bodyfile="App/Check.php" bodystart="14" bodyend="35"/>
     <listofallmembers>
-      <member refid="class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" prot="public" virt="non-virtual"><scope>App::Check</scope><name>mixMdp</name></member>
+      <member refid="class_app_1_1_check_1a336fdbb25ca75f575c65d04924058db9" prot="public" virt="non-virtual"><scope>App::Check</scope><name>mixMdp</name></member>
       <member refid="class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" prot="public" virt="non-virtual"><scope>App::Check</scope><name>verifSession</name></member>
     </listofallmembers>
   </compounddef>

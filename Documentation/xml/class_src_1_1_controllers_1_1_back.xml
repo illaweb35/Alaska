@@ -12,10 +12,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>retour à l&apos;accueil si déconnecté </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Back.php" line="9" column="1" bodyfile="Src/Controllers/Back.php" bodystart="9" bodyend="14"/>
+        <location file="Src/Controllers/Back.php" line="23" column="1" bodyfile="Src/Controllers/Back.php" bodystart="23" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_back_1a405a66825259e2e811a2011a61c2beff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -25,10 +25,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affichage Tableau de bord si connecté </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Back.php" line="16" column="1" bodyfile="Src/Controllers/Back.php" bodystart="16" bodyend="34"/>
+        <location file="Src/Controllers/Back.php" line="32" column="1" bodyfile="Src/Controllers/Back.php" bodystart="32" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_back_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,10 +38,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affichage de la liste des billets </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Back.php" line="36" column="1" bodyfile="Src/Controllers/Back.php" bodystart="36" bodyend="41"/>
+        <location file="Src/Controllers/Back.php" line="48" column="1" bodyfile="Src/Controllers/Back.php" bodystart="48" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_back_1abfd4f6736a8cd4dc4fa1e012996f4a23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,10 +51,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affichage de la liste des utilisateurs </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Back.php" line="43" column="1" bodyfile="Src/Controllers/Back.php" bodystart="43" bodyend="51"/>
+        <location file="Src/Controllers/Back.php" line="57" column="1" bodyfile="Src/Controllers/Back.php" bodystart="57" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_back_1a384a1ec9e22b88a73de48023bb2bbf4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,16 +67,24 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Vérification si commentaire est modéré <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suivant l&apos;identifiant du commentaire . </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Back.php" line="52" column="1" bodyfile="Src/Controllers/Back.php" bodystart="52" bodyend="59"/>
+        <location file="Src/Controllers/Back.php" line="70" column="1" bodyfile="Src/Controllers/Back.php" bodystart="70" bodyend="77"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Classe <ref refid="class_src_1_1_controllers_1_1_back" kindref="compound">Back</ref> controleur pour les méthodes du back office si connecté en admin Hérite de la classe <ref refid="class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> </para>    </detaileddescription>
     <inheritancegraph>
       <node id="4">
         <label>Back</label>
@@ -101,7 +109,7 @@
         <link refid="class_src_1_1_controllers_1_1_main"/>
       </node>
     </collaborationgraph>
-    <location file="Src/Controllers/Back.php" line="7" column="1" bodyfile="Src/Controllers/Back.php" bodystart="6" bodyend="60"/>
+    <location file="Src/Controllers/Back.php" line="18" column="1" bodyfile="Src/Controllers/Back.php" bodystart="17" bodyend="78"/>
     <listofallmembers>
       <member refid="class_src_1_1_controllers_1_1_main_1a7205c4d22c61e375f2be552a32f97ccb" prot="protected" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>$billetManager</name></member>
       <member refid="class_src_1_1_controllers_1_1_main_1a2fdbb2dc79956746757958a453709ca6" prot="protected" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>$commentManager</name></member>

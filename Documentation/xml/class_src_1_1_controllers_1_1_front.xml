@@ -13,10 +13,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Constance pour le nombre de billet à afficher sur la page </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="8" column="1" bodyfile="Src/Controllers/Front.php" bodystart="8" bodyend="-1"/>
+        <location file="Src/Controllers/Front.php" line="22" column="1" bodyfile="Src/Controllers/Front.php" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -28,10 +28,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>affiche la liste des billets sur la page d&apos;accueil avec un maximum de 4 billets suivant la constance MAX_POST </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="11" column="1" bodyfile="Src/Controllers/Front.php" bodystart="11" bodyend="16"/>
+        <location file="Src/Controllers/Front.php" line="27" column="1" bodyfile="Src/Controllers/Front.php" bodystart="27" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_front_1a5fcbe325afb03acc6e4eaec38a7bb1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -44,10 +44,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affiche les détails d&apos;un billet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du billet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="18" column="1" bodyfile="Src/Controllers/Front.php" bodystart="18" bodyend="24"/>
+        <location file="Src/Controllers/Front.php" line="37" column="1" bodyfile="Src/Controllers/Front.php" bodystart="37" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_front_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,10 +66,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affiche la liste des billets </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="26" column="1" bodyfile="Src/Controllers/Front.php" bodystart="26" bodyend="31"/>
+        <location file="Src/Controllers/Front.php" line="47" column="1" bodyfile="Src/Controllers/Front.php" bodystart="47" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_front_1ad01f71fa0ecc039494e3c282864298c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -70,10 +79,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Création d&apos;un commentaire pour le billet </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="33" column="1" bodyfile="Src/Controllers/Front.php" bodystart="33" bodyend="40"/>
+        <location file="Src/Controllers/Front.php" line="56" column="1" bodyfile="Src/Controllers/Front.php" bodystart="56" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_controllers_1_1_front_1a8b22c40bd1737bbb7db0816b7e9763b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -86,16 +95,16 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Signaler un commentaire a l&apos;admin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Controllers/Front.php" line="42" column="1" bodyfile="Src/Controllers/Front.php" bodystart="42" bodyend="49"/>
+        <location file="Src/Controllers/Front.php" line="67" column="1" bodyfile="Src/Controllers/Front.php" bodystart="67" bodyend="74"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="class_src_1_1_controllers_1_1_front" kindref="compound">Front</ref> pour la gestion des controleurs du site côté visiteur Hérite de la class <ref refid="class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> </para>    </detaileddescription>
     <inheritancegraph>
       <node id="26">
         <label>Front</label>
@@ -120,7 +129,7 @@
         <link refid="class_src_1_1_controllers_1_1_main"/>
       </node>
     </collaborationgraph>
-    <location file="Src/Controllers/Front.php" line="7" column="1" bodyfile="Src/Controllers/Front.php" bodystart="6" bodyend="50"/>
+    <location file="Src/Controllers/Front.php" line="18" column="1" bodyfile="Src/Controllers/Front.php" bodystart="17" bodyend="75"/>
     <listofallmembers>
       <member refid="class_src_1_1_controllers_1_1_main_1a7205c4d22c61e375f2be552a32f97ccb" prot="protected" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>$billetManager</name></member>
       <member refid="class_src_1_1_controllers_1_1_main_1a2fdbb2dc79956746757958a453709ca6" prot="protected" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>$commentManager</name></member>

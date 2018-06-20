@@ -11,6 +11,10 @@ namespace Src\Managers;
 use App\Dbd;
 use App\Alert;
 
+/**
+* Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets
+*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*/
 class billetManager
 {
     protected $_pdo;
@@ -19,6 +23,9 @@ class billetManager
     {
         $this->_pdo =  new Dbd;
     }
+    /**
+    * Fonction pour lire tous les billets si connecté en admin
+    */
     public function readAll()
     {
         if (isset($_SESSION['authenticated'])) {
@@ -29,7 +36,11 @@ class billetManager
             $request->closeCursor();
         }
     }
-    // Lire tous les billets
+    /**
+    * Lecture des billets pour la partie front du site
+    *@param variable $offset détermine la position de départ dans la base de donnée
+    *@param variable $limit détermine le nombre de billet à afficher
+    */
     public function ReadFront($offset, $limit)
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_billets  WHERE posted = 1 ORDER BY create_at ASC LIMIT :offset,:limit');
@@ -40,7 +51,10 @@ class billetManager
         return $billets = $request->fetchAll();
         $request->closeCursor();
     }
-    // lire un billet
+    /**
+    * Lecture d'un billet en fonction de l'identifiant
+    *@param variable $id identifiant du billet à afficher
+    */
     public function Read($id)
     {
         $request = $this->_pdo->prepare("SELECT * FROM T_billets WHERE id_bil = :id LIMIT 1");
@@ -50,7 +64,9 @@ class billetManager
         return $billets = $request->fetch();
         $request->closeCursor();
     }
-    // Creation d'un billet
+    /**
+    *Création ou insertion dans la base de données du billet
+    */
     public function Create()
     {
         $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted="";
@@ -67,7 +83,7 @@ class billetManager
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         $posted = \htmlspecialchars($_POST['posted']);
-
+        // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
             if (isset($_FILES['image'])) {
                 $upload_dir = chmod(\BASEPATH .'img/posts/', 0755);
@@ -85,6 +101,7 @@ class billetManager
                     Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
                 }
             }
+            //Insertion des infos en base de données
             $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
             VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
             $request->bindValue(':title', $title, \PDO::PARAM_STR);
@@ -103,7 +120,10 @@ class billetManager
         }
         $request->closeCursor();
     }
-    // Mise à jour de Billet
+    /**
+    *Mise a jour des infos du billet suivant son identifiant en base de données
+    *@param variable $id identifiant du billet
+    */
     public function Update($id)
     {
         $title = $author = $content = $image = $modif_at = $posted = $imgFile = $tmp_dir = $imgSize='';
@@ -155,7 +175,10 @@ class billetManager
             throw new \Exception($e->getMessage());
         }
     }
-    // Effacer un Billet
+    /**
+    * Effacement d'un enregistrement suivant son identifiant
+    *@param variable $id identifiant du billet
+    */
     public function Delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id LIMIT 1');

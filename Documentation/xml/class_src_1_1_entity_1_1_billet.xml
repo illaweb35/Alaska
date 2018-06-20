@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="10" column="1" bodyfile="Src/Entity/Billet.php" bodystart="10" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="17" column="1" bodyfile="Src/Entity/Billet.php" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ada57e7bb7c152edad18fe2f166188691" prot="private" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="11" column="1" bodyfile="Src/Entity/Billet.php" bodystart="11" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="18" column="1" bodyfile="Src/Entity/Billet.php" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" static="no" mutable="no">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="12" column="1" bodyfile="Src/Entity/Billet.php" bodystart="12" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="19" column="1" bodyfile="Src/Entity/Billet.php" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a57b284fe00866494b33afa80ba729bed" prot="private" static="no" mutable="no">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="13" column="1" bodyfile="Src/Entity/Billet.php" bodystart="13" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="20" column="1" bodyfile="Src/Entity/Billet.php" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1aac6146b4cdec66c94263ddb55afd5946" prot="private" static="no" mutable="no">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="14" column="1" bodyfile="Src/Entity/Billet.php" bodystart="14" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="21" column="1" bodyfile="Src/Entity/Billet.php" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" static="no" mutable="no">
         <type></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="15" column="1" bodyfile="Src/Entity/Billet.php" bodystart="15" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="22" column="1" bodyfile="Src/Entity/Billet.php" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" static="no" mutable="no">
         <type></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="16" column="1" bodyfile="Src/Entity/Billet.php" bodystart="16" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="23" column="1" bodyfile="Src/Entity/Billet.php" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_billet_1ae3027d981e3b44a9d3a607332821c2a1" prot="private" static="no" mutable="no">
         <type></type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="17" column="1" bodyfile="Src/Entity/Billet.php" bodystart="17" bodyend="-1"/>
+        <location file="Src/Entity/Billet.php" line="24" column="1" bodyfile="Src/Entity/Billet.php" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -121,10 +121,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Initialisation des données vers l&apos;hydratation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>qui est un tableau des données </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="19" column="1" bodyfile="Src/Entity/Billet.php" bodystart="19" bodyend="24"/>
+        <location file="Src/Entity/Billet.php" line="29" column="1" bodyfile="Src/Entity/Billet.php" bodystart="29" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -137,10 +146,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Mise en place des Setters avec vérification de format </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="27" column="1" bodyfile="Src/Entity/Billet.php" bodystart="27" bodyend="34"/>
+        <location file="Src/Entity/Billet.php" line="42" column="1" bodyfile="Src/Entity/Billet.php" bodystart="42" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a884ba9bb0d54bde7839e798db7964476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -156,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="35" column="1" bodyfile="Src/Entity/Billet.php" bodystart="35" bodyend="42"/>
+        <location file="Src/Entity/Billet.php" line="50" column="1" bodyfile="Src/Entity/Billet.php" bodystart="50" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a04a5eddb7c3abc7bf31fa25b58f046bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -172,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="43" column="1" bodyfile="Src/Entity/Billet.php" bodystart="43" bodyend="50"/>
+        <location file="Src/Entity/Billet.php" line="58" column="1" bodyfile="Src/Entity/Billet.php" bodystart="58" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1af785d0fb8da1ba24ec74c2f9f7e27c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -188,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="51" column="1" bodyfile="Src/Entity/Billet.php" bodystart="51" bodyend="56"/>
+        <location file="Src/Entity/Billet.php" line="66" column="1" bodyfile="Src/Entity/Billet.php" bodystart="66" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1ad12db04fd7abd82e8172ebee19c45ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -205,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="57" column="1" bodyfile="Src/Entity/Billet.php" bodystart="57" bodyend="60"/>
+        <location file="Src/Entity/Billet.php" line="72" column="1" bodyfile="Src/Entity/Billet.php" bodystart="72" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -222,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="61" column="1" bodyfile="Src/Entity/Billet.php" bodystart="61" bodyend="64"/>
+        <location file="Src/Entity/Billet.php" line="76" column="1" bodyfile="Src/Entity/Billet.php" bodystart="76" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1acee4aedcde0f95ac298a1a0ce86be082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -238,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="65" column="1" bodyfile="Src/Entity/Billet.php" bodystart="65" bodyend="70"/>
+        <location file="Src/Entity/Billet.php" line="80" column="1" bodyfile="Src/Entity/Billet.php" bodystart="80" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a12251d0c022e9e21c137a105ff683f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -248,10 +257,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Mise en place des GETTERS </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="72" column="1" bodyfile="Src/Entity/Billet.php" bodystart="72" bodyend="75"/>
+        <location file="Src/Entity/Billet.php" line="89" column="1" bodyfile="Src/Entity/Billet.php" bodystart="89" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a5286e30390ae3e1b274940286493dd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -264,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="76" column="1" bodyfile="Src/Entity/Billet.php" bodystart="76" bodyend="79"/>
+        <location file="Src/Entity/Billet.php" line="93" column="1" bodyfile="Src/Entity/Billet.php" bodystart="93" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a95e859a4588a39a1824b717378a84c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -277,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="80" column="1" bodyfile="Src/Entity/Billet.php" bodystart="80" bodyend="83"/>
+        <location file="Src/Entity/Billet.php" line="97" column="1" bodyfile="Src/Entity/Billet.php" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a58e43f09a06ce4e29b192c4e17ce7915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -290,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="84" column="1" bodyfile="Src/Entity/Billet.php" bodystart="84" bodyend="87"/>
+        <location file="Src/Entity/Billet.php" line="101" column="1" bodyfile="Src/Entity/Billet.php" bodystart="101" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a2af8add37797384585cae101fb8cbfe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -303,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="88" column="1" bodyfile="Src/Entity/Billet.php" bodystart="88" bodyend="91"/>
+        <location file="Src/Entity/Billet.php" line="105" column="1" bodyfile="Src/Entity/Billet.php" bodystart="105" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -316,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="92" column="1" bodyfile="Src/Entity/Billet.php" bodystart="92" bodyend="95"/>
+        <location file="Src/Entity/Billet.php" line="109" column="1" bodyfile="Src/Entity/Billet.php" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -329,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="96" column="1" bodyfile="Src/Entity/Billet.php" bodystart="96" bodyend="99"/>
+        <location file="Src/Entity/Billet.php" line="113" column="1" bodyfile="Src/Entity/Billet.php" bodystart="113" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_billet_1a4a91b6f2e5d3d9220ccbed241e1d2eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -342,14 +351,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Billet.php" line="100" column="1" bodyfile="Src/Entity/Billet.php" bodystart="100" bodyend="103"/>
+        <location file="Src/Entity/Billet.php" line="117" column="1" bodyfile="Src/Entity/Billet.php" bodystart="117" bodyend="120"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Src/Entity/Billet.php" line="9" column="1" bodyfile="Src/Entity/Billet.php" bodystart="8" bodyend="104"/>
+    <location file="Src/Entity/Billet.php" line="16" column="1" bodyfile="Src/Entity/Billet.php" bodystart="15" bodyend="121"/>
     <listofallmembers>
       <member refid="class_src_1_1_entity_1_1_billet_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$author</name></member>
       <member refid="class_src_1_1_entity_1_1_billet_1a57b284fe00866494b33afa80ba729bed" prot="private" virt="non-virtual"><scope>Src::Entity::Billet</scope><name>$content</name></member>

@@ -5,7 +5,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Utilisation des classes de controllers Pour génbérer les routes correspondantes </para>    </detaileddescription>
     <location file="App/Router.php" line="1" column="1"/>
   </compounddef>
 </doxygen>

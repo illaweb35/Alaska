@@ -13,10 +13,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Trait Singleton instanciation unique d&apos;une classe Instance de classe unique </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Pattern/Singleton.trait.php" line="4" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="5" bodyend="-1"/>
+        <location file="App/Pattern/Singleton.trait.php" line="15" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Pattern/Singleton.trait.php" line="8" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="8" bodyend="10"/>
+        <location file="App/Pattern/Singleton.trait.php" line="19" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="19" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="namespace_app_1_1_pattern_1a0c11e0e56c6a5589b98f956835d91862" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -44,13 +44,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Pattern/Singleton.trait.php" line="11" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="11" bodyend="17"/>
+        <location file="App/Pattern/Singleton.trait.php" line="22" column="1" bodyfile="App/Pattern/Singleton.trait.php" bodystart="22" bodyend="28"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="App/Pattern/Hydrator.trait.php" line="2" column="1"/>
+<para><simplesect kind="author"><para>Jean-Marie HOLLAND <ulink url="mailto:illaweb35@gmail.com">illaweb35@gmail.com</ulink> </para></simplesect>
+<simplesect kind="copyright"><para>(c) 2018, Jean-Marie HOLLAND. All Rights Reserved.</para></simplesect>
+Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</ulink> <ref refid="" kindref="compound">https://illaweb.fr</ref></para>    </detaileddescription>
+    <location file="App/Pattern/Hydrator.trait.php" line="9" column="1"/>
   </compounddef>
 </doxygen>

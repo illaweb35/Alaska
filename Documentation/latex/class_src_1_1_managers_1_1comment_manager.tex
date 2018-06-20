@@ -1,125 +1,109 @@
-\section{comment\+Manager Class Reference}
+\hypertarget{class_src_1_1_managers_1_1comment_manager}{}\section{comment\+Manager Class Reference}
 \label{class_src_1_1_managers_1_1comment_manager}\index{comment\+Manager@{comment\+Manager}}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ \+\_\+\+\_\+construct} ()
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct} ()
 \item 
-\textbf{ Read\+All} ()
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a24f9f6fa83eb8694eab0a87b2e6ad0b1}{Read\+All} ()
 \item 
-\textbf{ Read\+Moderate} ()
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a4224d6d3de965c48624a2c530d0a2c94}{Read\+Moderate} ()
 \item 
-\textbf{ Read} (\$id=null)
+\hyperlink{class_src_1_1_managers_1_1comment_manager_af0b2d518844625de0b1fe21ebb8e6c58}{Read} (\$id=null)
 \item 
-\textbf{ Create} ()
+\hyperlink{class_src_1_1_managers_1_1comment_manager_ad01f71fa0ecc039494e3c282864298c3}{Create} ()
 \item 
-\textbf{ Moderate} (\$id)
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a511df177d885f133ac59c2b68c7046f2}{Moderate} (\$id)
 \item 
-\textbf{ Delete} (\$id)
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a59113b5ecd1d155db6a4f30af34a1e80}{Delete} (\$id)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ \$\+\_\+pdo}
+\hyperlink{class_src_1_1_managers_1_1comment_manager_a1e6d977917b70dce7e26cebad8438bf4}{\$\+\_\+pdo}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-
-
-Definition at line 7 of file comment\+Manager.\+php.
-
+Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires. 
+\begin{DoxyParams}[1]{Parameters}
+variable & {\em \$\+\_\+pdo} & nouvelle instance de la classe Dbd base de données \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a095c5d389db211932136b53f25f39685}} 
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a095c5d389db211932136b53f25f39685}\label{class_src_1_1_managers_1_1comment_manager_a095c5d389db211932136b53f25f39685}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
 \index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{\+\_\+\+\_\+construct()}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
 {\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 11 of file comment\+Manager.\+php.
-
-
-
 \subsection{Member Function Documentation}
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_ad01f71fa0ecc039494e3c282864298c3}} 
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_ad01f71fa0ecc039494e3c282864298c3}\label{class_src_1_1_managers_1_1comment_manager_ad01f71fa0ecc039494e3c282864298c3}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Create@{Create}}
 \index{Create@{Create}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Create()}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
 {\footnotesize\ttfamily Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line 53 of file comment\+Manager.\+php.
-
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a59113b5ecd1d155db6a4f30af34a1e80}} 
+Fonction de création ou insertion de commentaire dans le base de données \mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a59113b5ecd1d155db6a4f30af34a1e80}\label{class_src_1_1_managers_1_1comment_manager_a59113b5ecd1d155db6a4f30af34a1e80}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Delete@{Delete}}
 \index{Delete@{Delete}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Delete()}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
 {\footnotesize\ttfamily Delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
 
-
-
-Definition at line 101 of file comment\+Manager.\+php.
-
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a511df177d885f133ac59c2b68c7046f2}} 
+Fonction d\textquotesingle{}effacement du commentaire 
+\begin{DoxyParams}[1]{Parameters}
+variable & {\em \$id} & identifiant du commentaire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a511df177d885f133ac59c2b68c7046f2}\label{class_src_1_1_managers_1_1comment_manager_a511df177d885f133ac59c2b68c7046f2}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Moderate@{Moderate}}
 \index{Moderate@{Moderate}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Moderate()}
+\subsubsection{\texorpdfstring{Moderate()}{Moderate()}}
 {\footnotesize\ttfamily Moderate (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
 
-
-
-Definition at line 81 of file comment\+Manager.\+php.
-
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_af0b2d518844625de0b1fe21ebb8e6c58}} 
+Fonction de modération verification sur létat de \textquotesingle{}moderate\textquotesingle{} dans la base de données puis si l\textquotesingle{}etat est non signaler le passe en signaler et inversement 
+\begin{DoxyParams}[1]{Parameters}
+variable & {\em \$id} & identifiant du commentaire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_af0b2d518844625de0b1fe21ebb8e6c58}\label{class_src_1_1_managers_1_1comment_manager_af0b2d518844625de0b1fe21ebb8e6c58}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Read@{Read}}
 \index{Read@{Read}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Read()}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
 {\footnotesize\ttfamily Read (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily null} }\end{DoxyParamCaption})}
 
-
-
-Definition at line 35 of file comment\+Manager.\+php.
-
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a24f9f6fa83eb8694eab0a87b2e6ad0b1}} 
+Fonction de lecture d\textquotesingle{}un commentaire avec ou sans id 
+\begin{DoxyParams}[1]{Parameters}
+variable & {\em \$id} & identifiant du commentaire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a24f9f6fa83eb8694eab0a87b2e6ad0b1}\label{class_src_1_1_managers_1_1comment_manager_a24f9f6fa83eb8694eab0a87b2e6ad0b1}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Read\+All@{Read\+All}}
 \index{Read\+All@{Read\+All}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Read\+All()}
+\subsubsection{\texorpdfstring{Read\+All()}{ReadAll()}}
 {\footnotesize\ttfamily Read\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line 16 of file comment\+Manager.\+php.
-
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a4224d6d3de965c48624a2c530d0a2c94}} 
+Fonction de lecture de tous ls commentaires \mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a4224d6d3de965c48624a2c530d0a2c94}\label{class_src_1_1_managers_1_1comment_manager_a4224d6d3de965c48624a2c530d0a2c94}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!Read\+Moderate@{Read\+Moderate}}
 \index{Read\+Moderate@{Read\+Moderate}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{Read\+Moderate()}
+\subsubsection{\texorpdfstring{Read\+Moderate()}{ReadModerate()}}
 {\footnotesize\ttfamily Read\+Moderate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line 25 of file comment\+Manager.\+php.
-
-
+Fonction de lecture des commentaires qui ont moderate = à 1 donc signaler pour l\textquotesingle{}admin 
 
 \subsection{Field Documentation}
-\mbox{\label{class_src_1_1_managers_1_1comment_manager_a1e6d977917b70dce7e26cebad8438bf4}} 
+\mbox{\Hypertarget{class_src_1_1_managers_1_1comment_manager_a1e6d977917b70dce7e26cebad8438bf4}\label{class_src_1_1_managers_1_1comment_manager_a1e6d977917b70dce7e26cebad8438bf4}} 
 \index{Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}!\$\+\_\+pdo@{\$\+\_\+pdo}}
 \index{\$\+\_\+pdo@{\$\+\_\+pdo}!Src\+::\+Managers\+::comment\+Manager@{Src\+::\+Managers\+::comment\+Manager}}
-\subsubsection{\$\+\_\+pdo}
+\subsubsection{\texorpdfstring{\$\+\_\+pdo}{$\_pdo}}
 {\footnotesize\ttfamily \$\+\_\+pdo\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 9 of file comment\+Manager.\+php.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Managers/\textbf{ comment\+Manager.\+php}\end{DoxyCompactItemize}
+Src/\+Managers/\hyperlink{comment_manager_8php}{comment\+Manager.\+php}\end{DoxyCompactItemize}

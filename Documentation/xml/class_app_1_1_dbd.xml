@@ -15,13 +15,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Dbd.php" line="6" column="1" bodyfile="App/Dbd.php" bodystart="6" bodyend="16"/>
+        <location file="App/Dbd.php" line="17" column="1" bodyfile="App/Dbd.php" bodystart="17" bodyend="27"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Classe de connexion à la base de données Utilisation des constances de la classe config pour les parametres de connexion </para>    </detaileddescription>
     <inheritancegraph>
       <node id="23">
         <label>PDO</label>
@@ -44,7 +44,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="App/Dbd.php" line="5" column="1" bodyfile="App/Dbd.php" bodystart="4" bodyend="17"/>
+    <location file="App/Dbd.php" line="16" column="1" bodyfile="App/Dbd.php" bodystart="15" bodyend="28"/>
     <listofallmembers>
       <member refid="class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>App::Dbd</scope><name>__construct</name></member>
     </listofallmembers>

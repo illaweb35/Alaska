@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="10" column="1" bodyfile="Src/Entity/Comment.php" bodystart="10" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="17" column="1" bodyfile="Src/Entity/Comment.php" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1a5aaec5de32a8e7a31b5104f80d58dec0" prot="private" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="11" column="1" bodyfile="Src/Entity/Comment.php" bodystart="11" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="18" column="1" bodyfile="Src/Entity/Comment.php" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1a57b284fe00866494b33afa80ba729bed" prot="private" static="no" mutable="no">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="12" column="1" bodyfile="Src/Entity/Comment.php" bodystart="12" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="19" column="1" bodyfile="Src/Entity/Comment.php" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1a62e5d0abef4f7c4e8a126a3e39e7ff82" prot="private" static="no" mutable="no">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="13" column="1" bodyfile="Src/Entity/Comment.php" bodystart="13" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="20" column="1" bodyfile="Src/Entity/Comment.php" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" prot="private" static="no" mutable="no">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="14" column="1" bodyfile="Src/Entity/Comment.php" bodystart="14" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="21" column="1" bodyfile="Src/Entity/Comment.php" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1acfc0e3a99369d0b48a67eaa317e1a1e0" prot="private" static="no" mutable="no">
         <type></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="15" column="1" bodyfile="Src/Entity/Comment.php" bodystart="15" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="22" column="1" bodyfile="Src/Entity/Comment.php" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_src_1_1_entity_1_1_comment_1a42188ce3c6f22f1f4c2bb0773f9eab0b" prot="private" static="no" mutable="no">
         <type></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="16" column="1" bodyfile="Src/Entity/Comment.php" bodystart="16" bodyend="-1"/>
+        <location file="Src/Entity/Comment.php" line="23" column="1" bodyfile="Src/Entity/Comment.php" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -108,10 +108,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Initialisation des données vers l&apos;hydratation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>qui est un tableau des données </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="18" column="1" bodyfile="Src/Entity/Comment.php" bodystart="18" bodyend="23"/>
+        <location file="Src/Entity/Comment.php" line="28" column="1" bodyfile="Src/Entity/Comment.php" bodystart="28" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a1d65ce1d25ffb871a48d33715e6b6bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -124,10 +133,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Mise en place des SETTERS avec vérification de format de données </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="28" column="1" bodyfile="Src/Entity/Comment.php" bodystart="28" bodyend="35"/>
+        <location file="Src/Entity/Comment.php" line="41" column="1" bodyfile="Src/Entity/Comment.php" bodystart="41" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a04a5eddb7c3abc7bf31fa25b58f046bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -143,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="36" column="1" bodyfile="Src/Entity/Comment.php" bodystart="36" bodyend="43"/>
+        <location file="Src/Entity/Comment.php" line="49" column="1" bodyfile="Src/Entity/Comment.php" bodystart="49" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1ad12db04fd7abd82e8172ebee19c45ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -160,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="44" column="1" bodyfile="Src/Entity/Comment.php" bodystart="44" bodyend="47"/>
+        <location file="Src/Entity/Comment.php" line="57" column="1" bodyfile="Src/Entity/Comment.php" bodystart="57" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a9f9f5983de6ae197176a80f55f113a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="48" column="1" bodyfile="Src/Entity/Comment.php" bodystart="48" bodyend="51"/>
+        <location file="Src/Entity/Comment.php" line="61" column="1" bodyfile="Src/Entity/Comment.php" bodystart="61" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a2e409e601842718df8e3fb392a6553a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="52" column="1" bodyfile="Src/Entity/Comment.php" bodystart="52" bodyend="55"/>
+        <location file="Src/Entity/Comment.php" line="65" column="1" bodyfile="Src/Entity/Comment.php" bodystart="65" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a0067c44a7d1de40089ffed311672b328" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -209,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="56" column="1" bodyfile="Src/Entity/Comment.php" bodystart="56" bodyend="61"/>
+        <location file="Src/Entity/Comment.php" line="69" column="1" bodyfile="Src/Entity/Comment.php" bodystart="69" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a12251d0c022e9e21c137a105ff683f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -219,10 +228,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Mise en place des GETTERS </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="64" column="1" bodyfile="Src/Entity/Comment.php" bodystart="64" bodyend="67"/>
+        <location file="Src/Entity/Comment.php" line="78" column="1" bodyfile="Src/Entity/Comment.php" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a7151e41f7b522d26d02102d970e9a309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -235,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="68" column="1" bodyfile="Src/Entity/Comment.php" bodystart="68" bodyend="71"/>
+        <location file="Src/Entity/Comment.php" line="82" column="1" bodyfile="Src/Entity/Comment.php" bodystart="82" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a58e43f09a06ce4e29b192c4e17ce7915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -248,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="72" column="1" bodyfile="Src/Entity/Comment.php" bodystart="72" bodyend="75"/>
+        <location file="Src/Entity/Comment.php" line="86" column="1" bodyfile="Src/Entity/Comment.php" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1ae5e6c0bedcef3f514100c20ee92c901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -261,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="76" column="1" bodyfile="Src/Entity/Comment.php" bodystart="76" bodyend="79"/>
+        <location file="Src/Entity/Comment.php" line="90" column="1" bodyfile="Src/Entity/Comment.php" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a5858386cc69be9863ed37e0ceb2697b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -274,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="80" column="1" bodyfile="Src/Entity/Comment.php" bodystart="80" bodyend="83"/>
+        <location file="Src/Entity/Comment.php" line="94" column="1" bodyfile="Src/Entity/Comment.php" bodystart="94" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a1df6ee009c81d0d807d36d18d40b9e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -287,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="84" column="1" bodyfile="Src/Entity/Comment.php" bodystart="84" bodyend="87"/>
+        <location file="Src/Entity/Comment.php" line="98" column="1" bodyfile="Src/Entity/Comment.php" bodystart="98" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_entity_1_1_comment_1a6d3a6a148bf0c8752548e7e7ab149abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -300,14 +309,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Entity/Comment.php" line="88" column="1" bodyfile="Src/Entity/Comment.php" bodystart="88" bodyend="91"/>
+        <location file="Src/Entity/Comment.php" line="102" column="1" bodyfile="Src/Entity/Comment.php" bodystart="102" bodyend="105"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Src/Entity/Comment.php" line="9" column="1" bodyfile="Src/Entity/Comment.php" bodystart="8" bodyend="92"/>
+    <location file="Src/Entity/Comment.php" line="16" column="1" bodyfile="Src/Entity/Comment.php" bodystart="15" bodyend="106"/>
     <listofallmembers>
       <member refid="class_src_1_1_entity_1_1_comment_1acfc0e3a99369d0b48a67eaa317e1a1e0" prot="private" virt="non-virtual"><scope>Src::Entity::Comment</scope><name>$bil_id</name></member>
       <member refid="class_src_1_1_entity_1_1_comment_1a57b284fe00866494b33afa80ba729bed" prot="private" virt="non-virtual"><scope>Src::Entity::Comment</scope><name>$content</name></member>

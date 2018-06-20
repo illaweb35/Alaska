@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project P3 Alaska: billetManager Class Reference</title>
+<title>Alaska projet P3: billetManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Project P3 Alaska
-   &#160;<span id="projectnumber">001</span>
+   <div id="projectname">Alaska projet P3
+   &#160;<span id="projectnumber">01</span>
    </div>
+   <div id="projectbrief">Blog ecrivain Jean Forteroche</div>
   </td>
  </tr>
  </tbody>
@@ -111,8 +113,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a1e6d977917b70dce7e26cebad8438bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00007">7</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<div class="textblock"><p>Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$_pdo</td><td>nouvelle instance de la classe Dbd base de données </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a095c5d389db211932136b53f25f39685"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a095c5d389db211932136b53f25f39685">&#9670;&nbsp;</a></span>__construct()</h2>
@@ -128,8 +134,6 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00011">11</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
 
 </div>
 </div>
@@ -148,8 +152,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00047">47</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Création ou insertion dans la base de données du billet </p>
 
 </div>
 </div>
@@ -168,8 +171,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00152">152</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Effacement d'un enregistrement suivant son identifiant </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant du billet </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -188,8 +195,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00037">37</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Lecture d'un billet en fonction de l'identifiant </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant du billet à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -207,8 +218,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00015">15</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Fonction pour lire tous les billets si connecté en admin </p>
 
 </div>
 </div>
@@ -237,8 +247,13 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00026">26</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Lecture des billets pour la partie front du site </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$offset</td><td>détermine la position de départ dans la base de donnée </td></tr>
+    <tr><td class="paramtype">variable</td><td class="paramname">$limit</td><td>détermine le nombre de billet à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -257,8 +272,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00100">100</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
+<p>Mise a jour des infos du billet suivant son identifiant en base de données </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant du billet </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -283,12 +302,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="billet_manager_8php_source.html#l00009">9</a> of file <a class="el" href="billet_manager_8php_source.html">billetManager.php</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Src/Managers/<a class="el" href="billet_manager_8php_source.html">billetManager.php</a></li>
+<li>Src/Managers/<a class="el" href="billet_manager_8php.html">billetManager.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

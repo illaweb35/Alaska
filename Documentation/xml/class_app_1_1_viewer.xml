@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Viewer.php" line="8" column="1" bodyfile="App/Viewer.php" bodystart="8" bodyend="-1"/>
+        <location file="App/Viewer.php" line="20" column="1" bodyfile="App/Viewer.php" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_app_1_1_viewer_1a49d523a090a700a0689f154d79932063" prot="private" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Viewer.php" line="9" column="1" bodyfile="App/Viewer.php" bodystart="9" bodyend="-1"/>
+        <location file="App/Viewer.php" line="21" column="1" bodyfile="App/Viewer.php" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -45,10 +45,27 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de construction de la vue <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suivant la méthode défini dans l&apos;url </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>recupère le tire de la page </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Viewer.php" line="11" column="1" bodyfile="App/Viewer.php" bodystart="11" bodyend="15"/>
+        <location file="App/Viewer.php" line="27" column="1" bodyfile="App/Viewer.php" bodystart="27" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_app_1_1_viewer_1ab1d271f3b152feb68aec05dd99ce8e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -61,10 +78,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Affichage de la vue </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Viewer.php" line="16" column="1" bodyfile="App/Viewer.php" bodystart="16" bodyend="20"/>
+        <location file="App/Viewer.php" line="35" column="1" bodyfile="App/Viewer.php" bodystart="35" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_app_1_1_viewer_1a6826cb34504c5216f4352fec9f9f27d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,17 +94,43 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de création du fichier des données <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>les données récupérées extraction des données puis ouverture du template pour affichage </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Viewer.php" line="21" column="1" bodyfile="App/Viewer.php" bodystart="21" bodyend="33"/>
+        <location file="App/Viewer.php" line="45" column="1" bodyfile="App/Viewer.php" bodystart="45" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="App/Viewer.php" line="7" column="1" bodyfile="App/Viewer.php" bodystart="6" bodyend="34"/>
+<para>Classe <ref refid="class_app_1_1_viewer" kindref="compound">Viewer</ref> pour l&apos;affichage des données <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>qui contient le fichier crée par la fonction creatFile suivant les données recueillies. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$_title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>qui récupère le tire pour chaque page </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="App/Viewer.php" line="19" column="1" bodyfile="App/Viewer.php" bodystart="18" bodyend="58"/>
     <listofallmembers>
       <member refid="class_app_1_1_viewer_1abddaf0b77086e2b7d920f5d1a9616889" prot="private" virt="non-virtual"><scope>App::Viewer</scope><name>$_file</name></member>
       <member refid="class_app_1_1_viewer_1a49d523a090a700a0689f154d79932063" prot="private" virt="non-virtual"><scope>App::Viewer</scope><name>$_title</name></member>

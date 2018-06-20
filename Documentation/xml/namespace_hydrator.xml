@@ -5,7 +5,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Utilisation du trait hydrator pour l&apos;hydratation des données </para>    </detaileddescription>
     <location file="Src/Entity/Billet.php" line="1" column="1"/>
   </compounddef>
 </doxygen>

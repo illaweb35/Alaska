@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Router.php" line="11" column="1" bodyfile="App/Router.php" bodystart="11" bodyend="-1"/>
+        <location file="App/Router.php" line="26" column="1" bodyfile="App/Router.php" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -26,10 +26,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction construct pour instancier les classes </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Router.php" line="12" column="1" bodyfile="App/Router.php" bodystart="12" bodyend="18"/>
+        <location file="App/Router.php" line="30" column="1" bodyfile="App/Router.php" bodystart="30" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_app_1_1_router_1a6fa8800727e8e7eeab56d569bfa3429b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -39,17 +39,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction qui décompose l&apos;adresse url pour en ressortir les routes </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="App/Router.php" line="19" column="1" bodyfile="App/Router.php" bodystart="19" bodyend="47"/>
+        <location file="App/Router.php" line="40" column="1" bodyfile="App/Router.php" bodystart="40" bodyend="71"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="App/Router.php" line="10" column="1" bodyfile="App/Router.php" bodystart="9" bodyend="48"/>
+<para>Classe <ref refid="class_app_1_1_router" kindref="compound">Router</ref> pour générer les routes du site <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$_route</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suivant l&apos;adresse url </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="App/Router.php" line="25" column="1" bodyfile="App/Router.php" bodystart="24" bodyend="72"/>
     <listofallmembers>
       <member refid="class_app_1_1_router_1a5be2317979ffdd5ee376ca8d0e5248f6" prot="private" virt="non-virtual"><scope>App::Router</scope><name>$_route</name></member>
       <member refid="class_app_1_1_router_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>App::Router</scope><name>__construct</name></member>

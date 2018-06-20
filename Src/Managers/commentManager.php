@@ -11,6 +11,10 @@ namespace Src\Managers;
 use App\Dbd;
 use App\Alert;
 
+/**
+*Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires.
+*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*/
 class commentManager
 {
     protected $_pdo;
@@ -19,7 +23,9 @@ class commentManager
     {
         $this->_pdo = new Dbd;
     }
-    //Lire tous les commentaires
+    /**
+    * Fonction de lecture de tous ls commentaires
+    */
     public function ReadAll()
     {
         $request = $this->_pdo->query('SELECT * FROM T_comments ORDER BY create_at DESC');
@@ -29,6 +35,9 @@ class commentManager
         $request->closeCursor();
         return $comments;
     }
+    /**
+    * Fonction de lecture des commentaires qui ont moderate = à 1 donc signaler pour l'admin
+    */
     public function ReadModerate()
     {
         $request = $this->_pdo->query('SELECT * FROM T_comments WHERE moderate = 1 ORDER BY create_at DESC');
@@ -38,8 +47,11 @@ class commentManager
         $request->closeCursor();
         return $comments;
     }
-    // lire un commentaire non signalé
-    public function Read($id = null)
+    /**
+    *Fonction de lecture d'un commentaire avec ou sans id
+    *@param variable $id identifiant du commentaire
+    */
+    public function Read($id = null)// id à null si non disponible
     {
         if (!isset($_SESSION['id'])) {
             $request = $this->_pdo->prepare('SELECT * FROM T_comments WHERE bil_id = :id AND moderate = 0 ORDER BY create_at DESC');
@@ -56,7 +68,9 @@ class commentManager
         $request->closeCursor();
         return $comments;
     }
-    // Creation d'un commentaire
+    /**
+    *Fonction de création ou insertion de commentaire dans le base de données
+    */
     public function Create()
     {
         $pseudo = $content = $art_id = $create_at ="";
@@ -84,7 +98,10 @@ class commentManager
             }
         }
     }
-
+    /**
+    * Fonction de modération verification sur létat de 'moderate' dans la base de données puis si l'etat est non signaler le passe en signaler et inversement
+    *@param variable $id identifiant du commentaire
+    */
     public function Moderate($id)
     {
         $sql=('SELECT moderate, bil_id FROM T_comments WHERE id_com=:id LIMIT 1');
@@ -103,8 +120,10 @@ class commentManager
         $request->execute();
         return $comment->getBil_id();
     }
-
-    // Effacer un Billet
+    /**
+    * Fonction d'effacement du commentaire
+    *@param variable $id identifiant du commentaire
+    */
     public function Delete($id)
     {
         $request = $this->_pdo->prepare('DELETE FROM T_comments WHERE id_com = :id');

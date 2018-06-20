@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project P3 Alaska: userManager Class Reference</title>
+<title>Alaska projet P3: userManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Project P3 Alaska
-   &#160;<span id="projectnumber">001</span>
+   <div id="projectname">Alaska projet P3
+   &#160;<span id="projectnumber">01</span>
    </div>
+   <div id="projectbrief">Blog ecrivain Jean Forteroche</div>
   </td>
  </tr>
  </tbody>
@@ -105,8 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a59113b5ecd1d155db6a4f30af34a1e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00008">8</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<div class="textblock"><p>Classe Manager de User regroupe les fonctions de gestion des utilisateurs </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$_pdo</td><td>nouvelle instance de la classe Dbd base de données </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a095c5d389db211932136b53f25f39685"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a095c5d389db211932136b53f25f39685">&#9670;&nbsp;</a></span>__construct()</h2>
@@ -122,8 +128,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00011">11</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
 
 </div>
 </div>
@@ -142,8 +146,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00016">16</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>Fonction de connexion à la partie admin et creation de la session </p>
 
 </div>
 </div>
@@ -161,8 +164,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00063">63</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>Fonction d'insertion d'un nouvel utilisateur dans le base de données </p>
 
 </div>
 </div>
@@ -181,8 +183,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00123">123</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>fonction d'effacement d'un utilisateur suivant son identifiant </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant de l'utilisateur </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -201,8 +207,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00042">42</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>Fonction d'affichage d'utilisateur suivant l'identifiant </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant de l'utilisateur </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -221,8 +231,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00102">102</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>Mise a jour des infos de l'utilisateur suivant l'identifiant </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">variable</td><td class="paramname">$id</td><td>identifiant de l'utilisateur </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -240,13 +254,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="user_manager_8php_source.html#l00053">53</a> of file <a class="el" href="user_manager_8php_source.html">userManager.php</a>.</p>
+<p>Fonction d'affichage de tous les utilisateurs </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Src/Managers/<a class="el" href="user_manager_8php_source.html">userManager.php</a></li>
+<li>Src/Managers/<a class="el" href="user_manager_8php.html">userManager.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

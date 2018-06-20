@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Project P3 Alaska", "index.html", [
+  [ "Alaska projet P3", "index.html", [
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [

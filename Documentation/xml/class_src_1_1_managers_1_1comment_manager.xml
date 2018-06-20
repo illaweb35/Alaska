@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="9" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="9" bodyend="-1"/>
+        <location file="Src/Managers/commentManager.php" line="20" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="11" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="11" bodyend="14"/>
+        <location file="Src/Managers/commentManager.php" line="22" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="22" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1a24f9f6fa83eb8694eab0a87b2e6ad0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -39,10 +39,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de lecture de tous ls commentaires </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="16" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="16" bodyend="24"/>
+        <location file="Src/Managers/commentManager.php" line="29" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="29" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1a4224d6d3de965c48624a2c530d0a2c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -52,10 +52,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de lecture des commentaires qui ont moderate = à 1 donc signaler pour l&apos;admin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="25" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="25" bodyend="33"/>
+        <location file="Src/Managers/commentManager.php" line="41" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="41" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1af0b2d518844625de0b1fe21ebb8e6c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,10 +69,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de lecture d&apos;un commentaire avec ou sans id <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du commentaire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="35" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="35" bodyend="51"/>
+        <location file="Src/Managers/commentManager.php" line="54" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="54" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1ad01f71fa0ecc039494e3c282864298c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -82,10 +91,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de création ou insertion de commentaire dans le base de données </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="53" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="53" bodyend="79"/>
+        <location file="Src/Managers/commentManager.php" line="74" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="74" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1a511df177d885f133ac59c2b68c7046f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -98,10 +107,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction de modération verification sur létat de &apos;moderate&apos; dans la base de données puis si l&apos;etat est non signaler le passe en signaler et inversement <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du commentaire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="81" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="81" bodyend="98"/>
+        <location file="Src/Managers/commentManager.php" line="105" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="105" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="class_src_1_1_managers_1_1comment_manager_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -114,17 +132,35 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Fonction d&apos;effacement du commentaire <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du commentaire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Src/Managers/commentManager.php" line="101" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="101" bodyend="106"/>
+        <location file="Src/Managers/commentManager.php" line="127" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="127" bodyend="132"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="Src/Managers/commentManager.php" line="8" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="7" bodyend="107"/>
+<para>Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$_pdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nouvelle instance de la classe Dbd base de données </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="Src/Managers/commentManager.php" line="19" column="1" bodyfile="Src/Managers/commentManager.php" bodystart="18" bodyend="133"/>
     <listofallmembers>
       <member refid="class_src_1_1_managers_1_1comment_manager_1a1e6d977917b70dce7e26cebad8438bf4" prot="protected" virt="non-virtual"><scope>Src::Managers::commentManager</scope><name>$_pdo</name></member>
       <member refid="class_src_1_1_managers_1_1comment_manager_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>Src::Managers::commentManager</scope><name>__construct</name></member>

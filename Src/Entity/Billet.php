@@ -22,15 +22,23 @@ class Billet
     private $create_at;
     private $modif_at;
     private $posted;
-
+    /**
+    *Initialisation des données vers l'hydratation
+    *@param variable $data qui est un tableau des données
+    */
     public function __construct($data =[])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
+    /**
+    *Utilisation du trait hydrator pour l'hydratation des données
+    */
     use Hydrator;
-    //SETTERS
+    /**
+    * Mise en place des Setters avec vérification de format
+    */
     public function setAuthor($author)
     {
         if (!is_string($author) || empty($author)) {
@@ -75,7 +83,9 @@ class Billet
             $this->posted = (int)$posted;
         }
     }
-    // GETTERS
+    /**
+    * Mise en place des GETTERS
+    */
     public function getId()
     {
         return $this->id_bil;

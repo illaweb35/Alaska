@@ -21,15 +21,23 @@ class User
     private $role;
     private $create_at;
     private $modif_at;
-
+    /**
+    *Initialisation des données vers l'hydratation
+    *@param variable $data qui est un tableau des données
+    */
     public function __construct($data=[])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
+    /**
+    * Utilisation du trait Hydrator pour l'hydratation des données de la variable $data
+    */
     use Hydrator;
-    //SETTERS
+    /**
+    * Mise en place des SETTERS et vérification de format
+    */
     public function setUsername($username)
     {
         if (!\is_string($username) || empty($username)) {
@@ -74,7 +82,9 @@ class User
             $this->modif_at = $modif_at;
         }
     }
-    // GETTERS
+    /**
+    * Mise en place des GETTERS
+    */
     public function getId()
     {
         return $this->id_user;

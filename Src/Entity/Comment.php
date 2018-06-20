@@ -21,17 +21,23 @@ class Comment
     private $modif_at;
     private $bil_id;
     private $moderate;
-
+    /**
+    * Initialisation  des données vers l'hydratation
+    *@param variable $data qui est un tableau des données
+    */
     public function __construct($date = [])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
+    /**
+    * Utilisation de l'hydratation du trait Hydrator
+    */
     use Hydrator;
-
-    //SETTERS
-
+    /**
+    * Mise en place des SETTERS avec vérification de format de données
+    */
     public function setPseudo($pseudo)
     {
         if (!is_string($pseudo) || empty($pseudo)) {
@@ -66,8 +72,9 @@ class Comment
             $this->moderate = (int)$moderate;
         }
     }
-
-    //GETTERS
+    /**
+    * Mise en place des GETTERS
+    */
     public function getId()
     {
         return $this->id_com;
