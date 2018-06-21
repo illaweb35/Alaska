@@ -7,7 +7,6 @@
 *@link       https://illaweb.fr
 */
 ?>
-
   <section class="section">
     <div class="container">
       <h1 class="title">Poster un Billet</h1>
@@ -26,7 +25,7 @@
             <div class="control">
               <textarea id="content" class="textarea" rows="8" type="text" name="content"
               value="<?php if (isset($_POST[content])) {
-    echo $_POST['contnt'];
+    echo $_POST['content'];
 }?>">
               </textarea>
             </div>
@@ -49,7 +48,7 @@
                       </span>
                       <span class="file-name">
 <?php if (isset($_POST['image']['name'])) {
-    echo $_POST['image']['name'];
+    echo $_POST['image'];
 }?>
                       </span>
                     </label>
