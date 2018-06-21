@@ -29,9 +29,12 @@
     </div>
   </footer>
 </section>
-<script src="<?= BASEPATH.'js/jquery.min.js'?>" type="text/javascript" charset="utf-8"></script>
+<script src="<?= BASEPATH.'js/jquery.min.js'?>" charset="utf-8"></script>
 <script src="<?=BASEPATH.'js/menu.js'?>" type="text/javascript" charset="utf-8"></script>
 <script src="<?= BASEPATH.'js/smoothScroll.js'?>" type="text/javascript" charset="utf-8"></script>
-<script src="<?= BASEPATH.'js/schwitch.js' ?>" charset="utf-8"></script>
+<script src="<?= BASEPATH.'js/cleditor/jquery.cleditor.min.js'?>"></script>
+<script>
+ $(document).ready(function () { $("#content").cleditor(); });
+</script>
 </body>
 </html>

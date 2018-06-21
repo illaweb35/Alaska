@@ -41,11 +41,6 @@ CREATE TABLE `T_billets` (
 -- Contenu de la table `T_billets`
 --
 
-INSERT INTO `T_billets` (`id_bil`, `title`, `author`, `content`, `image`, `create_at`, `modif_at`, `posted`) VALUES
-(1, 'Préambule', 'Jean Forteroche', 'J\'écris depuis plus de dix ans, j\'écris ce que j\'appelle \"Balade dans ma mémoire\", source inépuisable de ce que nous pensions avoir enfoui ... Mais peu à peu tout remonte à la surface... Il suffit de creuser un peu. En voici le préambule.                                                          \r\n                                                          Telles des gouttes d\'eau, les lettres s\'amoncellent...\r\n                                                          Formant les petits ruisseaux, puis les grandes rivières\r\n                                                          Où puisent-elles leurs sources ? ...                                                                                                       \r\n                                                                                        Préambule…\r\nÉcrire ce que nous savons…Oui c’est facile, car tout est dans la tête ! … Dans nos fichiers personnels, le concret de notre vie enfoui dans notre mémoire. Si l’on considère que le passé est le livre de notre existence, donc déjà écrit, il suffit de raconter ce que l’on a vécu.\r\nOn pourrait imaginer, de lire dans notre passé, de laisser notre réalité, nous dicter ce qui nous a construit…\r\nDu moins semble-t-il, jusqu’au moment de passer à l’acte !... Par quoi commencer ? Comment le dire ?\r\nPas facile…Surtout si l’on considère, le temps rigide s’écoulant sur des rails…Bien sûr il suffit de le remonter, grâce à la mémoire…Mais il est difficile de résister à la tentation, de s’arrêter dans toutes les gares…  \r\n\r\nPuis il y a sa propre version, l’interprétation et l’émotion qui ont forgé notre philosophie personnelle.  Le sentiment a tant de choses à raconter… A défricher dans le lointain, pourtant si proche. C’est l’autre mémoire, celle de la vision du cœur…D’aujourd’hui, mais aussi celle de l’enfant…  Tout cela n’est pas déjà écrit, il faut chercher à l’intérieur, trier ce que l’on veut exprimer, gratter un peu…\r\nOn ne peut pas parler de soi, en écartant la famille, l’entourage. Là c’est plus délicat, il est difficile de se balader dans sa mémoire, sans exprimer ce que l’on ressent et surtout faut-il tout dire ?\r\nBien sûr il y aussi le concret, tout ce qu’il reste lorsque le dernier parent disparaît. La réalité du passé qui veut parler, mais resterait silencieuse, si personne ne prend le temps de l’écouter. De souffler sur la poussière accumulée depuis tant d’années…Afin, d’aider nos descendants à savoir, à comprendre par quelle voie ils sont arrivés dans leur présent…  \r\n', 'Map_Alaska.png', '2018-05-16 05:22:26', '0000-00-00 00:00:00', 1),
-(2, 'Billet', '', '<p>Essai pr&eacute;alable de poster un nouveau billet</p>', '264955.jpg', '2018-06-14 16:53:20', '2018-06-14 16:53:20', 1);
-
--- --------------------------------------------------------
 
 --
 -- Structure de la table `T_comments`
@@ -65,9 +60,7 @@ CREATE TABLE `T_comments` (
 -- Contenu de la table `T_comments`
 --
 
-INSERT INTO `T_comments` (`id_com`, `pseudo`, `content`, `create_at`, `modif_at`, `bil_id`, `moderate`) VALUES
-(1, 'Jonathan', 'Commentaire de vérification', '2018-06-14 16:22:14', '0000-00-00 00:00:00', 1, 0),
-(2, 'Pablo de la Vega', 'Écrit un commentaire désobligeant et donc sera Modéré', '2018-06-14 16:22:50', '2018-06-14 16:29:31', 1, 1);
+
 
 -- --------------------------------------------------------
 
@@ -89,8 +82,6 @@ CREATE TABLE `T_users` (
 -- Contenu de la table `T_users`
 --
 
-INSERT INTO `T_users` (`id_user`, `username`, `email`, `password`, `role`, `create_at`) VALUES
-(1, 'admin', 'admin@localhost.fr', '$2y$10$sAxoBBCtDwtlwU6QQc8cQOSFSCbcF2MLPso.yHvEtsgMUQkcdL9rC', 'utilisateur', '2018-06-14 16:27:55');
 
 --
 -- Index pour les tables exportées
