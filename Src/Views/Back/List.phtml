@@ -9,10 +9,13 @@
 ?>
 <section class="section">
   <div class="content">
-    <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+    <p>
+      Utilisateur Connecté:
+      <strong><?= $_SESSION['name']?></strong>
+    </p>
   </div>
   <?php foreach ($billets as $bil):?>
-<div class="container">
+  <div class="container">
     <div class="box">
       <article class="media">
         <figure class="media-left">
@@ -24,7 +27,8 @@
           <div class="content">
             <p>
               <a href="<?= BASEPATH .'Front/posting/'. $bil->getId()?>">
-              <strong><?= htmlspecialchars($bil->getTitle()) ?></strong></a>
+              <strong><?= htmlspecialchars($bil->getTitle()) ?></strong>
+              </a>
             </p>
             <br/>
             <p>
@@ -36,26 +40,28 @@
                 <?= date('d - M - Y à H : i', strtotime($bil->getCreate_at())); ?>
               </em>
             </small>
-            <p>Par <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
+            <p>
+              Par
+              <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
             </p>
           </div>
           <nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
-            <span class="icon is-small">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-            </span>
-          </a>
-          <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$bil->getId()?>">
-            <span class="icon is-small">
-              <i class="fas fa-trash" aria-hidden="true"></i>
-            </span>
-          </a>
+            <div class="level-left">
+              <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
+                <span class="icon is-small">
+                  <i class="fas fa-edit" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$bil->getId()?>">
+                <span class="icon is-small">
+                  <i class="fas fa-trash" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </nav>
         </div>
-      </nav>
-         </div>
       </article>
-      </div>
     </div>
-  <?php endforeach?>
+  </div>
+<?php endforeach?>
 </section>

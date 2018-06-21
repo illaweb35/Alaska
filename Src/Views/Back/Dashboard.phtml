@@ -10,9 +10,11 @@
 <section class="section">
   <div class="container">
     <h1 class="title">Tableau de Bord</h1>
-<div class="content">
-  <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
-</div>
+    <div class="content">
+      <p>Utilisateur Connecté:
+        <strong><?= $_SESSION['name']?></strong>
+      </p>
+    </div>
     <div class="columns">
       <div class="column">
         <div class="box notification is-link">
@@ -24,11 +26,17 @@
             </div>
             <div class="media-content">
               <p class="subtitle is-3">
-              Billets
+                Billets
               </p>
-              <p><strong><?= count($all_billets)?></strong> _ Billets sur le site.</p>
+              <p>
+                <strong><?= count($all_billets)?></strong>
+                 _ Billets sur le site.
+               </p>
               <hr/>
-              <p><strong><?= count($billets)?></strong> _ Publié sur le site</p>
+              <p>
+                <strong><?= count($billets)?></strong>
+                 _ Publié sur le site
+               </p>
             </div>
           </article>
         </div>
@@ -45,9 +53,15 @@
               <p class="subtitle is-3">
                 Commentaires
               </p>
-              <p><strong><?= count($comments)?></strong> _ Commentaires publiés</p>
+              <p>
+                <strong><?= count($comments)?></strong>
+                 _ Commentaires publiés
+              </p>
               <hr/>
-              <p><strong><?= count($commentModerate)?></strong> _ Commentaires à valider</p>
+              <p>
+                <strong><?= count($commentModerate)?></strong>
+                _ Commentaires à valider
+              </p>
             </div>
           </article>
         </div>
@@ -64,7 +78,9 @@
               <p class="subtitle is-3">
                 Utilisateurs
               </p>
-              <p>Nombres : <strong><?= count($users) ?></strong></p>
+              <p>Nombres :
+                <strong><?= count($users) ?></strong>
+              </p>
             </div>
           </article>
         </div>

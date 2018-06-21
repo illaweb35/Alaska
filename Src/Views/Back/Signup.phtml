@@ -15,25 +15,25 @@
         <div class="column">
           <form action="<?= BASEPATH.'Main/Signup'?>" method="post">
             <div class="box">
-            <figure class="image is-centered">
+              <figure class="image is-centered">
                 <img id="admin_img" src="<?= BASEPATH.'/img/modo.png'?>" alt="Utilisateur">
-            </figure>
+              </figure>
             </div>
             <div class="field">
               <label for="username" class="label">Nom d'utilisateur</label>
               <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
     echo $_POST['username'];
-}?>" required autofocus>
+}?>" required autofocus/>
             </div>
             <div class="field">
               <label for="email" class="label">Email</label>
               <input type="email" class="input" name="email" pattern ="^[a-z0-9]+@([a-z0-9])+(\.)([a-z]{2,4})" value="<?php if (isset($_POST['email'])) {
     echo $_POST['email'];
-}?>" required>
+}?>" required/>
             </div>
             <div class="field">
               <label for="password" class="label">Mot de Passe</label>
-              <input type="password" class="input" name="password" placeholder="Mot de passe " required>
+              <input type="password" class="input" name="password" placeholder="Mot de passe " required/>
             </div>
             <div class="field">
               <div class="select">
