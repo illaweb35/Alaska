@@ -17,13 +17,13 @@
       <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" >Titre du billet</label>
-            <input type="text" name="title" class="input" placeholder="Ici votre titre " value="<?php if (isset($_POST['title'])) {
+            <input type="text" name="title" class="input is-focused" placeholder="Ici votre titre " value="<?php if (isset($_POST['title'])) {
     echo $_POST['title'];
 }?>" autofocus/>
         </div>
         <div class="field">
           <div class="control">
-            <textarea id="content" class="textarea" rows="8" type="text" name="content"
+            <textarea id="content" class="textarea is-focused" rows="8" type="text" name="content"
               value="<?php if (isset($_POST[content])) {
     echo $_POST['content'];
 }?>">
