@@ -34,6 +34,8 @@
           <div class="column">
             <div class="box">
               <p class="title is-5">Image à la une</p>
+          <div class="columns">
+            <div class="column">
               <div class="field">
                 <div class="file is-danger has-name is-boxed">
                   <label class="file-label">
@@ -43,15 +45,25 @@
                       <i class="fas fa-cloud-upload-alt"></i>
                     </span>
                     <span class="file-label">
-                    Enregistrer l'image
+                    Modifier l'image
                     </span>
                     </span>
                     <span class="file-name">
-                    <?php if (isset($_POST['image']['name'])) {
-    echo $_POST['image']['name'];
+                      Nom du fichier : _
+                    <?php if (!isset($_POST['image'])) {
+    echo $billets->getImage();
 }?>
                     </span>
                 </label>
+            <div class="column">
+              <figure class="media-left">
+                <p class="image">
+                  <img src="<?= BASEPATH.'img/posts/'.$billets->getImage()?>" alt="<?= $billets->getTitle()?>">
+                </p>
+              </figure>
+            </div>
+            </div>
+          </div>
               </div>
               </div>
               </div>
@@ -84,11 +96,11 @@
             <div class="column">
               <div class="field is-grouped">
                 <div class="control">
-                  <button type="submit" class="button is-link" title="Mettre à jour le commentaire">Mise à jour</button>
+                  <button type="submit" class="button is-link" title="Mettre à jour le Billet">Mise à jour</button>
                 </div>
                 <div class="control">
-                  <button class="button"type="reset" title="effacer et recommencer la saisie">
-                  Annuler
+                  <button class="button" title="Annulé et revenir au billet original">
+                <a href="javascript:history.go(-1)">Annuler</a>
                   </button>
                 </div>
             </div>

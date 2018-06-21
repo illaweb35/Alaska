@@ -86,7 +86,7 @@ class billetManager
         // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
             if (isset($_FILES['image'])) {
-                $upload_dir = chmod(\BASEPATH .'img/posts/', 0755);
+                $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
                 $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
                 $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
                 $image = rand(1000, 1000000).".".$imgExt;
@@ -137,7 +137,7 @@ class billetManager
         $imgSize = $_FILES['image']['size'];
 
         if ($imgFile) {
-            $upload_dir = chmod(BASEPATH.'img/posts/', 0755);
+            $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
             $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
             $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
             $image = rand(1000, 1000000).".".$imgExt;
