@@ -51,7 +51,9 @@
             <figure class="image ">
               <img id="homePost" src="<?= BASEPATH.'/img/posts/'. $bil->getImage()?>" alt="<?= $bil->getTitle()?>">
             </figure>
+          </div>
             <div class="card-content">
+            <div class="media">
               <div class="media-content">
                 <p class="title is-4" title="Lien vers le détail de l'billet">
                   <a href="<?= BASEPATH.'Front/posting/'.$bil->getId()?>">
@@ -69,11 +71,11 @@
                 </div>
               </div>
             </div>
-          </div>
+            </div>
         </div>
       </div>
-      <?php endforeach;?>
-      <?php endif?>
+    <?php endforeach;?>
+  <?php endif;?>
     </div>
   </div>
 </section>
