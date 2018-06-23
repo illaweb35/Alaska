@@ -44,15 +44,24 @@
               Par
               <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
             </p>
+            <div class="field">
+              <label class="checkbox switch">
+                <input type="checkbox" name="posted" value="<?= $bil->getPosted()?>" <?php if ($bil->getPosted()== 1) {
+    ?>checked="checked"<?php
+}?>/>
+                <span class="slider round"></span>
+              </label>
+                Poster
+            </div>
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item" aria-label="mmodif" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
+              <a class="level-item" aria-label="mmodif" title="Modifier le billet" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
                 <span class="icon is-small">
                   <i class="fas fa-edit" aria-hidden="true"></i>
                 </span>
               </a>
-              <a class="level-item" aria-label="delete" href="<?= BASEPATH.'Backedit/delete/'.$bil->getId()?>">
+              <a class="level-item" aria-label="delete" title="Supprimer le billet" href="<?= BASEPATH.'Backedit/delete/'.$bil->getId()?>">
                 <span class="icon is-small">
                   <i class="fas fa-trash" aria-hidden="true"></i>
                 </span>

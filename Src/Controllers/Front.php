@@ -53,7 +53,7 @@ class Front extends Main
     /**
     *Création d'un commentaire pour le billet
     */
-    public function Create()
+    public function Create_com()
     {
         $comment = $this->commentManager->Create();
         if ($comment !== false) {
