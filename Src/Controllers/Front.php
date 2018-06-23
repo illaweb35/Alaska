@@ -55,7 +55,7 @@ class Front extends Main
     */
     public function Create()
     {
-        $comment = $this->commentManager->create();
+        $comment = $this->commentManager->Create();
         if ($comment !== false) {
             header('Location:'.\BASEPATH.'Front/Posting/'.$comment);
             exit();

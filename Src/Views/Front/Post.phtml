@@ -82,13 +82,14 @@
                 </div>
                 <div class="field">
                   <div class="control">
-                      <textarea class="textarea"  name="content" placeholder="Votre commentaire" required></textarea><br/>
+                      <textarea class="textarea" type="text" name="content" placeholder="Votre commentaire" required></textarea>
+                      <br/>
                   </div>
                 </div>
                 <input class="input" type="hidden" name="bil_id" value="<?= $billets->getId() ?>"/>
                   <div class="field is-grouped">
                     <div class="control">
-                      <button type="submit" class="button" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>
+                      <button type="submit" class="button is-link" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>
                     </div>
                     <div class="control">
                       <button class="button"type="reset" title="Effacer et recommencer la saisie">
