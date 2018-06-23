@@ -34,11 +34,11 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-        $billets = $this->billetManager->readFront(0, 100);
+        $billets = $this->billetManager->ReadFront(0, 100);
         $all_billets = $this->billetManager->readAll();
-        $comments = $this->commentManager->readAll();
-        $commentModerate =$this->commentManager->readModerate();
-        $users = $this->userManager->userAll();
+        $comments = $this->commentManager->ReadAll();
+        $commentModerate =$this->commentManager->ReadModerate();
+        $users = $this->userManager->UserAll();
         $view = new Viewer('Back/Dashboard', "Mon Blog _ Tableau de bord");
         $view->createFile(['billets' => $billets,'all_billets'=>$all_billets,'comments'=>$comments,'users'=>$users,'commentModerate'=> $commentModerate]);
     }
@@ -47,7 +47,7 @@ class Back extends Main
     */
     public function List()
     {
-        $billets =$this->billetManager->readAll(0, 100);
+        $billets =$this->billetManager->ReadAll(0, 100);
         $view = new Viewer('Back/List', 'Liste des billets');
         $view->createFile(['billets' => $billets]);
     }
@@ -59,7 +59,7 @@ class Back extends Main
         if (!isset($_SESSION['authenticated'])) {
             header('Location:'.\BASEPATH.'Front/Index');
         }
-        $users = $this->userManager->userAll();
+        $users = $this->userManager->UserAll();
         $view = new Viewer('Back/ListUsers', 'Alaska _ Paramètres');
         $view->createFile(['users'=>$users]);
     }

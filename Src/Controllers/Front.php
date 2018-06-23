@@ -26,7 +26,7 @@ class Front extends Main
     */
     public function Index()
     {
-        $billets = $this->billetManager->readFront(0, self::MAX_POST);
+        $billets = $this->billetManager->ReadFront(0, self::MAX_POST);
         $view = new Viewer('Front/Index', 'Alaska _ Accueil');
         $view->createFile(['billets' => $billets]);
     }
@@ -36,8 +36,8 @@ class Front extends Main
     */
     public function Posting($id)
     {
-        $billets = $this->billetManager->read($id);
-        $comments = $this->commentManager->read($id);
+        $billets = $this->billetManager->Read($id);
+        $comments = $this->commentManager->Read($id);
         $view = new Viewer('Front/Post', 'Alaska _ Détails d\'un article');
         $view->createFile(['billets'=>$billets,'comments' =>$comments]);
     }
@@ -46,7 +46,7 @@ class Front extends Main
     */
     public function List()
     {
-        $billets =$this->billetManager->readFront(0, 100);
+        $billets =$this->billetManager->ReadFront(0, 100);
         $view = new Viewer('Front/List', 'Alaska _ Liste des billets');
         $view->createFile(['billets' => $billets]);
     }

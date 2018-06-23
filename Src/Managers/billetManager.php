@@ -26,7 +26,7 @@ class billetManager
     /**
     * Fonction pour lire tous les billets si connecté en admin
     */
-    public function readAll()
+    public function ReadAll()
     {
         if (isset($_SESSION['authenticated'])) {
             $request = $this->_pdo->prepare('SELECT * FROM T_billets  ORDER BY create_at DESC ');

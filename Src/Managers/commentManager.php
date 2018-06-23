@@ -76,7 +76,7 @@ class commentManager
         $pseudo = $content = $art_id = $create_at ="";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
             $pseudo = htmlspecialchars($_POST['pseudo']);
-            $content = htmlspecialchars($_POST['content']);
+            $content = $_POST['content'];
             $art_id = htmlspecialchars($_POST['bil_id']);
             $create_at = date(DATE_W3C);
             try {
