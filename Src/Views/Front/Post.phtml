@@ -19,11 +19,15 @@
   </div>
   <div id="top"class="container ">
     <article class="media">
+          <?php if (!empty($billets->getImage())) {
+    ?>
       <div class="media-left">
         <figure class="image is-128x128">
           <img src="<?= BASEPATH.'img/posts/'.$billets->getImage()?>" alt="<?= htmlspecialchars($billets->getTitle())?>">
         </figure>
         </div>
+      <?php
+}?>
         <div class="media-content">
           <div class="content">
             <p class="title is-4"><?= htmlspecialchars($billets->getTitle())?></p>

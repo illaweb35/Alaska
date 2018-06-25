@@ -85,30 +85,38 @@ class billetManager
         $posted = \htmlspecialchars($_POST['posted']);
         // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
-            if (isset($_FILES['image'])) {
-                $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
-                $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
-                $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
-                $image = rand(1000, 1000000).".".$imgExt;
-                if (in_array($imgExt, $valid_extensions)) {
-                    if ($imgSize < 5*MB) {
-                        \move_uploaded_file($tmp_dir, $upload_dir.$image);
-                        echo 'Upload éffectué avec succès';
+            if (!$_FILES['image']['size'] == 0) {
+                if (isset($_FILES['image'])&& !empty($_FILES)) {
+                    $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
+                    $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
+                    $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
+                    $image = rand(1000, 1000000).".".$imgExt;
+                    if (in_array($imgExt, $valid_extensions)) {
+                        if ($imgSize < 5*MB) {
+                            \move_uploaded_file($tmp_dir, $upload_dir.$image);
+                        } else {
+                            Alert::getError($errorMsg = 'Le fichier image est trop gros!');
+                        }
                     } else {
-                        Alert::getError($errorMsg = 'Le fichier image est trop gros!');
+                        Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
                     }
-                } else {
-                    Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
                 }
+                $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted) VALUES(:title, :author, :content, :image, NOW(), NOW(), :posted)');
+                $request->bindValue(':image', $image, \PDO::PARAM_STR);
+                $request->bindValue(':title', $title, \PDO::PARAM_STR);
+                $request->bindValue(':author', $author, \PDO::PARAM_STR);
+                $request->bindValue(':content', $content, \PDO::PARAM_STR);
+                $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
+            } else {
+                //Insertion des infos en base de données avec image.
+                $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, create_at, modif_at, posted)
+              VALUES (:title, :author, :content, NOW(), NOW(), :posted)');
+                $request->bindValue(':title', $title, \PDO::PARAM_STR);
+                $request->bindValue(':author', $author, \PDO::PARAM_STR);
+                $request->bindValue(':content', $content, \PDO::PARAM_STR);
+                $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
             }
-            //Insertion des infos en base de données
-            $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted)
-            VALUES (:title, :author, :content, :image, NOW(), NOW(), :posted)');
-            $request->bindValue(':title', $title, \PDO::PARAM_STR);
-            $request->bindValue(':author', $author, \PDO::PARAM_STR);
-            $request->bindValue(':content', $content, \PDO::PARAM_STR);
-            $request->bindValue(':image', $image, \PDO::PARAM_STR);
-            $request->bindvalue(':posted', $posted, \PDO::PARAM_BOOL);
+
             $verifIsOk = $request->execute();
             if (!$verifIsOk) {
                 return false;

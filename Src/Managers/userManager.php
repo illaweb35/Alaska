@@ -28,7 +28,7 @@ class userManager
     */
     public function Connexion()
     {
-        $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username ');
+        $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username');
         $request->execute([':username'=>\htmlspecialchars($_POST['username'])]);
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         if ($request->rowCount()== 1) {
