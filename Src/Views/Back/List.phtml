@@ -41,7 +41,7 @@
             <br/>
               <small>Publié le :
                 <em>
-                <?= date('d - M - Y à H : i', strtotime($bil->getCreate_at())); ?>
+                <?= date('d - m - Y à H : i', strtotime($bil->getCreate_at())); ?>
               </em>
             </small>
             <p>
@@ -50,7 +50,7 @@
             </p>
             <div class="field">
               <label class="checkbox switch">
-                <input type="checkbox" name="posted" value="<?= $bil->getPosted()?>" <?php if ($bil->getPosted()== 1) {
+                <input type="checkbox" name="posted" value="<?= htmlspecialchars($bil->getPosted())?>" <?php if ($bil->getPosted()== 1) {
         ?>checked="checked"<?php
     }?>/>
                 <span class="slider round"></span>

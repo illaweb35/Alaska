@@ -32,7 +32,7 @@
           <div class="content">
             <p class="title is-4"><?= htmlspecialchars($billets->getTitle())?></p>
             <p><?= $billets->getContent() ?></p>
-            <small>Publié le : <em><?= date(' d - M - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
+            <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
           </div>
         </div>
       </article>
@@ -61,7 +61,7 @@
                       </strong> a écrit:
                     </p>
                   </span>
-                    <small>Le <?= date('d - M - Y à H:i', strtotime($com->getCreate_at()))?></small>
+                    <small>Le <?= date('d - m - Y à H:i', strtotime($com->getCreate_at()))?></small>
                     <p>
                       <?= $com->getContent() ?>
                     </p>
