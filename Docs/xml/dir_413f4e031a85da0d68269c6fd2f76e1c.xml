@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_413f4e031a85da0d68269c6fd2f76e1c" kind="dir">
+    <compoundname>/var/www/html/Alaska/Src</compoundname>
+    <innerdir refid="dir_56a6948c0b047eb485c43df86b07ff5e">/var/www/html/Alaska/Src/Controllers</innerdir>
+    <innerdir refid="dir_07ae240da7ea98c662d844069e42a581">/var/www/html/Alaska/Src/Entity</innerdir>
+    <innerdir refid="dir_539f545fc436bda17edc6f194bdaf790">/var/www/html/Alaska/Src/Managers</innerdir>
+    <innerdir refid="dir_fa03d2c194b50d62be43f8dfd73ee9cf">/var/www/html/Alaska/Src/Views</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/html/Alaska/Src/"/>
+  </compounddef>
+</doxygen>

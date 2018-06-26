@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="da/d61/namespace_app_1_1_router" kind="namespace" language="PHP">
+    <compoundname>App::Router</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jean-Marie HOLLAND <ulink url="mailto:illaweb35@gmail.com">illaweb35@gmail.com</ulink> </para></simplesect>
+<simplesect kind="copyright"><para>(c) 2018, Jean-Marie HOLLAND. All Rights Reserved.</para></simplesect>
+Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</ulink> <ref refid="" kindref="compound">https://illaweb.fr</ref></para>    </detaileddescription>
+    <location file="/var/www/html/Alaska/Web/index.php" line="1" column="1"/>
+  </compounddef>
+</doxygen>

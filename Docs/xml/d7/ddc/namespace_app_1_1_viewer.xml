@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d7/ddc/namespace_app_1_1_viewer" kind="namespace" language="PHP">
+    <compoundname>App::Viewer</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Utilisation de la classe <ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref> pour l&apos;affichage des données </para>    </detaileddescription>
+    <location file="/var/www/html/Alaska/App/Alert.php" line="1" column="1"/>
+  </compounddef>
+</doxygen>

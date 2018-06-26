@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dc/db5/class_src_1_1_controllers_1_1_backedit" kind="class" language="PHP" prot="public">
+    <compoundname>Src::Controllers::Backedit</compoundname>
+    <basecompoundref refid="d7/d5e/class_src_1_1_controllers_1_1_main" prot="public" virt="non-virtual">Main</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1ad01f71fa0ecc039494e3c282864298c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>création d&apos;un Billet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="22" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="22" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1a82232b33fbfacdbdb8a8f49acaecf564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Update</definition>
+        <argsstring>($id)</argsstring>
+        <name>Update</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mise à jour du billet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du billet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="42" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="42" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1af3369c06390987c5f54b6bc444c615ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Create_user</definition>
+        <argsstring>()</argsstring>
+        <name>Create_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Création d&apos;un utilisateur </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="63" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="63" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac76a9db7f422d94f155c99c21540da0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Update_user</definition>
+        <argsstring>($id)</argsstring>
+        <name>Update_user</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mise à jour d&apos;un utilisateur  *<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="82" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="82" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Delete</definition>
+        <argsstring>($id)</argsstring>
+        <name>Delete</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suppression d&apos;un billet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du billet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="106" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="106" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1a38147e014898a3417c74b23e903621b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Delete_com</definition>
+        <argsstring>($id)</argsstring>
+        <name>Delete_com</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suppression d&apos;un commentaire <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant du commentaire </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="121" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="121" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac8f9af14ff73b939d55940eb2ff886ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Delete_user</definition>
+        <argsstring>($id)</argsstring>
+        <name>Delete_user</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suppression d&apos;un utilisateur <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="134" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="134" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Classe <ref refid="dc/db5/class_src_1_1_controllers_1_1_backedit" kindref="compound">Backedit</ref> gere la gestion des controleurs pour la modification des billets et commentaires si connecté Hérite de la calsse <ref refid="d7/d5e/class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>Backedit</label>
+        <link refid="dc/db5/class_src_1_1_controllers_1_1_backedit"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Main</label>
+        <link refid="d7/d5e/class_src_1_1_controllers_1_1_main"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>Backedit</label>
+        <link refid="dc/db5/class_src_1_1_controllers_1_1_backedit"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Main</label>
+        <link refid="d7/d5e/class_src_1_1_controllers_1_1_main"/>
+      </node>
+    </collaborationgraph>
+    <location file="/var/www/html/Alaska/Src/Controllers/Backedit.php" line="18" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Backedit.php" bodystart="17" bodyend="142"/>
+    <listofallmembers>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a7205c4d22c61e375f2be552a32f97ccb" prot="protected" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>$billetManager</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a2fdbb2dc79956746757958a453709ca6" prot="protected" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>$commentManager</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1afd45ca85c50f41c20a03f0a8d0f4db23" prot="protected" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>$userManager</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>__construct</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1ad01f71fa0ecc039494e3c282864298c3" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Create</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1af3369c06390987c5f54b6bc444c615ee" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Create_user</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Delete</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a38147e014898a3417c74b23e903621b0" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Delete_com</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac8f9af14ff73b939d55940eb2ff886ee" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Delete_user</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a8db48c2902872da0ee80463db6696375" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Login</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1aa14f760d541a59acb41ac8eefddafb9b" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Logout</name></member>
+      <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1aba348654bb87049dfb96fa24794b191b" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Signup</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a82232b33fbfacdbdb8a8f49acaecf564" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Update</name></member>
+      <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac76a9db7f422d94f155c99c21540da0e" prot="public" virt="non-virtual"><scope>Src::Controllers::Backedit</scope><name>Update_user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

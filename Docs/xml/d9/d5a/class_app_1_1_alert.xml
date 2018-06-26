@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d9/d5a/class_app_1_1_alert" kind="class" language="PHP" prot="public">
+    <compoundname>App::Alert</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d9/d5a/class_app_1_1_alert_1a9e9e1b0e1f542b18ea01e9f132a278e2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getError</definition>
+        <argsstring>($errorMsg)</argsstring>
+        <name>getError</name>
+        <param>
+          <declname>$errorMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function qui récupère le message d&apos;erreur et génère la vue <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$errorMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contenant le message Instanciation de la classe <ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref> pour générer la vue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Alert.php" line="26" column="1" bodyfile="/var/www/html/Alaska/App/Alert.php" bodystart="26" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Classe <ref refid="d9/d5a/class_app_1_1_alert" kindref="compound">Alert</ref> pour l&apos;affichage de toutes les alertes du site </para>    </detaileddescription>
+    <location file="/var/www/html/Alaska/App/Alert.php" line="21" column="1" bodyfile="/var/www/html/Alaska/App/Alert.php" bodystart="20" bodyend="32"/>
+    <listofallmembers>
+      <member refid="d9/d5a/class_app_1_1_alert_1a9e9e1b0e1f542b18ea01e9f132a278e2" prot="public" virt="non-virtual"><scope>App::Alert</scope><name>getError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

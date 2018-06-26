@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d3/d29/namespace_src" kind="namespace" language="PHP">
+    <compoundname>Src</compoundname>
+    <innernamespace refid="d0/dc3/namespace_src_1_1_controllers">Src::Controllers</innernamespace>
+    <innernamespace refid="d9/d33/namespace_src_1_1_entity">Src::Entity</innernamespace>
+    <innernamespace refid="df/daf/namespace_src_1_1_managers">Src::Managers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

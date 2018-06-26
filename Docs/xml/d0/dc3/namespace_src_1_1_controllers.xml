@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d0/dc3/namespace_src_1_1_controllers" kind="namespace" language="PHP">
+    <compoundname>Src::Controllers</compoundname>
+    <innerclass refid="d7/d05/class_src_1_1_controllers_1_1_back" prot="public">Src::Controllers::Back</innerclass>
+    <innerclass refid="dc/db5/class_src_1_1_controllers_1_1_backedit" prot="public">Src::Controllers::Backedit</innerclass>
+    <innerclass refid="d4/db2/class_src_1_1_controllers_1_1_front" prot="public">Src::Controllers::Front</innerclass>
+    <innerclass refid="d7/d5e/class_src_1_1_controllers_1_1_main" prot="public">Src::Controllers::Main</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jean-Marie HOLLAND <ulink url="mailto:illaweb35@gmail.com">illaweb35@gmail.com</ulink> </para></simplesect>
+<simplesect kind="copyright"><para>(c) 2018, Jean-Marie HOLLAND. All Rights Reserved.</para></simplesect>
+Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</ulink> <ref refid="" kindref="compound">https://illaweb.fr</ref></para>    </detaileddescription>
+    <location file="/var/www/html/Alaska/Src/Controllers/Back.php" line="9" column="1"/>
+  </compounddef>
+</doxygen>

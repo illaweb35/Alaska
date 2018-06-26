@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d9/d3f/_alert_8php" kind="file" language="PHP">
+    <compoundname>Alert.php</compoundname>
+    <innerclass refid="d9/d5a/class_app_1_1_alert" prot="public">App::Alert</innerclass>
+    <innernamespace refid="dc/d33/namespace_app">App</innernamespace>
+    <innernamespace refid="d7/ddc/namespace_app_1_1_viewer">App::Viewer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="9" refid="dc/d33/namespace_app" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="dc/d33/namespace_app" kindref="compound">App</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">use<sp/><ref refid="d7/ddc/namespace_app_1_1_viewer" kindref="compound">App\Viewer</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d9/d5a/class_app_1_1_alert" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d5a/class_app_1_1_alert" kindref="compound">Alert</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="d9/d5a/class_app_1_1_alert_1a9e9e1b0e1f542b18ea01e9f132a278e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/class_app_1_1_alert_1a9e9e1b0e1f542b18ea01e9f132a278e2" kindref="member">getError</ref>($errorMsg)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$view<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref>(</highlight><highlight class="stringliteral">&quot;Error&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Page<sp/>d\&apos;erreur&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$view-&gt;createFile([</highlight><highlight class="stringliteral">&apos;errorMsg&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$errorMsg]);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_once(</highlight><highlight class="stringliteral">&apos;../Src/Views/Error.phtml&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/html/Alaska/App/Alert.php"/>
+  </compounddef>
+</doxygen>
