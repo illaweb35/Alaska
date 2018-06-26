@@ -68,7 +68,7 @@
                   <strong><?=  htmlspecialchars($bil->getAuthor()) ?></strong>
                 </p>
                 <div class="content">
-                  <p><?= substr($bil->getContent(), 0, 150)?>...</p>
+                  <p><?= substr(rtrim($bil->getContent()), 0, 150)?>...</p>
                    <time datetime="1-1-2016">
                      <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($bil->getCreate_at())); ?></em></small>
                    </time>
