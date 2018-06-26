@@ -189,6 +189,12 @@ class billetManager
     */
     public function Delete($id)
     {
+        $request = $this->_pdo->prepare('SELECT * FROM T_billets WHERE id_bil=:id LIMIT 1');
+        $request->bindParam(':id', $id, \PDO::PARAM_INT);
+        $request->execute();
+        $billet = $request->fetch();
+        $image = $billet['image'];
+        unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
         $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         return $request->execute();
