@@ -22,13 +22,13 @@
             <div class="field">
               <label for="username" class="label">Nom d'utilisateur</label>
               <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
-    echo $_POST['username'];
+    echo htmlspecialchars($_POST['username']);
 }?>" required autofocus/>
             </div>
             <div class="field">
               <label for="email" class="label">Email</label>
               <input type="email" class="input" name="email" pattern ="^[a-z0-9]+@([a-z0-9])+(\.)([a-z]{2,4})" value="<?php if (isset($_POST['email'])) {
-    echo $_POST['email'];
+    echo htmlspecialchars($_POST['email']);
 }?>" required/>
             </div>
             <div class="field">

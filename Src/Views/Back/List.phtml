@@ -11,18 +11,18 @@
   <div class="content">
     <p>
       Utilisateur Connecté:
-      <strong><?= $_SESSION['name']?></strong>
+      <strong><?= htmlspecialchars($_SESSION['name'])?></strong>
     </p>
   </div>
   <?php foreach ($billets as $bil):?>
   <div class="container">
     <div class="box">
       <article class="media">
-        <?php if (!empty($bil->getImage())) {
+        <?php if (!empty(htmlspecialchars($bil->getImage()))) {
     ?>
         <figure class="media-left">
           <p class="image is-128x128">
-            <img src="<?= BASEPATH.'img/posts/'.$bil->getImage()?>" alt="<?= $bil->getTitle()?>">
+            <img src="<?= BASEPATH.'img/posts/'.htmlspecialchars($bil->getImage())?>" alt="<?= htmlspecialchars($bil->getTitle())?>">
           </p>
         </figure>
       <?php
@@ -30,7 +30,7 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="<?= BASEPATH .'Front/posting/'. $bil->getId()?>">
+              <a href="<?= BASEPATH .'Front/posting/'. htmlspecialchars($bil->getId())?>">
               <strong><?= htmlspecialchars($bil->getTitle()) ?></strong>
               </a>
             </p>
@@ -50,7 +50,7 @@
             </p>
             <div class="field">
               <label class="checkbox switch">
-                <input type="checkbox" name="posted" value="<?= htmlspecialchars($bil->getPosted())?>" <?php if ($bil->getPosted()== 1) {
+                <input type="checkbox" name="posted" value="<?= htmlspecialchars($bil->getPosted())?>" <?php if (htmlspecialchars($bil->getPosted())== 1) {
         ?>checked="checked"<?php
     }?>/>
                 <span class="slider round"></span>
@@ -60,12 +60,12 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item" aria-label="mmodif" title="Modifier le billet" href="<?= BASEPATH.'Backedit/Update/'.$bil->getId()?>">
+              <a class="level-item" aria-label="mmodif" title="Modifier le billet" href="<?= BASEPATH.'Backedit/Update/'.htmlspecialchars($bil->getId())?>">
                 <span class="icon is-small">
                   <i class="fas fa-edit" aria-hidden="true"></i>
                 </span>
               </a>
-              <a class="level-item" aria-label="delete" title="Supprimer le billet" href="<?= BASEPATH.'Backedit/Delete/'.$bil->getId()?>" data-confirm="Etes-vous certain de vouloir supprimer le Billet?">
+              <a class="level-item" aria-label="delete" title="Supprimer le billet" href="<?= BASEPATH.'Backedit/Delete/'.htmlspecialchars($bil->getId())?>" data-confirm="Etes-vous certain de vouloir supprimer le Billet?">
                 <span class="icon is-small">
                   <i class="fas fa-trash" aria-hidden="true"></i>
                 </span>

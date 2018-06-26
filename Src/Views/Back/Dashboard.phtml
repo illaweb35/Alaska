@@ -12,7 +12,7 @@
     <h1 class="title">Tableau de Bord</h1>
     <div class="content">
       <p>Utilisateur Connecté:
-        <strong><?= $_SESSION['name']?></strong>
+        <strong><?= htmlspecialchars($_SESSION['name'])?></strong>
       </p>
     </div>
     <div class="columns">
@@ -108,12 +108,12 @@
         <td><?= substr(nl2br(htmlspecialchars($comMod->getContent())), 0, 100); ?> ...</td>
         <td><?= htmlspecialchars($comMod->getBil_id())?></td>
         <td>
-          <a href="<?= BASEPATH.'Back/Check/'.$comMod->getId()?>">
+          <a href="<?= BASEPATH.'Back/Check/'.htmlspecialchars($comMod->getId())?>">
             <span class="icon">
               <i class="fas fa-check"></i>
             </span>
           </a>
-          <a href="<?= BASEPATH.'Backedit/Delete_com/'.$comMod->getId()?>">
+          <a href="<?= BASEPATH.'Backedit/Delete_com/'.htmlspecialchars($comMod->getId())?>">
             <span class="icon">
               <i class="fas fa-trash"></i>
             </span>

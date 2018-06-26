@@ -24,7 +24,7 @@
                 Nom d'utilisateur ou pseudo
               </label>
               <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
-    echo $_POST['username'];
+    echo htmlspecialchars($_POST['username']);
 }?>" autofocus/>
             </div>
             <div class="field">

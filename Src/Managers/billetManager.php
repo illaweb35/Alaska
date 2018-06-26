@@ -77,9 +77,9 @@ class billetManager
         }
         $author = \htmlspecialchars($_POST['author']);
         $content = $_POST['content'];
-        $imgFile = $_FILES['image']['name'];
-        $tmp_dir = $_FILES['image']['tmp_name'];
-        $imgSize = $_FILES['image']['size'];
+        $imgFile = \htmlspecialchars($_FILES['image']['name']);
+        $tmp_dir = \htmlspecialchars($_FILES['image']['tmp_name']);
+        $imgSize = \htmlspecialchars($_FILES['image']['size']);
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         $posted = \htmlspecialchars($_POST['posted']);
@@ -140,9 +140,9 @@ class billetManager
         $content = $_POST['content'];
         $modif_at = date(DATE_W3C);
         $posted = (isset($_POST['posted']))? \htmlspecialchars($_POST['posted']):"0";
-        $imgFile = $_FILES['image']['name'];
-        $tmp_dir = $_FILES['image']['tmp_name'];
-        $imgSize = $_FILES['image']['size'];
+        $imgFile = htmlspecialchars($_FILES['image']['name']);
+        $tmp_dir = htmlspecialchars($_FILES['image']['tmp_name']);
+        $imgSize = htmlspecialchars($_FILES['image']['size']);
 
         if ($imgFile) {
             $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';

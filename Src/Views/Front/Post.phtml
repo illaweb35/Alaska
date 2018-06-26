@@ -19,11 +19,11 @@
   </div>
   <div id="top"class="container ">
     <article class="media">
-          <?php if (!empty($billets->getImage())) {
+          <?php if (!empty(htmlspecialchars($billets->getImage()))) {
     ?>
       <div class="media-left">
         <figure class="image is-128x128">
-          <img src="<?= BASEPATH.'img/posts/'.$billets->getImage()?>" alt="<?= htmlspecialchars($billets->getTitle())?>">
+          <img src="<?= BASEPATH.'img/posts/'.htmlspecialchars($billets->getImage())?>" alt="<?= htmlspecialchars($billets->getTitle())?>">
         </figure>
         </div>
       <?php
@@ -67,7 +67,7 @@
                     </p>
                     <br/>
                     <p class="is-size-7">
-                    <a href="<?= BASEPATH.'Front/Signaler/'.$com->getId() ?>">Signaler le commentaire</a>
+                    <a href="<?= BASEPATH.'Front/Signaler/'.htmlspecialchars($com->getId()) ?>">Signaler le commentaire</a>
                     </p>
                   <hr/>
                 <?php endforeach?>
@@ -78,7 +78,7 @@
         <div class="column">
           <article class="media">
             <div class="media-content">
-              <form action="<?= BASEPATH.'Front/Create_com/'.$billets->getId()?>" method="post">
+              <form action="<?= BASEPATH.'Front/Create_com/'.htmlspecialchars($billets->getId())?>" method="post">
                 <div class="field">
                   <div class="control">
                     <input class ="input" id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo" required /><br />
@@ -90,7 +90,7 @@
                       <br/>
                   </div>
                 </div>
-                <input class="input" type="hidden" name="bil_id" value="<?= $billets->getId() ?>"/>
+                <input class="input" type="hidden" name="bil_id" value="<?= htmlspecialchars($billets->getId()) ?>"/>
                   <div class="field is-grouped">
                     <div class="control">
                       <button type="submit" class="button is-link" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>

@@ -11,14 +11,14 @@
   <div class="container">
     <h1 class="title">Poster un Billet</h1>
     <div class="content">
-      <p>Utilisateur Connecté: <strong><?= $_SESSION['name']?></strong></p>
+      <p>Utilisateur Connecté: <strong><?= htmlspecialchars($_SESSION['name'])?></strong></p>
     </div>
     <div class="box">
       <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" >Titre du billet</label>
             <input type="text" name="title" class="input" placeholder="Ici votre titre " value="<?php if (isset($_POST['title'])) {
-    echo $_POST['title'];
+    echo htmlspecialchars($_POST['title']);
 }?>" autofocus/>
         </div>
         <div class="field">

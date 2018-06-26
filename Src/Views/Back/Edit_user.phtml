@@ -13,12 +13,12 @@
     <div class="content">
       <p>Utilisateur connecté:
         <strong>
-          <?= $_SESSION['name']?>
+          <?= htmlspecialchars($_SESSION['name'])?>
         </strong>
       </p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Backedit/Update_user/'.$users->getId()?>" method="post">
+      <form action="<?= BASEPATH.'Backedit/Update_user/'.htmlspecialchars($users->getId())?>" method="post">
         <div class="field">
           <label for="username" class="label">Nom</label>
           <input type="text" class="input" name="username" value="<?= htmlspecialchars($users->getUsername())?>"/>
@@ -30,8 +30,8 @@
         <div class="field">
           <div class="select">
             <select name="role">
-              <option value="Utilisateur"<?php if ($users->getRole() == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
-              <option value="Modérateur"<?php if ($users->getRole() == 'Modérateur'):?>selected="selected"<?php endif?>
+              <option value="Utilisateur"<?php if (htmlspecialchars($users->getRole()) == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
+              <option value="Modérateur"<?php if (htmlspecialchars($users->getRole()) == 'Modérateur'):?>selected="selected"<?php endif?>
               >Modérateur</option>
             </select>
           </div>
