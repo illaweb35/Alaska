@@ -13,7 +13,7 @@
     <div class="content">
       <p>
         Utilisateur Connecté:
-        <strong><?= $_SESSION['name']?></strong>
+        <strong><?= trim(htmlspecialchars($_SESSION['name']))?></strong>
       </p>
     </div>
     <div class="columns">
@@ -35,16 +35,16 @@
               <?php foreach ($users as $user):?>
               <tbody>
                 <tr>
-                  <td><?= htmlspecialchars($user->getUsername())?></td>
-                  <td><?= htmlspecialchars($user->getEmail())?></td>
+                  <td><?= trim(htmlspecialchars($user->getUsername()))?></td>
+                  <td><?= trim(htmlspecialchars($user->getEmail()))?></td>
                   <td><?= date(' d - M - Y à H:i', strtotime($user->getCreate_at()))?></td>
                   <td>
-                    <a href="<?= BASEPATH.'Backedit/Update_user/'.$user->getId()?>">
+                    <a href="<?= BASEPATH.'Backedit/Update_user/'.trim(htmlspecialchars($user->getId()))?>">
                       <span class="icon">
                         <i class="fas fa-edit"></i>
                       </span>
                     </a>
-                    <a href="<?= BASEPATH.'Backedit/Delete_user/'.htmlspecialchars($user->getId()) ?>">
+                    <a href="<?= BASEPATH.'Backedit/Delete_user/'.trim(htmlspecialchars($user->getId())) ?>">
                       <span class="icon">
                         <i class="fas fa-trash"></i>
                       </span>
@@ -60,19 +60,19 @@
       <div class="column">
         <div class="box">
           <div class="notification">
-            <p class="title is-5">
+            <p class="title is-4">
               Ajouter un utilisateur
               <form action="<?= BASEPATH.'Backedit/Create_user'?>" method="post">
                 <div class="field">
                   <label for="username" class="label">Nom d'utilisateur</label>
                   <input type="text" class="input" name="username" value="<?php if (isset($_POST['username'])) {
-    echo htmlspecialchars($_POST['username']);
+    echo trim(htmlspecialchars($_POST['username']));
 }?>" required/>
                 </div>
                 <div class="field">
                   <label for="email" class="label">Email</label>
                   <input type="text" class="input" name="email" pattern ="^[a-z0-9]+@([a-z0-9])+(\.)([a-z]{2,4})" value="<?php if (isset($_POST['email'])) {
-    echo htmlspecialchars($_POST['email']);
+    echo trim(htmlspecialchars($_POST['email']));
 }?>" required/>
                 </div>
                 <div class="field">

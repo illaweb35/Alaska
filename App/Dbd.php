@@ -24,5 +24,6 @@ class Dbd extends \PDO
 
         parent::__construct($dsn, $db_user, $db_pass);
         $this->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $this->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
     }
 }

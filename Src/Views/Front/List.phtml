@@ -13,11 +13,11 @@
     <div class="box">
       <article class="media">
         <?php
-        if (!empty(htmlspecialchars($bil->getImage()))) {
+        if (!empty(trim(htmlspecialchars($bil->getImage())))) {
             ?>
         <figure class="media-left">
           <p class="image is-128x128">
-            <img src="<?= BASEPATH.'img/posts/'.htmlspecialchars($bil->getImage())?>" alt="<?= htmlspecialchars($bil->getTitle())?>">
+            <img src="<?= BASEPATH.'img/posts/'.trim(htmlspecialchars($bil->getImage()))?>" alt="<?= trim(htmlspecialchars($bil->getTitle()))?>">
           </p>
         </figure>
       <?php
@@ -25,8 +25,8 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="<?= BASEPATH .'Front/posting/'.htmlspecialchars($bil->getId())?>">
-              <strong><?= htmlspecialchars($bil->getTitle()) ?></strong></a>
+              <a href="<?= BASEPATH .'Front/posting/'.trim(htmlspecialchars($bil->getId()))?>">
+              <strong><?= trim(htmlspecialchars($bil->getTitle())) ?></strong></a>
             </p>
             <br/>
             <p>
@@ -38,7 +38,7 @@
                 <?= date(' d - m - Y  à H : i', strtotime($bil->getCreate_at())); ?>
               </em>
             </small>
-            <p>Par <strong><?= htmlspecialchars($bil->getAuthor()) ?></strong>
+            <p>Par <strong><?= trim(htmlspecialchars($bil->getAuthor())) ?></strong>
             </p>
           </div>
          </div>

@@ -12,7 +12,7 @@
     <h1 class="title">Tableau de Bord</h1>
     <div class="content">
       <p>Utilisateur Connecté:
-        <strong><?= htmlspecialchars($_SESSION['name'])?></strong>
+        <strong><?= trim(htmlspecialchars($_SESSION['name']))?></strong>
       </p>
     </div>
     <div class="columns">
@@ -104,16 +104,16 @@
       </thead>
         <?php foreach ($commentModerate as $comMod):?>
       <tbody>
-        <td><?= htmlspecialchars($comMod->getPseudo())?></td>
+        <td><?= trim(htmlspecialchars($comMod->getPseudo()))?></td>
         <td><?= substr(nl2br(htmlspecialchars($comMod->getContent())), 0, 100); ?> ...</td>
-        <td><?= htmlspecialchars($comMod->getBil_id())?></td>
+        <td><?= trim(htmlspecialchars($comMod->getBil_id()))?></td>
         <td>
-          <a href="<?= BASEPATH.'Back/Check/'.htmlspecialchars($comMod->getId())?>">
+          <a href="<?= BASEPATH.'Back/Check/'.trim(htmlspecialchars($comMod->getId()))?>">
             <span class="icon">
               <i class="fas fa-check"></i>
             </span>
           </a>
-          <a href="<?= BASEPATH.'Backedit/Delete_com/'.htmlspecialchars($comMod->getId())?>">
+          <a href="<?= BASEPATH.'Backedit/Delete_com/'.trim(htmlspecialchars($comMod->getId()))?>">
             <span class="icon">
               <i class="fas fa-trash"></i>
             </span>

@@ -13,25 +13,25 @@
     <div class="content">
       <p>Utilisateur connecté:
         <strong>
-          <?= htmlspecialchars($_SESSION['name'])?>
+          <?= trim(htmlspecialchars($_SESSION['name']))?>
         </strong>
       </p>
     </div>
     <div class="box">
-      <form action="<?= BASEPATH.'Backedit/Update_user/'.htmlspecialchars($users->getId())?>" method="post">
+      <form action="<?= BASEPATH.'Backedit/Update_user/'.trim(htmlspecialchars($users->getId()))?>" method="post">
         <div class="field">
           <label for="username" class="label">Nom</label>
-          <input type="text" class="input" name="username" value="<?= htmlspecialchars($users->getUsername())?>"/>
+          <input type="text" class="input" name="username" value="<?= trim(htmlspecialchars($users->getUsername()))?>"/>
         </div>
         <div class="field">
           <label for="email" class="label">Email</label>
-          <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= htmlspecialchars($users->getEmail())?>"/>
+          <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= trim(htmlspecialchars($users->getEmail()))?>"/>
         </div>
         <div class="field">
           <div class="select">
             <select name="role">
-              <option value="Utilisateur"<?php if (htmlspecialchars($users->getRole()) == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
-              <option value="Modérateur"<?php if (htmlspecialchars($users->getRole()) == 'Modérateur'):?>selected="selected"<?php endif?>
+              <option value="Utilisateur"<?php if (trim(htmlspecialchars($users->getRole())) == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
+              <option value="Modérateur"<?php if (trim(htmlspecialchars($users->getRole())) == 'Modérateur'):?>selected="selected"<?php endif?>
               >Modérateur</option>
             </select>
           </div>

@@ -19,18 +19,18 @@
   </div>
   <div id="top"class="container ">
     <article class="media">
-          <?php if (!empty(htmlspecialchars($billets->getImage()))) {
+          <?php if (!empty(trim(htmlspecialchars($billets->getImage())))) {
     ?>
       <div class="media-left">
         <figure class="image is-128x128">
-          <img src="<?= BASEPATH.'img/posts/'.htmlspecialchars($billets->getImage())?>" alt="<?= htmlspecialchars($billets->getTitle())?>">
+          <img src="<?= BASEPATH.'img/posts/'.trim(htmlspecialchars($billets->getImage()))?>" alt="<?= trim(htmlspecialchars($billets->getTitle()))?>">
         </figure>
         </div>
       <?php
 }?>
         <div class="media-content">
           <div class="content">
-            <p class="title is-4"><?= htmlspecialchars($billets->getTitle())?></p>
+            <p class="title is-4"><?= trim(htmlspecialchars($billets->getTitle()))?></p>
             <p><?= $billets->getContent() ?></p>
             <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
           </div>
@@ -41,11 +41,11 @@
         <div class="column">
           <article class="message is-info">
               <div class="message-header">
-                <p><em><strong>Commentaires pour :  </strong></em><?php htmlspecialchars($billets->getTitle()) ?>
+                <p><em><strong>Commentaires pour :  </strong></em><?php trim(htmlspecialchars($billets->getTitle())) ?>
               </p>
               </div>
                 <div class="message-body">
-           <?php if (empty($comments)):?>
+           <?php if (trim(htmlspecialchars(empty($comments)))):?>
                 <p class="bold">Il n'y a pas de commentaire pour cet article.
                 </p>
                 <hr/>
@@ -57,17 +57,17 @@
                   <span class="underline">
                     <p>
                       <strong>
-                        <?= htmlspecialchars($com->getPseudo())?>
+                        <?= trim(htmlspecialchars($com->getPseudo()))?>
                       </strong> a écrit:
                     </p>
                   </span>
                     <small>Le <?= date('d - m - Y à H:i', strtotime($com->getCreate_at()))?></small>
                     <p>
-                      <?= $com->getContent() ?>
+                      <?= trim(htmlspecialchars($com->getContent())) ?>
                     </p>
                     <br/>
                     <p class="is-size-7">
-                    <a href="<?= BASEPATH.'Front/Signaler/'.htmlspecialchars($com->getId()) ?>">Signaler le commentaire</a>
+                    <a href="<?= BASEPATH.'Front/Signaler/'.trim(htmlspecialchars($com->getId())) ?>">Signaler le commentaire</a>
                     </p>
                   <hr/>
                 <?php endforeach?>
@@ -78,7 +78,7 @@
         <div class="column">
           <article class="media">
             <div class="media-content">
-              <form action="<?= BASEPATH.'Front/Create_com/'.htmlspecialchars($billets->getId())?>" method="post">
+              <form action="<?= BASEPATH.'Front/Create_com/'.trim(htmlspecialchars($billets->getId()))?>" method="post">
                 <div class="field">
                   <div class="control">
                     <input class ="input" id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo" required /><br />
@@ -90,7 +90,7 @@
                       <br/>
                   </div>
                 </div>
-                <input class="input" type="hidden" name="bil_id" value="<?= htmlspecialchars($billets->getId()) ?>"/>
+                <input class="input" type="hidden" name="bil_id" value="<?= trim(htmlspecialchars($billets->getId())) ?>"/>
                   <div class="field is-grouped">
                     <div class="control">
                       <button type="submit" class="button is-link" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>
