@@ -11,7 +11,7 @@ namespace Src\Controllers;
 use App\Viewer;
 
 /**
-*Class Front pour la gestion des controleurs du site côté visiteur
+*Class Front pour la gestion des managers pour la partie visiteur
 * Hérite de la class Main
 */
 class Front extends Main
