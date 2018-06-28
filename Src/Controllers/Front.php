@@ -16,17 +16,13 @@ use App\Viewer;
 */
 class Front extends Main
 {
-    /**
-    * Constance pour le nombre de billet à afficher sur la page
-    */
-    const MAX_POST = 4;
 
     /**
     * affiche la liste des billets sur la page d'accueil avec un maximum de 4 billets suivant la constance MAX_POST
     */
     public function Index()
     {
-        $billets = $this->billetManager->ReadFront(0, self::MAX_POST);
+        $billets = $this->billetManager->ReadFront(0, \MAX_POST);
         $view = new Viewer('Front/Index', 'Alaska _ Accueil');
         $view->createFile(['billets' => $billets]);
     }

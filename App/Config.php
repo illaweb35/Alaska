@@ -16,7 +16,10 @@ DB_NAME = 'Alaska',
 DB_USER = 'root',
 DB_PASS = 'root';
 
-
+/**
+* Constance pour le nombre de billet à afficher sur la page
+*/
+const MAX_POST = 4;
 // dimensions images
 define('KB', 1024);
 define('MB', 1048576);
