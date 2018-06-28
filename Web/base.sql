@@ -59,7 +59,6 @@ CREATE TABLE `T_users` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL,
   `create_at` datetime NOT NULL,
   `modif_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -68,8 +67,8 @@ CREATE TABLE `T_users` (
 -- Contenu de la table `T_users`
 --
 
-INSERT INTO `T_users` (`id_user`, `username`, `email`, `password`, `role`, `create_at`, `modif_at`) VALUES
-(1, 'admin', 'admin@localhost.il', '$2y$10$6ovYlWuBibjxf93wAKONCuP.YY7xRZtObdznHv.I0lF.EufraFDL2', 'Modérateur', '2018-06-25 15:55:56', '2018-06-25 15:55:56');
+INSERT INTO `T_users` (`id_user`, `username`, `email`, `password`, `create_at`, `modif_at`) VALUES
+(1, 'admin', 'admin@localhost.il', '$2y$10$6ovYlWuBibjxf93wAKONCuP.YY7xRZtObdznHv.I0lF.EufraFDL2', '2018-06-25 15:55:56', '2018-06-25 15:55:56');
 
 --
 -- Index pour les tables exportées

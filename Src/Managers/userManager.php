@@ -81,14 +81,13 @@ class userManager
     */
     public function Create()
     {
-        $username = $email = $password =  $role = $create_at = $modif_at="";
+        $username = $email = $password = $create_at = $modif_at="";
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
         if (!\filter_var($email, FILTER_VALIDATE_EMAIL)) {
             Alert::getError($errorMsg="Le format de l'adresse email est incorrecte.");
         }
         $password = Check::mixMdp(\htmlspecialchars($_POST['password']));
-        $role = \htmlspecialchars($_POST['role']);
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         $request = $this->_pdo->query("SELECT* FROM T_users WHERE username = '$username' OR email='$email'");
@@ -97,11 +96,10 @@ class userManager
             Alert::getError($errorMsg = "Nom d'utilisateur ou email deja utilisé");
         } else {
             try {
-                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, role, create_at, modif_at) VALUES (:username, :email, :password, :role, NOW(),NOW())');
+                $request = $this->_pdo->prepare('INSERT INTO T_users (username, email, password, create_at, modif_at) VALUES (:username, :email, :password,  NOW(),NOW())');
                 $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
                 $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
                 $request->bindValue(':password', $password, \PDO::PARAM_STR);
-                $request->bindValue(':role', $role, \PDO::PARAM_STR);
                 $users = $request->execute();
                 $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
                 $verifIsOk = $users;
@@ -122,17 +120,16 @@ class userManager
     */
     public function Update($id)
     {
-        $username = $email = $password = $role = $modif_at = "";
+        $username = $email = $password = $modif_at = "";
         $username = \htmlspecialchars($_POST['username']);
         $email= \htmlspecialchars($_POST['email']);
-        $role = \htmlspecialchars($_POST['role']);
+
         $modif_at = date(DATE_W3C);
         try {
-            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email,role=:role, modif_at=NOW() WHERE id_user=:id');
+            $request = $this->_pdo->prepare('UPDATE T_users SET username=:username,email=:email, modif_at=NOW() WHERE id_user=:id');
             $request->bindValue(':id', (int)$id, \PDO::PARAM_INT);
             $request->bindValue(':username', $username, \PDO::PARAM_STR) ;
             $request->bindValue(':email', $email, \PDO::PARAM_STR) ;
-            $request->bindValue(':role', $role, \PDO::PARAM_STR);
             $request->execute();
             $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         } catch (PDOException $e) {

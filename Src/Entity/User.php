@@ -18,7 +18,6 @@ class User
     private $username;
     private $email;
     private $password;
-    private $role;
     private $create_at;
     private $modif_at;
     /**
@@ -62,14 +61,6 @@ class User
             $this->password = $password;
         }
     }
-    public function setRole($role)
-    {
-        if (!\is_string($role) || empty($role)) {
-            Alert::getError("Une erreur est survenue, merci de vérifier que vous avez sélectionner une option");
-        } else {
-            $this->role = $role;
-        }
-    }
     public function setDateCrea(DateTime $create_at)
     {
         if (is_string($create_at)) {
@@ -100,10 +91,6 @@ class User
     public function getPassword()
     {
         return $this->password;
-    }
-    public function getRole()
-    {
-        return $this->role;
     }
     public function getCreate_at()
     {
