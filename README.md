@@ -3,13 +3,13 @@
 
 ### Réalisation d'un moteur de blog en PHP et MYSQL
 
-**FrontEnd** _ pour la gestion côté visiteur
+  **FrontEnd** _ pour la gestion côté visiteur
 
-  _ Affichage des billets avec possibilité de commenter et de modéré les commentaires.
-  Affichage Page d'accueil sur forme de CARD,  nombre de card afficher  gérer dans le fichier Config.php
-
-  _ Affichage d'un billet avec ses commentaires  et la possibilité de poster ou modéré les commentaires.
-  _ Affichage de la liste des billets.
+  _ Index
+  * Affichage des billets avec possibilité de commenter et de modéré les commentaires.
+  * Affichage Page d'accueil sur forme de CARD, nombre de card afficher  gérer dans le fichier Config.php.
+  * Affichage d'un billet avec ses commentaires  et la possibilité de poster ou modéré les commentaires.
+  * Affichage de la liste des billets.
 
 **BackEnd** _ pour l'administration du site
 
@@ -47,5 +47,5 @@ Moteur en PHP et MYSQL
 Affichage HTML / CSS et framework [Bulma](https://bulma.io/)
 Interaction utilisateur JAVASCRIPT.
 
-utilisation pour étude seulement.
-Tous droits réservés 2018 illaweb35.
+Pour étude seulement.
+Tous droits réservés 2018 [illaweb35](https://www.illaweb.fr).
