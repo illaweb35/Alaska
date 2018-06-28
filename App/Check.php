@@ -28,8 +28,8 @@ class Check
     *Fonction de cryptage
     * @param variable $pass egal au password.
     */
-    public static function mixMdp($pass)
+    public static function mixMdp($p)
     {
-        return \password_hash($pass, PASSWORD_DEFAULT);
+        return \password_hash($p, PASSWORD_DEFAULT);
     }
 }
