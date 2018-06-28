@@ -44,7 +44,9 @@ _ Connexion
 
 ---
 Moteur en PHP et MYSQL
+
 Affichage HTML / CSS et framework [Bulma](https://bulma.io/)
+
 Interaction utilisateur JAVASCRIPT.
 
 Pour étude seulement.
