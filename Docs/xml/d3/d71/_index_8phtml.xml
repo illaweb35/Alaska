@@ -3,10 +3,10 @@
   <compounddef id="d3/d71/_index_8phtml" kind="file" language="PHP">
     <compoundname>Index.phtml</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="d3/d71/_index_8phtml_1a27903a7caf89f85f163e2083401e82a6" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="d3/d71/_index_8phtml_1a2c45b5587710879fcdf4b73a7bab7757" prot="public" static="no" mutable="no">
         <type>if</type>
-        <definition>if (empty( $billets))( $bil-&gt;getId())?&gt;&quot;&gt; &lt;strong&gt;&lt;?</definition>
-        <argsstring>($bil-&gt;getId())?&gt;&quot;&gt; &lt;strong&gt;&lt;?</argsstring>
+        <definition>if (empty( $billets))(htmlspecialchars( $bil-&gt;getId()))?&gt;&quot;&gt; &lt;strong&gt;&lt;?</definition>
+        <argsstring>(htmlspecialchars($bil-&gt;getId()))?&gt;&quot;&gt; &lt;strong&gt;&lt;?</argsstring>
         <name>(empty($billets))</name>
         <initializer>= date(&apos; d - m - Y à H:i&apos;, strtotime($bil-&gt;getCreate_at()))</initializer>
         <briefdescription>
@@ -18,32 +18,6 @@ Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.htm
         <inbodydescription>
         </inbodydescription>
         <location file="/var/www/html/Alaska/Src/Views/Front/Index.phtml" line="42" column="1" bodyfile="/var/www/html/Alaska/Src/Views/Front/Index.phtml" bodystart="73" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="d3/d71/_index_8phtml_1a672d9707ef91db026c210f98cc601123" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>endforeach</definition>
-        <argsstring></argsstring>
-        <name>endforeach</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Views/Front/Index.phtml" line="81" column="1" bodyfile="/var/www/html/Alaska/Src/Views/Front/Index.phtml" bodystart="81" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="d3/d71/_index_8phtml_1a82cd33ca97ff99f2fcc5e9c81d65251b" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>endif</definition>
-        <argsstring></argsstring>
-        <name>endif</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Views/Front/Index.phtml" line="82" column="1" bodyfile="/var/www/html/Alaska/Src/Views/Front/Index.phtml" bodystart="82" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,12 +66,12 @@ Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.htm
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:?&gt;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($billets<sp/>as<sp/>$bil):?&gt;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;column<sp/>is-3&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty(htmlspecialchars($bil-&gt;getImage())))<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty(trim(htmlspecialchars($bil-&gt;getImage()))))<sp/>{</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>?&gt;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;card&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;card-image&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;figure<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;image<sp/>&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;img<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;homePost&quot;</highlight><highlight class="normal"><sp/>src=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;/img/posts/&apos;.<sp/>htmlspecialchars($bil-&gt;getImage())?&gt;&quot;</highlight><highlight class="normal"><sp/>alt=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>htmlspecialchars($bil-&gt;getTitle())?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;img<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;homePost&quot;</highlight><highlight class="normal"><sp/>src=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;/img/posts/&apos;.<sp/>trim(htmlspecialchars($bil-&gt;getImage()))?&gt;&quot;</highlight><highlight class="normal"><sp/>alt=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>trim(htmlspecialchars($bil-&gt;getTitle()))?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/figure&gt;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php</highlight></codeline>
@@ -106,17 +80,17 @@ Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.htm
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;media&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;media-content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title<sp/>is-4&quot;</highlight><highlight class="normal"><sp/>title=</highlight><highlight class="stringliteral">&quot;Lien<sp/>vers<sp/>le<sp/>détail<sp/>de<sp/>l&apos;billet&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Front/posting/&apos;.htmlspecialchars($bil-&gt;getId())?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;&lt;?=<sp/>htmlspecialchars($bil-&gt;getTitle())<sp/>?&gt;&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Front/posting/&apos;.trim(htmlspecialchars($bil-&gt;getId()))?&gt;&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;&lt;?=<sp/>trim(htmlspecialchars($bil-&gt;getTitle()))<sp/>?&gt;&lt;/strong&gt;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;subtitle<sp/>is-6&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;&lt;?=<sp/><sp/>htmlspecialchars($bil-&gt;getAuthor())<sp/>?&gt;&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;&lt;?=<sp/><sp/>trim(htmlspecialchars($bil-&gt;getAuthor()))<sp/>?&gt;&lt;/strong&gt;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;&lt;?=<sp/>substr(rtrim($bil-&gt;getContent()),<sp/>0,<sp/>150)?&gt;...&lt;/p&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;&lt;?=<sp/>substr($bil-&gt;getContent(),<sp/>0,<sp/>150)?&gt;...&lt;/p&gt;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;time<sp/>datetime=</highlight><highlight class="stringliteral">&quot;1-1-2016&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="73" refid="d3/d71/_index_8phtml_1a27903a7caf89f85f163e2083401e82a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;small&gt;Publié<sp/>le<sp/>:<sp/>&lt;em&gt;&lt;?=<sp/>date(</highlight><highlight class="stringliteral">&apos;<sp/>d<sp/>-<sp/>m<sp/>-<sp/>Y<sp/>à<sp/>H:i&apos;</highlight><highlight class="normal">,<sp/>strtotime($bil-&gt;getCreate_at()));<sp/>?&gt;&lt;/em&gt;&lt;/small&gt;</highlight></codeline>
+<codeline lineno="73" refid="d3/d71/_index_8phtml_1a2c45b5587710879fcdf4b73a7bab7757" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;small&gt;Publié<sp/>le<sp/>:<sp/>&lt;em&gt;&lt;?=<sp/>date(</highlight><highlight class="stringliteral">&apos;<sp/>d<sp/>-<sp/>m<sp/>-<sp/>Y<sp/>à<sp/>H:i&apos;</highlight><highlight class="normal">,<sp/>strtotime($bil-&gt;getCreate_at()));<sp/>?&gt;&lt;/em&gt;&lt;/small&gt;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/time&gt;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
@@ -124,8 +98,8 @@ Lesser General Public Licence <ulink url="http://www.gnu.org/copyleft/lesser.htm
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="81" refid="d3/d71/_index_8phtml_1a672d9707ef91db026c210f98cc601123" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;?php<sp/><ref refid="d3/d71/_index_8phtml_1a672d9707ef91db026c210f98cc601123" kindref="member">endforeach</ref>;?&gt;</highlight></codeline>
-<codeline lineno="82" refid="d3/d71/_index_8phtml_1a82cd33ca97ff99f2fcc5e9c81d65251b" refkind="member"><highlight class="normal"><sp/><sp/>&lt;?php<sp/><ref refid="d3/d71/_index_8phtml_1a82cd33ca97ff99f2fcc5e9c81d65251b" kindref="member">endif</ref>;?&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;?php<sp/>endforeach?&gt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>&lt;?php<sp/>endif?&gt;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">&lt;/section&gt;</highlight></codeline>

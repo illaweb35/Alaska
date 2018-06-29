@@ -61,7 +61,7 @@
   </compound>
   <compound refid="df/d3d/class_app_1_1_check" kind="class"><name>App::Check</name>
     <member refid="df/d3d/class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" kind="function"><name>verifSession</name></member>
-    <member refid="df/d3d/class_app_1_1_check_1a336fdbb25ca75f575c65d04924058db9" kind="function"><name>mixMdp</name></member>
+    <member refid="df/d3d/class_app_1_1_check_1a6ad7e08262ba342da3f69a34a5536eb6" kind="function"><name>mixMdp</name></member>
   </compound>
   <compound refid="d9/de4/class_src_1_1_entity_1_1_comment" kind="class"><name>Src::Entity::Comment</name>
     <member refid="d9/de4/class_src_1_1_entity_1_1_comment_1a379b4edd94d1eb0c4669683b4c765674" kind="variable"><name>$id_com</name></member>
@@ -100,7 +100,6 @@
     <member refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" kind="function"><name>__construct</name></member>
   </compound>
   <compound refid="d4/db2/class_src_1_1_controllers_1_1_front" kind="class"><name>Src::Controllers::Front</name>
-    <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1ae6f0a6c86ad9f61cbc99ad3c4180b481" kind="variable"><name>MAX_POST</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1ac36db983080e1b0934908febca5de2d9" kind="function"><name>Index</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a5fcbe325afb03acc6e4eaec38a7bb1ae" kind="function"><name>Posting</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a17e6c90f14225bdac5c65ed915b0a2f6" kind="function"><name>List</name></member>
@@ -127,21 +126,18 @@
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1ad634f418b20382e2802f80532d76d3cd" kind="variable"><name>$email</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
-    <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a62e5d0abef4f7c4e8a126a3e39e7ff82" kind="variable"><name>$create_at</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a436913ea7b1bab0c0c9ac69f1fc5bc8e" kind="variable"><name>$modif_at</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1ab3129f1d71e9f51353de9d551ea381d7" kind="function"><name>__construct</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1ac359b701a2ccaff746dd480f03314244" kind="function"><name>setUsername</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a5ef76eef42d2624386442eeb636d338c" kind="function"><name>setEmail</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" kind="function"><name>setPassword</name></member>
-    <member refid="dc/de4/class_src_1_1_entity_1_1_user_1aa9233284be00bee150c4982e73785b72" kind="function"><name>setRole</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a9c8311c6d2e7d1d118a6a6da7b577c0b" kind="function"><name>setDateCrea</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a9f9f5983de6ae197176a80f55f113a6c" kind="function"><name>setModif_at</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a12251d0c022e9e21c137a105ff683f13" kind="function"><name>getId</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" kind="function"><name>getUsername</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a02a01849f28e2535e888ae4ec87b20f2" kind="function"><name>getEmail</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" kind="function"><name>getPassword</name></member>
-    <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a0b2e7098f1c48a7439a42bada5b69689" kind="function"><name>getRole</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1ae5e6c0bedcef3f514100c20ee92c901a" kind="function"><name>getCreate_at</name></member>
     <member refid="dc/de4/class_src_1_1_entity_1_1_user_1a5858386cc69be9863ed37e0ceb2697b1" kind="function"><name>getModif_at</name></member>
   </compound>
@@ -225,6 +221,7 @@
     <member refid="d4/d8a/_config_8php_1ab5db0d3504f917f268614c50b02c53e2" kind="variable"><name>DB_NAME</name></member>
     <member refid="d4/d8a/_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" kind="variable"><name>DB_USER</name></member>
     <member refid="d4/d8a/_config_8php_1a8bb9c4546d91667cfa61879d83127a92" kind="variable"><name>DB_PASS</name></member>
+    <member refid="d4/d8a/_config_8php_1ae6f0a6c86ad9f61cbc99ad3c4180b481" kind="variable"><name>MAX_POST</name></member>
     <member refid="d4/d8a/_config_8php_1a4f06cdd0c63f3ce691804d6c90ea6c32" kind="variable"><name>KB</name></member>
     <member refid="d4/d8a/_config_8php_1a91c734126e699a6ba53fe57e06bb8b49" kind="variable"><name>MB</name></member>
   </compound>
@@ -237,6 +234,10 @@
   <compound refid="d1/d8d/_router_8php" kind="file"><name>Router.php</name>
   </compound>
   <compound refid="d5/dd9/_viewer_8php" kind="file"><name>Viewer.php</name>
+  </compound>
+  <compound refid="d9/dd6/_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="d3/d2e/_web_2js_2tinymce_2langs_2_r_e_a_d_m_e_8md" kind="file"><name>readme.md</name>
   </compound>
   <compound refid="d2/dbc/_back_8php" kind="file"><name>Back.php</name>
   </compound>
@@ -265,28 +266,24 @@
   <compound refid="df/d2d/_edit__user_8phtml" kind="file"><name>Edit_user.phtml</name>
   </compound>
   <compound refid="dc/d6e/_back_2_list_8phtml" kind="file"><name>List.phtml</name>
-    <member refid="dc/d6e/_back_2_list_8phtml_1a6adf298dcf6cb192f46b9acd637b5fb8" kind="variable"><name>($billets as $bil)</name></member>
+    <member refid="dc/d6e/_back_2_list_8phtml_1ad2f3a7b0d156c4152b10073c2ddf4feb" kind="variable"><name>($billets as $bil)</name></member>
   </compound>
   <compound refid="dd/d52/_front_2_list_8phtml" kind="file"><name>List.phtml</name>
-    <member refid="dd/d52/_front_2_list_8phtml_1a6adf298dcf6cb192f46b9acd637b5fb8" kind="variable"><name>($billets as $bil)</name></member>
+    <member refid="dd/d52/_front_2_list_8phtml_1ad2f3a7b0d156c4152b10073c2ddf4feb" kind="variable"><name>($billets as $bil)</name></member>
   </compound>
   <compound refid="dd/d96/_list_users_8phtml" kind="file"><name>ListUsers.phtml</name>
   </compound>
   <compound refid="d0/d25/_login_8phtml" kind="file"><name>Login.phtml</name>
-  </compound>
-  <compound refid="d8/d1c/_signup_8phtml" kind="file"><name>Signup.phtml</name>
   </compound>
   <compound refid="dc/dc4/_write_8phtml" kind="file"><name>Write.phtml</name>
   </compound>
   <compound refid="d6/d0b/_error_8phtml" kind="file"><name>Error.phtml</name>
   </compound>
   <compound refid="d3/d71/_index_8phtml" kind="file"><name>Index.phtml</name>
-    <member refid="d3/d71/_index_8phtml_1a27903a7caf89f85f163e2083401e82a6" kind="variable"><name>(empty($billets))</name></member>
-    <member refid="d3/d71/_index_8phtml_1a672d9707ef91db026c210f98cc601123" kind="variable"><name>endforeach</name></member>
-    <member refid="d3/d71/_index_8phtml_1a82cd33ca97ff99f2fcc5e9c81d65251b" kind="variable"><name>endif</name></member>
+    <member refid="d3/d71/_index_8phtml_1a2c45b5587710879fcdf4b73a7bab7757" kind="variable"><name>(empty($billets))</name></member>
   </compound>
   <compound refid="dc/db0/_post_8phtml" kind="file"><name>Post.phtml</name>
-    <member refid="dc/db0/_post_8phtml_1acc9a0c9a6a649164ac0aeb82c2c6640e" kind="variable"><name>else</name></member>
+    <member refid="dc/db0/_post_8phtml_1aac228b0e8b0c735747754b789e95709c" kind="variable"><name>else</name></member>
   </compound>
   <compound refid="d1/d82/footer_8phtml" kind="file"><name>footer.phtml</name>
   </compound>
@@ -302,7 +299,7 @@
   <compound refid="de/d20/index_8php" kind="file"><name>index.php</name>
     <member refid="de/d20/index_8php_1af4105acdee5d34dc96c2aec4058b81f9" kind="variable"><name>$route</name></member>
   </compound>
-  <compound refid="d0/d20/readme_8md" kind="file"><name>readme.md</name>
+  <compound refid="df/dcc/md__var_www_html__alaska__r_e_a_d_m_e" kind="page"><name>md__var_www_html_Alaska_README</name>
   </compound>
   <compound refid="de/d91/md__var_www_html__alaska__web_js_tinymce_langs_readme" kind="page"><name>md__var_www_html_Alaska_Web_js_tinymce_langs_readme</name>
   </compound>

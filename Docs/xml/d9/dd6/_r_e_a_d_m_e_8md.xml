@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d9/dd6/_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Alaska</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Projet<sp/>3</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Réalisation<sp/>d&apos;un<sp/>moteur<sp/>de<sp/>blog<sp/>en<sp/>PHP<sp/>et<sp/>MYSQL</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>**FrontEnd**<sp/>_<sp/>pour<sp/>la<sp/>gestion<sp/>côté<sp/>visiteur</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>_<sp/>Index</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>des<sp/>billets<sp/>avec<sp/>possibilité<sp/>de<sp/>commenter<sp/>et<sp/>de<sp/>modéré<sp/>les<sp/>commentaires.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>Page<sp/>d&apos;accueil<sp/>sur<sp/>forme<sp/>de<sp/>CARD,<sp/>nombre<sp/>de<sp/>card<sp/>afficher<sp/><sp/>gérer<sp/>dans<sp/>le<sp/>fichier<sp/>Config.php.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>d&apos;un<sp/>billet<sp/>avec<sp/>ses<sp/>commentaires<sp/><sp/>et<sp/>la<sp/>possibilité<sp/>de<sp/>poster<sp/>ou<sp/>modéré<sp/>les<sp/>commentaires.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>de<sp/>la<sp/>liste<sp/>des<sp/>billets.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**BackEnd**<sp/>_<sp/>pour<sp/>l&apos;administration<sp/>du<sp/>site</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>_<sp/>Accès<sp/>à<sp/>l&apos;administration<sp/>par<sp/>login</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>_<sp/>Tableau<sp/>de<sp/>bord</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Nombres<sp/>total<sp/>de<sp/>billets<sp/>du<sp/>site<sp/>,<sp/>et<sp/>le<sp/>nombre<sp/>publié.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Nombre<sp/>de<sp/>commentaires<sp/>total<sp/>,<sp/>et<sp/>nombre<sp/>modérés.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Nombre<sp/>d&apos;utilisateur<sp/>inscrit<sp/>sur<sp/>le<sp/>site.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>sous<sp/>forme<sp/>de<sp/>tableau<sp/>des<sp/>commentaires<sp/>modérés,<sp/>avec<sp/>la<sp/>possibilité<sp/>de<sp/>les<sp/>valider<sp/>ou<sp/>de<sp/>les<sp/>supprimer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_<sp/>Ecrire<sp/>un<sp/>billet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Formulaire<sp/>de<sp/>création<sp/>avec<sp/>interface<sp/>WYSIWYG<sp/>[TinyMCE](https://www.tinymce.com/),<sp/>pour<sp/>une<sp/>meilleure<sp/>ergonomie<sp/>de<sp/>saisie.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Possibilité<sp/>d&apos;insérer<sp/>une<sp/>image<sp/>pour<sp/>illustrer<sp/>le<sp/>billet<sp/>(jpg,jpeg,gif,png)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Auteur<sp/>de<sp/>l&apos;article<sp/>paramétrable<sp/>avec<sp/>par<sp/>défaut<sp/>*Jean<sp/>FORTEROCHE*.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Switch<sp/>pour<sp/>poster<sp/>ou<sp/>pas<sp/>le<sp/>billet<sp/>sur<sp/>le<sp/>site.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_<sp/>Liste<sp/>des<sp/>billets</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Affichage<sp/>de<sp/>tous<sp/>les<sp/>billets<sp/>du<sp/>site.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Switch<sp/>pour<sp/>l&apos;état<sp/>de<sp/>publication<sp/>ou<sp/>non<sp/>des<sp/>billets.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Icône<sp/>pour<sp/>ouvrir<sp/>la<sp/>page<sp/>de<sp/>modification<sp/>du<sp/>billet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Icône<sp/>pour<sp/>supprimer<sp/>le<sp/>billet.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_<sp/>Utilisateurs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Liste<sp/>des<sp/>utilisateurs<sp/>du<sp/>site<sp/><sp/>avec<sp/>nom,<sp/>email,<sp/>date<sp/>de<sp/>création<sp/>de<sp/>la<sp/>fiche<sp/>et<sp/>icônes<sp/>pour<sp/>la<sp/>modification<sp/>de<sp/>la<sp/>fiche<sp/>ou<sp/>la<sp/>suppression.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Formulaire<sp/>pour<sp/>la<sp/>création<sp/>d&apos;un<sp/>nouvel<sp/>utilisateur.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_<sp/>Connexion</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Quitter<sp/>qui<sp/>renvoi<sp/>vers<sp/>la<sp/>page<sp/>d&apos;accueil<sp/>du<sp/>front<sp/>pour<sp/>vérifier<sp/>le<sp/>visuel<sp/>des<sp/>publications.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Déconnexion<sp/>qui<sp/>efface<sp/>la<sp/>session<sp/>et<sp/>renvoie<sp/>vers<sp/>le<sp/>FrontEnd.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">Moteur<sp/>en<sp/>PHP<sp/>et<sp/>MYSQL</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Affichage<sp/>HTML<sp/>/<sp/>CSS<sp/>et<sp/>framework<sp/>[Bulma](https://bulma.io/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Interaction<sp/>utilisateur<sp/>JAVASCRIPT.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Pour<sp/>étude<sp/>seulement.</highlight></codeline>
+<codeline><highlight class="normal">Tous<sp/>droits<sp/>réservés<sp/>2018<sp/>[illaweb35](https://www.illaweb.fr).</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/html/Alaska/README.md"/>
+  </compounddef>
+</doxygen>

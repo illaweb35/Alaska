@@ -3,22 +3,6 @@
   <compounddef id="d4/db2/class_src_1_1_controllers_1_1_front" kind="class" language="PHP" prot="public">
     <compoundname>Src::Controllers::Front</compoundname>
     <basecompoundref refid="d7/d5e/class_src_1_1_controllers_1_1_main" prot="public" virt="non-virtual">Main</basecompoundref>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="d4/db2/class_src_1_1_controllers_1_1_front_1ae6f0a6c86ad9f61cbc99ad3c4180b481" prot="public" static="no" mutable="no">
-        <type>const</type>
-        <definition>const MAX_POST</definition>
-        <argsstring></argsstring>
-        <name>MAX_POST</name>
-        <initializer>= 4</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Constance pour le nombre de billet à afficher sur la page </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="22" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="22" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="d4/db2/class_src_1_1_controllers_1_1_front_1ac36db983080e1b0934908febca5de2d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -31,7 +15,7 @@
 <para>affiche la liste des billets sur la page d&apos;accueil avec un maximum de 4 billets suivant la constance MAX_POST </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="27" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="27" bodyend="32"/>
+        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="23" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="23" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="d4/db2/class_src_1_1_controllers_1_1_front_1a5fcbe325afb03acc6e4eaec38a7bb1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -56,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="37" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="37" bodyend="43"/>
+        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="33" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="33" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="d4/db2/class_src_1_1_controllers_1_1_front_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,7 +53,7 @@
 <para>Affiche la liste des billets </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="47" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="47" bodyend="52"/>
+        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="43" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="43" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="d4/db2/class_src_1_1_controllers_1_1_front_1aff5b608669ee776cd4c341238adddb7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -82,7 +66,7 @@
 <para>Création d&apos;un commentaire pour le billet </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="56" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="56" bodyend="63"/>
+        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="52" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="52" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="d4/db2/class_src_1_1_controllers_1_1_front_1a8b22c40bd1737bbb7db0816b7e9763b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -98,13 +82,13 @@
 <para>Signaler un commentaire a l&apos;admin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="67" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="67" bodyend="74"/>
+        <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="63" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="63" bodyend="70"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Class <ref refid="d4/db2/class_src_1_1_controllers_1_1_front" kindref="compound">Front</ref> pour la gestion des controleurs du site côté visiteur Hérite de la class <ref refid="d7/d5e/class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> </para>    </detaileddescription>
+<para>Class <ref refid="d4/db2/class_src_1_1_controllers_1_1_front" kindref="compound">Front</ref> pour la gestion des managers pour la partie visiteur Hérite de la class <ref refid="d7/d5e/class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> </para>    </detaileddescription>
     <inheritancegraph>
       <node id="26">
         <label>Front</label>
@@ -129,7 +113,7 @@
         <link refid="d7/d5e/class_src_1_1_controllers_1_1_main"/>
       </node>
     </collaborationgraph>
-    <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="18" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="17" bodyend="75"/>
+    <location file="/var/www/html/Alaska/Src/Controllers/Front.php" line="18" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Front.php" bodystart="17" bodyend="71"/>
     <listofallmembers>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a7205c4d22c61e375f2be552a32f97ccb" prot="protected" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>$billetManager</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a2fdbb2dc79956746757958a453709ca6" prot="protected" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>$commentManager</name></member>
@@ -140,7 +124,6 @@
       <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>List</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a8db48c2902872da0ee80463db6696375" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>Login</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1aa14f760d541a59acb41ac8eefddafb9b" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>Logout</name></member>
-      <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1ae6f0a6c86ad9f61cbc99ad3c4180b481" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>MAX_POST</name></member>
       <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a5fcbe325afb03acc6e4eaec38a7bb1ae" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>Posting</name></member>
       <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a8b22c40bd1737bbb7db0816b7e9763b3" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>Signaler</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1aba348654bb87049dfb96fa24794b191b" prot="public" virt="non-virtual"><scope>Src::Controllers::Front</scope><name>Signup</name></member>

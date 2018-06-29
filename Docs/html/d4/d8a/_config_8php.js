@@ -6,5 +6,6 @@ var _config_8php =
     [ "DB_PASS", "d4/d8a/_config_8php.html#a8bb9c4546d91667cfa61879d83127a92", null ],
     [ "DB_USER", "d4/d8a/_config_8php.html#a1d1d99f8e08f387d84fe9848f3357156", null ],
     [ "KB", "d4/d8a/_config_8php.html#a4f06cdd0c63f3ce691804d6c90ea6c32", null ],
+    [ "MAX_POST", "d4/d8a/_config_8php.html#ae6f0a6c86ad9f61cbc99ad3c4180b481", null ],
     [ "MB", "d4/d8a/_config_8php.html#a91c734126e699a6ba53fe57e06bb8b49", null ]
 ];

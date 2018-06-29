@@ -15,12 +15,10 @@ var searchData=
   ['setpassword',['setPassword',['../dc/de4/class_src_1_1_entity_1_1_user.html#a3e35c8d3dbb2c513c618a664389e0926',1,'Src::Entity::User']]],
   ['setposted',['setPosted',['../d9/d73/class_src_1_1_entity_1_1_billet.html#acee4aedcde0f95ac298a1a0ce86be082',1,'Src::Entity::Billet']]],
   ['setpseudo',['setPseudo',['../d9/de4/class_src_1_1_entity_1_1_comment.html#a1d65ce1d25ffb871a48d33715e6b6bef',1,'Src::Entity::Comment']]],
-  ['setrole',['setRole',['../dc/de4/class_src_1_1_entity_1_1_user.html#aa9233284be00bee150c4982e73785b72',1,'Src::Entity::User']]],
   ['settitle',['setTitle',['../d9/d73/class_src_1_1_entity_1_1_billet.html#a884ba9bb0d54bde7839e798db7964476',1,'Src::Entity::Billet']]],
   ['setusername',['setUsername',['../dc/de4/class_src_1_1_entity_1_1_user.html#ac359b701a2ccaff746dd480f03314244',1,'Src::Entity::User']]],
   ['signaler',['Signaler',['../d4/db2/class_src_1_1_controllers_1_1_front.html#a8b22c40bd1737bbb7db0816b7e9763b3',1,'Src::Controllers::Front']]],
   ['signup',['Signup',['../d7/d5e/class_src_1_1_controllers_1_1_main.html#aba348654bb87049dfb96fa24794b191b',1,'Src::Controllers::Main']]],
-  ['signup_2ephtml',['Signup.phtml',['../d8/d1c/_signup_8phtml.html',1,'']]],
   ['singleton',['Singleton',['../d8/dbf/namespace_app_1_1_pattern.html#a90c7994df18fc2d358849f9a46502bc1',1,'App::Pattern']]],
   ['singleton_2etrait_2ephp',['Singleton.trait.php',['../d1/d5b/_singleton_8trait_8php.html',1,'']]],
   ['src',['Src',['../d3/d29/namespace_src.html',1,'']]]

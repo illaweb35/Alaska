@@ -75,9 +75,13 @@
                 </div>
                 <div class="field">
                   <label class="checkbox switch">
-                    <input type="checkbox" name="posted" value="<?= trim(htmlspecialchars($billets->getPosted()))?>" <?php if (trim(htmlspecialchars($billets->getPosted()))== 1) {
-    ?>checked="checked"<?php
-}?>/>
+                    <input type="checkbox" name="posted" value=""
+                     <?php if (trim(htmlspecialchars($billets->getPosted()== 1))) {
+    ?>
+                       checked="checked";
+                     <?php
+}?>
+                     />
                     <span class="slider round"></span>
                   </label>
                     Poster

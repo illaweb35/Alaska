@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "Alaska  Blog Ecrivain P3", "index.html", [
+    [ "Alaska", "df/dcc/md__var_www_html__alaska__r_e_a_d_m_e.html", null ],
     [ "readme", "de/d91/md__var_www_html__alaska__web_js_tinymce_langs_readme.html", null ],
     [ "Espaces de nommage", null, [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces" ],

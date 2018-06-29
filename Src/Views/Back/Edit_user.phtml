@@ -27,15 +27,6 @@
           <label for="email" class="label">Email</label>
           <input type="email" patern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" $class="input" name="email"  value="<?= trim(htmlspecialchars($users->getEmail()))?>"/>
         </div>
-        <div class="field">
-          <div class="select">
-            <select name="role">
-              <option value="Utilisateur"<?php if (trim(htmlspecialchars($users->getRole())) == 'Utilisateur'): ?>selected="selected"<?php endif?>>Utilisateur</option>
-              <option value="Modérateur"<?php if (trim(htmlspecialchars($users->getRole())) == 'Modérateur'):?>selected="selected"<?php endif?>
-              >Modérateur</option>
-            </select>
-          </div>
-        </div>
         <div class="field has-addons">
           <div class="control">
             <button class="button is-link" type="submit">Modifier</button>

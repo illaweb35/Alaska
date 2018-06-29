@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="df/dcc/md__var_www_html__alaska__r_e_a_d_m_e" kind="page">
+    <compoundname>md__var_www_html_Alaska_README</compoundname>
+    <title>Alaska</title>
+    <detaileddescription>
+<para><heading level="2">Projet 3</heading>
+</para><para><heading level="3">Réalisation d&apos;un moteur de blog en PHP et MYSQL</heading>
+</para><para><bold>FrontEnd</bold> _ pour la gestion côté visiteur</para><para>_ Index<itemizedlist>
+<listitem><para>Affichage des billets avec possibilité de commenter et de modéré les commentaires.</para></listitem><listitem><para>Affichage Page d&apos;accueil sur forme de CARD, nombre de card afficher gérer dans le fichier <ref refid="d4/d8a/_config_8php" kindref="compound">Config.php</ref>.</para></listitem><listitem><para>Affichage d&apos;un billet avec ses commentaires et la possibilité de poster ou modéré les commentaires.</para></listitem><listitem><para>Affichage de la liste des billets.</para></listitem></itemizedlist>
+</para><para><bold>BackEnd</bold> _ pour l&apos;administration du site</para><para>_ Accès à l&apos;administration par login</para><para>_ Tableau de bord<itemizedlist>
+<listitem><para>Nombres total de billets du site , et le nombre publié.</para></listitem><listitem><para>Nombre de commentaires total , et nombre modérés.</para></listitem><listitem><para>Nombre d&apos;utilisateur inscrit sur le site.</para></listitem><listitem><para>Affichage sous forme de tableau des commentaires modérés, avec la possibilité de les valider ou de les supprimer.</para></listitem></itemizedlist>
+</para><para>_ Ecrire un billet<itemizedlist>
+<listitem><para>Formulaire de création avec interface WYSIWYG <ulink url="https://www.tinymce.com/">TinyMCE</ulink>, pour une meilleure ergonomie de saisie.</para></listitem><listitem><para>Possibilité d&apos;insérer une image pour illustrer le billet (jpg,jpeg,gif,png)</para></listitem><listitem><para>Auteur de l&apos;article paramétrable avec par défaut <emphasis>Jean FORTEROCHE</emphasis>.</para></listitem><listitem><para>Switch pour poster ou pas le billet sur le site.</para></listitem></itemizedlist>
+</para><para>_ Liste des billets<itemizedlist>
+<listitem><para>Affichage de tous les billets du site.</para></listitem><listitem><para>Switch pour l&apos;état de publication ou non des billets.</para></listitem><listitem><para>Icône pour ouvrir la page de modification du billet</para></listitem><listitem><para>Icône pour supprimer le billet.</para></listitem></itemizedlist>
+</para><para>_ Utilisateurs<itemizedlist>
+<listitem><para>Liste des utilisateurs du site avec nom, email, date de création de la fiche et icônes pour la modification de la fiche ou la suppression.</para></listitem><listitem><para>Formulaire pour la création d&apos;un nouvel utilisateur.</para></listitem></itemizedlist>
+</para><para>_ Connexion<itemizedlist>
+<listitem><para>Quitter qui renvoi vers la page d&apos;accueil du front pour vérifier le visuel des publications.</para></listitem><listitem><para>Déconnexion qui efface la session et renvoie vers le FrontEnd.</para></listitem></itemizedlist>
+</para><para><hruler/>
+ Moteur en PHP et MYSQL</para><para>Affichage HTML / CSS et framework <ulink url="https://bulma.io/">Bulma</ulink></para><para>Interaction utilisateur JAVASCRIPT.</para><para>Pour étude seulement. Tous droits réservés 2018 <ulink url="https://www.illaweb.fr">illaweb35</ulink>. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -3,21 +3,21 @@
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-if(!empty(htmlspecialchars(\$billets-\/$>$get\+Image()))) htmlspecialchars( \$billets-\/$>$get\+Title()) ?$>$$<$/p $>$$<$/div $>$$<$ div class \hyperlink{_post_8phtml_acc9a0c9a6a649164ac0aeb82c2c6640e}{else}
+if(!empty(trim(htmlspecialchars(\$billets-\/$>$get\+Image())))) trim(htmlspecialchars( \$billets-\/$>$get\+Title())) ?$>$$<$/p $>$$<$/div $>$$<$ div class \hyperlink{_post_8phtml_aac228b0e8b0c735747754b789e95709c}{else}
 \end{DoxyCompactItemize}
 
 
 \subsection{Documentation des variables}
-\mbox{\Hypertarget{_post_8phtml_acc9a0c9a6a649164ac0aeb82c2c6640e}\label{_post_8phtml_acc9a0c9a6a649164ac0aeb82c2c6640e}} 
+\mbox{\Hypertarget{_post_8phtml_aac228b0e8b0c735747754b789e95709c}\label{_post_8phtml_aac228b0e8b0c735747754b789e95709c}} 
 \index{Post.\+phtml@{Post.\+phtml}!else@{else}}
 \index{else@{else}!Post.\+phtml@{Post.\+phtml}}
 \subsubsection{\texorpdfstring{else}{else}}
-{\footnotesize\ttfamily if (!empty(htmlspecialchars( \$billets-\/$>$get\+Image()))) htmlspecialchars (\$billets-\/$>$get\+Title()) ?$>$ $<$/p$>$ $<$/div$>$ $<$div class else}
+{\footnotesize\ttfamily if (!empty(trim(htmlspecialchars( \$billets-\/$>$get\+Image())))) trim (htmlspecialchars(\$billets-\/$>$get\+Title())) ?$>$ $<$/p$>$ $<$/div$>$ $<$div class else}
 
 {\bfseries Valeur initiale \+:}
 \begin{DoxyCode}
 =\textcolor{stringliteral}{"message-body"}>
-           <?php \textcolor{keywordflow}{if} (empty($comments)):
+           <?php \textcolor{keywordflow}{if} (trim(htmlspecialchars(empty($comments)))):
 \end{DoxyCode}
 \begin{DoxyAuthor}{Auteur}
 Jean-\/\+Marie H\+O\+L\+L\+A\+ND \href{mailto:illaweb35@gmail.com}{\tt illaweb35@gmail.\+com} 

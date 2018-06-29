@@ -14,7 +14,6 @@ var searchData=
   ['getpassword',['getPassword',['../dc/de4/class_src_1_1_entity_1_1_user.html#a04e0957baeb7acde9c0c86556da2d43f',1,'Src::Entity::User']]],
   ['getposted',['getPosted',['../d9/d73/class_src_1_1_entity_1_1_billet.html#a4a91b6f2e5d3d9220ccbed241e1d2eb0',1,'Src::Entity::Billet']]],
   ['getpseudo',['getPseudo',['../d9/de4/class_src_1_1_entity_1_1_comment.html#a7151e41f7b522d26d02102d970e9a309',1,'Src::Entity::Comment']]],
-  ['getrole',['getRole',['../dc/de4/class_src_1_1_entity_1_1_user.html#a0b2e7098f1c48a7439a42bada5b69689',1,'Src::Entity::User']]],
   ['gettitle',['getTitle',['../d9/d73/class_src_1_1_entity_1_1_billet.html#a95e859a4588a39a1824b717378a84c29',1,'Src::Entity::Billet']]],
   ['getusername',['getUsername',['../dc/de4/class_src_1_1_entity_1_1_user.html#a81b37a3c9d639574e394f80c1138c75e',1,'Src::Entity::User']]]
 ];

@@ -135,12 +135,12 @@ class billetManager
     public function Update($id)
     {
         $title = $author = $content = $image = $modif_at = $posted = $imgFile = $tmp_dir = $imgSize='';
-        $title = \htmlspecialchars($_POST['title']);
-        $author = \htmlspecialchars($_POST['author']);
+        $title = trim(\htmlspecialchars($_POST['title']));
+        $author = trim(\htmlspecialchars($_POST['author']));
         $content = $_POST['content'];
         $modif_at = date(DATE_W3C);
-        $posted = (isset($_POST['posted']))? \htmlspecialchars($_POST['posted']):"0";
-        $imgFile = htmlspecialchars($_FILES['image']['name']);
+        $posted = ($_POST['posted'] !== null)? 1:0;
+        $imgFile = trim(htmlspecialchars($_FILES['image']['name']));
         $tmp_dir = htmlspecialchars($_FILES['image']['tmp_name']);
         $imgSize = htmlspecialchars($_FILES['image']['size']);
 
