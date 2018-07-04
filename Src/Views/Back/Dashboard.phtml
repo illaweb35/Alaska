@@ -6,13 +6,15 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
+
 ?>
 <section class="section">
   <div class="container">
     <h1 class="title">Tableau de Bord</h1>
     <div class="content">
       <p>Utilisateur Connecté:
-        <strong><?= trim(htmlspecialchars($_SESSION['name']))?></strong>
+        <strong><?= Verif::filterName($_SESSION['name'])?></strong>
       </p>
     </div>
     <div class="columns">
@@ -104,16 +106,16 @@
       </thead>
         <?php foreach ($commentModerate as $comMod):?>
       <tbody>
-        <td><?= trim(htmlspecialchars($comMod->getPseudo()))?></td>
-        <td><?= substr(nl2br(htmlspecialchars($comMod->getContent())), 0, 100); ?> ...</td>
-        <td><?= trim(htmlspecialchars($comMod->getBil_id()))?></td>
+        <td><?= Verif::filterName($comMod->getPseudo())?></td>
+        <td><?= substr(nl2br(Verif::filterString($comMod->getContent())), 0, 100); ?> ...</td>
+        <td><?= Verif::filterInt($comMod->getBil_id())?></td>
         <td>
-          <a href="<?= BASEPATH.'Back/Check/'.trim(htmlspecialchars($comMod->getId()))?>">
+          <a href="<?= BASEPATH.'Back/Check/'.Verif::filterInt($comMod->getId())?>">
             <span class="icon">
               <i class="fas fa-check"></i>
             </span>
           </a>
-          <a href="<?= BASEPATH.'Backedit/Delete_com/'.trim(htmlspecialchars($comMod->getId()))?>">
+          <a href="<?= BASEPATH.'Backedit/Delete_com/'.tVerif::filterName($comMod->getId())?>">
             <span class="icon">
               <i class="fas fa-trash"></i>
             </span>

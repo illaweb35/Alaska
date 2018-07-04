@@ -6,26 +6,28 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
+
 ?>
 <section class="section">
   <div class="container">
     <h1 class="title">Poster un Billet</h1>
     <div class="content">
-      <p>Utilisateur Connecté: <strong><?= trim(htmlspecialchars($_SESSION['name']))?></strong></p>
+      <p>Utilisateur Connecté: <strong><?= Verif::filterName($_SESSION['name'])?></strong></p>
     </div>
     <div class="box">
       <form action="<?= BASEPATH.'Backedit/Create'?>" method="post" enctype="multipart/form-data">
         <div class="field">
           <label for="Titre" name="title" class="label" >Titre du billet</label>
             <input type="text" name="title" class="input" placeholder="Ici votre titre " value="<?php if (isset($_POST['title'])) {
-    echo trim(htmlspecialchars($_POST['title']));
+    echo Verif::filterName($_POST['title']);
 }?>" autofocus/>
         </div>
         <div class="field">
           <div class="control">
             <textarea  class="textarea" id="TinyModif" rows="8" type="text" name="content"
               value="<?php if (isset($_POST[content])) {
-    echo trim(htmlspecialchars($_POST['content']));
+    echo $_POST['content'];
 }?>">
             </textarea>
           </div>

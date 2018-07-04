@@ -33,7 +33,7 @@ use App\Verif;
         <div class="media-content">
           <div class="content">
             <p class="title is-4"><?= Verif::filterName($billets->getTitle())?></p>
-            <p><?= Verif::filterString($billets->getContent()) ?></p>
+            <p><?= $billets->getContent() ?></p>
             <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
           </div>
         </div>

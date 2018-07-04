@@ -27,7 +27,7 @@ use App\Verif;
           </div>
           <div class="field">
             <div class="control">
-              <textarea class="textarea" id="TinyModif" type="text" rows="6" name="content" ><?= Verif::filterString($billets->getContent())?></textarea>
+              <textarea class="textarea" id="TinyModif" type="text" rows="6" name="content" ><?= $billets->getContent()?></textarea>
             </div>
           </div>
           <div class="columns">
@@ -56,16 +56,18 @@ use App\Verif;
                           </span>
                         </label>
                         <div class="column">
+                          <?php if (Verif::filterName($billets->getImage())):?>
                           <figure class="media-left">
                             <p class="image">
-                              <img src="<?= BASEPATH.'img/posts/'.Verif::filterName($billets->getImage())?>" alt="<?= Verif::filterName($billets->getTitle())?>">
+                              <img src="<?= BASEPATH.'img/posts/'.Verif::filterName($billets->getImage())?>" alt="<?= Verif::filterName($billets->getImage())?>">
                             </p>
                           </figure>
                           <div class="field">
                             <div class="control">
-                              <button class="button" href="<?= BASEPATH.'Backedit/Delete_img/'.Verif::filterInt($billets->getId())?>">Effacer l'image</button>
+                              <a class="button" href="<?= BASEPATH.'Backedit/Delete_img/'.Verif::filterInt($billets->getId())?>">Effacer l'image</a>
                             </div>
                           </div>
+                        <?php endif?>
                         </div>
                       </div>
                     </div>

@@ -128,7 +128,7 @@ class Backedit extends Main
 
         $billets = $this->billetManager->Delete_img($id);
 
-        header('Location:'.\BASEPATH.'Back/Edit_billet');
+        header('Location:'.\BASEPATH.'Backedit/Update/'.$id);
         exit();
     }
     /**

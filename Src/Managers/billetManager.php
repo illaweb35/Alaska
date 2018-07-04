@@ -238,16 +238,16 @@ class billetManager
     */
     public function Delete_img($id)
     {
-        var_dump($id);
-        die();
-        $request = $this->_pdo->prepare('SELECT image FROM T_billets WHERE id_bil=:id LIMIT 1');
+        $request = $this->_pdo->prepare('SELECT * FROM T_billets WHERE id_bil=:id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         $request->execute();
         $billet = $request->fetch();
         $image = $billet['image'];
         unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
-        $request = $this->_pdo->prepare('DELETE image FROM T_billets WHERE id_bil = :id LIMIT 1');
+        $unset="";
+        $request = $this->_pdo->prepare('UPDATE  T_billets SET image=:image WHERE id_bil = :id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
+        $request->bindParam(':image', $unset, \PDO::PARAM_STR);
         return $request->execute();
     }
 }
