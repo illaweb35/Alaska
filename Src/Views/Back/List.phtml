@@ -6,23 +6,25 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
+
 ?>
 <section class="section">
   <div class="content">
     <p>
       Utilisateur Connecté:
-      <strong><?= trim(htmlspecialchars($_SESSION['name']))?></strong>
+      <strong><?= Verif::filterName($_SESSION['name'])?></strong>
     </p>
   </div>
   <?php foreach ($billets as $bil):?>
   <div class="container">
     <div class="box">
       <article class="media">
-        <?php if (!empty(trim(htmlspecialchars($bil->getImage())))) {
+        <?php if (!empty(Verif::filterName($bil->getImage()))) {
     ?>
         <figure class="media-left">
           <p class="image is-128x128">
-            <img src="<?= BASEPATH.'img/posts/'.trim(htmlspecialchars($bil->getImage()))?>" alt="<?= trim(htmlspecialchars($bil->getTitle()))?>">
+            <img src="<?= BASEPATH.'img/posts/'.Verif::filterName($bil->getImage())?>" alt="<?= Verif::filterName($bil->getTitle())?>">
           </p>
         </figure>
       <?php
@@ -30,13 +32,13 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="<?= BASEPATH .'Front/posting/'. trim(htmlspecialchars($bil->getId()))?>">
-              <strong><?= trim(htmlspecialchars($bil->getTitle())) ?></strong>
+              <a href="<?= BASEPATH .'Front/posting/'. Verif::filterInt($bil->getId())?>">
+              <strong><?= Verif::filterName($bil->getTitle()) ?></strong>
               </a>
             </p>
             <br/>
             <p>
-            <?=  substr(trim($bil->getContent()), 0, 150); ?>...
+            <?=  substr(Verif::filterString($bil->getContent()), 0, 150); ?>...
             </p>
             <br/>
               <small>Publié le :
@@ -46,11 +48,11 @@
             </small>
             <p>
               Par
-              <strong><?= trim(htmlspecialchars($bil->getAuthor())) ?></strong>
+              <strong><?= Verif::filterName($bil->getAuthor()) ?></strong>
             </p>
             <div class="field">
               <label class="checkbox switch">
-                <input type="checkbox" name="posted" value="<?= trim(htmlspecialchars($bil->getPosted()))?>" <?php if (trim(htmlspecialchars($bil->getPosted()))== 1) {
+                <input type="checkbox" name="posted" value="<?= Verif::filterBool($bil->getPosted())?>" <?php if (Verif::filterBool($bil->getPosted())== 1) {
         ?>checked="checked"<?php
     }?>/>
                 <span class="slider round"></span>
@@ -60,12 +62,12 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item" aria-label="mmodif" title="Modifier le billet" href="<?= BASEPATH.'Backedit/Update/'.trim(htmlspecialchars($bil->getId()))?>">
+              <a class="level-item" aria-label="mmodif" title="Modifier le billet" href="<?= BASEPATH.'Backedit/Update/'.Verif::filterInt($bil->getId())?>">
                 <span class="icon is-small">
                   <i class="fas fa-edit" aria-hidden="true"></i>
                 </span>
               </a>
-              <a class="level-item" aria-label="delete" title="Supprimer le billet" href="<?= BASEPATH.'Backedit/Delete/'.trim(htmlspecialchars($bil->getId()))?>" data-confirm="Etes-vous certain de vouloir supprimer le Billet?">
+              <a class="level-item" aria-label="delete" title="Supprimer le billet" href="<?= BASEPATH.'Backedit/Delete/'.Verif::filterInt($bil->getId())?>">
                 <span class="icon is-small">
                   <i class="fas fa-trash" aria-hidden="true"></i>
                 </span>

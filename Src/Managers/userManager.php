@@ -11,6 +11,7 @@ namespace Src\Managers;
 use App\Dbd;
 use App\Alert;
 use App\Check;
+use App\Verif;
 
 /**
 * Classe Manager de User regroupe les fonctions de gestion des utilisateurs
@@ -29,11 +30,11 @@ class userManager
     public function Connexion()
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_users WHERE username=:username');
-        $request->execute([':username'=>\htmlspecialchars($_POST['username'])]);
+        $request->execute([':username'=>Verif::filterName($_POST['username'])]);
         $request->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'Src\Entity\User');
         if ($request->rowCount()== 1) {
             $user = $request->fetch();
-            if (\password_verify(\htmlspecialchars($_POST['password']), $user->getPassword())) {
+            if (\password_verify(Verif::filterString($_POST['password']), $user->getPassword())) {
                 if (\session_status()== PHP_SESSION_NONE) {
                     \session_start();
                     session_name('Alaska_MonBlog');
@@ -82,10 +83,21 @@ class userManager
     public function Create()
     {
         $username = $email = $password = $create_at = $modif_at="";
-        $username = \htmlspecialchars($_POST['username']);
-        $email= \htmlspecialchars($_POST['email']);
-        if (!\filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            Alert::getError($errorMsg="Le format de l'adresse email est incorrecte.");
+        if (empty($_POST['username'])) {
+            Alert::getError($errorMsg='Merci d\'entrer un nom ou pseudo');
+        } else {
+            $username = Verif::filterName($_POST['username']);
+            if ($username == false) {
+                Alert::getError($errorMsg='Votre non ou pseudo n\'est pas valide');
+            }
+        }
+        if (empty($_POST['email'])) {
+            alert::getError($errorMsg='Merci de renseigner une adresse email');
+        } else {
+            $email = Verif::filterEmail($_POST['email']);
+            if ($email ==false) {
+                Alert::getError($errorMsg='Adresse email non valide , merci de vérifier le format!');
+            }
         }
         $password = Check::mixMdp(\htmlspecialchars($_POST['password']));
         $create_at = date(DATE_W3C);
@@ -121,8 +133,22 @@ class userManager
     public function Update($id)
     {
         $username = $email = $password = $modif_at = "";
-        $username = \htmlspecialchars($_POST['username']);
-        $email= \htmlspecialchars($_POST['email']);
+        if (empty($_POST['username'])) {
+            Alert::getError($errorMsg='Merci d\'entrer un nom ou pseudo');
+        } else {
+            $username = Verif::filterName($_POST['username']);
+            if ($username == false) {
+                Alert::getError($errorMsg='Votre non ou pseudo n\'est pas valide');
+            }
+        }
+        if (empty($_POST['email'])) {
+            alert::getError($errorMsg='Merci de renseigner une adresse email');
+        } else {
+            $email = Verif::filterEmail($_POST['email']);
+            if ($email ==false) {
+                Alert::getError($errorMsg='Adresse email non valide , merci de vérifier le format!');
+            }
+        }
 
         $modif_at = date(DATE_W3C);
         try {

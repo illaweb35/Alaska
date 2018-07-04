@@ -6,6 +6,7 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
 
 ?>
 <section class="section">
@@ -14,19 +15,19 @@
       <div class="content">
         <p>Utilisateur Connecté:
           <strong>
-            <?= trim(htmlspecialchars($_SESSION['name']))?>
+            <?= Verif::filterName($_SESSION['name'])?>
           </strong>
         </p>
       </div>
       <div class="box">
-        <form action="<?= BASEPATH.'Backedit/Update/'.trim(htmlspecialchars($billets->getId()))?>" method="post" enctype="multipart/form-data">
+        <form action="<?= BASEPATH.'Backedit/Update/'.Verif::filterInt($billets->getId())?>" method="post" enctype="multipart/form-data">
           <div class="field">
             <label for="Titre" name="title" class="label" > Titre du billet</label>
-            <input type="text" name="title" class="input" value="<?= trim(htmlspecialchars($billets->getTitle()))?>"/>
+            <input type="text" name="title" class="input" value="<?= Verif::filterName($billets->getTitle())?>"/>
           </div>
           <div class="field">
             <div class="control">
-              <textarea class="textarea" id="TinyModif" type="text" rows="6" name="content" ><?= trim(htmlspecialchars($billets->getContent()))?></textarea>
+              <textarea class="textarea" id="TinyModif" type="text" rows="6" name="content" ><?= Verif::filterString($billets->getContent())?></textarea>
             </div>
           </div>
           <div class="columns">
@@ -50,16 +51,21 @@
                           <span class="file-name">
                           Nom du fichier : _
                           <?php if (!isset($_POST['image'])) {
-    echo trim(htmlspecialchars($billets->getImage()));
+    echo Verif::filterName($billets->getImage());
 }?>
                           </span>
                         </label>
                         <div class="column">
                           <figure class="media-left">
                             <p class="image">
-                              <img src="<?= BASEPATH.'img/posts/'.trim(htmlspecialchars($billets->getImage()))?>" alt="<?= trim(htmlspecialchars($billets->getTitle()))?>">
+                              <img src="<?= BASEPATH.'img/posts/'.Verif::filterName($billets->getImage())?>" alt="<?= Verif::filterName($billets->getTitle())?>">
                             </p>
                           </figure>
+                          <div class="field">
+                            <div class="control">
+                              <button class="button" href="<?= BASEPATH.'Backedit/Delete_img/'.Verif::filterInt($billets->getId())?>">Effacer l'image</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -75,12 +81,13 @@
                 </div>
                 <div class="field">
                   <label class="checkbox switch">
-                    <input type="checkbox" name="posted" value=""
-                     <?php if (trim(htmlspecialchars($billets->getPosted()== 1))) {
-    ?>
+                    <input type="checkbox" name="posted"
+                     <?php
+                     if (Verif::filterBool($billets->getPosted())== 1) {
+                         ?>
                        checked="checked";
                      <?php
-}?>
+                     }?>
                      />
                     <span class="slider round"></span>
                   </label>

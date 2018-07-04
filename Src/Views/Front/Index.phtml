@@ -6,6 +6,8 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
+
 ?>
 <section class="hero is-fullheight">
   <div class="hero-body">
@@ -46,12 +48,12 @@
       <?php else:?>
         <?php foreach ($billets as $bil):?>
       <div class="column is-3">
-        <?php if (!empty(trim(htmlspecialchars($bil->getImage())))) {
+        <?php if (!empty(Verif::filterName($bil->getImage()))) {
     ?>
         <div class="card">
           <div class="card-image">
             <figure class="image ">
-              <img id="homePost" src="<?= BASEPATH.'/img/posts/'. trim(htmlspecialchars($bil->getImage()))?>" alt="<?= trim(htmlspecialchars($bil->getTitle()))?>">
+              <img id="homePost" src="<?= BASEPATH.'/img/posts/'. Verif::filterName($bil->getImage())?>" alt="<?= Verif::filterName($bil->getTitle())?>">
             </figure>
           </div>
           <?php
@@ -60,15 +62,15 @@
             <div class="media">
               <div class="media-content">
                 <p class="title is-4" title="Lien vers le détail de l'billet">
-                  <a href="<?= BASEPATH.'Front/posting/'.trim(htmlspecialchars($bil->getId()))?>">
-                  <strong><?= trim(htmlspecialchars($bil->getTitle())) ?></strong>
+                  <a href="<?= BASEPATH.'Front/posting/'.Verif::filterInt($bil->getId())?>">
+                  <strong><?= Verif::filterName($bil->getTitle()) ?></strong>
                   </a>
                 </p>
                 <p class="subtitle is-6">
-                  <strong><?=  trim(htmlspecialchars($bil->getAuthor())) ?></strong>
+                  <strong><?=  Verif::filterName($bil->getAuthor()) ?></strong>
                 </p>
                 <div class="content">
-                  <p><?= substr($bil->getContent(), 0, 150)?>...</p>
+                  <p><?= substr(Verif::filterString($bil->getContent()), 0, 150)?>...</p>
                    <time datetime="1-1-2016">
                      <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($bil->getCreate_at())); ?></em></small>
                    </time>

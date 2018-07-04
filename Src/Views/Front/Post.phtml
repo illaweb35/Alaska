@@ -6,6 +6,8 @@
 *@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
 *@link       https://illaweb.fr
 */
+use App\Verif;
+
 ?>
 <section class="section">
   <div class="container">
@@ -19,19 +21,19 @@
   </div>
   <div id="top"class="container ">
     <article class="media">
-          <?php if (!empty(trim(htmlspecialchars($billets->getImage())))) {
+          <?php if (!empty(Verif::filterName($billets->getImage()))) {
     ?>
       <div class="media-left">
         <figure class="image is-128x128">
-          <img src="<?= BASEPATH.'img/posts/'.trim(htmlspecialchars($billets->getImage()))?>" alt="<?= trim(htmlspecialchars($billets->getTitle()))?>">
+          <img src="<?= BASEPATH.'img/posts/'.Verif::filterName($billets->getImage())?>" alt="<?= Verif::filterName($billets->getTitle())?>">
         </figure>
         </div>
       <?php
 }?>
         <div class="media-content">
           <div class="content">
-            <p class="title is-4"><?= trim(htmlspecialchars($billets->getTitle()))?></p>
-            <p><?= $billets->getContent() ?></p>
+            <p class="title is-4"><?= Verif::filterName($billets->getTitle())?></p>
+            <p><?= Verif::filterString($billets->getContent()) ?></p>
             <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
           </div>
         </div>
@@ -41,11 +43,11 @@
         <div class="column">
           <article class="message is-info">
               <div class="message-header">
-                <p><em><strong>Commentaires pour :  </strong></em><?php trim(htmlspecialchars($billets->getTitle())) ?>
+                <p><em><strong>Commentaires pour :  </strong></em><?php Verif::filterName($billets->getTitle()) ?>
               </p>
               </div>
                 <div class="message-body">
-           <?php if (trim(htmlspecialchars(empty($comments)))):?>
+           <?php if (Verif::filterName(empty($comments))):?>
                 <p class="bold">Il n'y a pas de commentaire pour cet article.
                 </p>
                 <hr/>
@@ -57,17 +59,17 @@
                   <span class="underline">
                     <p>
                       <strong>
-                        <?= trim(htmlspecialchars($com->getPseudo()))?>
+                        <?= Verif::filterName($com->getPseudo())?>
                       </strong> a écrit:
                     </p>
                   </span>
                     <small>Le <?= date('d - m - Y à H:i', strtotime($com->getCreate_at()))?></small>
                     <p>
-                      <?= trim(htmlspecialchars($com->getContent())) ?>
+                      <?= Verif::filterString($com->getContent()) ?>
                     </p>
                     <br/>
                     <p class="is-size-7">
-                    <a href="<?= BASEPATH.'Front/Signaler/'.trim(htmlspecialchars($com->getId())) ?>">Signaler le commentaire</a>
+                    <a href="<?= BASEPATH.'Front/Signaler/'.Verif::filterInt($com->getId()) ?>">Signaler le commentaire</a>
                     </p>
                   <hr/>
                 <?php endforeach?>
@@ -78,7 +80,7 @@
         <div class="column">
           <article class="media">
             <div class="media-content">
-              <form action="<?= BASEPATH.'Front/Create_com/'.trim(htmlspecialchars($billets->getId()))?>" method="post">
+              <form action="<?= BASEPATH.'Front/Create_com/'.Verif::filterInt($billets->getId())?>" method="post">
                 <div class="field">
                   <div class="control">
                     <input class ="input" id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo" required /><br />
@@ -90,7 +92,7 @@
                       <br/>
                   </div>
                 </div>
-                <input class="input" type="hidden" name="bil_id" value="<?= trim(htmlspecialchars($billets->getId())) ?>"/>
+                <input class="input" type="hidden" name="bil_id" value="<?= Verif::filterInt($billets->getId()) ?>"/>
                   <div class="field is-grouped">
                     <div class="control">
                       <button type="submit" class="button is-link" name="btn-comment" title="Enregistrer le commentaire">Commenter</button>

@@ -10,6 +10,7 @@ namespace Src\Managers;
 
 use App\Dbd;
 use App\Alert;
+use App\Verif;
 
 /**
 *Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires.
@@ -75,9 +76,24 @@ class commentManager
     {
         $pseudo = $content = $art_id = $create_at ="";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
-            $pseudo = htmlspecialchars($_POST['pseudo']);
-            $content = $_POST['content'];
-            $art_id = htmlspecialchars($_POST['bil_id']);
+            if (empty($_POST['pseudo'])) {
+                Alert::getError($errorMsg='Merci d\'entrer un pseudo');
+            } else {
+                $pseudo = Verif::filterName($_POST['pseudo']);
+                if ($pseudo == false) {
+                    Alert::getError($errorMsg='Ton pseudo comporte des caractères interdits, tels des accents, des symboles, etc...');
+                    exit();
+                }
+            }
+            if (empty($_POST['content'])) {
+                Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
+            } else {
+                $content = Verif::filterString($_POST['content']);
+                if (empty($_POST['content'])) {
+                    Alert::getError($errorMsg='Votre commentaire ne peut-être vide !');
+                }
+            }
+            $art_id = Verif::filterInt($_POST['bil_id']);
             $create_at = date(DATE_W3C);
             try {
                 $sql = ('INSERT INTO T_comments(pseudo, content, create_at, bil_id) VALUES (:pseudo,:content,:create_at,:bil_id)');

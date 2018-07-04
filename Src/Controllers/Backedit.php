@@ -27,7 +27,7 @@ class Backedit extends Main
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $billets = $this->billetManager->Create();
             if ($billets !== false) {
-                header('Location:'.\BASEPATH.'Back/Dashboard');
+                header('Location:'.\BASEPATH.'Back/List');
                 exit();
             }
         }
@@ -112,6 +112,23 @@ class Backedit extends Main
         }
         $billets = $this->billetManager->Delete($id);
         header('Location:'.\BASEPATH.'Back/List');
+        exit();
+    }
+    /**
+    *Suppression image
+    *@param variable $id identifiant du billet
+    */
+    public function Delete_img($id)
+    {
+        //Verification si l'utilisateur est bien connecté a l'admin
+        if (!isset($_SESSION['authenticated']) and !$this->isLogged()) {
+            header('Location:'.\BASEPATH.'Front/Index');
+            exit();
+        }
+
+        $billets = $this->billetManager->Delete_img($id);
+
+        header('Location:'.\BASEPATH.'Back/Edit_billet');
         exit();
     }
     /**

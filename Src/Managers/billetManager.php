@@ -10,6 +10,7 @@ namespace Src\Managers;
 
 use App\Dbd;
 use App\Alert;
+use App\Verif;
 
 /**
 * Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets
@@ -69,20 +70,34 @@ class billetManager
     */
     public function Create()
     {
-        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted="";
-        $title = \htmlspecialchars($_POST['title']);
-        if (empty($title)) {
-            Alert::getError($errorMsg='Merci de donner un titre à votre billet!');
-            die();
+        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted ="";
+        if (empty($_POST['title'])) {
+            Alert::getError($errorMsg ='Merci de renseigner titre');
+        } else {
+            $title = Verif::filterName($_POST['title']);
+            if ($title == false) {
+                Alert::getError($errorMsg ="Merci de rentrer un titre valide.");
+            }
         }
-        $author = \htmlspecialchars($_POST['author']);
-        $content = $_POST['content'];
-        $imgFile = \htmlspecialchars($_FILES['image']['name']);
-        $tmp_dir = \htmlspecialchars($_FILES['image']['tmp_name']);
-        $imgSize = \htmlspecialchars($_FILES['image']['size']);
+        if (empty($_POST['author'])) {
+            Alert::getError($errorMsg = 'Merci d\'entrez un nom d\'auteur');
+        } else {
+            $author = Verif::filterName($_POST['author']);
+            if ($author == false) {
+                Alert::getError($errorMsg ='Merci d\'entrez un non d\'auteur valide.');
+            }
+        }
+        if (empty($_POST['content'])) {
+            Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
+        } else {
+            $content = Verif::filterString($_POST['content']);
+        }
+        $imgFile = Verif::filterName($_FILES['image']['name']);
+        $tmp_dir = Verif::filterString($_FILES['image']['tmp_name']);
+        $imgSize = Verif::filterInt($_FILES['image']['size']);
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
-        $posted = \htmlspecialchars($_POST['posted']);
+        $posted = Verif::filterBool($_POST['posted']);
         // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
             if (!$_FILES['image']['size'] == 0) {
@@ -134,16 +149,34 @@ class billetManager
     */
     public function Update($id)
     {
-        $title = $author = $content = $image = $modif_at = $posted = $imgFile = $tmp_dir = $imgSize='';
-        $title = trim(\htmlspecialchars($_POST['title']));
-        $author = trim(\htmlspecialchars($_POST['author']));
-        $content = $_POST['content'];
+        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted ="";
+        if (empty($_POST['title'])) {
+            Alert::getError($errorMsg ='Merci de donner un titre');
+        } else {
+            $title = Verif::filterName($_POST['title']);
+            if ($title ==false) {
+                Alert::getError($errorMsg ="Merci de rentrer un titre valide.");
+            }
+        }
+        if (empty($_POST['author'])) {
+            Alert::getError($errorMsg = 'Merci d\'entrez un nom d\'auteur');
+        } else {
+            $author = Verif::filterName($_POST['author']);
+            if ($author == false) {
+                Alert::getError($errorMsg ='Merci d\'entrez un non d\'auteur valide.');
+            }
+        }
+        if (empty($_POST['content'])) {
+            Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
+        } else {
+            $content = Verif::filterString($_POST['content']);
+        }
+        $imgFile = Verif::filterName($_FILES['image']['name']);
+        $tmp_dir = Verif::filterString($_FILES['image']['tmp_name']);
+        $imgSize = Verif::filterInt($_FILES['image']['size']);
+        $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
-        $posted = ($_POST['posted'] !== null)? 1:0;
-        $imgFile = trim(htmlspecialchars($_FILES['image']['name']));
-        $tmp_dir = htmlspecialchars($_FILES['image']['tmp_name']);
-        $imgSize = htmlspecialchars($_FILES['image']['size']);
-
+        $posted = Verif::filterBool($_POST['posted']);
         if ($imgFile) {
             $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
             $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
@@ -196,6 +229,24 @@ class billetManager
         $image = $billet['image'];
         unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
         $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id LIMIT 1');
+        $request->bindParam(':id', $id, \PDO::PARAM_INT);
+        return $request->execute();
+    }
+    /**
+    * effacement image post
+    *@param variable $id identifiant deu billet
+    */
+    public function Delete_img($id)
+    {
+        var_dump($id);
+        die();
+        $request = $this->_pdo->prepare('SELECT image FROM T_billets WHERE id_bil=:id LIMIT 1');
+        $request->bindParam(':id', $id, \PDO::PARAM_INT);
+        $request->execute();
+        $billet = $request->fetch();
+        $image = $billet['image'];
+        unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
+        $request = $this->_pdo->prepare('DELETE image FROM T_billets WHERE id_bil = :id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         return $request->execute();
     }
