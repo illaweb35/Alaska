@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="20" bodyend="-1"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="21" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="22" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="22" bodyend="25"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="23" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a24f9f6fa83eb8694eab0a87b2e6ad0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
 <para>Fonction pour lire tous les billets si connecté en admin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="29" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="29" bodyend="38"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="30" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="30" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1af7e26a4a8ffd767a1265151f87860ddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="44" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="44" bodyend="53"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="45" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="45" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1ad2bbc9b3130abdfe3a9fc9e9fe36716f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="58" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="58" bodyend="66"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="59" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="59" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1ad01f71fa0ecc039494e3c282864298c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -116,7 +116,7 @@
 <para>Création ou insertion dans la base de données du billet </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="70" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="70" bodyend="130"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="71" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="71" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a82232b33fbfacdbdb8a8f49acaecf564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -141,7 +141,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="135" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="135" bodyend="185"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="150" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="150" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -166,7 +166,32 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="190" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="190" bodyend="201"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="223" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="223" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a7da0978ffd29442d84e0d4374cb07e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Delete_img</definition>
+        <argsstring>($id)</argsstring>
+        <name>Delete_img</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>effacement image post <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>variable</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifiant deu billet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="239" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="239" bodyend="252"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -182,12 +207,13 @@
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="19" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="18" bodyend="202"/>
+    <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="19" bodyend="253"/>
     <listofallmembers>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a1e6d977917b70dce7e26cebad8438bf4" prot="protected" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>$_pdo</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>__construct</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1ad01f71fa0ecc039494e3c282864298c3" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>Create</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>Delete</name></member>
+      <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a7da0978ffd29442d84e0d4374cb07e8a" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>Delete_img</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1ad2bbc9b3130abdfe3a9fc9e9fe36716f" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>Read</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a24f9f6fa83eb8694eab0a87b2e6ad0b1" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>ReadAll</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1af7e26a4a8ffd767a1265151f87860ddb" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>ReadFront</name></member>

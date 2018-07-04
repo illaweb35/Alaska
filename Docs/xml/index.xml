@@ -20,6 +20,7 @@
     <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1af3369c06390987c5f54b6bc444c615ee" kind="function"><name>Create_user</name></member>
     <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac76a9db7f422d94f155c99c21540da0e" kind="function"><name>Update_user</name></member>
     <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a59113b5ecd1d155db6a4f30af34a1e80" kind="function"><name>Delete</name></member>
+    <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a7da0978ffd29442d84e0d4374cb07e8a" kind="function"><name>Delete_img</name></member>
     <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1a38147e014898a3417c74b23e903621b0" kind="function"><name>Delete_com</name></member>
     <member refid="dc/db5/class_src_1_1_controllers_1_1_backedit_1ac8f9af14ff73b939d55940eb2ff886ee" kind="function"><name>Delete_user</name></member>
   </compound>
@@ -58,6 +59,7 @@
     <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1ad01f71fa0ecc039494e3c282864298c3" kind="function"><name>Create</name></member>
     <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a82232b33fbfacdbdb8a8f49acaecf564" kind="function"><name>Update</name></member>
     <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a59113b5ecd1d155db6a4f30af34a1e80" kind="function"><name>Delete</name></member>
+    <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a7da0978ffd29442d84e0d4374cb07e8a" kind="function"><name>Delete_img</name></member>
   </compound>
   <compound refid="df/d3d/class_app_1_1_check" kind="class"><name>App::Check</name>
     <member refid="df/d3d/class_app_1_1_check_1a762802022c6341f5a11a5bd2d24e374a" kind="function"><name>verifSession</name></member>
@@ -151,6 +153,13 @@
     <member refid="dd/d6e/class_src_1_1_managers_1_1user_manager_1a82232b33fbfacdbdb8a8f49acaecf564" kind="function"><name>Update</name></member>
     <member refid="dd/d6e/class_src_1_1_managers_1_1user_manager_1a59113b5ecd1d155db6a4f30af34a1e80" kind="function"><name>Delete</name></member>
   </compound>
+  <compound refid="d9/d3a/class_app_1_1_verif" kind="class"><name>App::Verif</name>
+    <member refid="d9/d3a/class_app_1_1_verif_1ae66ae460929735528668ff5a64355e1c" kind="function"><name>filterName</name></member>
+    <member refid="d9/d3a/class_app_1_1_verif_1ad27d2a83b777170b7a7309c28b0b6976" kind="function"><name>filterEmail</name></member>
+    <member refid="d9/d3a/class_app_1_1_verif_1a99f773813353109ce02b4796ddd49467" kind="function"><name>filterString</name></member>
+    <member refid="d9/d3a/class_app_1_1_verif_1acaebb8c6ab397efcf8d4c0e29b2b3357" kind="function"><name>filterBool</name></member>
+    <member refid="d9/d3a/class_app_1_1_verif_1abb832f72a01d33d452acfc2f67bc776f" kind="function"><name>filterInt</name></member>
+  </compound>
   <compound refid="df/d23/class_app_1_1_viewer" kind="class"><name>App::Viewer</name>
     <member refid="df/d23/class_app_1_1_viewer_1abddaf0b77086e2b7d920f5d1a9616889" kind="variable"><name>$_file</name></member>
     <member refid="df/d23/class_app_1_1_viewer_1a49d523a090a700a0689f154d79932063" kind="variable"><name>$_title</name></member>
@@ -180,6 +189,8 @@
   <compound refid="d1/dd9/namespace_app_1_1_pattern_1_1_singleton" kind="namespace"><name>App::Pattern::Singleton</name>
   </compound>
   <compound refid="da/d61/namespace_app_1_1_router" kind="namespace"><name>App::Router</name>
+  </compound>
+  <compound refid="d3/d3c/namespace_app_1_1_verif" kind="namespace"><name>App::Verif</name>
   </compound>
   <compound refid="d7/ddc/namespace_app_1_1_viewer" kind="namespace"><name>App::Viewer</name>
   </compound>
@@ -233,6 +244,8 @@
   </compound>
   <compound refid="d1/d8d/_router_8php" kind="file"><name>Router.php</name>
   </compound>
+  <compound refid="d4/dc5/_verif_8php" kind="file"><name>Verif.php</name>
+  </compound>
   <compound refid="d5/dd9/_viewer_8php" kind="file"><name>Viewer.php</name>
   </compound>
   <compound refid="d9/dd6/_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
@@ -266,10 +279,10 @@
   <compound refid="df/d2d/_edit__user_8phtml" kind="file"><name>Edit_user.phtml</name>
   </compound>
   <compound refid="dc/d6e/_back_2_list_8phtml" kind="file"><name>List.phtml</name>
-    <member refid="dc/d6e/_back_2_list_8phtml_1ad2f3a7b0d156c4152b10073c2ddf4feb" kind="variable"><name>($billets as $bil)</name></member>
+    <member refid="dc/d6e/_back_2_list_8phtml_1a8e0c0a104325d525b4080fdfbdc4327a" kind="variable"><name>($billets as $bil)</name></member>
   </compound>
   <compound refid="dd/d52/_front_2_list_8phtml" kind="file"><name>List.phtml</name>
-    <member refid="dd/d52/_front_2_list_8phtml_1ad2f3a7b0d156c4152b10073c2ddf4feb" kind="variable"><name>($billets as $bil)</name></member>
+    <member refid="dd/d52/_front_2_list_8phtml_1a8e0c0a104325d525b4080fdfbdc4327a" kind="variable"><name>($billets as $bil)</name></member>
   </compound>
   <compound refid="dd/d96/_list_users_8phtml" kind="file"><name>ListUsers.phtml</name>
   </compound>
@@ -280,10 +293,10 @@
   <compound refid="d6/d0b/_error_8phtml" kind="file"><name>Error.phtml</name>
   </compound>
   <compound refid="d3/d71/_index_8phtml" kind="file"><name>Index.phtml</name>
-    <member refid="d3/d71/_index_8phtml_1a2c45b5587710879fcdf4b73a7bab7757" kind="variable"><name>(empty($billets))</name></member>
+    <member refid="d3/d71/_index_8phtml_1a27903a7caf89f85f163e2083401e82a6" kind="variable"><name>(empty($billets))</name></member>
   </compound>
   <compound refid="dc/db0/_post_8phtml" kind="file"><name>Post.phtml</name>
-    <member refid="dc/db0/_post_8phtml_1aac228b0e8b0c735747754b789e95709c" kind="variable"><name>else</name></member>
+    <member refid="dc/db0/_post_8phtml_1a1b3147c3812ec28a287cd73eb1d680d8" kind="variable"><name>else</name></member>
   </compound>
   <compound refid="d1/d82/footer_8phtml" kind="file"><name>footer.phtml</name>
   </compound>

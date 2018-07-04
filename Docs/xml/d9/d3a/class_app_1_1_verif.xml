@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d9/d3a/class_app_1_1_verif" kind="class" language="PHP" prot="public">
+    <compoundname>App::Verif</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1ae66ae460929735528668ff5a64355e1c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static filterName</definition>
+        <argsstring>($field)</argsstring>
+        <name>filterName</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="6" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="6" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1ad27d2a83b777170b7a7309c28b0b6976" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static filterEmail</definition>
+        <argsstring>($field)</argsstring>
+        <name>filterEmail</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="14" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1a99f773813353109ce02b4796ddd49467" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static filterString</definition>
+        <argsstring>($field)</argsstring>
+        <name>filterString</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="21" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1acaebb8c6ab397efcf8d4c0e29b2b3357" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static filterBool</definition>
+        <argsstring>($field)</argsstring>
+        <name>filterBool</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="28" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1abb832f72a01d33d452acfc2f67bc776f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static filterInt</definition>
+        <argsstring>($field)</argsstring>
+        <name>filterInt</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="35" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="35" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/html/Alaska/App/Verif.php" line="5" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="4" bodyend="42"/>
+    <listofallmembers>
+      <member refid="d9/d3a/class_app_1_1_verif_1acaebb8c6ab397efcf8d4c0e29b2b3357" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterBool</name></member>
+      <member refid="d9/d3a/class_app_1_1_verif_1ad27d2a83b777170b7a7309c28b0b6976" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterEmail</name></member>
+      <member refid="d9/d3a/class_app_1_1_verif_1abb832f72a01d33d452acfc2f67bc776f" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterInt</name></member>
+      <member refid="d9/d3a/class_app_1_1_verif_1ae66ae460929735528668ff5a64355e1c" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterName</name></member>
+      <member refid="d9/d3a/class_app_1_1_verif_1a99f773813353109ce02b4796ddd49467" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

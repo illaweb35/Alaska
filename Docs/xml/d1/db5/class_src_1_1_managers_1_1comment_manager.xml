@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="20" bodyend="-1"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="21" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="22" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="22" bodyend="25"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="23" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1a24f9f6fa83eb8694eab0a87b2e6ad0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
 <para>Fonction de lecture de tous ls commentaires </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="29" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="29" bodyend="37"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="30" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="30" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1a4224d6d3de965c48624a2c530d0a2c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,7 +55,7 @@
 <para>Fonction de lecture des commentaires qui ont moderate = à 1 donc signaler pour l&apos;admin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="41" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="41" bodyend="49"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="42" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="42" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1af0b2d518844625de0b1fe21ebb8e6c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="54" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="54" bodyend="70"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="55" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="55" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1ad01f71fa0ecc039494e3c282864298c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -94,7 +94,7 @@
 <para>Fonction de création ou insertion de commentaire dans le base de données </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="74" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="74" bodyend="100"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="75" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="75" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1a511df177d885f133ac59c2b68c7046f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -119,7 +119,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="105" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="105" bodyend="122"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="121" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="121" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="d1/db5/class_src_1_1_managers_1_1comment_manager_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -144,7 +144,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="127" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="127" bodyend="132"/>
+        <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="143" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="143" bodyend="148"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -160,7 +160,7 @@
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="19" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="18" bodyend="133"/>
+    <location file="/var/www/html/Alaska/Src/Managers/commentManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/commentManager.php" bodystart="19" bodyend="149"/>
     <listofallmembers>
       <member refid="d1/db5/class_src_1_1_managers_1_1comment_manager_1a1e6d977917b70dce7e26cebad8438bf4" prot="protected" virt="non-virtual"><scope>Src::Managers::commentManager</scope><name>$_pdo</name></member>
       <member refid="d1/db5/class_src_1_1_managers_1_1comment_manager_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>Src::Managers::commentManager</scope><name>__construct</name></member>

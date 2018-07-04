@@ -6,6 +6,7 @@
     <innerclass refid="df/d3d/class_app_1_1_check" prot="public">App::Check</innerclass>
     <innerclass refid="d8/d03/class_app_1_1_dbd" prot="public">App::Dbd</innerclass>
     <innerclass refid="df/dc2/class_app_1_1_router" prot="public">App::Router</innerclass>
+    <innerclass refid="d9/d3a/class_app_1_1_verif" prot="public">App::Verif</innerclass>
     <innerclass refid="df/d23/class_app_1_1_viewer" prot="public">App::Viewer</innerclass>
     <innernamespace refid="d8/dbf/namespace_app_1_1_pattern">App::Pattern</innernamespace>
     <briefdescription>

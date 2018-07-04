@@ -18,5 +18,6 @@ var hierarchy =
     [ "Router", "df/dc2/class_app_1_1_router.html", null ],
     [ "User", "dc/de4/class_src_1_1_entity_1_1_user.html", null ],
     [ "userManager", "dd/d6e/class_src_1_1_managers_1_1user_manager.html", null ],
+    [ "Verif", "d9/d3a/class_app_1_1_verif.html", null ],
     [ "Viewer", "df/d23/class_app_1_1_viewer.html", null ]
 ];
