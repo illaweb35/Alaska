@@ -30,11 +30,10 @@
         <detaileddescription>
 <para>Affiche les détails d&apos;un billet <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

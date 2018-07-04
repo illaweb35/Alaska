@@ -12,6 +12,9 @@ use App\Config;
 
 require_once('../App/Autoloader.php');
 require_once('../App/Config.php');
+// initialisation de l'autoloader
 Autoloader::init();
+// instanciation du routeur
 $route = new Router();
+//appel à la fonction intialisation de la route
 $route->initRoute();

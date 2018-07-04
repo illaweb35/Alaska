@@ -12,8 +12,8 @@ use App\Alert;
 
 /**
 * Classe Viewer pour l'affichage des données
-*@param variable $_file qui contient le fichier crée par la fonction creatFile suivant les données recueillies.
-*@param variable $_title qui récupère le tire pour chaque page
+*@param  $_file  = contient le fichier crée par la fonction creatFile suivant les données recueillies.
+*@param  $_title = récupère le tire pour chaque page
 */
 class Viewer
 {
@@ -21,8 +21,8 @@ class Viewer
     private $_title;
     /**
     *Fonction de construction de la vue
-    *@param variable $action suivant la méthode défini dans l'url
-    *@param variable $title recupère le tire de la page
+    *@param $action  = suivant la méthode défini dans l'url
+    *@param  $title = recupère le tire de la page
     */
     public function __construct($action, $title)
     {
@@ -39,7 +39,7 @@ class Viewer
     }
     /**
     *Fonction de création du fichier des données
-    *@param variable $data les données récupérées
+    *@param  $data = les données récupérées
     * extraction des données puis ouverture du template pour affichage
     */
     public function createFile($data)

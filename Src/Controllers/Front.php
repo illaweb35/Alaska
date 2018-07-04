@@ -28,7 +28,7 @@ class Front extends Main
     }
     /**
     *Affiche les détails d'un billet
-    *@param variable $id  identifiant du billet
+    *@param  $id = identifiant du billet
     */
     public function Posting($id)
     {

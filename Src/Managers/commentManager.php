@@ -14,7 +14,7 @@ use App\Verif;
 
 /**
 *Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires.
-*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*@param $_pdo = nouvelle instance de la classe Dbd base de données
 */
 class commentManager
 {
@@ -50,7 +50,7 @@ class commentManager
     }
     /**
     *Fonction de lecture d'un commentaire avec ou sans id
-    *@param variable $id identifiant du commentaire
+    *@param  $id = identifiant du commentaire
     */
     public function Read($id = null)// id à null si non disponible
     {
@@ -116,7 +116,7 @@ class commentManager
     }
     /**
     * Fonction de modération verification sur létat de 'moderate' dans la base de données puis si l'etat est non signaler le passe en signaler et inversement
-    *@param variable $id identifiant du commentaire
+    *@param  $id = identifiant du commentaire
     */
     public function Moderate($id)
     {
@@ -138,7 +138,7 @@ class commentManager
     }
     /**
     * Fonction d'effacement du commentaire
-    *@param variable $id identifiant du commentaire
+    *@param  $id = identifiant du commentaire
     */
     public function Delete($id)
     {

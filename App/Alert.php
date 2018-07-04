@@ -20,7 +20,7 @@ use App\Viewer;
 class Alert
 {/**
   *Function qui récupère le message d'erreur et génère la vue
-  *@param variable $errorMsg contenant le message
+  *@param  $errorMsg = contient le message à afficher
   * Instanciation de la classe Viewer pour générer la vue.
   */
     public static function getError($errorMsg)

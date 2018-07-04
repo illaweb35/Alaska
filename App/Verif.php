@@ -1,8 +1,24 @@
 <?php
+/**
+* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
+*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
+*
+*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+*@link       https://illaweb.fr
+*/
 namespace App;
 
+/**
+* Classe de filtration pour les entrées et sortie du site
+* Evite les failles XSS  et fait une vérification du format demandé
+*/
 class Verif
 {
+    /**
+    * Filtration des type String et mise en place d'un regex de formattage.
+    * fonction trim pour les espaces
+    * fonction hmltspeciachars pour les caractères spéciaux
+    */
     public static function filterName($field)
     {
         $field = \filter_var(\trim($field), FILTER_SANITIZE_STRING);
@@ -11,6 +27,11 @@ class Verif
             return htmlspecialchars($field);
         }
     }
+    /**
+    *vérification pour les adresses email
+    * fonction trim pour les espaces
+    * fonction htmlspecialchars pour les caractères spéciaux.
+    */
     public static function filterEmail($field)
     {
         $field = \filter_var(\trim($field), FILTER_SANITIZE_EMAIL);
@@ -18,6 +39,9 @@ class Verif
             return \htmlspecialchars($field);
         }
     }
+    /**
+    * Verification des contenu texte utilisant le formattage TinyMCe
+    */
     public static function filterString($field)
     {
         $field = \filter_var(\trim($field), FILTER_SANITIZE_STRING);
@@ -25,6 +49,9 @@ class Verif
             return $field;
         }
     }
+    /**
+    * Verification des Booléens
+    */
     public static function filterBool($field)
     {
         $field = \filter_var(\trim($field), FILTER_VALIDATE_BOOLEAN);
@@ -32,6 +59,9 @@ class Verif
             return \htmlspecialchars($field);
         }
     }
+    /**
+    * Vérification des entiers.
+    */
     public static function filterInt($field)
     {
         $field = \filter_var(\trim($field), FILTER_VALIDATE_INT);

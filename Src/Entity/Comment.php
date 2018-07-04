@@ -23,7 +23,7 @@ class Comment
     private $moderate;
     /**
     * Initialisation  des données vers l'hydratation
-    *@param variable $data qui est un tableau des données
+    *@param  $data = est un tableau des données
     */
     public function __construct($date = [])
     {

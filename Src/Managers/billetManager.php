@@ -14,7 +14,7 @@ use App\Verif;
 
 /**
 * Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets
-*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*@param  $_pdo  = nouvelle instance de la classe Dbd base de données
 */
 class billetManager
 {
@@ -39,8 +39,8 @@ class billetManager
     }
     /**
     * Lecture des billets pour la partie front du site
-    *@param variable $offset détermine la position de départ dans la base de donnée
-    *@param variable $limit détermine le nombre de billet à afficher
+    *@param  $offset = détermine la position de départ dans la base de donnée
+    *@param  $limit = détermine le nombre de billet à afficher
     */
     public function ReadFront($offset, $limit)
     {
@@ -54,7 +54,7 @@ class billetManager
     }
     /**
     * Lecture d'un billet en fonction de l'identifiant
-    *@param variable $id identifiant du billet à afficher
+    *@param  $id = identifiant du billet à afficher
     */
     public function Read($id)
     {
@@ -116,6 +116,7 @@ class billetManager
                         Alert::getError($errorMsg = 'Erreur: Extensions de fichiers autorisée, (jpeg,jpg,png,gif)');
                     }
                 }
+                // insertion en base de données sans image
                 $request = $this->_pdo->prepare('INSERT INTO T_billets (title, author, content, image, create_at, modif_at, posted) VALUES(:title, :author, :content, :image, NOW(), NOW(), :posted)');
                 $request->bindValue(':image', $image, \PDO::PARAM_STR);
                 $request->bindValue(':title', $title, \PDO::PARAM_STR);
@@ -145,7 +146,7 @@ class billetManager
     }
     /**
     *Mise a jour des infos du billet suivant son identifiant en base de données
-    *@param variable $id identifiant du billet
+    *@param  $id = identifiant du billet
     */
     public function Update($id)
     {
@@ -218,7 +219,7 @@ class billetManager
     }
     /**
     * Effacement d'un enregistrement suivant son identifiant
-    *@param variable $id identifiant du billet
+    *@param  $id = identifiant du billet
     */
     public function Delete($id)
     {
@@ -234,7 +235,7 @@ class billetManager
     }
     /**
     * effacement image post
-    *@param variable $id identifiant deu billet
+    *@param  $id = identifiant du billet
     */
     public function Delete_img($id)
     {

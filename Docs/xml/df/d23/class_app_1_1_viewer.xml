@@ -47,19 +47,17 @@
         <detaileddescription>
 <para>Fonction de construction de la vue <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$action</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>suivant la méthode défini dans l&apos;url </para></parameterdescription>
+<para>= suivant la méthode défini dans l&apos;url </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$title</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>recupère le tire de la page </para></parameterdescription>
+<para>= recupère le tire de la page </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -96,11 +94,10 @@
         <detaileddescription>
 <para>Fonction de création du fichier des données <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>les données récupérées extraction des données puis ouverture du template pour affichage </para></parameterdescription>
+<para>= les données récupérées extraction des données puis ouverture du template pour affichage </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -114,19 +111,17 @@
     <detaileddescription>
 <para>Classe <ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref> pour l&apos;affichage des données <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_file</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>qui contient le fichier crée par la fonction creatFile suivant les données recueillies. </para></parameterdescription>
+<para>= contient le fichier crée par la fonction creatFile suivant les données recueillies. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_title</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>qui récupère le tire pour chaque page </para></parameterdescription>
+<para>= récupère le tire pour chaque page </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>

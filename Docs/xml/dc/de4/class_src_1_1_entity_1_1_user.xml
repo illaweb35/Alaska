@@ -97,11 +97,10 @@
         <detaileddescription>
 <para>Initialisation des données vers l&apos;hydratation <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>qui est un tableau des données </para></parameterdescription>
+<para>= est un tableau des données </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

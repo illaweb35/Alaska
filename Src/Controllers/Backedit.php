@@ -37,7 +37,7 @@ class Backedit extends Main
     }
     /**
     *Mise à jour du billet
-    *@param variable $id identifiant du billet
+    *@param  $id = identifiant du billet
     */
     public function Update($id)
     {
@@ -77,7 +77,7 @@ class Backedit extends Main
     }
     /**
     *Mise à jour d'un utilisateur
-     *@param variable $id identifiant de l'utilisateur
+     *@param  $id = identifiant de l'utilisateur
     */
     public function Update_user($id)
     {
@@ -101,7 +101,7 @@ class Backedit extends Main
     }
     /**
     *Suppression d'un billet
-    *@param variable $id identifiant du billet
+    *@param  $id = identifiant du billet
     */
     public function Delete($id)
     {
@@ -116,7 +116,7 @@ class Backedit extends Main
     }
     /**
     *Suppression image
-    *@param variable $id identifiant du billet
+    *@param $id = identifiant du billet
     */
     public function Delete_img($id)
     {
@@ -133,7 +133,7 @@ class Backedit extends Main
     }
     /**
     *Suppression d'un commentaire
-    *@param variable $id identifiant du commentaire
+    *@param  $id = identifiant du commentaire
     */
     public function Delete_com($id)
     {
@@ -146,7 +146,7 @@ class Backedit extends Main
     }
     /**
     *Suppression d'un utilisateur
-    *@param variable $id identifiant de l'utilisateur
+    *@param  $id = identifiant de l'utilisateur
     */
     public function Delete_user($id)
     {

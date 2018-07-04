@@ -30,11 +30,10 @@
         <detaileddescription>
 <para>Mise à jour du billet <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -68,11 +67,10 @@
         <detaileddescription>
 <para>Mise à jour d&apos;un utilisateur  *<parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+<para>= identifiant de l&apos;utilisateur </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -93,11 +91,10 @@
         <detaileddescription>
 <para>Suppression d&apos;un billet <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -118,11 +115,10 @@
         <detaileddescription>
 <para>Suppression image <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -143,11 +139,10 @@
         <detaileddescription>
 <para>Suppression d&apos;un commentaire <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du commentaire </para></parameterdescription>
+<para>= identifiant du commentaire </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -168,11 +163,10 @@
         <detaileddescription>
 <para>Suppression d&apos;un utilisateur <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+<para>= identifiant de l&apos;utilisateur </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

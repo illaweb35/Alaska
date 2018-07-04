@@ -19,7 +19,7 @@ use Src\Controllers\Main;
 
 /**
 *Classe Router pour générer les routes du site
-* @param variable $_route suivant l'adresse url
+* @param  $_route  = l'adresse url avec la methode et les paramètres.
 */
 class Router
 {

@@ -57,11 +57,10 @@
         <detaileddescription>
 <para>Fonction d&apos;affichage d&apos;utilisateur suivant l&apos;identifiant <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+<para>= identifiant de l&apos;utilisateur </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -108,11 +107,10 @@
         <detaileddescription>
 <para>Mise a jour des infos de l&apos;utilisateur suivant l&apos;identifiant <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+<para>= identifiant de l&apos;utilisateur </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -133,11 +131,10 @@
         <detaileddescription>
 <para>fonction d&apos;effacement d&apos;un utilisateur suivant son identifiant <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant de l&apos;utilisateur </para></parameterdescription>
+<para>= identifiant de l&apos;utilisateur </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -151,11 +148,10 @@
     <detaileddescription>
 <para>Classe Manager de User regroupe les fonctions de gestion des utilisateurs <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_pdo</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>nouvelle instance de la classe Dbd base de données </para></parameterdescription>
+<para>= nouvelle instance de la classe Dbd base de données </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>

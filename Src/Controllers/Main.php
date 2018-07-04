@@ -15,10 +15,10 @@ use App\Viewer;
 
 /**
 *Class Main instancie les classes controllers et vérifie la connection et l'inscription sur le site ainsi que la déconnexion.
-*@param variable $_id l'identifiant des Entities.
-*@param variable $billetManager instance de la classse Billet Manager
-*@param variable $commentManager instance de la classe Comment Manager
-*@param variable $userManager instance de la calsse User Manager
+*@param  $_id = l'identifiant des Entities.
+*@param  $billetManager = instance de la classse Billet Manager
+*@param $commentManager = instance de la classe Comment Manager
+*@param  $userManager = instance de la calsse User Manager
 */
 class Main
 {

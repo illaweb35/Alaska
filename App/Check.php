@@ -25,8 +25,8 @@ class Check
     }
 
     /**
-    *Fonction de cryptage
-    * @param variable $pass egal au password.
+    *Fonction de cryptage pour mot de pass ou token
+    * @param  $pass = au password.
     */
     public static function mixMdp($p)
     {

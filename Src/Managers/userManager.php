@@ -15,7 +15,7 @@ use App\Verif;
 
 /**
 * Classe Manager de User regroupe les fonctions de gestion des utilisateurs
-*@param variable $_pdo nouvelle instance de la classe Dbd base de données
+*@param $_pdo = nouvelle instance de la classe Dbd base de données
 */
 class userManager
 {
@@ -54,7 +54,7 @@ class userManager
     }
     /**
     * Fonction d'affichage d'utilisateur suivant l'identifiant
-    *@param variable $id identifiant de l'utilisateur
+    *@param  $id = identifiant de l'utilisateur
     */
     public function Read($id)
     {
@@ -128,7 +128,7 @@ class userManager
     }
     /**
     * Mise a jour des infos de l'utilisateur suivant l'identifiant
-    *@param variable $id identifiant de l'utilisateur
+    *@param  $id = identifiant de l'utilisateur
     */
     public function Update($id)
     {
@@ -164,7 +164,7 @@ class userManager
     }
     /**
     * fonction d'effacement d'un utilisateur suivant son identifiant
-    *@param variable $id identifiant de l'utilisateur
+    *@param  $id = identifiant de l'utilisateur
     */
     public function Delete($id)
     {

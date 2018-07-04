@@ -16,11 +16,10 @@
         <detaileddescription>
 <para>Function qui récupère le message d&apos;erreur et génère la vue <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$errorMsg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>contenant le message Instanciation de la classe <ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref> pour générer la vue. </para></parameterdescription>
+<para>= contient le message à afficher Instanciation de la classe <ref refid="df/d23/class_app_1_1_viewer" kindref="compound">Viewer</ref> pour générer la vue. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

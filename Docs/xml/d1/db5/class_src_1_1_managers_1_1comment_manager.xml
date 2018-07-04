@@ -71,11 +71,10 @@
         <detaileddescription>
 <para>Fonction de lecture d&apos;un commentaire avec ou sans id <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du commentaire </para></parameterdescription>
+<para>= identifiant du commentaire </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -109,11 +108,10 @@
         <detaileddescription>
 <para>Fonction de modération verification sur létat de &apos;moderate&apos; dans la base de données puis si l&apos;etat est non signaler le passe en signaler et inversement <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du commentaire </para></parameterdescription>
+<para>= identifiant du commentaire </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -134,11 +132,10 @@
         <detaileddescription>
 <para>Fonction d&apos;effacement du commentaire <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du commentaire </para></parameterdescription>
+<para>= identifiant du commentaire </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -152,11 +149,10 @@
     <detaileddescription>
 <para>Classe Manager des commentaires qui regroupes les fonctions pour la gestion des commentaires. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_pdo</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>nouvelle instance de la classe Dbd base de données </para></parameterdescription>
+<para>= nouvelle instance de la classe Dbd base de données </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>

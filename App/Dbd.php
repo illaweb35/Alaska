@@ -10,7 +10,8 @@ namespace App;
 
 /**
 *Classe de connexion à la base de données
-* Utilisation des constances de la classe config pour les parametres de connexion
+* Utilisation des constances de la classe config pour les paramètres de connexion
+* puis utilisation de la résolution de portée pour l'instanciation de la connexion pdo au contructeur parent.
 */
 class Dbd extends \PDO
 {

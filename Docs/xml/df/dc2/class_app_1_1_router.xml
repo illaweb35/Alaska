@@ -50,11 +50,10 @@
     <detaileddescription>
 <para>Classe <ref refid="df/dc2/class_app_1_1_router" kindref="compound">Router</ref> pour générer les routes du site <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_route</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>suivant l&apos;adresse url </para></parameterdescription>
+<para>= l&apos;adresse url avec la methode et les paramètres. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>

@@ -65,7 +65,7 @@ class Back extends Main
     }
     /**
     *Vérification si commentaire est modéré
-    *@param $id suivant l'identifiant du commentaire .
+    *@param $id = l'identifiant du commentaire .
     */
     public function Check($id)
     {

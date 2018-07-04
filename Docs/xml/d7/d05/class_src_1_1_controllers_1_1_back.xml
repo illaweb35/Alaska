@@ -72,7 +72,7 @@
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>suivant l&apos;identifiant du commentaire . </para></parameterdescription>
+<para>= l&apos;identifiant du commentaire . </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

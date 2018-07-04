@@ -120,35 +120,31 @@
     <detaileddescription>
 <para>Class <ref refid="d7/d5e/class_src_1_1_controllers_1_1_main" kindref="compound">Main</ref> instancie les classes controllers et vérifie la connection et l&apos;inscription sur le site ainsi que la déconnexion. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>l&apos;identifiant des Entities. </para></parameterdescription>
+<para>= l&apos;identifiant des Entities. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$billetManager</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>instance de la classse Billet Manager </para></parameterdescription>
+<para>= instance de la classse Billet Manager </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$commentManager</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>instance de la classe Comment Manager </para></parameterdescription>
+<para>= instance de la classe Comment Manager </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$userManager</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>instance de la calsse User Manager </para></parameterdescription>
+<para>= instance de la calsse User Manager </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>

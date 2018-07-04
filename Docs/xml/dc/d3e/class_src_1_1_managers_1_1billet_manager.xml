@@ -60,19 +60,17 @@
         <detaileddescription>
 <para>Lecture des billets pour la partie front du site <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$offset</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>détermine la position de départ dans la base de donnée </para></parameterdescription>
+<para>= détermine la position de départ dans la base de donnée </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$limit</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>détermine le nombre de billet à afficher </para></parameterdescription>
+<para>= détermine le nombre de billet à afficher </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -93,11 +91,10 @@
         <detaileddescription>
 <para>Lecture d&apos;un billet en fonction de l&apos;identifiant <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet à afficher </para></parameterdescription>
+<para>= identifiant du billet à afficher </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
@@ -116,7 +113,7 @@
 <para>Création ou insertion dans la base de données du billet </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="71" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="71" bodyend="145"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="71" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="71" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a82232b33fbfacdbdb8a8f49acaecf564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -131,17 +128,16 @@
         <detaileddescription>
 <para>Mise a jour des infos du billet suivant son identifiant en base de données <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="150" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="150" bodyend="218"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="151" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="151" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a59113b5ecd1d155db6a4f30af34a1e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -156,17 +152,16 @@
         <detaileddescription>
 <para>Effacement d&apos;un enregistrement suivant son identifiant <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant du billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="223" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="223" bodyend="234"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="224" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="224" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a7da0978ffd29442d84e0d4374cb07e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -181,17 +176,16 @@
         <detaileddescription>
 <para>effacement image post <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>identifiant deu billet </para></parameterdescription>
+<para>= identifiant du billet </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="239" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="239" bodyend="252"/>
+        <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="240" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="240" bodyend="253"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -199,15 +193,14 @@
     <detaileddescription>
 <para>Class Manager des billets qui regroupe l&apos;ensemble des fonctions concernant la gestion des billets <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$_pdo</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>nouvelle instance de la classe Dbd base de données </para></parameterdescription>
+<para>= nouvelle instance de la classe Dbd base de données </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="19" bodyend="253"/>
+    <location file="/var/www/html/Alaska/Src/Managers/billetManager.php" line="20" column="1" bodyfile="/var/www/html/Alaska/Src/Managers/billetManager.php" bodystart="19" bodyend="254"/>
     <listofallmembers>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a1e6d977917b70dce7e26cebad8438bf4" prot="protected" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>$_pdo</name></member>
       <member refid="dc/d3e/class_src_1_1_managers_1_1billet_manager_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>Src::Managers::billetManager</scope><name>__construct</name></member>

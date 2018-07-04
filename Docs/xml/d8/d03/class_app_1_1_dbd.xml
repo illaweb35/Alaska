@@ -15,13 +15,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Dbd.php" line="17" column="1" bodyfile="/var/www/html/Alaska/App/Dbd.php" bodystart="17" bodyend="31"/>
+        <location file="/var/www/html/Alaska/App/Dbd.php" line="18" column="1" bodyfile="/var/www/html/Alaska/App/Dbd.php" bodystart="18" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Classe de connexion à la base de données Utilisation des constances de la classe config pour les parametres de connexion </para>    </detaileddescription>
+<para>Classe de connexion à la base de données Utilisation des constances de la classe config pour les paramètres de connexion puis utilisation de la résolution de portée pour l&apos;instanciation de la connexion pdo au contructeur parent. </para>    </detaileddescription>
     <inheritancegraph>
       <node id="23">
         <label>PDO</label>
@@ -44,7 +44,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/var/www/html/Alaska/App/Dbd.php" line="16" column="1" bodyfile="/var/www/html/Alaska/App/Dbd.php" bodystart="15" bodyend="32"/>
+    <location file="/var/www/html/Alaska/App/Dbd.php" line="17" column="1" bodyfile="/var/www/html/Alaska/App/Dbd.php" bodystart="16" bodyend="33"/>
     <listofallmembers>
       <member refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>App::Dbd</scope><name>__construct</name></member>
     </listofallmembers>

@@ -12,24 +12,24 @@
 <codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
 <codeline lineno="9"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="dc/d33/namespace_app" kindref="compound">App</ref>;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="d8/d03/class_app_1_1_dbd" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/d03/class_app_1_1_dbd" kindref="compound">Dbd</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>\PDO</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="17" refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" kindref="member">__construct</ref>()</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_base<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1ab5db0d3504f917f268614c50b02c53e2" kindref="member">\DB_NAME</ref>;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_host<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1a293363d7988627f671958e2d908c202a" kindref="member">\DB_HOST</ref>;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_user<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" kindref="member">\DB_USER</ref>;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_pass<sp/>=<ref refid="d4/d8a/_config_8php_1a8bb9c4546d91667cfa61879d83127a92" kindref="member">\DB_PASS</ref>;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$dsn<sp/>=<sp/>(</highlight><highlight class="stringliteral">&apos;mysql:host=&apos;</highlight><highlight class="normal">.$db_host.</highlight><highlight class="stringliteral">&apos;;dbname=&apos;</highlight><highlight class="normal">.$db_base.</highlight><highlight class="stringliteral">&apos;;charset=utf8&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent::__construct($dsn,<sp/>$db_user,<sp/>$db_pass);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;setAttribute(\PDO::ATTR_ERRMODE,<sp/>\PDO::ERRMODE_EXCEPTION);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE,<sp/>\PDO::FETCH_ASSOC);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>new<sp/>\Exception($e-&gt;getMessage(),<sp/>1);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16" refid="d8/d03/class_app_1_1_dbd" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/d03/class_app_1_1_dbd" kindref="compound">Dbd</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>\PDO</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d03/class_app_1_1_dbd_1a095c5d389db211932136b53f25f39685" kindref="member">__construct</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_base<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1ab5db0d3504f917f268614c50b02c53e2" kindref="member">\DB_NAME</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_host<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1a293363d7988627f671958e2d908c202a" kindref="member">\DB_HOST</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_user<sp/>=<sp/><ref refid="d4/d8a/_config_8php_1a1d1d99f8e08f387d84fe9848f3357156" kindref="member">\DB_USER</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$db_pass<sp/>=<ref refid="d4/d8a/_config_8php_1a8bb9c4546d91667cfa61879d83127a92" kindref="member">\DB_PASS</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$dsn<sp/>=<sp/>(</highlight><highlight class="stringliteral">&apos;mysql:host=&apos;</highlight><highlight class="normal">.$db_host.</highlight><highlight class="stringliteral">&apos;;dbname=&apos;</highlight><highlight class="normal">.$db_base.</highlight><highlight class="stringliteral">&apos;;charset=utf8&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent::__construct($dsn,<sp/>$db_user,<sp/>$db_pass);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;setAttribute(\PDO::ATTR_ERRMODE,<sp/>\PDO::ERRMODE_EXCEPTION);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE,<sp/>\PDO::FETCH_ASSOC);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>new<sp/>\Exception($e-&gt;getMessage(),<sp/>1);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/var/www/html/Alaska/App/Dbd.php"/>
   </compounddef>

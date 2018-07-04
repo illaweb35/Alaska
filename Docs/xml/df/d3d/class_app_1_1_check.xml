@@ -27,13 +27,12 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Fonction de cryptage <parameterlist kind="param"><parameteritem>
+<para>Fonction de cryptage pour mot de pass ou token <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametertype>variable</parametertype>
 <parametername>$pass</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>egal au password. </para></parameterdescription>
+<para>= au password. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
