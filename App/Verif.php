@@ -23,8 +23,9 @@ class Verif
     {
         $field = \filter_var(\trim($field), FILTER_SANITIZE_STRING);
         if (!empty($field)) {
-            if (\filter_var($field, FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>"/^[a-zA-Z]+$/"]]));
+            //if (\filter_var($field, FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>"/^([a-zA-ZÀ-ÖØ-öø-ÿœŒ]+[- ']?[a-zA-ZÀ-ÖØ-öø-ÿœŒ]+)+$/u"]])) {
             return htmlspecialchars($field);
+            //  }
         }
     }
     /**

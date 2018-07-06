@@ -72,11 +72,11 @@ class billetManager
     {
         $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted ="";
         if (empty($_POST['title'])) {
-            Alert::getError($errorMsg ='Merci de renseigner titre');
+            Alert::getError($errorMsg ='Merci de rentrer un titre valide');
         } else {
             $title = Verif::filterName($_POST['title']);
             if ($title == false) {
-                Alert::getError($errorMsg ="Merci de rentrer un titre valide.");
+                Alert::getError($errorMsg ='Merci de rentrer un titre valide.');
             }
         }
         if (empty($_POST['author'])) {
@@ -97,7 +97,9 @@ class billetManager
         $imgSize = Verif::filterInt($_FILES['image']['size']);
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
-        $posted = Verif::filterBool($_POST['posted']);
+        if (isset($_POST['posted'])) {
+            $posted = (Verif::filterBool($_POST['posted'])!== null)? 1:0;
+        }
         // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
             if (!$_FILES['image']['size'] == 0) {
