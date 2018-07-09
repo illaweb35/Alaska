@@ -1,9 +1,13 @@
+# Mise en place de la réécriture
  Options -MultiViews
  RewriteEngine On
 
+# Adresse de base de réécriture
  RewriteBase /Alaska/Web
 
+# Règles
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
 
+# Accès au site
  RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
