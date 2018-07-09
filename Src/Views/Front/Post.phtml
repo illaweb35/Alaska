@@ -12,9 +12,9 @@ use App\Verif;
 <section class="section">
   <div class="container">
     <div class="image_bandeau">
-      <img src="<?= BASEPATH.'img/Alaska.png'?>" alt="image de bandeau header Bienvenue en Alaska">
+      <img src="<?= BASEPATH.'img/Alaska_bandeau.jpg'?>" alt="image de bandeau header Bienvenue en Alaska">
       <span>
-        <h2 class="title">Alaska</h2>
+        <h2 class="title">Billet simple pour l'Alaska</h2>
         <p>mon livre en épisode</p>
       </span>
     </div>
@@ -35,6 +35,7 @@ use App\Verif;
             <p class="title is-4"><?= Verif::filterName($billets->getTitle())?></p>
             <p><?= $billets->getContent() ?></p>
             <small>Publié le : <em><?= date(' d - m - Y à H:i', strtotime($billets->getCreate_at())) ?></em></small>
+              <p>Par <strong><?= Verif::filterName($billets->getAuthor()) ?></strong>
           </div>
         </div>
       </article>

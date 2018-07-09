@@ -139,6 +139,7 @@
 
 .image_bandeau span p {
   z-index: 2;
+  margin-top: 15px;
   background: transparent;
   visibility: hidden;
   position: absolute;
