@@ -90,7 +90,7 @@ class billetManager
         if (empty($_POST['content'])) {
             Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
         } else {
-            $content = Verif::filterString($_POST['content']);
+            $content = $_POST['content'];
         }
         $imgFile = Verif::filterName($_FILES['image']['name']);
         $tmp_dir = Verif::filterString($_FILES['image']['tmp_name']);
@@ -172,7 +172,7 @@ class billetManager
         if (empty($_POST['content'])) {
             Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
         } else {
-            $content = Verif::filterString($_POST['content']);
+            $content = $_POST['content'];
         }
         $imgFile = Verif::filterName($_FILES['image']['name']);
         $tmp_dir = Verif::filterString($_FILES['image']['tmp_name']);
