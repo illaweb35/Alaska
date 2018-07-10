@@ -45,7 +45,7 @@ class Back extends Main
     /**
     *Affichage de la liste des billets
     */
-    public function List()
+    public function ListPost()
     {
         $billets =$this->billetManager->ReadAll(0, 100);
         $view = new Viewer('Back/List', 'Liste des billets');

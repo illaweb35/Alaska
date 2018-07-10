@@ -27,7 +27,7 @@ class Backedit extends Main
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $billets = $this->billetManager->Create();
             if ($billets !== false) {
-                header('Location:'.\BASEPATH.'Back/List');
+                header('Location:'.\BASEPATH.'Back/ListPost');
                 exit();
             }
         }
@@ -48,7 +48,7 @@ class Backedit extends Main
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
             $billets = $this->billetManager->Update($id);
             if ($billets !== false) {
-                header('Location:'.\BASEPATH.'Back/List');
+                header('Location:'.\BASEPATH.'Back/ListPost');
                 exit();
             }
         }
@@ -111,7 +111,7 @@ class Backedit extends Main
             exit();
         }
         $billets = $this->billetManager->Delete($id);
-        header('Location:'.\BASEPATH.'Back/List');
+        header('Location:'.\BASEPATH.'Back/ListPost');
         exit();
     }
     /**

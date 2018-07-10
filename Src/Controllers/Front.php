@@ -40,7 +40,7 @@ class Front extends Main
     /**
     *Affiche la liste des billets
     */
-    public function List()
+    public function ListPost()
     {
         $billets =$this->billetManager->ReadFront(0, 100);
         $view = new Viewer('Front/List', 'Alaska _ Liste des billets');
