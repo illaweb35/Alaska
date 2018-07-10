@@ -30,11 +30,11 @@
         </inbodydescription>
         <location file="/var/www/html/Alaska/Src/Controllers/Back.php" line="32" column="1" bodyfile="/var/www/html/Alaska/Src/Controllers/Back.php" bodystart="32" bodyend="44"/>
       </memberdef>
-      <memberdef kind="function" id="d7/d05/class_src_1_1_controllers_1_1_back_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="d7/d05/class_src_1_1_controllers_1_1_back_1a8ce0a92892ab19020f1ebefe99d88a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>List</definition>
+        <definition>ListPost</definition>
         <argsstring>()</argsstring>
-        <name>List</name>
+        <name>ListPost</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -118,7 +118,7 @@
       <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a384a1ec9e22b88a73de48023bb2bbf4f" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>Check</name></member>
       <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a405a66825259e2e811a2011a61c2beff" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>Dashboard</name></member>
       <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1ac36db983080e1b0934908febca5de2d9" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>Index</name></member>
-      <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>List</name></member>
+      <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a8ce0a92892ab19020f1ebefe99d88a00" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>ListPost</name></member>
       <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1abfd4f6736a8cd4dc4fa1e012996f4a23" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>ListUsers</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1a8db48c2902872da0ee80463db6696375" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>Login</name></member>
       <member refid="d7/d5e/class_src_1_1_controllers_1_1_main_1aa14f760d541a59acb41ac8eefddafb9b" prot="public" virt="non-virtual"><scope>Src::Controllers::Back</scope><name>Logout</name></member>

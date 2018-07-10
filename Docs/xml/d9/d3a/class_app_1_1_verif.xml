@@ -17,7 +17,7 @@
 <para>Filtration des type String et mise en place d&apos;un regex de formattage. fonction trim pour les espaces fonction hmltspeciachars pour les caractères spéciaux </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Verif.php" line="22" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="22" bodyend="29"/>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="22" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="22" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1ad27d2a83b777170b7a7309c28b0b6976" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -33,7 +33,7 @@
 <para>vérification pour les adresses email fonction trim pour les espaces fonction htmlspecialchars pour les caractères spéciaux. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Verif.php" line="35" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="35" bodyend="41"/>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="36" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="36" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1a99f773813353109ce02b4796ddd49467" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -49,7 +49,7 @@
 <para>Verification des contenu texte utilisant le formattage TinyMCe </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Verif.php" line="45" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="45" bodyend="51"/>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="46" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="46" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1acaebb8c6ab397efcf8d4c0e29b2b3357" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -65,7 +65,7 @@
 <para>Verification des Booléens </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Verif.php" line="55" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="55" bodyend="61"/>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="56" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="56" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="d9/d3a/class_app_1_1_verif_1abb832f72a01d33d452acfc2f67bc776f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -81,14 +81,14 @@
 <para>Vérification des entiers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/var/www/html/Alaska/App/Verif.php" line="65" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="65" bodyend="71"/>
+        <location file="/var/www/html/Alaska/App/Verif.php" line="66" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="66" bodyend="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Classe de filtration pour les entrées et sortie du site Evite les failles XSS et fait une vérification du format demandé </para>    </detaileddescription>
-    <location file="/var/www/html/Alaska/App/Verif.php" line="16" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="15" bodyend="72"/>
+    <location file="/var/www/html/Alaska/App/Verif.php" line="16" column="1" bodyfile="/var/www/html/Alaska/App/Verif.php" bodystart="15" bodyend="73"/>
     <listofallmembers>
       <member refid="d9/d3a/class_app_1_1_verif_1acaebb8c6ab397efcf8d4c0e29b2b3357" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterBool</name></member>
       <member refid="d9/d3a/class_app_1_1_verif_1ad27d2a83b777170b7a7309c28b0b6976" prot="public" virt="non-virtual"><scope>App::Verif</scope><name>filterEmail</name></member>

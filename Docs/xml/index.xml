@@ -10,7 +10,7 @@
   <compound refid="d7/d05/class_src_1_1_controllers_1_1_back" kind="class"><name>Src::Controllers::Back</name>
     <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1ac36db983080e1b0934908febca5de2d9" kind="function"><name>Index</name></member>
     <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a405a66825259e2e811a2011a61c2beff" kind="function"><name>Dashboard</name></member>
-    <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a17e6c90f14225bdac5c65ed915b0a2f6" kind="function"><name>List</name></member>
+    <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a8ce0a92892ab19020f1ebefe99d88a00" kind="function"><name>ListPost</name></member>
     <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1abfd4f6736a8cd4dc4fa1e012996f4a23" kind="function"><name>ListUsers</name></member>
     <member refid="d7/d05/class_src_1_1_controllers_1_1_back_1a384a1ec9e22b88a73de48023bb2bbf4f" kind="function"><name>Check</name></member>
   </compound>
@@ -104,7 +104,7 @@
   <compound refid="d4/db2/class_src_1_1_controllers_1_1_front" kind="class"><name>Src::Controllers::Front</name>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1ac36db983080e1b0934908febca5de2d9" kind="function"><name>Index</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a5fcbe325afb03acc6e4eaec38a7bb1ae" kind="function"><name>Posting</name></member>
-    <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a17e6c90f14225bdac5c65ed915b0a2f6" kind="function"><name>List</name></member>
+    <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a8ce0a92892ab19020f1ebefe99d88a00" kind="function"><name>ListPost</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1aff5b608669ee776cd4c341238adddb7c" kind="function"><name>Create_com</name></member>
     <member refid="d4/db2/class_src_1_1_controllers_1_1_front_1a8b22c40bd1737bbb7db0816b7e9763b3" kind="function"><name>Signaler</name></member>
   </compound>

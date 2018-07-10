@@ -19,25 +19,25 @@
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;h1<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Blog&lt;/h1&gt;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;brand-subtitle&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Alaska&lt;/p&gt;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;button<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;button<sp/>navbar-burger&quot;</highlight><highlight class="normal"><sp/>data-target=</highlight><highlight class="stringliteral">&quot;navMenu&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/button&gt;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navbar-menu&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navMenu&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navbar-end&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH<sp/>?&gt;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navbar-item&quot;</highlight><highlight class="normal">&gt;Accueil&lt;/a&gt;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Front/List&apos;?&gt;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navbar-item&quot;</highlight><highlight class="normal">&gt;Blog&lt;/a&gt;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;&lt;?=<sp/>BASEPATH.&apos;Main/Login&apos;?&gt;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navbar-item&quot;</highlight><highlight class="normal">&gt;Admin&lt;/a&gt;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">&lt;/nav&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Billet<sp/>simple<sp/>pour<sp/>l</highlight><highlight class="stringliteral">&apos;Alaska&lt;/p&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;button<sp/>class=&quot;button<sp/>navbar-burger&quot;<sp/>data-target=&quot;navMenu&quot;&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;span&gt;&lt;/span&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/button&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/>&lt;div<sp/>class=&quot;navbar-menu&quot;<sp/>id=&quot;navMenu&quot;&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;div<sp/>class=&quot;navbar-end&quot;&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;&lt;?=<sp/>BASEPATH<sp/>?&gt;&quot;<sp/>class=&quot;navbar-item&quot;&gt;Accueil&lt;/a&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">Front/ListPost</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>class=&quot;navbar-item&quot;&gt;Blog&lt;/a&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;&lt;?=<sp/>BASEPATH.&apos;</highlight><highlight class="normal">Main/Login</highlight><highlight class="stringliteral">&apos;?&gt;&quot;<sp/>class=&quot;navbar-item&quot;&gt;Admin&lt;/a&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral">&lt;/nav&gt;</highlight></codeline>
     </programlisting>
     <location file="/var/www/html/Alaska/Src/Views/inc/navbar.phtml"/>
   </compounddef>
