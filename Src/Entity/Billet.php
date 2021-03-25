@@ -1,16 +1,18 @@
 <?php
+
 /**
-* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
-*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
-*
-*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
-*@link       https://illaweb.fr
-*/
+ * @author    jm Holland <jm.holland@illaweb.fr>
+ * @copyright  (c) 2018, illaweb. All Rights Reserved.
+ * @license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+ * @link       https://www.illaweb.fr
+ */
+
 namespace Src\Entity;
 
-require_once('../App/Pattern/Hydrator.trait.php');
-use App\Pattern\Hydrator;
-use App\Alert;
+require_once '../app/pattern/Hydrator.trait.php';
+
+use app\pattern\Hydrator;
+use app\Alert;
 
 class Billet
 {
@@ -22,23 +24,26 @@ class Billet
     private $create_at;
     private $modif_at;
     private $posted;
+
     /**
-    *Initialisation des données vers l'hydratation
-    *@param  $data = est un tableau des données
-    */
-    public function __construct($data =[])
+     * Initialisation des données vers l'hydratation
+     * @param  $data = est un tableau des données
+     */
+    public function __construct($data = [])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
+
     /**
-    *Utilisation du trait hydrator pour l'hydratation des données
-    */
+     * Utilisation du trait hydrator pour l'hydratation des données
+     */
     use Hydrator;
+
     /**
-    * Mise en place des Setters avec vérification de format
-    */
+     * Mise en place des Setters avec vérification de format
+     */
     public function setAuthor($author)
     {
         if (!is_string($author) || empty($author)) {
@@ -47,6 +52,7 @@ class Billet
             $this->author = $author;
         }
     }
+
     public function setTitle($title)
     {
         if (!is_string($title) || empty($title)) {
@@ -55,6 +61,7 @@ class Billet
             $this->title = $title;
         }
     }
+
     public function setContent($content)
     {
         if (!is_string($content) || empty($content)) {
@@ -63,20 +70,23 @@ class Billet
             $this->content = $content;
         }
     }
+
     public function setImage($image)
     {
         if (is_string($image)) {
             $this->image = $image;
         }
     }
-    public function setCreate_at(DateTime $create_at)
+
+    public function setCreate_at(\DateTime $create_at)
     {
         $this->create_at = $create_at;
     }
-    public function setModif_at(DateTime $modif_at)
+    public function setModif_at(\DateTime $modif_at)
     {
         $this->modif_at = $modif_at;
     }
+
     public function setPosted($posted)
     {
         if (is_bool($posted)) {
@@ -84,8 +94,8 @@ class Billet
         }
     }
     /**
-    * Mise en place des GETTERS
-    */
+     * Mise en place des GETTERS
+     */
     public function getId()
     {
         return $this->id_bil;

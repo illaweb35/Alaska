@@ -1,16 +1,18 @@
 <?php
+
 /**
-* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
-*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
-*
-*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
-*@link       https://illaweb.fr
-*/
+ * @author    jm Holland <jm.holland@illaweb.fr>
+ * @copyright  (c) 2018, illaweb. All Rights Reserved.
+ * @license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+ * @link       https://www.illaweb.fr
+ */
+
 namespace Src\Entity;
 
-require_once('../App/Pattern/Hydrator.trait.php');
-use App\Pattern\Hydrator;
-use App\Alert;
+require_once '../app/pattern/Hydrator.trait.php';
+
+use app\pattern\Hydrator;
+use app\Alert;
 
 class User
 {
@@ -20,23 +22,25 @@ class User
     private $password;
     private $create_at;
     private $modif_at;
+
     /**
-    *Initialisation des données vers l'hydratation
-    *@param  $data = est un tableau des données
-    */
-    public function __construct($data=[])
+     * Initialisation des données vers l'hydratation
+     * @param  $data = est un tableau des données
+     */
+    public function __construct($data = [])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
     /**
-    * Utilisation du trait Hydrator pour l'hydratation des données de la variable $data
-    */
+     * Utilisation du trait Hydrator pour l'hydratation des données de la variable $data
+     */
     use Hydrator;
+
     /**
-    * Mise en place des SETTERS et vérification de format
-    */
+     * Mise en place des SETTERS et vérification de format
+     */
     public function setUsername($username)
     {
         if (!\is_string($username) || empty($username)) {
@@ -45,6 +49,7 @@ class User
             $this->username = $username;
         }
     }
+
     public function setEmail($email)
     {
         if (!\is_string($email) || empty($email) and  filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -53,6 +58,7 @@ class User
             $this->email = $email;
         }
     }
+
     public function setPassword($password)
     {
         if (!\is_string($password) || empty($password)) {
@@ -61,21 +67,23 @@ class User
             $this->password = $password;
         }
     }
-    public function setDateCrea(DateTime $create_at)
+
+    public function setDateCrea(\DateTime $create_at)
     {
         if (is_string($create_at)) {
             $this->create_at = $create_at;
         }
     }
-    public function setModif_at(DateTime $modif_at)
+
+    public function setModif_at(\DateTime $modif_at)
     {
         if (is_string($modif_at)) {
             $this->modif_at = $modif_at;
         }
     }
     /**
-    * Mise en place des GETTERS
-    */
+     * Mise en place des GETTERS
+     */
     public function getId()
     {
         return $this->id_user;

@@ -3,7 +3,7 @@
  RewriteEngine On
 
 # Adresse de base de réécriture
- RewriteBase /Alaska/Web
+ RewriteBase /
 
 # Règles
  RewriteCond %{REQUEST_FILENAME} !-f

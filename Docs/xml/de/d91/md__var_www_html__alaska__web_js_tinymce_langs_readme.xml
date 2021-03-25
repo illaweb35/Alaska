@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
-  <compounddef id="de/d91/md__var_www_html__alaska__web_js_tinymce_langs_readme" kind="page">
-    <compoundname>md__var_www_html_Alaska_Web_js_tinymce_langs_readme</compoundname>
-    <title>readme</title>
-    <detaileddescription>
-<para>This is where language files should be placed.</para><para>Please DO NOT translate these directly use this service: <ulink url="https://www.transifex.com/projects/p/tinymce/">https://www.transifex.com/projects/p/tinymce/</ulink> </para>    </detaileddescription>
-  </compounddef>
-</doxygen>

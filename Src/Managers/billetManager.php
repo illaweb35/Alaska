@@ -1,21 +1,22 @@
 <?php
+
 /**
-* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
-*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
-*
-*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
-*@link       https://illaweb.fr
-*/
+ * @author    jm Holland <jm.holland@illaweb.fr>
+ * @copyright  (c) 2018, illaweb. All Rights Reserved.
+ * @license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+ * @link       https://www.illaweb.fr
+ */
+
 namespace Src\Managers;
 
-use App\Dbd;
-use App\Alert;
-use App\Verif;
+use app\Dbd;
+use app\Alert;
+use app\Verif;
 
 /**
-* Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets
-*@param  $_pdo  = nouvelle instance de la classe Dbd base de données
-*/
+ * Class Manager des billets qui regroupe l'ensemble des fonctions concernant la gestion des billets
+ * @param  $_pdo  = nouvelle instance de la classe Dbd base de données
+ */
 class billetManager
 {
     protected $_pdo;
@@ -24,9 +25,10 @@ class billetManager
     {
         $this->_pdo =  new Dbd;
     }
+
     /**
-    * Fonction pour lire tous les billets si connecté en admin
-    */
+     * Fonction pour lire tous les billets si connecté en admin
+     */
     public function ReadAll()
     {
         if (isset($_SESSION['authenticated'])) {
@@ -37,11 +39,12 @@ class billetManager
             $request->closeCursor();
         }
     }
+
     /**
-    * Lecture des billets pour la partie front du site
-    *@param  $offset = détermine la position de départ dans la base de donnée
-    *@param  $limit = détermine le nombre de billet à afficher
-    */
+     * Lecture des billets pour la partie front du site
+     * @param  $offset = détermine la position de départ dans la base de donnée
+     * @param  $limit = détermine le nombre de billet à afficher
+     */
     public function ReadFront($offset, $limit)
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_billets  WHERE posted = 1 ORDER BY create_at ASC LIMIT :offset,:limit');
@@ -52,10 +55,11 @@ class billetManager
         return $billets = $request->fetchAll();
         $request->closeCursor();
     }
+
     /**
-    * Lecture d'un billet en fonction de l'identifiant
-    *@param  $id = identifiant du billet à afficher
-    */
+     * Lecture d'un billet en fonction de l'identifiant
+     * @param  $id = identifiant du billet à afficher
+     */
     public function Read($id)
     {
         $request = $this->_pdo->prepare("SELECT * FROM T_billets WHERE id_bil = :id LIMIT 1");
@@ -65,18 +69,19 @@ class billetManager
         return $billets = $request->fetch();
         $request->closeCursor();
     }
+
     /**
-    *Création ou insertion dans la base de données du billet
-    */
+     * Création ou insertion dans la base de données du billet
+     */
     public function Create()
     {
-        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted ="";
+        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted = "";
         if (empty($_POST['title'])) {
-            Alert::getError($errorMsg ='Merci de rentrer un titre valide');
+            Alert::getError($errorMsg = 'Merci de rentrer un titre valide');
         } else {
             $title = Verif::filterName($_POST['title']);
             if ($title == false) {
-                Alert::getError($errorMsg ='Merci de rentrer un titre valide.');
+                Alert::getError($errorMsg = 'Merci de rentrer un titre valide.');
             }
         }
         if (empty($_POST['author'])) {
@@ -84,11 +89,11 @@ class billetManager
         } else {
             $author = Verif::filterName($_POST['author']);
             if ($author == false) {
-                Alert::getError($errorMsg ='Merci d\'entrez un non d\'auteur valide.');
+                Alert::getError($errorMsg = 'Merci d\'entrez un non d\'auteur valide.');
             }
         }
         if (empty($_POST['content'])) {
-            Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
+            Alert::getError($errorMsg = 'Vous devez entrez une ligne de texte au minimum!');
         } else {
             $content = $_POST['content'];
         }
@@ -98,19 +103,19 @@ class billetManager
         $create_at = date(DATE_W3C);
         $modif_at = date(DATE_W3C);
         if (isset($_POST['posted'])) {
-            $posted = (Verif::filterBool($_POST['posted'])!== null)? 1:0;
+            $posted = (Verif::filterBool($_POST['posted']) !== null) ? 1 : 0;
         }
         // Insertion de l'image en upload avec enregistrement du nom dans la base et déplacement de l'image dans un dossier sur le site
         try {
             if (!$_FILES['image']['size'] == 0) {
-                if (isset($_FILES['image'])&& !empty($_FILES)) {
-                    $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
+                if (isset($_FILES['image']) && !empty($_FILES)) {
+                    $upload_dir = $_SERVER['DOCUMENT_ROOT'] . \BASEPATH . 'img/posts/';
                     $imgExt = \strtolower(\pathinfo($imgFile, PATHINFO_EXTENSION));
-                    $valid_extensions= array('jpeg', 'jpg', 'png', 'gif');
-                    $image = rand(1000, 1000000).".".$imgExt;
+                    $valid_extensions = array('jpeg', 'jpg', 'png', 'gif');
+                    $image = rand(1000, 1000000) . "." . $imgExt;
                     if (in_array($imgExt, $valid_extensions)) {
-                        if ($imgSize < 5*MB) {
-                            \move_uploaded_file($tmp_dir, $upload_dir.$image);
+                        if ($imgSize < 5 * MB) {
+                            \move_uploaded_file($tmp_dir, $upload_dir . $image);
                         } else {
                             Alert::getError($errorMsg = 'Le fichier image est trop gros!');
                         }
@@ -141,24 +146,25 @@ class billetManager
             } else {
                 return $_POST['id_bil'];
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
         $request->closeCursor();
     }
+
     /**
-    *Mise a jour des infos du billet suivant son identifiant en base de données
-    *@param  $id = identifiant du billet
-    */
+     * Mise a jour des infos du billet suivant son identifiant en base de données
+     * @param  $id = identifiant du billet
+     */
     public function Update($id)
     {
-        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted ="";
+        $title = $author = $content = $imgFile = $tmp_dir = $imgSize = $create_at = $modif_at = $posted = "";
         if (empty($_POST['title'])) {
-            Alert::getError($errorMsg ='Merci de donner un titre');
+            Alert::getError($errorMsg = 'Merci de donner un titre');
         } else {
             $title = Verif::filterName($_POST['title']);
-            if ($title ==false) {
-                Alert::getError($errorMsg ="Merci de rentrer un titre valide.");
+            if ($title == false) {
+                Alert::getError($errorMsg = "Merci de rentrer un titre valide.");
             }
         }
         if (empty($_POST['author'])) {
@@ -166,11 +172,11 @@ class billetManager
         } else {
             $author = Verif::filterName($_POST['author']);
             if ($author == false) {
-                Alert::getError($errorMsg ='Merci d\'entrez un non d\'auteur valide.');
+                Alert::getError($errorMsg = 'Merci d\'entrez un non d\'auteur valide.');
             }
         }
         if (empty($_POST['content'])) {
-            Alert::getError($errorMsg ='Vous devez entrez une ligne de texte au minimum!');
+            Alert::getError($errorMsg = 'Vous devez entrez une ligne de texte au minimum!');
         } else {
             $content = $_POST['content'];
         }
@@ -181,14 +187,14 @@ class billetManager
         $modif_at = date(DATE_W3C);
         $posted = Verif::filterBool($_POST['posted']);
         if ($imgFile) {
-            $upload_dir = $_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/';
+            $upload_dir = $_SERVER['DOCUMENT_ROOT'] . \BASEPATH . 'img/posts/';
             $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
             $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
-            $image = rand(1000, 1000000).".".$imgExt;
+            $image = rand(1000, 1000000) . "." . $imgExt;
             if (in_array($imgExt, $valid_extensions)) {
-                if ($imgSize < 5*MB) {
-                    unlink($upload_dir.$edit_row['image']);
-                    move_uploaded_file($tmp_dir, $upload_dir.$image);
+                if ($imgSize < 5 * MB) {
+                    unlink($upload_dir . $edit_row['image']);
+                    move_uploaded_file($tmp_dir, $upload_dir . $image);
                 } else {
                     Alert::getError($errorMsg = 'Le fichier image est trop gros!');
                 }
@@ -215,14 +221,15 @@ class billetManager
                 $request->closeCursor();
                 return $billets;
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
     }
+
     /**
-    * Effacement d'un enregistrement suivant son identifiant
-    *@param  $id = identifiant du billet
-    */
+     * Effacement d'un enregistrement suivant son identifiant
+     * @param  $id = identifiant du billet
+     */
     public function Delete($id)
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_billets WHERE id_bil=:id LIMIT 1');
@@ -230,15 +237,16 @@ class billetManager
         $request->execute();
         $billet = $request->fetch();
         $image = $billet['image'];
-        unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
+        unlink($_SERVER['DOCUMENT_ROOT'] . \BASEPATH . 'img/posts/' . $image);
         $request = $this->_pdo->prepare('DELETE FROM T_billets WHERE id_bil = :id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         return $request->execute();
     }
+
     /**
-    * effacement image post
-    *@param  $id = identifiant du billet
-    */
+     * effacement image post
+     * @param  $id = identifiant du billet
+     */
     public function Delete_img($id)
     {
         $request = $this->_pdo->prepare('SELECT * FROM T_billets WHERE id_bil=:id LIMIT 1');
@@ -246,8 +254,8 @@ class billetManager
         $request->execute();
         $billet = $request->fetch();
         $image = $billet['image'];
-        unlink($_SERVER['DOCUMENT_ROOT'].\BASEPATH.'img/posts/'.$image);
-        $unset="";
+        unlink($_SERVER['DOCUMENT_ROOT'] . \BASEPATH . 'img/posts/' . $image);
+        $unset = "";
         $request = $this->_pdo->prepare('UPDATE  T_billets SET image=:image WHERE id_bil = :id LIMIT 1');
         $request->bindParam(':id', $id, \PDO::PARAM_INT);
         $request->bindParam(':image', $unset, \PDO::PARAM_STR);

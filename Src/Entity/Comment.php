@@ -1,15 +1,18 @@
 <?php
+
 /**
-* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
-*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
-*
-*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
-*@link       https://illaweb.fr
-*/
+ * @author    jm Holland <jm.holland@illaweb.fr>
+ * @copyright  (c) 2018, illaweb. All Rights Reserved.
+ * @license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+ * @link       https://www.illaweb.fr
+ */
+
+
 namespace Src\Entity;
 
-require_once('../App/Pattern/Hydrator.trait.php');
-use App\Pattern\Hydrator;
+require_once '../app/pattern/Hydrator.trait.php';
+
+use app\pattern\Hydrator;
 use app\Alert;
 
 class Comment
@@ -21,23 +24,26 @@ class Comment
     private $modif_at;
     private $bil_id;
     private $moderate;
+
     /**
-    * Initialisation  des données vers l'hydratation
-    *@param  $data = est un tableau des données
-    */
+     * Initialisation  des données vers l'hydratation
+     * @param  $data = est un tableau des données
+     */
     public function __construct($date = [])
     {
         if (!empty($data)) {
             $this->hydrate($data);
         }
     }
+
     /**
-    * Utilisation de l'hydratation du trait Hydrator
-    */
+     * Utilisation de l'hydratation du trait Hydrator
+     */
     use Hydrator;
+
     /**
-    * Mise en place des SETTERS avec vérification de format de données
-    */
+     * Mise en place des SETTERS avec vérification de format de données
+     */
     public function setPseudo($pseudo)
     {
         if (!is_string($pseudo) || empty($pseudo)) {
@@ -54,18 +60,22 @@ class Comment
             $this->content = $content;
         }
     }
-    public function setCreate_at(DateTime $create_at)
+
+    public function setCreate_at(\DateTime $create_at)
     {
         $this->create_at = $create_at;
     }
-    public function setModif_at(DateTime $modif_at)
+
+    public function setModif_at(\DateTime $modif_at)
     {
         $this->modif_at = $modif_at;
     }
+
     public function setBil_Id($bil_id)
     {
         $this->bil_id = (int)$bil_id;
     }
+
     public function setModerate($moderate)
     {
         if (is_bool($moderate)) {
@@ -73,8 +83,8 @@ class Comment
         }
     }
     /**
-    * Mise en place des GETTERS
-    */
+     * Mise en place des GETTERS
+     */
     public function getId()
     {
         return $this->id_com;

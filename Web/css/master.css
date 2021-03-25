@@ -1,10 +1,9 @@
 /**
-* @author    Jean-Marie HOLLAND <illaweb35@gmail.com>
-*@copyright  (c) 2018, Jean-Marie HOLLAND. All Rights Reserved.
-*
-*@license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
-*@link       https://illaweb.fr
-*/
+ * @author    jm Holland <jm.holland@illaweb.fr>
+ * @copyright  (c) 2018, illaweb. All Rights Reserved.
+ * @license    Lesser General Public Licence <http://www.gnu.org/copyleft/lesser.html>
+ * @link       https://www.illaweb.fr
+ */
 
 /* Présentaion du blog siuvant mes propres critères */
 
@@ -56,7 +55,7 @@
   overflow: hidden;
 }
 
-.rings>* {
+.rings > * {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,38 +64,38 @@
   animation: rotate infinite linear;
 }
 
-.rings>*>* {
+.rings > * > * {
   display: block;
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   border: 1px solid #000;
-  border-top-color: rgba(0, 0, 0, .75);
-  border-right-color: rgba(0, 0, 0, .5);
-  border-bottom-color: : rgba(0, 0, 0, .25);
+  border-top-color: rgba(0, 0, 0, 0.75);
+  border-right-color: rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(0, 0, 0, 0.25);
   border-left-color: rgba(0, 0, 0, 0);
 }
 
-.rings>*:nth-child(1) {
+.rings > *:nth-child(1) {
   position: absolute;
   text-align: center;
   height: 1em;
   top: calc(50% - 1em);
 }
 
-.rings>*:nth-child(2) {
+.rings > *:nth-child(2) {
   animation-duration: 8s;
 }
 
-.rings>*:nth-child(3) {
+.rings > *:nth-child(3) {
   animation-duration: 12s;
   margin: 10%;
   height: 80%;
   width: 80%;
 }
 
-.rings>*:nth-child(4) {
+.rings > *:nth-child(4) {
   animation-duration: 20s;
   margin: 20%;
   height: 60%;
@@ -120,8 +119,8 @@
   border-radius: 2% 20%;
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .image_bandeau:hover img {
@@ -164,7 +163,7 @@
 }
 
 .card-image {
-  max-width: 350px
+  max-width: 350px;
 }
 
 #Map_Alaska {
@@ -196,8 +195,8 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -208,19 +207,19 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
