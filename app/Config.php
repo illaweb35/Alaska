@@ -18,8 +18,8 @@ const BASEPATH = '/Web/';
 const
     DB_HOST = 'localhost',
     DB_NAME = 'db_alaska',
-    DB_USER = 'admin',
-    DB_PASS = 'Mysql35)mord';
+    DB_USER = 'root',
+    DB_PASS = 'password';
 
 /**
  * Constance pour le nombre de billet à afficher sur la page
